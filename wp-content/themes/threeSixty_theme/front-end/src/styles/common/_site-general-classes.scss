@@ -23,17 +23,14 @@ section {
 
 // region container
 .container {
-  max-width: 600px;
   @include marginX(auto);
   @include marginY(0);
   padding-inline: 24px;
-  @include media-screen-from600-to1024 {
-    max-width: 639px;
+  @include max-medium-screen {
+    max-width: 900px;
   }
-  //   1280
   @include min-medium-screen {
-    padding-inline: 0;
-    max-width: 960px;
+    max-width: 1263px;
   }
 }
 
@@ -508,6 +505,7 @@ ol.theme-unordered-list-element {
     min-height: 304px;
     width: 304px;
   }
+
   .swiper-navigations {
     @include small-screen {
       padding-right: 4px;
