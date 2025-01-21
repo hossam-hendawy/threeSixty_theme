@@ -46,6 +46,31 @@
           "slug": "gray-500",
           "color": "#667085",
           "name": "Gray-500"
+        },
+        {
+          "slug": "gray-900",
+          "color": "#121926",
+          "name": "Gray-900"
+        },
+        {
+          "slug": "gray-950",
+          "color": "#0C111D",
+          "name": "Gray-950"
+        },
+        {
+          "slug": "gray-600",
+          "color": "#4B5565",
+          "name": "Gray-600"
+        },
+        {
+          "slug": "brand-700",
+          "color": "#A15C07",
+          "name": "Brand-700"
+        },
+        {
+          "slug": "brand-600",
+          "color": "#CA8504",
+          "name": "Brand-600"
         }
       ]
     },

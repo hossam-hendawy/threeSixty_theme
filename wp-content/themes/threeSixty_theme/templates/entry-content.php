@@ -5,9 +5,8 @@
 
 get_header();
 ?>
-
 <?php while (have_posts()) : the_post(); ?>
-
+<div class="container">
   <div class="text-xl regular gold text-center">Expert Perspectives on Digital
     Growth
   </div>
@@ -24,6 +23,8 @@ get_header();
     the latest trends in SEO and social media management to advanced topics like
     AI-driven marketing and cybersecurity, we’ve got you covered.
   </div>
+</div>
+
   <?php the_content(); ?>
 <?php endwhile; ?>
 <?php get_footer();
