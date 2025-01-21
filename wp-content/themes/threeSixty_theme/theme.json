@@ -36,6 +36,16 @@
           "slug": "gray",
           "color": "#302A30",
           "name": "Gray"
+        },
+        {
+          "slug": "gold",
+          "color": "#CA8504",
+          "name": "Gold"
+        },
+        {
+          "slug": "gray-500",
+          "color": "#667085",
+          "name": "Gray-500"
         }
       ]
     },

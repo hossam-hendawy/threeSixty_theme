@@ -2,14 +2,9 @@
 @use "../../styles/mixins/mixins" as *;
 
 header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  transform: translateX(0);
-  transition: transform $duration, background $duration;
-  background: transparent;
+  position: relative;
+  height: 50px;
+  background-color: red;
 
   &.fixed {
     position: fixed;
@@ -216,4 +211,6 @@ header {
 
   &.sticky {
   }
+
+
 }
