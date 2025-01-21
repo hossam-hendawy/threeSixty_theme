@@ -48,6 +48,11 @@
           "name": "Gray-500"
         },
         {
+          "slug": "gray-700",
+          "color": "#404968",
+          "name": "Gray-700"
+        },
+        {
           "slug": "gray-900",
           "color": "#121926",
           "name": "Gray-900"

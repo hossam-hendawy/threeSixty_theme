@@ -315,18 +315,28 @@ $base-size: 10;
   @include flex(center, center);
   padding: 16px 24.5px;
   transition: background-color $duration, color $duration;
-  background-color: $threeSixty_theme_warm_red;
+  background-color: $threeSixty_theme_gray-700;
   cursor: pointer;
-
+  font-family: $inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
   @include x-large-screen {
     padding: 16px 24.6px;
   }
+
   &:hover {
-    background-color: $threeSixty_theme_off_white;
+    background-color: $threeSixty_theme_gray-700;
   }
 
   &.small-cta {
-    padding: 16px 9.2px;
+    font-size: 16px;
+    font-style: normal;
+  }
+
+  &.gray-cta {
+    background-color: $threeSixty_theme_gray;
   }
 }
 
