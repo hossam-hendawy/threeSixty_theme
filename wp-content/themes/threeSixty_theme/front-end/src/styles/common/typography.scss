@@ -1,0 +1,252 @@
+@use "variables" as *;
+@use "../mixins/mixins" as *;
+@use "../functions/functions" as *;
+
+
+body {
+  font-family: $hahmlet;
+}
+
+.tes-D1 {
+  font-family: $TitlingGothicFB;
+  font-size: 120px;
+  line-height: 100%;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 24px;
+  @include min-medium-screen {
+    @include font-size(480px, 480px);
+    font-size: 480px;
+  }
+}
+
+// region font family TitlingGothicFB
+.sans-h1, .sans-h1 p {
+  font-family: $TitlingGothicFB;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: 1.6px;
+  @include min-medium-screen {
+    font-size: 64px;
+    letter-spacing: 3.2px;
+  }
+}
+
+.sans-h2, .sans-h2 p {
+  font-family: $TitlingGothicFB;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+  letter-spacing: normal;
+  @include min-medium-screen {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.sans-h3, .sans-h3 p {
+  font-family: $TitlingGothicFB;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17.6px;
+  letter-spacing: 0.8px;
+}
+
+.sans-h4, .sans-h4 p {
+  font-family: $TitlingGothicFB;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13.2px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+// endregion
+
+// region font family hahmlet
+.serif-h1, .serif-h1 p {
+  font-family: $hahmlet;
+  font-size: 36px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+  @include min-medium-screen {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -1.6px;
+  }
+}
+
+.serif-h2, .serif-h2 p {
+  font-family: $hahmlet;
+  font-size: 28px;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: -0.56px;
+  @include min-medium-screen {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.8px;
+  }
+}
+
+.serif-h3, .serif-h3 p {
+  @include font(18px, 400, 22.5px, $threeSixty_theme_white, $hahmlet, -0.02rem);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.5px;
+  letter-spacing: -0.36px;
+  font-family: $hahmlet;
+  @include min-medium-screen {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.48px;
+  }
+}
+
+// endregion
+
+.subheading p, .subheading {
+  font-family: $montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22.4px;
+}
+
+.body p, .body {
+  font-family: $montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.small-copy p, .small-copy {
+  font-family: $montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: capitalize;
+}
+
+.micro-text{
+  font-family: $TitlingGothicFB;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 2.24px;
+  text-transform: uppercase;
+}
+
+.micro-text p{
+  @include micro-text;
+}
+
+// region cta button
+
+.theme-cta-button {
+  @include theme-cta-style;
+  @include micro-text;
+}
+
+.label {
+  @include micro-text;
+  display: block;
+  width: fit-content;
+  text-transform: uppercase;
+  @include flex(center, center);
+  transition: background-color $duration, color $duration;
+  background-color: transparent;
+  border-radius: 50px;
+  color: $threeSixty_theme_warm_red;
+  border: 1px solid currentColor;
+  padding: 7.2px 11.7px;
+  @include x-large-screen {
+    padding: 7.5px 12px;
+  }
+
+  &.light-label {
+    color: $threeSixty_theme_white;
+  }
+}
+
+// endregion cta button
+
+// region cta link
+.theme-cta-link {
+  @include font(18px, 700, 24px, $threeSixty_theme_black, $montserrat);
+  transition: color $duration;
+
+  &:hover {
+    color: $threeSixty_theme_white;
+  }
+}
+
+// endregion cta link
+
+.desktop-cta {
+  display: none;
+  @include min-medium-screen {
+    display: flex;
+  }
+}
+
+.mobile-cta {
+  display: flex;
+  margin-top: 40px;
+  @include min-medium-screen {
+    display: none;
+  }
+}
+
+
+.off-white-color {
+  color: $threeSixty_theme_off_white;
+}
+
+.white-color {
+  color: $threeSixty_theme_white;
+}
+
+.gray-color {
+  color: $threeSixty_theme_off_white;
+  opacity: 0.7;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 900;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.capital-text {
+  text-transform: capitalize;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.under-line {
+  @include under-line;
+}

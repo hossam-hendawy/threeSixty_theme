@@ -1,0 +1,45 @@
+{
+    "key": "group_67210c6f30713",
+    "title": "Page Settings",
+    "fields": [
+        {
+            "key": "field_67210c6fc7b6c",
+            "label": "Warm Red Page",
+            "name": "warm_red_page",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "when turned on please use `color-start` and `color-end` classes to mark start and end of the color change effect",
+    "show_in_rest": 0,
+    "modified": 1731907594
+}

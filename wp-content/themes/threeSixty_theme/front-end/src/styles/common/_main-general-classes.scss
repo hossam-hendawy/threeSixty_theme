@@ -1,0 +1,498 @@
+@use "variables" as *;
+@use "../mixins/mixins" as *;
+
+//region HTML tags
+*, *::before, *::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+//region customize html scroll bar
+::-webkit-scrollbar {
+  width: 3px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background:  $threeSixty_theme_gray;
+  //background: rgba(0, 0, 0, 0.5); /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: $threeSixty_theme_white;
+  //background-color: red; /* color of the scroll thumb */
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important; // Hide Scrollbar FireFox
+  &::-webkit-scrollbar { // Hide Scrollbar Chrome
+    display: none;
+  }
+}
+
+//endregion customize html scroll bar
+
+// region hyperlink style
+a {
+  text-decoration: none !important;
+  color: inherit;
+  transition: color $duration;
+}
+
+// endregion hyperlink style
+
+img, picture, video {
+  display: block;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, form, fieldset, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+
+input, textarea, select, button {
+  font: inherit;
+
+  &::placeholder {
+    transition: opacity $duration;
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+svg {
+  path {
+    transition: fill, stroke;
+    transition-duration: $duration;
+  }
+}
+
+//endregion HTML tags
+
+//region scroll animation classes
+.line-overflow,
+.word-overflow {
+  overflow: hidden;
+  vertical-align: top;
+}
+
+[class ^="iv-st"], [class *= " iv-st"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.iv-st-from-top, .iv-st-from-bottom, .iv-st-from-left, .iv-st-from-right, .word-up, .line-up, .real-line-up {
+  opacity: 0;
+  visibility: hidden;
+}
+
+//endregion scroll animation classes
+
+//region utility classes
+.has-max-lines {
+  --max-lines: 3;
+  @include max-lines()
+}
+
+.aspect-ratio {
+  position: relative;
+  height: 0;
+
+  img, video, iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.cover-background {
+  position: absolute;
+  @include square(100%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+
+  img {
+    @include objectImg(cover);
+  }
+}
+
+.hide {
+  &-only-sm {
+    @include small-screen {
+      display: none !important;
+    }
+  }
+
+  &-only-md {
+    @include medium-screen {
+      display: none !important;
+    }
+  }
+
+  &-only-lg {
+    @include large-screen {
+      display: none !important;
+    }
+  }
+
+  &-between-sm-md {
+    @include max-medium-screen {
+      display: none !important;
+    }
+  }
+
+  &-between-md-lg {
+    @include min-medium-screen {
+      display: none !important;
+    }
+  }
+}
+
+.f-w {
+  &-900 {
+    font-weight: 900 !important;
+  }
+
+  &-800 {
+    font-weight: 800 !important;
+  }
+
+  &-700 {
+    font-weight: 700 !important;
+  }
+
+  &-400 {
+    font-weight: 400 !important;
+  }
+}
+
+.g-container {
+  // region remove container padding in media
+
+  &-remove-sm-md {
+    @include max-medium-screen {
+      @include paddingX(0 !important);
+    }
+  }
+
+  &-remove-sm-0 {
+    @include small-screen {
+      @include paddingX(0 !important);
+    }
+  }
+
+  &-remove-md-0 {
+    @include medium-screen {
+      @include paddingX(0 !important)
+    }
+  }
+
+  &-remove-lg-0 {
+    @include large-screen {
+      @include paddingX(0 !important)
+    }
+  }
+
+  // endregion remove container padding in media
+
+  // region set container padding in  media
+
+  &-set-sm {
+    @include small-screen {
+      @include paddingX(size($container-padding-sm) !important);
+    }
+  }
+
+  &-set-md {
+    @include medium-screen {
+      @include paddingX(size($container-padding-md) !important);
+    }
+  }
+
+  &-set-lg {
+    @include large-screen {
+      @include paddingX(size($container-padding-lg) !important)
+    }
+  }
+
+  // endregion set container padding in  media
+
+  // region set container padding between media
+  &-set-sm-md {
+    @include small-screen {
+      @include paddingX(size($container-padding-sm) !important);
+    }
+    @include medium-screen {
+      @include paddingX(size($container-padding-md) !important);
+    }
+  }
+
+  &-set-all {
+    @include paddingX(size($container-padding-sm) !important);
+    @include min-medium-screen {
+      @include paddingX(size($container-padding-md) !important);
+    }
+    @include large-screen {
+      @include paddingX(size($container-padding-lg) !important);
+    }
+  }
+
+  // endregion set container padding between media
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-block {
+  display: block;
+}
+
+.load-more-wrapper {
+  position: relative;
+  transition: opacity $duration;
+  display: flex;
+  justify-content: center;
+
+  .loader {
+    width: size(90);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity $duration;
+    opacity: 0;
+    pointer-events: none;
+
+    .loader-ball {
+      $anim-drt: 0.4s;
+      $anim-ease: cubic-bezier(.6, .05, .15, .95);
+      @include square(size(20));
+      border-radius: 50%;
+
+
+      &:nth-child(1) {
+        animation: itemsLoader $anim-drt alternate infinite $anim-ease;
+      }
+
+      &:nth-child(2) {
+        animation: itemsLoader $anim-drt calc(#{$anim-drt} / 4) alternate infinite $anim-ease backwards;
+      }
+
+      &:nth-child(3) {
+        //background: $cheq-gradient-purple;
+        animation: itemsLoader $anim-drt calc(#{$anim-drt} / 2) alternate infinite $anim-ease backwards;
+      }
+    }
+  }
+
+  .cta-button {
+    transition: opacity, background;
+    transition-duration: $duration;
+  }
+
+  &.loading {
+    .loader {
+      opacity: 1;
+    }
+
+    .cta-button {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &.hidden {
+    //opacity: 0 !important;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+.no-posts {
+  display: none;
+  @include font(48px, 400, 56px, $threeSixty_theme_white, $montserrat  );
+
+  &.active {
+    display: block;
+    text-align: center;
+    padding-top: size(80);
+    padding-bottom: size(30);
+  }
+}
+
+//endregion utility classes
+
+//region animations
+
+@keyframes bouncing {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(size(-20), size(-50));
+  }
+}
+
+@keyframes itemsLoader {
+  0% {
+    transform: translate3d(0, 1rem, 0) scale(1.2, 0.85);
+  }
+  100% {
+    transform: translate3d(0, -1rem, 0) scale(0.9, 1.1);
+  }
+}
+
+@keyframes shaking {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
+//endregion animations
+
+[skip-to-main-content] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+  //visibility: hidden;
+  opacity: 0;
+
+  &:focus {
+    z-index: 10000;
+    opacity: 1;
+    visibility: visible;
+    color: green;
+
+  }
+}
+
+//:focus {
+//  outline:$threeSixty_theme_white  2px solid !important;
+//}
+
+//region all blocks
+[data-section-class] {
+  position: relative;
+  z-index: 1;
+
+  &.section-noPaddings {
+    @include paddingY(0);
+  }
+}
+
+//endregion all blocks
+
+
+// region custom modal
+.custom-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 400ms, z-index 400ms;
+  z-index: -1;
+  @include flex(center, center);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: auto;
+
+  .close-modal {
+    position: absolute;
+    top: size(20);
+    right: size(20);
+    z-index: 1;
+    @include square(size(50));
+    @include min-medium-screen{
+      top: size(32);
+      right: size(32);
+    }
+    svg {
+      @include square(100%);
+    }
+  }
+
+  .contact-form-title {
+    display: none;
+  }
+
+  .custom-modal-inner {
+    position: relative;
+
+    @include small-screen {
+      width: 83%;
+    }
+    @include min-medium-screen {
+      width: 82.8%;
+    }
+    @include marginX(0);
+    transition: opacity 300ms ease-in-out;
+
+    &.modal-loading {
+      transition-duration: 0s;
+      opacity: 0.5;
+    }
+
+  }
+
+  .custom-modal-content {
+    max-height: 92vh;
+    overflow: auto;
+    @include paddingX(size(12));
+  }
+
+  .close-modal {
+    background-color: transparent !important;
+  }
+
+  &.modal-active {
+    z-index: 99999;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+// endregion

@@ -1,0 +1,10 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+#single-hero-block {
+  margin-bottom: size(30);
+}
+
+.template-title {
+  margin-bottom: size(30);
+}

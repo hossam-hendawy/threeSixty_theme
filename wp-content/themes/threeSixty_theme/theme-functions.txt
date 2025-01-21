@@ -1,0 +1,26 @@
+# functions.php
+	1- get_post_categories
+	2- generate_video_embed_url
+	3- get_post_lazyloaded_image
+	4- get_acf_lazyloaded_image
+	5- small_content
+	6- show_read_time
+	7- get_paginate_links
+# Js Functions
+	1- accordion
+	2- stickySidebar
+	3- scrolTohash
+	4- swiperActivator
+	5- activePage -> follow the existing classes
+	6- allowPageScroll & preventPageScroll
+	7- wrap & unwrap
+	8- vimeo player
+	9- youtube player
+# CSS Utility Classes
+	1- aspect-ratio
+	2- cover-background
+	3- hide -
+	4- text-uppercase
+	5- text-center
+	6- display-block
+	7- g-container -

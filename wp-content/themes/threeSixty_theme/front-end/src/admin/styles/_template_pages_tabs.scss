@@ -1,0 +1,21 @@
+body.post-type-page {
+  .postbox.acf-postbox {
+    .acf-fields {
+      .acf-field.acf-field-clone {
+        &:before {
+          display: none;
+        }
+      }
+
+      &.-left {
+        > .acf-field > .acf-label {
+          display: none;
+        }
+
+        > .acf-field > .acf-input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

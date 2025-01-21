@@ -1,0 +1,98 @@
+@import "src/admin/styles/columns";
+@import "src/admin/styles/columns_popup";
+@import "src/admin/styles/radio_field_images_list";
+@import "src/admin/styles/group";
+@import "src/admin/styles/template_pages_tabs";
+
+.interface-interface-skeleton__sidebar > div {
+  width: 100% !important;
+}
+
+.wp-block .-open .acf-label.acf-accordion-title {
+  height: 50px !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+.wp-block .acf-label.acf-accordion-title {
+  transition: height 400ms, background-position 400ms;
+  height: 200px !important;
+  background-repeat: no-repeat !important;
+  //background-size: 100% 84%!important;
+  background-size: contain !important;
+  background-position: 50% 50% !important;
+
+  .acf-accordion-icon {
+    background-color: #FFF;
+  }
+}
+
+.interface-interface-skeleton__sidebar {
+  width: 350px !important;
+}
+
+.threeSixty_theme-block.two_columns_block {
+  background: #e8e8e8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__layout .block-editor-default-block-appender .block-editor-inserter {
+    right: 18px;
+  }
+}
+
+tr.acf-row {
+
+  > td:first-of-type {
+    font-size: 24px !important;
+    color: #3a3a3a !important;
+    font-weight: 900 !important;
+    text-shadow: none !important;
+    font-family: initial;
+  }
+
+  &:nth-of-type(odd) {
+    > td {
+      border-top: 5px #dedede solid !important;
+      border-bottom: 5px #dedede solid !important;
+
+      &:first-of-type, &:last-of-type {
+        background: #dedede !important;
+      }
+
+    }
+  }
+
+  &:nth-of-type(even) {
+    > td {
+      border-top: 5px #cbcbcb solid !important;
+      border-bottom: 5px #cbcbcb solid !important;
+
+      &:first-of-type, &:last-of-type {
+        background: #cbcbcb !important;
+      }
+    }
+  }
+}
+
+[class ^="iv-st"], [class *= " iv-st"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+[data-section-class] p {
+  font: inherit;
+}
+
+// hide ACF from other branches
+tr:has([title*="Awaiting save"]) {
+  display: none;
+}
+
+table.users {
+  #the-list {
+    #user-2 {
+      display: none;
+    }
+  }
+}

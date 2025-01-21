@@ -1,0 +1,46 @@
+{
+    "key": "group_606707c1ee030",
+    "title": "Block Accordion (DO NOT DELETE)",
+    "fields": [
+        {
+            "key": "field_606707efda9a8",
+            "label": "loading",
+            "name": "block_preview_image",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/background-shape-block"
+            }
+        ]
+    ],
+    "menu_order": -5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1639387965
+}

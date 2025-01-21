@@ -1,0 +1,134 @@
+.wp-block-columns {
+  border: 3px solid red;
+  padding: 20px;
+
+  &:before {
+    content: 'Parent Columns';
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  &.is-selected {
+    border-color: green;
+  }
+
+  .wp-block-column {
+    border: 3px solid blue;
+    padding: 20px 20px 25px;
+    background-color: #b4b0b0;
+    height: 100%;
+
+    &:before {
+      content: 'Column';
+      font-size: 13px;
+      font-weight: 500;
+      color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      border-color: green;
+    }
+
+    .wp-block-columns {
+
+      &:before {
+        content: 'Sub Parent Columns';
+      }
+
+      .wp-block-column {
+        padding: 20px 10px 25px !important;
+
+
+        &:hover {
+          border-style: dotted;
+        }
+      }
+    }
+
+    &.is-selected {
+      border-color: green;
+    }
+
+    &:after {
+      display: none;
+    }
+
+  }
+
+  .wp-block-group {
+    border: 3px solid yellow;
+    padding: 20px 0 30px !important;
+
+    &:before {
+      content: 'Group';
+      font-size: 13px;
+      font-weight: 500;
+      color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      border-color: green;
+      border-style: dashed;
+    }
+
+    .wp-block {
+      max-width: 100% !important;
+    }
+
+    &.is-selected {
+      border-color: green;
+    }
+
+  }
+
+  .acf-label.acf-accordion-title {
+    height: 110px !important;
+    background-position: bottom !important;
+    transition: none !important;
+
+    label {
+      background-color: #FFF;
+      padding: 3px;
+      width: fit-content;
+    }
+  }
+
+  .acf-block-body .acf-fields > .acf-field.acf-accordion .acf-accordion-title {
+    padding: 10px;
+  }
+}
+
+body:not(.acf-popup-activated) .wp-block-columns .wp-block-column .wp-block-columns .wp-block-column {
+  .acf-label.acf-accordion-title {
+    height: auto !important;
+    background: none !important;
+    padding: 5px 5px 25px !important;
+  }
+
+  .acf-accordion .acf-accordion-title svg.acf-accordion-icon {
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
+  }
+
+}
+

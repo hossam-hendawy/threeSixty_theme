@@ -1,0 +1,53 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+.autoplay-swiper-cont {
+  overflow-x: hidden;
+  width: 100%;
+
+  .autoplay-swiper {
+    display: flex;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .autoplay-swiper-wrapper {
+      display: flex;
+      align-items: center;
+
+      .autoplay-swiper-slide {
+        //height: 100%;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+body:not(.rtl) {
+  .autoplay-swiper {
+    animation-name: autoplay;
+    @keyframes autoplay {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+
+body.rtl {
+  .autoplay-swiper {
+    display: flex;
+    animation-name: autoplay-arabic-direction;
+    @keyframes autoplay-arabic-direction {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  }
+}

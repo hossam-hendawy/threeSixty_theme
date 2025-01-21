@@ -1,0 +1,407 @@
+@use "sass:math";
+@use "../common/variables" as *;
+@use "../functions/functions" as *;
+
+@mixin paddingX($l, $r:$l) {
+  padding-right: $r;
+  padding-left: $l;
+}
+
+@mixin paddingY($t, $b:$t) {
+  padding-top: $t;
+  padding-bottom: $b;
+}
+
+@mixin marginX($l, $r:$l) {
+  margin-right: $r;
+  margin-left: $l;
+}
+
+@mixin marginY($t, $b:$t) {
+  margin-top: $t;
+  margin-bottom: $b;
+}
+
+@mixin square($value) {
+  width: $value;
+  height: $value;
+}
+
+@mixin dimensions($w,$h:$w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin ie() {
+  body.ie & {
+    @content;
+  }
+}
+
+@mixin not-wp() {
+  @at-root div:not(#wpwrap) & {
+    @content;
+  }
+}
+
+//region media query
+
+//region {only} media
+
+@mixin small-screen() {
+  @media screen and (max-width: $small-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-600() {
+  @media screen and (min-width: $medium-screen-min-600) {
+    @content;
+  }
+}
+
+@mixin media-screen-992() {
+  @media screen and (min-width: $medium-screen-min-992) {
+    @content;
+  }
+}
+
+
+@mixin media-screen-768() {
+  @media screen and (min-width: $medium-screen-min-768) {
+    @content;
+  }
+}
+
+@mixin min-media-screen-600() {
+  @media screen and (min-width: $medium-screen-min-600) {
+    @content;
+  }
+}
+
+@mixin media-screen-from600-to1024() {
+  @media screen and (min-width: $medium-screen-min-600) and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin medium-screen() {
+  @media screen and (min-width: $medium-screen-min-width) and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media screen and (min-width: $large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin x-large-screen() {
+  @media screen and (min-width: $x-large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin xx-large-screen() {
+  @media screen and (min-width: $xx-large-screen-min-width) {
+    @content;
+  }
+}
+
+//endregion {only} media
+
+//region {max} media
+@mixin max-medium-screen() {
+  @media screen and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+//endregion {max} media
+
+//region {min} media
+@mixin min-medium-screen() {
+  @media screen and (min-width: $medium-screen-min-width) {
+    @content;
+  }
+}
+
+//endregion {min} media
+
+//endregion media query
+
+@mixin change-gutter($gutter-size-x:false, $gutter-size-y:false) {
+  @if ($gutter-size-x) {
+    @include marginX(math.div(-$gutter-size-x, 2));
+  }
+  @if ($gutter-size-y) {
+    @include marginY(math.div(-$gutter-size-y, 2));
+  }
+  > div {
+    @if ($gutter-size-x) {
+      @include paddingX(math.div($gutter-size-x, 2));
+    }
+    @if ($gutter-size-y) {
+      @include paddingY(math.div($gutter-size-y, 2));
+    }
+  }
+}
+
+// aspect ratio mixin
+@mixin aspect-ratio($pt) {
+  position: relative;
+  height: 0;
+  padding-top: $pt;
+  img, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+// flex mixin
+@mixin flex($vertical:false, $horizontal:false,$direction:false,$wrap:false) {
+  display: flex;
+  @if ($vertical) {
+    align-items: $vertical;
+  }
+  @if ($horizontal) {
+    justify-content: $horizontal;
+  }
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+  @if ($wrap) {
+    flex-wrap: $wrap;
+  }
+}
+
+// path mixin
+@mixin path($fill:false , $stroke:false) {
+  path {
+    @if ($fill) {
+      fill: $fill;
+    }
+    @if ($stroke) {
+      stroke: $stroke;
+    }
+  }
+}
+
+@mixin font-size($font-size,$line-height:100%) {
+  font-size: $font-size;
+  line-height: line-height($font-size, $line-height);
+}
+
+// font
+@mixin font($size: false, $weight: false,  $lh: 100%,$colour: false,$family:false,$ls:false) {
+  //font: italic small-caps bold 12px/30px Georgia, serif;
+  @if $size {
+    @include font-size($size, $lh)
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $family {
+    font-family: $family;
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+// flex basis mixin
+@mixin flexBasis($fb) {
+  flex-basis: $fb;
+  width: $fb;
+}
+
+// objectImg
+
+@mixin objectImg($object:contain) {
+  width: 100%;
+  height: 100%;
+  object-fit: $object;
+}
+
+// hide me in ??
+@mixin hideMeIn($sm:true,$md:false,$lg:false,$smMd:false,$mdLg:false) {
+  @if ($md) {
+    @include medium-screen {
+      display: none !important;
+    }
+  }
+  @if ($sm) {
+    @include small-screen {
+      display: none !important;
+    }
+  }
+  @if ($lg) {
+    @include min-medium-screen {
+      display: none !important;
+    }
+  }
+  @if ($smMd) {
+    @include max-medium-screen {
+      display: none !important;
+    }
+  }
+  @if ($mdLg) {
+    @include min-medium-screen {
+      display: none !important;
+    }
+  }
+}
+
+$base-size: 10;
+//Function to convert px value into rem
+//You can replace rem with any other value you want (rem is most preferred value for web)
+@function to-rem($target, $context: $base-size) {
+  @return math.div(strip-unit($target),$context)*1rem;
+}
+
+// region number lines of text
+
+@mixin max-lines($number: var(--max-lines)) {
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// endregion number lines of text
+
+@function size($min-size,$max-size: false) {
+  @if ($max-size) {
+    $min-base: math.div($min-size, $base-size);
+    $max-base: math.div($max-size, $base-size);
+    $design-width: math.div($design-width, $base-size);
+    $mobile-width: math.div($mobile-width, $base-size);
+    $medium-base: math.div(($max-base - $min-base), ($design-width - $mobile-width));
+    $medium-1: $min-base -  $mobile-width * $medium-base;
+    $medium-2: $medium-base*100;
+    @if ($min-size > $max-size) {
+      @return clamp(#{$max-base}rem, #{$medium-1}rem + #{$medium-2}vw, #{$min-base}rem);
+    } @else {
+      @return clamp(#{$min-base}rem, #{$medium-1}rem + #{$medium-2}vw, #{$max-base}rem);
+    }
+  } @else {
+    @return to-rem($min-size)
+  }
+}
+
+
+@mixin micro-text {
+  font-family: $TitlingGothicFB;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 2.24px;
+  text-transform: uppercase;
+}
+
+@mixin theme-cta-style {
+  display: block;
+  width: fit-content;
+  text-transform: uppercase;
+  @include flex(center, center);
+  padding: 16px 24.5px;
+  transition: background-color $duration, color $duration;
+  background-color: $threeSixty_theme_warm_red;
+  cursor: pointer;
+
+  @include x-large-screen {
+    padding: 16px 24.6px;
+  }
+  &:hover {
+    background-color: $threeSixty_theme_off_white;
+  }
+
+  &.small-cta {
+    padding: 16px 9.2px;
+  }
+}
+
+@mixin under-line {
+  position: relative;
+  padding-bottom: size(17);
+  width: fit-content;
+  @include marginX(auto);
+
+  margin-bottom: size(30);
+  @include min-medium-screen {
+    margin-bottom: size(49px);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: size(90);
+    background: currentColor;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+
+    @include min-medium-screen {
+      width: size(132);
+    }
+  }
+}
+
+@mixin h2-style {
+  @include font(24px, 400, 32px, $threeSixty_theme_black, inherit, normal);
+  @include min-medium-screen {
+    @include font-size(36px, 42px);
+  }
+  @include large-screen {
+    @include font-size(40px, 48px);
+  }
+}
+
+@mixin h3-style {
+  @include font(20px, 400, 24px, $threeSixty_theme_black, inherit, normal);
+  @include min-medium-screen {
+    @include font-size(24px, 28px);
+  }
+  @include large-screen {
+    @include font-size(28px, 34px);
+  }
+}
+
+@mixin h4-style {
+  @include font(18px, 400, 20px, $threeSixty_theme_black, inherit, normal);
+  @include min-medium-screen {
+    @include font-size(20px, 24px);
+  }
+}
+
+@mixin under-line-hover {
+  position: relative;
+  width: fit-content;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0.5px;
+    background: currentColor;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: width $duration;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}

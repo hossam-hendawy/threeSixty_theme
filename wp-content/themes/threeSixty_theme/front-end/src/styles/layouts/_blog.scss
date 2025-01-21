@@ -1,0 +1,152 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+.single-post-container {
+  padding-top: size(160);
+  @include paddingY(size(160), size(80, 160));
+
+  .single-post-wrapper {
+    width: min(#{size(792)}, 100%);
+    @include marginX(auto);
+  }
+
+  .has-label {
+    margin: 0 auto 24px;
+  }
+
+  .post-title {
+    margin-bottom: size(24);
+    text-align: center;
+    @include min-medium-screen {
+      max-width: 100%;
+    }
+  }
+
+  .post-date {
+    text-align: center;
+    font-weight: 260;
+    font-size: size(18);
+    line-height: size(24);
+  }
+
+  .post-featured-image {
+    padding-top: 56.18%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: size(40);
+
+    + .entry-content p:first-child {
+      margin-bottom: size(40);
+    }
+  }
+
+  .entry-content {
+    margin-top: size(40);
+    padding-bottom: size(32);
+  }
+
+  .post-share-links {
+    max-width: size($content-max-width);
+    border-top: 2px solid $threeSixty_theme_black;
+    padding-top: size(32);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include marginX(auto);
+
+
+    .sharing {
+      display: flex;
+
+      a {
+        display: block;
+        @include square(size(48));
+
+        &:not(:last-child) {
+          margin-right: size(16);
+        }
+
+        svg {
+          @include square(100%);
+        }
+      }
+
+    }
+
+  }
+
+  .author-details {
+    max-width: size($content-max-width);
+    @include marginX(auto);
+    margin-top: size(40, 80);
+
+    .author-card {
+      background: $threeSixty_theme_black;
+      border-radius: 20px;
+      padding: size(20);
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: size(16);
+      }
+
+      @include min-medium-screen {
+        padding: size(40) size(56);
+      }
+
+      .author-gravatar {
+        width: 60px;
+        height: 60px;
+        margin-right: size(24);
+
+        @include min-medium-screen {
+          width: 80px;
+          height: 80px;
+        }
+
+        img {
+          border-radius: 50% !important;
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: contain !important;
+        }
+      }
+    }
+
+    .author-main {
+      margin-bottom: size(32);
+    }
+
+    .author-name-position {
+      display: flex;
+      flex-direction: column;
+
+      .author-name {
+        font-weight: 700;
+        font-size: size(16);
+        line-height: 150%;
+      }
+
+      .author-position {
+        font-weight: 260;
+        font-size: size(16);
+        line-height: 150%;
+      }
+    }
+
+  }
+
+  .related-posts {
+    margin-top: size(80, 160);
+    .related-title {
+      margin-bottom: size(24);
+      text-align: center;
+      @include min-medium-screen {
+        margin-bottom: size(34);
+      }
+    }
+  }
+
+
+}

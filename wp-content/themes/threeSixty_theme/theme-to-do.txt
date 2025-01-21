@@ -1,0 +1,31 @@
+# Js Fix Container in header php && in scripts general
+
+# Fonts in style _font.scss && fonts in header
+
+# container paddings variables in _variable
+
+# font styling in site general
+
+# cta button && cta link styling in site general
+
+# swiper button(navigation) styling without absolute in site general
+
+# swiper pagination styling without absolute in site general
+
+# wysiwyg ur & ol in site general
+
+# colors in root && colors in variables
+
+# styling general wp-post-term in wp_general
+
+# styling wp-pagination in wp_general
+
+# collection card template styling
+
+# collection card template in template parts
+
+# image sizes in functions.php in custom_image_sizes function
+
+# change acf images btn fill image
+
+# change acf images btn outline image

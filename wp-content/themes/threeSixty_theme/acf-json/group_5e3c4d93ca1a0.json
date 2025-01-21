@@ -1,0 +1,207 @@
+{
+    "key": "group_5e3c4d93ca1a0",
+    "title": "Blocks General Settings (DO NOT DELETE)",
+    "fields": [
+        {
+            "key": "field_5e8482762bb57",
+            "label": "Block Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_62cad1818bd59",
+            "label": "Remove Container?",
+            "name": "remove_container",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_63a44b621bc73",
+            "label": "Remove Paddings?",
+            "name": "remove_paddings",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_638ba3012ac54",
+            "label": "Desktop Settings",
+            "name": "desktop_settings",
+            "aria-label": "",
+            "type": "section_styles",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "border_top": 0,
+            "border_right": 0,
+            "border_bottom": 0,
+            "border_left": 0,
+            "border_style": "solid",
+            "border_color": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "background_style": "default",
+            "background_color": "",
+            "background_position_1": "top",
+            "background_position_2": "left"
+        },
+        {
+            "key": "field_638ba31d2ac55",
+            "label": "Tablet Settings",
+            "name": "tablet_settings",
+            "aria-label": "",
+            "type": "section_styles",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "border_top": 0,
+            "border_right": 0,
+            "border_bottom": 0,
+            "border_left": 0,
+            "border_style": "solid",
+            "border_color": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "background_style": "default",
+            "background_color": "",
+            "background_position_1": "top",
+            "background_position_2": "left"
+        },
+        {
+            "key": "field_638ba3292ac56",
+            "label": "Mobile Settings",
+            "name": "mobile_settings",
+            "aria-label": "",
+            "type": "section_styles",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "border_top": 0,
+            "border_right": 0,
+            "border_bottom": 0,
+            "border_left": 0,
+            "border_style": "solid",
+            "border_color": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "background_style": "default",
+            "background_color": "",
+            "background_position_1": "top",
+            "background_position_2": "left"
+        },
+        {
+            "key": "field_606707aefedbd",
+            "label": "Close",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1729688386
+}

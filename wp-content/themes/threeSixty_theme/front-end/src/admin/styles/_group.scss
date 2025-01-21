@@ -1,0 +1,31 @@
+.wp-block-group {
+  border: 3px solid red;
+  padding: 20px 0 30px !important;
+
+  &:before {
+    content: 'Group';
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  &:hover {
+    border-color: green;
+  }
+
+  .wp-block {
+    max-width: 100% !important;
+  }
+
+  &.is-selected {
+    border-color: green;
+  }
+
+}

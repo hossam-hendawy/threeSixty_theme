@@ -1,0 +1,28 @@
+@use "sass:math";
+@use "../common/variables" as *;
+
+@function get-unit($value) {
+  @return str-slice($value * 0 + "", 2, -1);
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function line-height($font-size,$line-height:100%) {
+  @if type-of($line-height) == 'number' and unitless($line-height) {
+    @return #{calc(#{$line-height}* 100%)}
+  }
+  $unit: get-unit($line-height);
+  @if $unit == 'px' {
+    @return math.div(strip-unit($line-height), strip-unit($font-size)) * 100%;
+  } @else if $unit == 'em' {
+    @return #{calc(strip-unit($line-height) * 100%)};
+  } @else if $unit == '%' {
+    @return $line-height;
+  }
+}

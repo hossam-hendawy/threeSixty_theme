@@ -1,0 +1,177 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author HOSSAM
+.hero_block {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  @include media-screen-from600-to1024 {
+    padding-bottom: 29px;
+  }
+  @include min-medium-screen {
+    padding-bottom: 32px;
+  }
+
+  // region animation
+  .iris-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+
+      /* Define mask properties */
+      mask-image: radial-gradient(circle at center, transparent 35px, black 35px);
+      mask-size: cover;
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  // endregion animation
+
+  // region images
+  .hero-cover-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    filter: blur(0);
+
+    img, svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .site-logo {
+    height: auto;
+    margin-bottom: 0;
+    z-index: 2;
+  }
+
+  .hollywood-hero-background {
+    z-index: 1;
+  }
+
+  .hollywood-hero-foreground {
+    z-index: 4;
+  }
+
+  .hollywood-hero-background, .hollywood-hero-foreground {
+    transition: filter $duration;
+  }
+
+
+  .drone {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 137.33%;
+    aspect-ratio: 2.41;
+    z-index: 6;
+    @include min-medium-screen {
+      transform: translate(-50%, 0);
+      width: 111.33%;
+      top: 26.44%;
+    }
+    @include large-screen {
+      width: 89.06%;
+    }
+    @include x-large-screen {
+      width: 79.1666%;
+    }
+    @include xx-large-screen {
+      width: 59.375%;
+    }
+  }
+
+  &.blur {
+    .hollywood-hero-background, .hollywood-hero-foreground {
+      filter: blur(10px);
+    }
+  }
+
+  //  endregion
+
+  .full-container {
+    z-index: 6;
+  }
+
+  .hero-content-wrapper {
+    display: flex;
+    gap: 11px;
+    flex-direction: column;
+    @include min-media-screen-600 {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between
+    }
+  }
+
+  .serif-h1 {
+    margin-bottom: 37px;
+    max-width: 217px;
+    @include min-medium-screen {
+      max-width: 419px;
+      margin-bottom: 31px;
+    }
+  }
+
+  .scroll-text {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    @include media-screen-768 {
+      top: 95%;
+      left: 50%;
+      translate: -50% 50%;
+    }
+  }
+
+  .pulse-text {
+    color: $threeSixty_theme_off_white;
+    text-align: center;
+    opacity: 0;
+    animation: pulseTextBrightness 2s infinite alternate ease-in-out;
+
+  }
+
+  @keyframes pulseTextBrightness {
+    0%,12% {
+      opacity: 0;
+    }
+    88%, 100%{
+      opacity: 1;
+    }
+  }
+
+
+}

@@ -1,0 +1,55 @@
+.acf-image-select-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.acf-image-select.acf-custom-buttons .acf-radio-list li {
+  height: 100%;
+}
+
+.acf-image-select.acf-image-select-custom .acf-radio-list li img {
+  object-position: center;
+  padding: 0 5px;
+}
+
+.acf-image-select.acf-image-select-custom .acf-radio-list {
+  flex-wrap: nowrap;
+}
+
+.acf-image-select .acf-radio-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.acf-image-select .acf-radio-list li {
+  flex-basis: 33.33%;
+  width: 33.33%;
+}
+
+.acf-image-select .acf-radio-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+}
+
+.acf-image-select label input {
+  display: none;
+}
+
+.acf-image-select label p {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.acf-image-select label img {
+  border: solid 6px #ddd;
+}
+
+.acf-image-select label.selected img {
+  border: solid 6px green;
+}

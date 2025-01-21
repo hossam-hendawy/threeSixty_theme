@@ -1,0 +1,51 @@
+@use "variables" as *;
+@use "../mixins/mixins" as *;
+
+//region  General Post term styling
+.wp-post-term {
+
+}
+
+//endregion  General Post term styling
+
+// region paginate styling
+.wp-pagination {
+  display: flex;
+  align-items: center;
+  max-width: size(275);
+  justify-content: space-between;
+  @include marginX(auto);
+  margin-top: size(40);
+  @include large-screen {
+    margin-top: size(30);
+    max-width: size(356);
+  }
+
+  .page-numbers {
+    @include font(18px, 700, 21px, red);
+    transition: color $duration;
+    display: flex;
+
+    &:hover {
+      &:not(.dots) {
+        color: blue;
+      }
+    }
+
+    &.current {
+      color: blue;
+    }
+
+  }
+
+  .arrow-pagination {
+    @include square(size(33));
+  }
+
+  .prev, .next {
+    display: flex !important;
+  }
+}
+
+// endregion paginate styling
+

@@ -1,0 +1,41 @@
+// content width
+$content-max-width: 558;
+
+// media screen sizes
+$small-screen-max-width: 599.98px;
+$medium-screen-max-width: 1023.98px;
+$medium-screen-min-600: 600px;
+$medium-screen-min-768: 768px;
+$medium-screen-min-992: 992px;
+$medium-screen-min-width: 1024px;
+$large-screen-min-width: 1280px;
+$x-large-screen-min-width: 1440px;
+$xx-large-screen-min-width: 1920px;
+
+// color
+$threeSixty_theme_black: var(--wp--preset--color--black);
+$threeSixty_theme_white: var(--wp--preset--color--white);
+$threeSixty_theme_warm_red: var(--wp--preset--color--warm-red);
+$threeSixty_theme_off_white: var(--wp--preset--color--off-white);
+$threeSixty_theme_warm_black: var(--wp--preset--color--warm-black);
+$threeSixty_theme_gray: var(--wp--preset--color--gray);
+
+
+// fonts
+$montserrat: 'Montserrat';
+$hahmlet: 'Hahmlet';
+$TitlingGothicFB: 'TitlingGothicFB';
+
+//default duration
+$duration: 500ms;
+
+//override bootstrap variables
+$container-padding-sm: 24px;
+$container-padding-md: 32px;
+$container-padding-lg: 32px;
+
+
+// design screen sizes
+$design-width: 1440;
+$tablet-width: 992;
+$mobile-width: 600;

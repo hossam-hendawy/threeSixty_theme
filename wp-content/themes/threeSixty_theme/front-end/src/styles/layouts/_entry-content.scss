@@ -1,0 +1,59 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+
+.page-template-entry-content {
+  .entry-content-template-wrapper {
+    background: $threeSixty_theme_black;
+    @include paddingY(size(70));
+    @include min-medium-screen {
+      @include paddingY(size(90));
+    }
+    @include large-screen {
+      @include paddingY(size(200) , size(120));
+    }
+  }
+
+  .main-wrapper {
+    padding-left: size(5);
+    @include large-screen {
+      //@include paddingX(size(306), size(303));
+
+    }
+    .template-title {
+      color: $threeSixty_theme_white;
+      font-size: size(48, 72)!important;
+      line-height: size(80);
+      text-align: center;
+      margin-bottom: size(24, 72);
+      @include small-screen {
+        line-height: size(56);
+        text-align: unset;
+      }
+    }
+
+    .entry-content {
+      color: $threeSixty_theme_white;
+      padding-top: 0;
+
+      p {
+        margin-bottom: size(40) !important;
+        max-width: size(591);
+      }
+
+      h3 , h2 {
+
+        color: $threeSixty_theme_white;
+        margin-bottom: size(24) !important;
+      }
+      h3 {
+        max-width: size(591);
+      }
+    }
+  }
+
+
+
+
+}
+

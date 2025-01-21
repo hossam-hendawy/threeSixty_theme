@@ -1,0 +1,53 @@
+# ignore ssh
+
+ssh/*
+ssh
+
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/themes/threeSixty_theme
+wp-content/themes/mogfordprize
+
+
+# ignore these plugins
+wp-content/plugins/hello.php
+
+# ignore specific themes
+wp-content/themes/twentytwentythree*/
+
+# ignore wp-confing
+
+wp-config.php
+
+# ignore .htaccess
+
+.htaccess
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# theme files
+
+\.idea/
+
+helper_files/
+
+\.DS_Store
+
+wp-content/themes/threeSixty_theme/assets
+wp-content/themes/threeSixty_theme/front-end/package-lock.json
+
+wp-content/themes/threeSixty_theme/front-end/yarn-error.log
+wp-content/themes/threeSixty_theme/front-end/yarn.lock
