@@ -242,6 +242,18 @@ body {
   color: $threeSixty_theme_gray_500;
 }
 
+.gray-600 {
+  color: $threeSixty_theme_gray-600;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gab-20 {
+  gap: $gab-20;
+}
 
 .dodo {
   color: $threeSixty_theme_brand-600;
