@@ -329,9 +329,6 @@ $base-size: 10;
     padding: 13.5px 24.6px;
   }
 
-  &:hover {
-    background-color: $threeSixty_theme_gray-700;
-  }
 
   &.small-cta {
     font-size: 16px;
@@ -346,6 +343,11 @@ $base-size: 10;
     width: 20px;
     height: 21px;
   }
+
+  &:hover {
+    background-color: $threeSixty_theme_brand-600;
+  }
+
 }
 
 @mixin under-line {

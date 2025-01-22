@@ -53,6 +53,11 @@
           "name": "Gray-500"
         },
         {
+          "slug": "gray-300",
+          "color": "#D0D5DD",
+          "name": "Gray-300"
+        },
+        {
           "slug": "gray-700",
           "color": "#404968",
           "name": "Gray-700"
@@ -81,6 +86,11 @@
           "slug": "brand-600",
           "color": "#CA8504",
           "name": "Brand-600"
+        },
+        {
+          "slug": "tertiary-600",
+          "color": "#475467",
+          "name": "Tertiary-600"
         }
       ]
     },

@@ -40,22 +40,28 @@ $cta_button = get_field('cta_button');
           the_row();
           $member_image = get_sub_field('member_image');
           ?>
-            <?php if (!empty($member_image) && is_array($member_image)) { ?>
-              <picture class="membership-image">
-                <img src="<?= $member_image['url'] ?>" alt="<?= $member_image['alt'] ?>">
-              </picture>
-            <?php } ?>
+          <?php if (!empty($member_image) && is_array($member_image)) { ?>
+            <picture class="membership-image">
+              <img src="<?= $member_image['url'] ?>" alt="<?= $member_image['alt'] ?>">
+            </picture>
+          <?php } ?>
         <?php } ?>
       </div>
     <?php } ?>
     <?php if ($membership_title) { ?>
-    <h3 class="text-xl semi-bold text-center membership-title"><?= $membership_title ?></h3>
+      <h3 class="text-xl semi-bold text-center membership-title"><?= $membership_title ?></h3>
     <?php } ?>
     <?php if ($membership_info) { ?>
-    <div class="membership-info text-lg text-center"><?= $membership_info ?></div>
+      <div class="membership-info text-lg text-center"><?= $membership_info ?></div>
     <?php } ?>
     <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
-      <a class="theme-cta-button" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
+      <a class="theme-cta-button" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
+        <?= $cta_button['title'] ?>
+        <svg aria-hidden="true" width="18" height="21" viewBox="0 0 18 21" fill="none">
+          <path d="M11.878 20.23H0.38L6.156 10.22L11.878 20.23Z" fill="#9AA4B2"/>
+          <path d="M17.621 10.231L11.881 0.23H0.38L6.155 10.22L11.878 20.23L17.621 10.231Z" fill="#F9F9FB"/>
+        </svg>
+      </a>
     <?php } ?>
   </div>
 </div>

@@ -1,6 +1,6 @@
 {
     "key": "group_fdbec56380e3e9",
-    "title": "Join Us Block",
+    "title": "Get In Touch Block",
     "fields": [
         {
             "key": "field_fdbec56380a712",
@@ -60,7 +60,7 @@
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
-                    "max_width": "",
+                    "max_width": 3,
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
@@ -144,5 +144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737507598
+    "modified": 1737569975
 }

@@ -94,10 +94,13 @@ body {
 
 .text-lg p, .text-lg {
   font-family: $inter;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 155%;
   font-style: normal;
+  @include large-screen  {
+    font-size: 18px;
+  }
 }
 
 .text-xl p, .text-xl {
