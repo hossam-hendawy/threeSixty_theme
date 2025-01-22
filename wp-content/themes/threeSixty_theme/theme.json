@@ -18,6 +18,11 @@
           "name": "White"
         },
         {
+          "slug": "Off-white",
+          "color": "#E5E7EB",
+          "name": "Off White"
+        },
+        {
           "slug": "warm-red",
           "color": "#F84E35",
           "name": "Warm Red"

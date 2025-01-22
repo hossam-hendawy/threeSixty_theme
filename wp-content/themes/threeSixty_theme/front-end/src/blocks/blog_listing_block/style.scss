@@ -18,10 +18,12 @@
       grid-template-columns: repeat(2, 1fr);
       margin-bottom: 85px;
     }
-
-    background-color: coral;
   }
 
-
+  .bottom-content-wrapper {
+    padding-block: 84px;
+    border-top: 1px solid $threeSixty_theme_off_white;
+    border-bottom: 1px solid $threeSixty_theme_off_white;
+  }
 }
 

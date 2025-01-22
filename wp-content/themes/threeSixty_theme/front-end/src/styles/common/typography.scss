@@ -293,6 +293,10 @@ body {
 
     .post-title {
       color: $threeSixty_theme_gray-900;
+      transition: color $duration;
+      &:hover{
+        color: $post_title_hover;
+      }
     }
   }
 
@@ -336,7 +340,7 @@ body {
       width: 100%;
       position: relative;
       @include media-screen-768 {
-        width: 47.69%;
+        width: 49.50%;
       }
 
       .post-image {
