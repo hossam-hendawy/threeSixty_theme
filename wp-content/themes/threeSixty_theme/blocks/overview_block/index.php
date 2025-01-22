@@ -35,7 +35,7 @@ $description = get_field('description');
 <div class="container">
   <div class="overview-content gab-20 flex-col">
     <?php if ($sub_title): ?>
-      <h3 class="text-xl gold center-text"><?= $sub_title ?></h3>
+      <h2 class="text-xl gold center-text"><?= $sub_title ?></h2>
     <?php endif; ?>
     <?php if ($title): ?>
       <h3 class="d-lg-h3 gray-950 bold center-text overview-title"><?= $title ?></h3>

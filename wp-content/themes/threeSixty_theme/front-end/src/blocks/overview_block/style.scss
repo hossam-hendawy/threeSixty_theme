@@ -5,19 +5,21 @@
 .overview_block {
   @include paddingY(65px);
   @include min-medium-screen {
-    @include paddingY(128px,109px)
+    @include paddingY(128px, 109px)
   }
+
   .overview-content {
     .overview-title {
       color: $threeSixty_theme_gray-950;
     }
+
     .overview-description {
       @include min-medium-screen {
         @include marginX(auto);
         max-width: 1080px;
       }
       @include large-screen {
-        max-width: 926px;
+        max-width: 883px;
       }
     }
   }

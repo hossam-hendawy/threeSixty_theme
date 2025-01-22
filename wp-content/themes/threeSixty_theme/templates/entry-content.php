@@ -7,7 +7,6 @@ get_header();
 ?>
 <?php while (have_posts()) : the_post(); ?>
   <div class="container">
-
     <div class="aaaa flex-col gab-20">
       <div class="text-xl regular gold text-center">Expert Perspectives on
         Digital
@@ -28,7 +27,6 @@ get_header();
         AI-driven marketing and cybersecurity, we’ve got you covered.
       </div>
     </div>
-
     <br>
     <br>
     <br>
@@ -37,7 +35,12 @@ get_header();
     <br>
     <br>
     <br>
-    <a href="#" class="theme-cta-button ">Get in touch</a>
+    <a href="#" class="theme-cta-button ">Get in touch
+      <svg aria-hidden="true" width="18" height="21" viewBox="0 0 18 21" fill="none">
+        <path d="M11.878 20.23H0.38L6.156 10.22L11.878 20.23Z" fill="#9AA4B2"/>
+        <path d="M17.621 10.231L11.881 0.23H0.38L6.155 10.22L11.878 20.23L17.621 10.231Z" fill="#F9F9FB"/>
+      </svg>
+    </a>
     <br>
     <br>
     <br>
@@ -46,7 +49,6 @@ get_header();
     <br>
     <br>
   </div>
-
   <?php the_content(); ?>
 <?php endwhile; ?>
 <?php get_footer();
