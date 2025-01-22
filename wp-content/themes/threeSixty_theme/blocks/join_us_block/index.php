@@ -52,7 +52,7 @@ $cta_button = get_field('cta_button');
     <h3 class="text-xl semi-bold text-center membership-title"><?= $membership_title ?></h3>
     <?php } ?>
     <?php if ($membership_info) { ?>
-    <div class="membership-info text-xs text-center"><?= $membership_info ?></div>
+    <div class="membership-info text-lg text-center"><?= $membership_info ?></div>
     <?php } ?>
     <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
       <a class="theme-cta-button" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>

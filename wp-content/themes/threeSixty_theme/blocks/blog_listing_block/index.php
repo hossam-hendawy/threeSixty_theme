@@ -32,12 +32,14 @@ $description = get_field('description');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="blog-cards">
-    <div class="blog-card">
-      <picture class="blog-image aspect-ratio">
-        <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
-      </picture>
-      <div class="blog-content flex-col">
+  <div class="post-cards">
+    <div class="post-card">
+      <div class="post-image-card">
+        <picture class="post-image aspect-ratio">
+          <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+        </picture>
+      </div>
+      <div class="post-content flex-col">
         <h3 class="text-sm semi-bold job-name">Design</h3>
         <h4 class="d-sm-h5 semi-bold job-title">The Future of Web Presence: Trends for 2024 and Beyond</h4>
         <div class="text-md regular gray-600">How do you create compelling presentations that wow your colleagues and impress your managers?How do you create compelling presentations that wow your colleagues and impress your managers ...</div>
@@ -49,6 +51,69 @@ $description = get_field('description');
             <h5 class="text-sm semi-bold author-name">Dr. Muneer Hamed</h5>
           <h6 class="text-sm gray-600 author-jop">Senior Marketing Consultant</h6>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="post-image-card">
+        <picture class="post-image aspect-ratio">
+          <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+        </picture>
+      </div>
+      <div class="post-content flex-col">
+        <h3 class="text-sm semi-bold job-name">Design</h3>
+        <h4 class="d-sm-h5 semi-bold job-title">The Future of Web Presence: Trends for 2024 and Beyond</h4>
+        <div class="text-md regular gray-600">How do you create compelling presentations that wow your colleagues and impress your managers?How do you create compelling presentations that wow your colleagues and impress your managers ...</div>
+        <div class="about-author">
+          <picture class="image-author">
+            <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+          </picture>
+          <div class="author-info">
+            <h5 class="text-sm semi-bold author-name">Dr. Muneer Hamed</h5>
+            <h6 class="text-sm gray-600 author-jop">Senior Marketing Consultant</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="post-card horizontal-card">
+    <div class="post-image-card">
+      <picture class="post-image aspect-ratio">
+        <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+      </picture>
+    </div>
+    <div class="post-content flex-col">
+      <h3 class="text-sm semi-bold job-name">Design</h3>
+      <h4 class="d-sm-h5 semi-bold job-title">The Future of Web Presence: Trends for 2024 and Beyond</h4>
+      <div class="text-md regular gray-600">How do you create compelling presentations that wow your colleagues and impress your managers?How do you create compelling presentations that wow your colleagues and impress your managers ...</div>
+      <div class="about-author">
+        <picture class="image-author">
+          <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+        </picture>
+        <div class="author-info">
+          <h5 class="text-sm semi-bold author-name">Dr. Muneer Hamed</h5>
+          <h6 class="text-sm gray-600 author-jop">Senior Marketing Consultant</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="post-card horizontal-card">
+    <div class="post-image-card">
+      <picture class="post-image aspect-ratio">
+        <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+      </picture>
+    </div>
+    <div class="post-content flex-col">
+      <h3 class="text-sm semi-bold job-name">Design</h3>
+      <h4 class="d-sm-h5 semi-bold job-title">The Future of Web Presence: Trends for 2024 and Beyond</h4>
+      <div class="text-md regular gray-600">How do you create compelling presentations that wow your colleagues and impress your managers?How do you create compelling presentations that wow your colleagues and impress your managers ...</div>
+      <div class="about-author">
+        <picture class="image-author">
+          <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+        </picture>
+        <div class="author-info">
+          <h5 class="text-sm semi-bold author-name">Dr. Muneer Hamed</h5>
+          <h6 class="text-sm gray-600 author-jop">Senior Marketing Consultant</h6>
         </div>
       </div>
     </div>
