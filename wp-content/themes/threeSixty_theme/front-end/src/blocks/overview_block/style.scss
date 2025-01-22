@@ -14,8 +14,10 @@
     }
 
     .overview-description {
+      max-width: 703px;
+      @include marginX(auto);
+
       @include min-medium-screen {
-        @include marginX(auto);
         max-width: 1080px;
       }
       @include large-screen {

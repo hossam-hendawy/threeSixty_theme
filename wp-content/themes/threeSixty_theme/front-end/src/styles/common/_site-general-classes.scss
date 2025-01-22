@@ -27,9 +27,6 @@ section {
   @include marginX(auto);
   @include marginY(0);
   padding-inline: 24px;
-  @include max-medium-screen {
-    max-width: 900px;
-  }
   @include min-medium-screen {
     max-width: 1263px;
   }
@@ -352,7 +349,7 @@ ol.theme-unordered-list-element {
   .post-content {
     gap: 8px;
     margin-top: 30px;
-    @include media-screen-768 {
+    @include min-medium-screen {
       margin-top: 50px;
     }
 
@@ -391,9 +388,11 @@ ol.theme-unordered-list-element {
   &.horizontal-card {
     display: flex;
     align-items: center;
-    gap: 56px;
+    gap: 40px;
     flex-direction: column;
-
+    @include min-medium-screen {
+      gap: 56px;
+    }
     &:not(:last-child) {
       margin-bottom: 45px;
     }

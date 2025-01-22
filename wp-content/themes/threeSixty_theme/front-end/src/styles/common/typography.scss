@@ -69,11 +69,11 @@ body {
 
 .d-sm-h5, .d-sm-h5 p {
   font-family: $inter;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 110%;
   font-style: normal;
-  @include min-medium-screen {
+  @include large-screen {
     font-size: 30px;
     line-height: 126.667%;
   }
@@ -99,7 +99,6 @@ body {
   line-height: 28px;
   font-style: normal;
 }
-
 
 .text-xl p, .text-xl {
   font-family: $inter;
