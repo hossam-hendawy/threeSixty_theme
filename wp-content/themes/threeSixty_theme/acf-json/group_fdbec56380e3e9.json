@@ -36,9 +36,9 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 3,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Add Image",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -60,7 +60,7 @@
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
-                    "max_width": 3,
+                    "max_width": "",
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
@@ -131,7 +131,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/join-us-block"
+                "value": "acf\/get-in-touch-block"
             }
         ]
     ],
@@ -144,5 +144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737569975
+    "modified": 1737570466
 }

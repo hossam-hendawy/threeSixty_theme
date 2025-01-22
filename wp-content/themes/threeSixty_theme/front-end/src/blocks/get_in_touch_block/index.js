@@ -2,11 +2,11 @@ import './style.scss';
 import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
 /**
- * @author DELL
+ * @author HOSSAM
  * @param block {HTMLElement}
  * @returns {Promise<void>}
  */
-const joinUsBlock = async (block) => {
+const getInTouchBlock = async (block) => {
 
   // add block code here
 // testing the new hidden value 
@@ -15,5 +15,5 @@ const joinUsBlock = async (block) => {
     imageLazyLoading(block);
 };
 
-export default joinUsBlock;
+export default getInTouchBlock;
 

@@ -1,8 +1,8 @@
 @use "../../styles/common/variables" as *;
 @use "../../styles/mixins/mixins" as *;
 
-// @author DELL
-.join_us_block {
+// @author HOSSAM
+.get_in_touch_block {
   position: relative;
   @include paddingY(65px);
   @include media-screen-992 {

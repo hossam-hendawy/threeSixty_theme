@@ -1,8 +1,8 @@
 <?php
-// @author DELL
+// @author HOSSAM
 // Create id attribute allowing for custom "anchor" value.
 $id = '';
-$className = $dataClass = 'join_us_block';
+$className = $dataClass = 'get_in_touch_block';
 if (isset($block)) {
   $id = 'block_' . uniqid();
   if (!empty($block['anchor'])) {
@@ -18,7 +18,7 @@ if (isset($block)) {
   }
   if (get_field('is_screenshot')) :
     /* Render screenshot for example */
-    echo '<img width="100%" height="100%" src="' . get_template_directory_uri() . '/blocks/join_us_block/screenshot.png" >';
+    echo '<img width="100%" height="100%" src="' . get_template_directory_uri() . '/blocks/get_in_touch_block/screenshot.png" >';
 
     return;
   endif;
@@ -66,6 +66,3 @@ $cta_button = get_field('cta_button');
   </div>
 </div>
 </section>
-
-
-<!-- endregion threeSixty_theme's Block -->
