@@ -8,6 +8,7 @@ html {
   --thumbBG: $threeSixty_theme_black;
   scrollbar-width: thin;
   scrollbar-color: $threeSixty_theme_black var(--scrollbarBG);
+  margin-top: 0 !important;
 }
 
 body {
