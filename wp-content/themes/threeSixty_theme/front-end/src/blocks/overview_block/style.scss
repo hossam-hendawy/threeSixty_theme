@@ -1,0 +1,21 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.overview_block {
+  @include paddingY(65px);
+  @include min-medium-screen {
+    @include paddingY(128px,109px)
+  }
+  .overview-content {
+    .description {
+      @include min-medium-screen {
+        @include marginX(auto);
+        max-width: 1080px;
+      }
+      @include large-screen {
+        max-width: 926px;
+      }
+    }
+  }
+}

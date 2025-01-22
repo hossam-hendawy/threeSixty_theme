@@ -1,0 +1,51 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.join_us_block {
+  @include paddingY(65px);
+  @include min-medium-screen {
+    @include paddingY(128px);
+  }
+  .join-us-card {
+    border: 1px solid red;
+    padding: 60px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    @include media-screen-600 {
+      max-width: 650px;
+    }
+    @include min-medium-screen {
+      max-width: 768px;
+    }
+    .membership-images {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+      .membership-image {
+        width: 48px;
+        height: 48px;
+        margin-left: -10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        &:nth-child(2) {
+          scale: 1.17;
+          margin-top: -10px;
+        }
+      }
+    }
+    .membership-title {
+      margin-bottom: 8px;
+      color: #101828;
+    }
+    .membership-info {
+      margin-bottom: 32px;
+    }
+  }
+}
