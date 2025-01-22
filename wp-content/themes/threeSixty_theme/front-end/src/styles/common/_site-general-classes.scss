@@ -318,220 +318,23 @@ ol.theme-unordered-list-element {
   align-items: baseline;
 }
 
-.flex-end {
-  align-items: flex-end;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.off-white-color {
-  color: $threeSixty_theme_off_white;
-}
-
-.page-link {
-  position: relative;
+.cta-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  color: $threeSixty_theme_off_white;
-  border: 1px solid $threeSixty_theme_off_white;
-  padding: 25px;
-  height: 202px;
-  transition: border-color $duration;
-  @include min-medium-screen {
-    height: 418px;
-  }
+  gap: 6px;
+  cursor: pointer;
+  transition: color $duration;
 
-  span {
-    transition: opacity $duration;
-  }
+  svg {
+    width: 20px;
+    height: 20px;
 
-  .arrow {
-    position: absolute;
-    top: 6px;
-    right: 7px;
-    width: 32px;
-    height: 32px;
-    @include min-medium-screen {
-      top: 16px;
-      right: 16px;
+    path {
+      stroke: currentColor;
     }
   }
 
-  .symbol {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 89.90%;
-    height: 168px;
-    transition: opacity $duration;
-    opacity: 0;
-    @include min-medium-screen {
-      width: 87.5%;
-      height: 336px;
-    }
-  }
-
-  &:not(.white-symbol) {
-    &:hover {
-
-      span {
-        opacity: 0;
-      }
-
-      .arrow {
-        path {
-          fill: $threeSixty_theme_warm_red;
-        }
-      }
-
-      border-color: $threeSixty_theme_warm_red;
-
-      .symbol {
-        opacity: 1;
-      }
-    }
-  }
-
-  &.white-symbol {
-    color: $threeSixty_theme_white;
-    border: 1px solid $threeSixty_theme_off_white;
-
-    &:hover {
-      .symbol {
-        opacity: 1;
-      }
-
-      span {
-        opacity: 0;
-      }
-    }
-  }
-}
-
-.general-left-content {
-  margin-bottom: 40px;
-  @include min-medium-screen {
-    margin-bottom: 0;
-  }
-
-  .label {
-    margin-bottom: 16px;
-  }
-
-  .description {
-    color: $threeSixty_theme_off_white;
-    margin-bottom: 32px;
-    max-width: 319px;
-
-    @include min-medium-screen {
-      max-width: 100%;
-    }
-  }
-}
-
-.services_block, .advisory_board_block {
-
-  .custom-container {
-    @include max-medium-screen {
-      max-width: 100%;
-      padding-left: 24px;
-      margin-inline: auto;
-    }
-    @media (min-width: 600px) and (max-width: 650px) {
-      padding-left: 24px !important;
-    }
-    @include media-screen-from600-to1024 {
-      padding-left: calc((100vw - 702px) / 2 + 57px);
-    }
-    @include min-medium-screen {
-      padding-inline: 0;
-      padding-left: calc((100vw - 1080px) / 2 + 57px);
-      margin-inline: auto 0;
-    }
-  }
-
-  .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    @include min-medium-screen {
-      flex-direction: row;
-    }
-  }
-
-  .right-content {
-    @include min-medium-screen {
-      @include flexBasis(669px);
-    }
-    @include large-screen {
-      @include flexBasis(791px);
-    }
-    @include x-large-screen {
-      @include flexBasis(872px);
-    }
-
-    @include xx-large-screen {
-      @include flexBasis(1114px);
-    }
-  }
-
-  .services-cards {
-    padding-right: 24px;
-
-    .card {
-      border-radius: 12px;
-      background: #302A30;
-      transition: background-color $duration;
-      min-height: 304px;
-      height: auto;
-      z-index: 2;
-      overflow: hidden;
-
-      &:hover {
-        background-color: $threeSixty_theme_warm_red;
-
-        .card-description {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  .swiper-slide {
-    min-height: 304px;
-    width: 304px;
-  }
-
-  .swiper-navigations {
-    @include small-screen {
-      padding-right: 4px;
-    }
-    @include min-medium-screen {
-      padding-right: 32px;
-    }
-  }
-
-}
-
-.services_hero_block, .contact_us_hero_block, .page_not_found, .privacy-policy-logo {
-
-  .site-logo {
-    position: relative;
-    top: 0;
-    z-index: 2;
-    pointer-events: auto;
-    display: flex;
-  }
-}
-
-.privacy-policy, .page-template {
-  padding-top: 37.5px;
-  @include min-medium-screen {
-    padding-top: 32px;
+  &:hover {
+    color: $threeSixty_theme_brand-600;
   }
 }

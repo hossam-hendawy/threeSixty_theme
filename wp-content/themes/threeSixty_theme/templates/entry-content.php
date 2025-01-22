@@ -48,6 +48,15 @@ get_header();
     <br>
     <br>
     <br>
+
+    <div class="cta-link text-sm gray-600 semi-bold">
+      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" aria-hidden="true" class="arrow">
+        <path d="M15.8337 10.2297H4.16699M4.16699 10.2297L10.0003 16.0631M4.16699 10.2297L10.0003 4.3964" stroke="#4B5565" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Previous
+    </div>
+
+
   </div>
   <?php the_content(); ?>
 <?php endwhile; ?>

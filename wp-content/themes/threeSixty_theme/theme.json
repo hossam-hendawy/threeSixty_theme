@@ -18,11 +18,6 @@
           "name": "White"
         },
         {
-          "slug": "Off-white",
-          "color": "#E5E7EB",
-          "name": "Off White"
-        },
-        {
           "slug": "warm-red",
           "color": "#F84E35",
           "name": "Warm Red"
@@ -41,6 +36,11 @@
           "slug": "gray",
           "color": "#302A30",
           "name": "Gray"
+        },
+        {
+          "slug": "gray-100",
+          "color": "#EEF2F6",
+          "name": "Gray-100"
         },
         {
           "slug": "gold",

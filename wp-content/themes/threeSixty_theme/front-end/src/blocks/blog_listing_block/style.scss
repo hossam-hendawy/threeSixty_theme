@@ -22,8 +22,39 @@
 
   .bottom-content-wrapper {
     padding-block: 84px;
-    border-top: 1px solid $threeSixty_theme_off_white;
-    border-bottom: 1px solid $threeSixty_theme_off_white;
+    border-top: 1px solid $threeSixty_theme_gray-100;
+    border-bottom: 1px solid $threeSixty_theme_gray-100;
+  }
+
+  .controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+
+    .numbers {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      .number {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        align-self: stretch;
+        transition: background-color $duration;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover, &.active {
+          background-color: $threeSixty_theme_gray-100;
+        }
+      }
+    }
   }
 }
 
