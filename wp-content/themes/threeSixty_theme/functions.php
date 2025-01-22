@@ -175,6 +175,38 @@ include 'wp-general/global-variables.php';
 
 // endregion wp general
 
+function threeSixty_theme_breadcrumbs() {
+  global $current_language;
+
+  $home_label = $current_language === 'ar' ? 'الرئيسية' : 'Home';
+
+  // Start the breadcrumb with a link to the home page
+  echo '<nav class="site-breadcrumb uppercase-text">';
+  echo '<a href="' . esc_url(home_url('/')) . '">' . esc_html($home_label) . '</a>';
+
+  // Add the separator
+  echo ' / ';
+
+  if (is_singular()) {
+    // Display the current page title
+    echo '<span>' . esc_html(get_the_title()) . '</span>';
+  } elseif (is_category() || is_tag() || is_tax()) {
+    // Display the term name for categories, tags, and custom taxonomies
+    echo '<span>' . esc_html(single_term_title('', false)) . '</span>';
+  } elseif (is_post_type_archive()) {
+    // Display the post type archive title
+    echo '<span>' . esc_html(post_type_archive_title('', false)) . '</span>';
+  } elseif (is_search()) {
+    // Display the search query
+    echo '<span>' . esc_html__('Search Results for: ', 'twentytwentyone') . esc_html(get_search_query()) . '</span>';
+  } elseif (is_404()) {
+    $not_found_label = $current_language === 'ar' ? '404 لم يتم العثور على الصفحة' : '404 Not Found';
+    echo '<span>' . esc_html($not_found_label) . '</span>';
+  }
+
+  echo '</nav>';
+}
+
 // region plugins adjustments
 
 include 'plugins-adjustments/gravity-from.php';
