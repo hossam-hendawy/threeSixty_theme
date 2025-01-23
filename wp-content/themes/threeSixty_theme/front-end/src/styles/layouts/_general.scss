@@ -8,3 +8,46 @@
 .template-title {
   margin-bottom: size(30);
 }
+.blog-content {
+  gap: 24px;
+  @include min-medium-screen {
+    max-width: 900px !important;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    .button {
+      padding: 2px 10px;
+      border-radius: 4px;
+      &.yellow {
+        background-color: #FEFBE8;
+        color: #A15C07;
+        border: 1px solid  #FDE172;
+      }
+      &.Purple {
+        background-color: #F5F3FF;
+        color: #6938EF;
+        border: 1px solid  #DDD6FE;
+      }
+      &.Pink {
+        background-color: #FDF2FA;
+        color: #C11574;
+        border: 1px solid  #FCCEEE;
+      }
+    }
+  }
+  .post-title {
+    color: $threeSixty_theme_gray-950;
+  }
+  .feature-image {
+    margin-top: 24px;
+    padding-top: 60%;
+    img {
+      border-radius: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}

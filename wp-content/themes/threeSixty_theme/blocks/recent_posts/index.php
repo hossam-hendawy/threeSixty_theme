@@ -32,9 +32,9 @@ $description = get_field('description');
 $programmatic_or_manual = get_field("programmatic_or_manual");
 if ($programmatic_or_manual === 'programmatic') {
   $query_options = get_field("query_options") ?: [];
-  $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : 5;
-  if ($number_of_posts > 5) {
-    $number_of_posts = 5;
+  $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : 3;
+  if ($number_of_posts > 3) {
+    $number_of_posts = 3;
   }
   $order = isset($query_options['order']) && in_array($query_options['order'], ['asc', 'desc']) ? $query_options['order'] : 'DESC';
   $args = [
