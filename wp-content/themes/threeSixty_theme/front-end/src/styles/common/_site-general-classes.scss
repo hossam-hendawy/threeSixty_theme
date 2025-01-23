@@ -200,19 +200,20 @@ ol.theme-unordered-list-element {
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
-
+  @include marginX(auto);
+  width: 144px;
+  gap: 32px;
   @include min-medium-screen {
-    margin-top: 24px;
+    margin-top: 80px;
   }
 }
 
 .swiper-navigation {
   z-index: 3;
   cursor: pointer;
-  width: 40px;
+  @include font-size(45px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #302A30;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,16 +221,18 @@ ol.theme-unordered-list-element {
   opacity: 1;
 
   svg {
-    width: size(16);
-    height: size(16);
+    width: size(56);
+    height: size(56);
+    path {
+      stroke: #475467;
+    }
   }
 
   &:hover {
-    background-color: $threeSixty_theme_off_white;
 
     svg {
       path {
-        fill: $threeSixty_theme_warm_black;
+        stroke: #D0D5DD;
       }
     }
   }
