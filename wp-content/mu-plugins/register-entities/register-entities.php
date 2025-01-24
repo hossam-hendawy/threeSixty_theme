@@ -16,6 +16,10 @@ $entities = [
     'Faqs',
     ];
 
+$entities = [
+    'Testimonials',
+];
+
 array_map(function ($entityName) {
   require dirname(__FILE__) . '/entities/' . $entityName . '.php';
 }, $entities);

@@ -1,9 +1,9 @@
 {
-    "key": "group_aa0c7e69e5d857",
-    "title": "Recent Posts",
+    "key": "group_ed6ea42c0fbc7d",
+    "title": "Testimonials Block",
     "fields": [
         {
-            "key": "field_aa0c7e69e5f1ed",
+            "key": "field_ed6ea42c0fdb23",
             "label": "Block Content",
             "name": "",
             "aria-label": "",
@@ -20,7 +20,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_6791cd2aa4749",
+            "key": "field_67939ff345ee3",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -40,23 +40,7 @@
             "append": ""
         },
         {
-            "key": "field_6791cd35a474a",
-            "label": "Cta Button",
-            "name": "cta_button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_6791cd68a474b",
+            "key": "field_67939ffc45ee4",
             "label": "Description",
             "name": "description",
             "aria-label": "",
@@ -76,7 +60,7 @@
             "delay": 0
         },
         {
-            "key": "field_679187841d224",
+            "key": "field_67939f6abacd9",
             "label": "Programmatic OR Manual",
             "name": "programmatic_or_manual",
             "aria-label": "",
@@ -85,7 +69,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "52",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -97,13 +81,13 @@
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "layout": "horizontal",
+            "layout": "vertical",
             "save_other_choice": 0
         },
         {
-            "key": "field_679187b01d225",
-            "label": "Recent Card",
-            "name": "recent_card",
+            "key": "field_67939f7cbacda",
+            "label": "Testimonial Card",
+            "name": "testimonial_card",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -111,7 +95,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_679187841d224",
+                        "field": "field_67939f6abacd9",
                         "operator": "==",
                         "value": "manual"
                     }
@@ -123,7 +107,7 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "testimonials"
             ],
             "taxonomy": "",
             "filters": [
@@ -135,7 +119,7 @@
             "elements": ""
         },
         {
-            "key": "field_679187ea1d226",
+            "key": "field_67939fb5bacdb",
             "label": "Query Options",
             "name": "query_options",
             "aria-label": "",
@@ -145,7 +129,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_679187841d224",
+                        "field": "field_67939f6abacd9",
                         "operator": "==",
                         "value": "programmatic"
                     }
@@ -159,7 +143,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_679188191d227",
+                    "key": "field_67939fcabacdc",
                     "label": "Number Of Posts",
                     "name": "number_of_posts",
                     "aria-label": "",
@@ -172,7 +156,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 3,
+                    "default_value": "",
                     "min": "",
                     "max": "",
                     "placeholder": "",
@@ -181,7 +165,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_679188261d228",
+                    "key": "field_67939fe2bacdd",
                     "label": "Order",
                     "name": "order",
                     "aria-label": "",
@@ -213,7 +197,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/recent-posts"
+                "value": "acf\/testimonials-block"
             }
         ]
     ],
@@ -226,5 +210,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737728292
+    "modified": 1737728320
 }

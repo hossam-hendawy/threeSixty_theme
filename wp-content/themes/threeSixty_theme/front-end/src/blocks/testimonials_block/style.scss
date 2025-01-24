@@ -1,0 +1,37 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+@import "swiper/css";
+
+// @author DELL
+.testimonials_block {
+  background: linear-gradient(270deg, #E4E7EC 0%, #FCFDFE 100%);
+  padding-block: 128px;
+  .cards-wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 112px;
+    .testimonials-swiper {
+      .testimonial-card {
+        padding: 62px 64px;
+        background-color: red;
+        .svg-quote {
+          width: 46px;
+          height: 42px;
+          margin-bottom: 24px;
+        }
+        .author-info {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-top: 34px;
+          .author-image {
+            @include square(64px);
+            img {
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
