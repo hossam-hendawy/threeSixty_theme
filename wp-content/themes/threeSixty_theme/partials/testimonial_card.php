@@ -9,17 +9,6 @@ $job_title = get_field('job_title', $post_id);
 $image = get_field('image', $post_id);
 ?>
 <div class="swiper-slide testimonial-card">
-  <svg class="svg-quote" width="64" height="42" viewBox="0 0 64 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_1_10301)">
-      <path d="M64 0.199951H47.986L32.7086 15.6983V41.7999H58.4191V15.6983H48.7226L64 0.199951Z" fill="#D0D5DD"/>
-      <path d="M15.2774 0.199951L0 15.6983V41.7999H25.7025V15.6983H16.014L31.2914 0.199951H15.2774Z" fill="#D0D5DD"/>
-    </g>
-    <defs>
-      <clipPath id="clip0_1_10301">
-        <rect width="64" height="41.6" fill="white" transform="translate(0 0.199951)"/>
-      </clipPath>
-    </defs>
-  </svg>
   <?php if ($comment): ?>
     <div class="comment text-xl gray-500 medium"><?= $comment ?></div>
   <?php endif; ?>
