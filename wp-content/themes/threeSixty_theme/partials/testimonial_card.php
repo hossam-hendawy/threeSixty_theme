@@ -7,7 +7,6 @@ $comment = get_field('comment', $post_id);
 $name = get_field('name', $post_id);
 $job_title = get_field('job_title', $post_id);
 $image = get_field('image', $post_id);
-
 ?>
 <div class="swiper-slide testimonial-card">
   <svg class="svg-quote" width="64" height="42" viewBox="0 0 64 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +21,7 @@ $image = get_field('image', $post_id);
     </defs>
   </svg>
   <?php if ($comment): ?>
-    <div class="title text-xl gray-500 medium"><?= $comment ?></div>
+    <div class="comment text-xl gray-500 medium"><?= $comment ?></div>
   <?php endif; ?>
   <div class="author-info">
     <?php if (!empty($image) && is_array($image)) { ?>
@@ -35,7 +34,7 @@ $image = get_field('image', $post_id);
       <div class="name text-lg semi-bold"><?= $name ?></div>
     <?php endif; ?>
     <?php if ($job_title): ?>
-      <div class="jop-title captions regular   text-md"><?= $job_title ?></div>
+      <div class="jop-title captions regular text-md"><?= $job_title ?></div>
     <?php endif; ?>
     </div>
   </div>

@@ -9,15 +9,45 @@
   .cards-wrapper {
     display: flex;
     align-items: center;
-    padding-left: 112px;
+    flex-direction: column;
+    padding-left: 24px;
+    @include large-screen {
+      padding-left: 112px;
+      flex-direction: row;
+    }
+    .left-card {
+      max-width: 384px;
+      .title {
+        color: $threeSixty_theme_brand-600;
+        margin-bottom: 16px;
+      }
+      .description {
+        color: $threeSixty_theme_gray-950;
+        p {
+          font-weight: 700;
+        }
+      }
+      .testimonial-navigations {
+        margin: 30px 0 0 0;
+        //display: none;
+        //@include large-screen {
+        //  display: flex;
+        //}
+      }
+    }
     .testimonials-swiper {
       .testimonial-card {
-        padding: 62px 64px;
+        padding: 60px 64px;
         background-color: red;
+        box-shadow: 0 32px 64px -12px  rgba(16, 24, 40, 0.14);
+        border-radius: 8px;
         .svg-quote {
-          width: 46px;
+          width: 64px;
           height: 42px;
           margin-bottom: 24px;
+        }
+        .comment {
+          max-width: 285px;
         }
         .author-info {
           display: flex;
@@ -28,6 +58,11 @@
             @include square(64px);
             img {
               border-radius: 50%;
+            }
+          }
+          .about-author {
+            .name {
+              margin-bottom: 2px;
             }
           }
         }

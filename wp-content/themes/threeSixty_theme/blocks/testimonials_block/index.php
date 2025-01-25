@@ -31,9 +31,9 @@ $description = get_field('description');
 $programmatic_or_manual = get_field("programmatic_or_manual");
 if ($programmatic_or_manual === 'programmatic') {
   $query_options = get_field("query_options") ?: [];
-  $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : 5;
-  if ($number_of_posts > 5) {
-    $number_of_posts = 5;
+  $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : 3;
+  if ($number_of_posts > 3) {
+    $number_of_posts = 3;
   }
   $order = isset($query_options['order']) && in_array($query_options['order'], ['asc', 'desc']) ? $query_options['order'] : 'DESC';
   $args = [
@@ -55,9 +55,9 @@ if ($programmatic_or_manual === 'programmatic') {
       <h3 class="text-xl title"><?= $title ?></h3>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="d-lg-h3 description "><?= $description ?></div>
+      <div class="d-lg-h3 description"><?= $description ?></div>
     <?php endif; ?>
-    <div class="swiper-navigations">
+    <div class="swiper-navigations testimonial-navigations">
       <div class="swiper-button-prev swiper-navigation arrow animation-scale-me" role="button" tabindex="0" aria-label="Previous Slide">
         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="#475467"/>
