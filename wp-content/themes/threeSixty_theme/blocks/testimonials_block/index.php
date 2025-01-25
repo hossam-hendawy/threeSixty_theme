@@ -71,7 +71,6 @@ if ($programmatic_or_manual === 'programmatic') {
         </svg>
       </div>
     </div>
-
   </div>
   <?php if ($programmatic_or_manual === "manual") { ?>
     <div class="swiper testimonials-swiper">
@@ -92,9 +91,6 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
     </div>
   <?php } ?>
-
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
