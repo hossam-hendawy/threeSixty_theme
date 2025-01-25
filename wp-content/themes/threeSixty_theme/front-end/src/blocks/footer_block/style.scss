@@ -87,9 +87,9 @@ footer {
   }
 
   .footer-logo {
-    width: 73px;
+    width: 320px;
     height: auto;
-    max-height: 22px;
+    max-height: 47px;
     display: block;
 
     svg, img {
@@ -190,6 +190,90 @@ footer {
 
   }
 
+  .contact-us-wrapper {
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    @include media-screen-600 {
+      align-items: center;
+    }
+    @include min-medium-screen {
+      padding-bottom: 54px;
+      gap: 12px;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    .content-icon {
+      column-gap: 16px;
+      display: flex;
+      align-items: center;
+      @include small-screen {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+      }
+      @include min-medium-screen {
+        width: 735px;
+      }
+      .icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+      }
+      .content {
+        .footer-description {
+          color: $threeSixty_theme_quinary-400;
+          margin-top: 2px;
+        }
+      }
+    }
+    .form-btn {
+      display: flex;
+      align-items: center;
+      //flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 30px;
+      @include min-medium-screen {
+        margin-top: 0;
+      }
+      .gf_browser_chrome {
+        width: 100%;
+        @include min-medium-screen {
+          width: 287px;
+        }
+      }
+
+      .gform_wrapper {
+        .gform_body {
+          padding: 12.5px 14px 12.5px 20px;
+          border-radius: 4px;
+          border: 1px solid $threeSixty_theme_gray-300;
+          background: $threeSixty_theme_white;
+          box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+          .ginput_container {
+            #input_1_1 {
+              &::placeholder {
+                color: $threeSixty_theme_quinary-400 ;
+              }
+            }
+
+          }
+        }
+        .gform_footer {
+          display: none;
+        }
+      }
+      .btn {
+        height: 48px;
+        background-color: red;
+        min-width: 315px;
+        @include media-screen-600 {
+          min-width: 172px;
+        }
+      }
+    }
+  }
+
   .content-wrapper {
     display: flex;
     align-items: flex-start;
@@ -211,7 +295,7 @@ footer {
       .company-info {
         padding: 22px;
         margin-top: 31px;
-        border: 1px solid #182230;
+        border: 1px solid $threeSixty_theme_gray-800;
         gap: 13px;
 
       }
@@ -269,7 +353,7 @@ footer {
     padding-top: 20px;
     flex-wrap: wrap;
     gap: 25px;
-    border-top: 1px solid red;
+    border-top: 1px solid $threeSixty_theme_gray-800;
     @include small-screen {
       justify-content: center;
     }
@@ -291,7 +375,7 @@ footer {
         align-items: center;
         justify-content: center;
         @include square(38px);
-        background-color: #161B26;
+        background-color: $threeSixty_theme_mode-900;
         transition: background-color $duration;
         &:hover {
           background-color: red;

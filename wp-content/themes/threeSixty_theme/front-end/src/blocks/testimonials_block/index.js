@@ -4,7 +4,6 @@ import {animations} from "../../scripts/general/animations";
 import {Swiper} from "swiper";
 import {Navigation} from 'swiper/modules';
 import {Autoplay} from "swiper/modules";
-
 /**
  * @author DELL
  * @param block {HTMLElement}

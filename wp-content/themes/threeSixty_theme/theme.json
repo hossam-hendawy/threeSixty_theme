@@ -91,6 +91,21 @@
           "slug": "tertiary-600",
           "color": "#475467",
           "name": "Tertiary-600"
+        },
+        {
+          "slug": "quinary-400",
+          "color": "#98A2B3",
+          "name": "Quinary-400"
+        },
+        {
+          "slug": "gray-800",
+          "color": "#182230",
+          "name": "Gray-800"
+        },
+        {
+          "slug": "mode-900",
+          "color": "#161B26",
+          "name": "Mode-900"
         }
       ]
     },

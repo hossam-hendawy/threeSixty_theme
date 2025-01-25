@@ -41,30 +41,33 @@ body {
   // all input
   .gform_wrapper.gravity-theme input:not([type="submit"]):not([type="number"]),
   select, textarea, .gform_wrapper.gravity-theme textarea, {
-    font-family: $montserrat;
+    font-family: $inter;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    font-weight: 500;
+    line-height: 142.857%;
     width: 100%;
     margin-bottom: 0;
     margin-top: auto;
     transition: border-color $duration;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #F68C7D !important;
+    //border-bottom: 1px solid #F68C7D !important;
     outline: none;
-    padding-block: 0 5px;
+    //padding-block: 0 5px;
     padding-inline: 0;
-    color: rgba(243, 233, 231, 0.7);
+    //color: rgba(243, 233, 231, 0.7);
+    padding: 0 !important;
+    color: red;
 
     &::placeholder {
-      font-family: $montserrat;
+      font-family: $inter;
       font-size: 14px;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500 ;
       line-height: 150%;
       color: rgba(243, 233, 231, 0.7);
+      padding: 0 !important;
     }
   }
 

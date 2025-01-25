@@ -1,10 +1,6 @@
 import './style.scss';
 import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
-// import Swiper from 'swiper';
-// import 'swiper/swiper.scss';
-// import 'swiper/modules/navigation.scss';
-// import {Navigation} from 'swiper/modules';
 import {Swiper} from "swiper";
 import {Navigation} from 'swiper/modules';
 
