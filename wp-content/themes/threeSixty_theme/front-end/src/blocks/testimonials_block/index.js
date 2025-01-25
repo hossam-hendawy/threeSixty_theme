@@ -4,6 +4,7 @@ import {animations} from "../../scripts/general/animations";
 import {Swiper} from "swiper";
 import {Navigation} from 'swiper/modules';
 import {Autoplay} from "swiper/modules";
+
 /**
  * @author DELL
  * @param block {HTMLElement}
@@ -26,7 +27,7 @@ const testimonialsBlock = async (block) => {
       },
       1024: {
         spaceBetween: 20,
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       1280: {
         slidesPerView: 2.26,
@@ -38,9 +39,10 @@ const testimonialsBlock = async (block) => {
       prevEl: block.querySelector(".swiper-button-prev"),
     },
   });
+
 // testing the new hidden value
-    animations(block);
-    imageLazyLoading(block);
+  animations(block);
+  imageLazyLoading(block);
 };
 
 export default testimonialsBlock;
