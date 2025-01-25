@@ -175,19 +175,31 @@ include 'wp-general/global-variables.php';
 
 // endregion wp general
 
-function threeSixty_theme_breadcrumbs() {
+function threeSixty_theme_breadcrumbs()
+{
   global $current_language;
 
   $home_label = $current_language === 'ar' ? 'الرئيسية' : 'Home';
 
   // Start the breadcrumb with a link to the home page
-  echo '<nav class="site-breadcrumb uppercase-text">';
+  echo '<nav class="site-breadcrumb">';
   echo '<a href="' . esc_url(home_url('/')) . '">' . esc_html($home_label) . '</a>';
 
   // Add the separator
   echo ' / ';
 
   if (is_singular()) {
+    // Get the referrer URL
+    $prev_url = wp_get_referer();
+    if ($prev_url) {
+      // Get the previous page title
+      $prev_post_id = url_to_postid($prev_url);
+      if ($prev_post_id) {
+        $prev_title = get_the_title($prev_post_id);
+        echo '<a href="' . esc_url($prev_url) . '">' . esc_html($prev_title) . '</a>';
+      }
+      echo ' / ';
+    }
     // Display the current page title
     echo '<span>' . esc_html(get_the_title()) . '</span>';
   } elseif (is_category() || is_tag() || is_tax()) {

@@ -223,6 +223,7 @@ ol.theme-unordered-list-element {
   svg {
     width: size(56);
     height: size(56);
+
     path {
       stroke: #475467;
     }
@@ -363,7 +364,8 @@ ol.theme-unordered-list-element {
     .post-title {
       color: $threeSixty_theme_gray-900;
       transition: color $duration;
-      &:hover{
+
+      &:hover {
         color: $post_title_hover;
       }
     }
@@ -396,6 +398,7 @@ ol.theme-unordered-list-element {
     @include min-medium-screen {
       gap: 56px;
     }
+
     &:not(:last-child) {
       margin-bottom: 45px;
     }
@@ -436,7 +439,10 @@ ol.theme-unordered-list-element {
   font-weight: 400;
   line-height: 20px;
   transition: color $duration;
-  &:hover {
-    color: $threeSixty_theme_brand-600;
+  a {
+    transition: color $duration;
+    &:hover {
+        color: $threeSixty_theme_brand-600;
+    }
   }
 }

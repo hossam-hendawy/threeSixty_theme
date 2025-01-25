@@ -45,7 +45,7 @@ $description = get_field('description');
       <a class="theme-cta-link white-color" href="<?= $cta_link['url'] ?>" target="<?= $cta_link['target'] ?>"><?= $cta_link['title'] ?></a>
     <?php } ?>
     <?php if ($title) { ?>
-    <h3 class="d-xl-h2 white-color bold"><?= $title ?></h3>
+      <h3 class="d-xl-h2 white-color bold"><?= $title ?></h3>
     <?php } ?>
     <?php if ($description) { ?>
       <div class="text-xl white-color blog-description"><?= $description ?></div>
