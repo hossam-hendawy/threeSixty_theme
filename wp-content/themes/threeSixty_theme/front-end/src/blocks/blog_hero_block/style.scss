@@ -6,16 +6,18 @@
   background-color: $threeSixty_theme_black;
   z-index: 4;
   min-height: 440px;
-  @include paddingY(83px,84px);
+  @include paddingY(83px, 84px);
   justify-content: flex-start;
   align-items: center;
   display: flex;
   position: relative;
   overflow: hidden;
+  z-index: 2;
   @include min-medium-screen {
     min-height: 516px;
-    @include paddingY(143px,144px);
+    @include paddingY(143px, 144px);
   }
+
   .container {
     width: 100%;
     max-width: 1440px;
@@ -24,6 +26,7 @@
       @include paddingX(112px);
     }
   }
+
   .content-wrapper {
     gap: 10px;
     max-width: 500px;

@@ -2,10 +2,6 @@
 @use "../mixins/mixins" as *;
 
 
-#wpadminbar {
-  display: none;
-}
-
 header {
   background-color: black;
   height: 90px;
@@ -69,24 +65,7 @@ header {
       .cat-name {
         padding: 2px 10px;
         border-radius: 4px;
-
-        &.yellow {
-          background-color: #FEFBE8;
-          color: #A15C07;
-          border: 1px solid #FDE172;
-        }
-
-        &.Purple {
-          background-color: #F5F3FF;
-          color: #6938EF;
-          border: 1px solid #DDD6FE;
-        }
-
-        &.Pink {
-          background-color: #FDF2FA;
-          color: #C11574;
-          border: 1px solid #FCCEEE;
-        }
+        border: 1px solid;
       }
     }
 
@@ -231,13 +210,15 @@ header {
       min-height: 55px;
       padding-block: 10px;
       padding: 12px;
+
       &:not(:last-child) {
         border: 1px solid $threeSixty_theme_gray-300;
       }
 
       a {
         text-decoration: none !important;
-        &:not(:hover){
+
+        &:not(:hover) {
           color: $threeSixty_theme_gray-900;
         }
       }
@@ -253,11 +234,13 @@ header {
     @include min-medium-screen {
       margin-bottom: 63px;
     }
+
     .tag-link {
       border-radius: 2px;
       background-color: $threeSixty_theme_gray-100;
-      transition: color $duration , background-color $duration;
+      transition: color $duration, background-color $duration;
       padding: 6px 12px;
+
       &:hover {
         background-color: $threeSixty_theme_gray-600;
         color: $threeSixty_theme_white;
@@ -277,6 +260,7 @@ header {
       gap: 16px;
       display: flex;
       align-items: center;
+
       .image-author {
         width: 40px;
         height: 40px;
@@ -288,10 +272,12 @@ header {
         }
       }
     }
+
     .social-links {
       display: flex;
       align-items: center;
       gap: 12px;
+
       .social-link {
         padding: 10px;
         border: 1px solid $threeSixty_theme_gray-300;
@@ -302,6 +288,7 @@ header {
         svg {
           @include square(20px)
         }
+
         &.copy-link {
           display: flex;
           align-items: center;
@@ -501,4 +488,13 @@ header {
       }
     }
   }
+}
+
+.gform_not_found, .theme-cta-button .btn {
+  display: none;
+}
+
+
+footer .contact-us-wrapper .form-btn .btn {
+  display: none;
 }

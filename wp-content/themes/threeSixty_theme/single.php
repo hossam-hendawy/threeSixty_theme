@@ -144,8 +144,6 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
         </div>
       </div>
     </div>
-
-
 <!--     recent posts -->
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts js-loaded">
       <div class="container">

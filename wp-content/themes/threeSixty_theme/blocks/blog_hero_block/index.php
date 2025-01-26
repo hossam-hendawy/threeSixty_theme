@@ -37,10 +37,10 @@ $description = get_field('description');
       threeSixty_theme_breadcrumbs();
     } ?>
     <?php if (!empty($cta_link) && is_array($cta_link)) { ?>
-      <a class="theme-cta-link white-color" href="<?= $cta_link['url'] ?>" target="<?= $cta_link['target'] ?>"><?= $cta_link['title'] ?></a>
+      <a class="theme-cta-link white-color " href="<?= $cta_link['url'] ?>" target="<?= $cta_link['target'] ?>"><?= $cta_link['title'] ?></a>
     <?php } ?>
     <?php if ($title) { ?>
-      <h3 class="d-xl-h2 white-color bold"><?= $title ?></h3>
+      <h1 class="d-xl-h2 white-color bold uppercase-text"><?= $title ?></h1>
     <?php } ?>
     <?php if ($description) { ?>
       <div class="text-xl white-color blog-description"><?= $description ?></div>
@@ -48,6 +48,4 @@ $description = get_field('description');
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
