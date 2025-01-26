@@ -39,7 +39,6 @@ $description = get_field('description');
           <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="post-title">
         </picture>
       </a>
-
       <div class="post-content flex-col">
         <div class="text-sm semi-bold category">Design</div>
         <a href="#" class="d-sm-h5 semi-bold post-title">The Future of Web
@@ -207,7 +206,6 @@ $description = get_field('description');
       </svg>
     </div>
   </div>
-
 </div>
 </section>
 <!-- endregion threeSixty_theme's Block -->

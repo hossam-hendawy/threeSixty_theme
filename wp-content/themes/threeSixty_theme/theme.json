@@ -111,6 +111,16 @@
           "slug": "mode-900",
           "color": "#161B26",
           "name": "Mode-900"
+        },
+        {
+          "slug": "gray-50",
+          "color": "#F8FAFC",
+          "name": "Gray-50"
+        },
+        {
+          "slug": "gray-200",
+          "color": "#E3E8EF",
+          "name": "Gray-200"
         }
       ]
     },
