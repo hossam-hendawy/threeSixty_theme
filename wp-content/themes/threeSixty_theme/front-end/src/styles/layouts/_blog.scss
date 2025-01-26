@@ -269,17 +269,17 @@ header {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid $threeSixty_theme_gray-200;
-    padding-top: 24px;
     flex-wrap: wrap;
     gap: 20px;
+    padding-block: 24px 16px;
+
     .about-author {
-      gap: 8px;
+      gap: 16px;
       display: flex;
       align-items: center;
       .image-author {
         width: 40px;
         height: 40px;
-
         img {
           width: 100%;
           height: 100%;
@@ -295,18 +295,60 @@ header {
       .social-link {
         padding: 10px;
         border: 1px solid $threeSixty_theme_gray-300;
+        transition: background-color $duration;
+        &:hover {
+          background-color: $threeSixty_theme_brand-600;
+        }
         svg {
           @include square(20px)
         }
         &.copy-link {
           display: flex;
           align-items: center;
+          padding: 10px 14px;
           gap: 6px;
           color: #364152;
         }
       }
     }
   }
+
+  .recent_posts {
+    &:after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: $threeSixty_theme_gray-300;
+      margin: 0 auto;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 48px);
+
+      @include large-screen {
+        width: calc(100% - 224px);
+      }
+    }
+
+    .recent-content-title {
+      color: $threeSixty_theme_gray-950;
+    }
+
+    .recent-posts-swiper {
+      margin-top: 54px;
+      .recent-card {
+        .post-title {
+          .post-title-svg {
+            display: none;
+          }
+        }
+        .excerpt {
+          display: none;
+        }
+      }
+    }
+  }
+
 
 }
 

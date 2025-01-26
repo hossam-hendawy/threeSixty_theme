@@ -334,10 +334,10 @@ footer {
             flex-shrink: 0;
           }
           &:hover {
-            color: red;
+            color: #CA8504;
             .link-svg {
               path {
-                stroke: red;
+                stroke: #CA8504;
               }
             }
           }
@@ -378,7 +378,7 @@ footer {
         background-color: $threeSixty_theme_mode-900;
         transition: background-color $duration;
         &:hover {
-          background-color: red;
+          background-color: #CA8504;
         }
         .icon-wrapper {
           @include square(18px);
