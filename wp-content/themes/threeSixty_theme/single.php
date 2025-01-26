@@ -46,13 +46,31 @@ get_header();
           <picture class="aspect-ratio feature-image">
             <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title_attribute(); ?>">
           </picture>
-
-          <div class="dynamic-content">
+          <div class="dynamic-content"  >
             <?php the_content(); ?>
           </div>
+
+          <!--     add new code here -->
+
+          <!--           tages -->
+
+
+<!--           bootm content -->
+<!-- authot -->
+
+          <a href="#">f</a>
+          <a href="#">x</a>
+          <a href="#">ins</a>
+
         </div>
+
+
       </div>
     </div>
+
+<!--     recent posts -->
+
+
   </div>
 <?php endif; ?>
 <?php
