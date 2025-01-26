@@ -135,15 +135,9 @@ get_header();
           </div>
 
         </div>
-
-
       </div>
     </div>
-
-
 <!--     recent posts -->
-
-
   </div>
 <?php endif; ?>
 <?php
