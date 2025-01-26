@@ -191,15 +191,18 @@ function threeSixty_theme_breadcrumbs()
   if (is_singular()) {
     // Get the referrer URL
     $prev_url = wp_get_referer();
+
     if ($prev_url) {
       // Get the previous page title
       $prev_post_id = url_to_postid($prev_url);
       if ($prev_post_id) {
         $prev_title = get_the_title($prev_post_id);
         echo '<a href="' . esc_url($prev_url) . '">' . esc_html($prev_title) . '</a>';
+        echo ' / ';
+  
       }
-      echo ' / ';
     }
+
     // Display the current page title
     echo '<span>' . esc_html(get_the_title()) . '</span>';
   } elseif (is_category() || is_tag() || is_tax()) {
@@ -257,3 +260,4 @@ function update_post_image_from_featured_image($post_type, $field_key)
   endif;
   wp_reset_postdata();
 }
+add_theme_support('post-thumbnails');

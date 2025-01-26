@@ -8,7 +8,8 @@ body {
 }
 
 // region font family TitlingGothicFB
-.d-2xl-h1, .d-2xl-h1 p {
+h1, .d-2xl-h1, .d-2xl-h1 p {
+  color: $threeSixty_theme_gray-900;
   font-family: $inter;
   font-size: 32px;
   font-weight: 400;
@@ -22,7 +23,8 @@ body {
   }
 }
 
-.d-xl-h2, .d-xl-h2 p {
+h2, .d-xl-h2, .d-xl-h2 p {
+  color: $threeSixty_theme_gray-900;
   font-family: $inter;
   font-size: 32px;
   font-weight: 400;
@@ -36,8 +38,9 @@ body {
   }
 }
 
-.d-lg-h3, .d-lg-h3 p {
+h3, .d-lg-h3, .d-lg-h3 p {
   font-family: $inter;
+  color: $threeSixty_theme_gray-900;
   font-size: 24px;
   font-weight: 400;
   line-height: 110%;
@@ -53,8 +56,9 @@ body {
   }
 }
 
-.d-md-h4, .d-md-h4 p {
+h4 .d-md-h4, .d-md-h4 p {
   font-family: $inter;
+  color: $threeSixty_theme_gray-900;
   font-size: 32px;
   font-weight: 400;
   line-height: 110%;
@@ -67,8 +71,9 @@ body {
   }
 }
 
-.d-sm-h5, .d-sm-h5 p {
+h5 , .d-sm-h5, .d-sm-h5 p {
   font-family: $inter;
+  color: $threeSixty_theme_gray-900;
   font-size: 24px;
   font-weight: 400;
   line-height: 110%;
@@ -79,8 +84,9 @@ body {
   }
 }
 
-.d-xs-6, .d-xs-6 p {
+h6 .d-xs-6, .d-xs-6 p {
   font-family: $inter;
+  color: $threeSixty_theme_gray-900;
   font-size: 32px;
   font-weight: 400;
   line-height: 110%;
@@ -92,13 +98,14 @@ body {
   }
 }
 
-.text-lg p, .text-lg {
+.text-lg p, .text-lg, p {
+  color: $threeSixty_theme_gray-600;
   font-family: $inter;
   font-size: 16px;
   font-weight: 400;
   line-height: 155%;
   font-style: normal;
-  @include large-screen  {
+  @include large-screen {
     font-size: 18px;
   }
 }

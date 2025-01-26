@@ -33,14 +33,9 @@ $description = get_field('description');
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
   <div class="content-wrapper flex-col">
-
     <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
       threeSixty_theme_breadcrumbs();
     } ?>
-
-
-
-
     <?php if (!empty($cta_link) && is_array($cta_link)) { ?>
       <a class="theme-cta-link white-color" href="<?= $cta_link['url'] ?>" target="<?= $cta_link['target'] ?>"><?= $cta_link['title'] ?></a>
     <?php } ?>
