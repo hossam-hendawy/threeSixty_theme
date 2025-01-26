@@ -450,6 +450,11 @@ header {
   }
 }
 
-.gform_not_found, .theme-cta-button {
+.gform_not_found, .theme-cta-button .btn {
+  display: none;
+}
+
+
+footer .contact-us-wrapper .form-btn .btn {
   display: none;
 }
