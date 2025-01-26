@@ -15,7 +15,7 @@ get_header();
     <div class="container">
       <div class="post-content-wrapper">
         <div class="blog-content flex-col">
-          <div class="buttons categories">
+          <div class="categories">
             <?php
             $categories = get_the_category();
             if ($categories) {
