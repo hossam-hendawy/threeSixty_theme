@@ -8,32 +8,6 @@
     @include paddingY(128px);
   }
 
-  .cards-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-bottom: 40px;
-    @include min-medium-screen {
-      flex-direction: row;
-      margin-bottom: 80px;
-    }
-
-    .recent-content {
-      max-width: 590px;
-      margin-bottom: 15px;
-      @include min-medium-screen {
-        margin-bottom: 0;
-      }
-      @include large-screen {
-        max-width: 768px;
-      }
-      .recent-content-title {
-        color: $threeSixty_theme_gray-950;
-        margin-bottom: 15px;
-      }
-    }
-  }
 
   .recent-posts-swiper {
     margin-bottom: 40px;
