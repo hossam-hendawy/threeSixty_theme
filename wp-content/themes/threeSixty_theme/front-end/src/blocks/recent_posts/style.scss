@@ -10,8 +10,8 @@
 
 
   .recent-posts-swiper {
-    margin-bottom: 40px;
-    @include min-medium-screen {
+    margin-bottom: 50px;
+    @include large-screen {
       margin-bottom: 80px;
     }
 

@@ -14,13 +14,16 @@ const recentPosts = async (block) => {
   const swiper = new Swiper(block.querySelector('.recent-posts-swiper'), {
     slidesPerView: 'auto',
     spaceBetween: 16,
-    loop: true,
     modules: [Navigation],
     breakpoints: {
       600: {
         slidesPerView: 2,
       },
       1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
         slidesPerView: 3,
         spaceBetween: 32,
       },
