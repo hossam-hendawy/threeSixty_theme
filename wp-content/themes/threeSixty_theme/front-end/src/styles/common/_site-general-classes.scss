@@ -228,7 +228,7 @@ ol.theme-unordered-list-element {
   &:hover {
     svg {
       path {
-        stroke: $threeSixty_theme_tertiary-600;
+        stroke: $threeSixty_theme_gray-600;
       }
     }
   }
@@ -242,7 +242,12 @@ ol.theme-unordered-list-element {
   }
 
   &.swiper-button-lock {
-   ;
+    svg {
+      path {
+        stroke: $threeSixty_theme_gray-300;
+      }
+    }
+    pointer-events: none
   }
 }
 
