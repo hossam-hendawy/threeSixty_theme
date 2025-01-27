@@ -17,7 +17,7 @@ const reInvokableFunction = async (container = document) => {
   container.querySelector('.hero_block') && await hero(container.querySelector('.hero_block'));
   await initBlocks(container);
   generateDataHover(container);
-  scrollToHash(container);
+  // scrollToHash(container);
   getHeightOfViewPort(container);
   activePage(container);
   initModal()

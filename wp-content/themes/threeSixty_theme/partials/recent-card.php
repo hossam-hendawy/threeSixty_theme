@@ -7,6 +7,8 @@ $post_title = get_the_title($post_id);
 $post_permalink = get_permalink($post_id);
 $post_excerpt = get_the_excerpt($post_id);
 $thumbnail_id = get_post_thumbnail_id($post_id);
+$thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+$thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_title);
 ?>
 <div class="swiper-slide recent-card">
   <a href="<?= $post_permalink ?>" target="_self">
@@ -15,15 +17,18 @@ $thumbnail_id = get_post_thumbnail_id($post_id);
     echo bis_get_attachment_picture(
       $thumbnail_id,
       [
-        375 => [335, 206, 1],
-        1024 => [305, 187, 1],
-        1280 => [365, 224, 1],
-        1440 => [418, 257, 1],
-        1920 => [418, 257, 1],
-        2500 => [418, 257, 1]
+        375 => [327, 205, 1],
+        600 => [266, 166, 1],
+        768 => [350, 219, 1],
+        992 => [462, 289, 1],
+        1024 => [312, 195, 1],
+        1280 => [384, 240, 1],
+        1440 => [384, 240, 1],
+        1920 => [384, 240, 1]
       ],
       [
         'retina' => true, 'picture_class' => $picture_class,
+        'alt' => esc_attr($thumbnail_alt)
       ]
     );
     ?>
