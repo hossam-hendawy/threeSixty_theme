@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_67210c6fc7b6c",
-            "label": "Warm Red Page",
-            "name": "warm_red_page",
+            "label": "Hide Get In Touch",
+            "name": "hide_get_in_touch",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -41,5 +41,5 @@
     "active": true,
     "description": "when turned on please use `color-start` and `color-end` classes to mark start and end of the color change effect",
     "show_in_rest": 0,
-    "modified": 1731907594
+    "modified": 1737996074
 }

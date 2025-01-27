@@ -929,6 +929,79 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 1
+        },
+        {
+            "key": "field_6797b73a00dab",
+            "label": "Get In Touch",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6797b74a00dac",
+            "label": "Title",
+            "name": "get_in_touch_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6797b76000dad",
+            "label": "Description",
+            "name": "get_in_touch_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "small-field",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_6797b79200dae",
+            "label": "Cta Button",
+            "name": "get_in_touch_cta_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -949,5 +1022,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737807112
+    "modified": 1737996363
 }
