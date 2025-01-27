@@ -1,10 +1,12 @@
 <?php wp_footer(); ?>
 
 <?php
+$hide_get_in_touch = get_field('hide_get_in_touch', get_the_ID());
 $get_in_touch_title = get_field('get_in_touch_title','options');
 $get_in_touch_description = get_field('get_in_touch_description' , 'options');
 $get_in_touch_cta_button = get_field('get_in_touch_cta_button' , 'options');
 ?>
+<?php if (!$hide_get_in_touch) {?>
 <section id="block_6797a0278885a" class="threeSixty_theme-block get_in_touch_block" data-section-class="get_in_touch_block">
   <div class="container">
     <div class="join-us-card">
@@ -136,6 +138,7 @@ $get_in_touch_cta_button = get_field('get_in_touch_cta_button' , 'options');
     </div>
   </div>
 </section>
+<?php } ?>
 <!--Footer ACF-->
 <?php
 $footer_logo = get_field('footer_logo', 'options');
