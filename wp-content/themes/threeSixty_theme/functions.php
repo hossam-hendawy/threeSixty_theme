@@ -199,7 +199,7 @@ function threeSixty_theme_breadcrumbs()
         $prev_title = get_the_title($prev_post_id);
         echo '<a href="' . esc_url($prev_url) . '">' . esc_html($prev_title) . '</a>';
         echo ' / ';
-  
+
       }
     }
 
@@ -241,23 +241,3 @@ include 'custom-acf-fields/acf-table-field/acf-table.php';
 // endregion custom acf fields
 
 //include_once __DIR__ . '/acf-my-new-field/init.php';
-
-//include 'acf-my-new-field/test.php';
-
-function update_post_image_from_featured_image($post_type, $field_key)
-{
-  $args = array(
-    'posts_per_page' => -1,
-    'post_type' => $post_type
-  );
-  $query = new WP_Query($args);
-  if ($query->have_posts()) :
-    while ($query->have_posts()) : $query->the_post();
-      $post_id = get_the_ID();
-      $thumbnail_id = get_post_thumbnail_id($post_id);
-      update_field($field_key, $thumbnail_id, $post_id);
-    endwhile;
-  endif;
-  wp_reset_postdata();
-}
-add_theme_support('post-thumbnails');
