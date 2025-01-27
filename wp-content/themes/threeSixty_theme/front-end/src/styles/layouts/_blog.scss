@@ -56,18 +56,6 @@ header {
       margin-bottom: 83px !important;
     }
 
-    .categories {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-
-      .cat-name {
-        padding: 2px 10px;
-        border-radius: 4px;
-        border: 1px solid;
-      }
-    }
 
     .post-title {
       color: $threeSixty_theme_gray-950;
@@ -84,6 +72,20 @@ header {
       }
     }
   }
+
+  .categories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    .cat-name {
+      padding: 2px 10px;
+      border-radius: 4px;
+      border: 1px solid;
+    }
+  }
+
 
   strong {
     font-weight: 600;

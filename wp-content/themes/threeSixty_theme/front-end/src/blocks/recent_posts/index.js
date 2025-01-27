@@ -31,8 +31,8 @@ const recentPosts = async (block) => {
     },
   });
 // testing the new hidden value
-    animations(block);
-    imageLazyLoading(block);
+  animations(block);
+  imageLazyLoading(block);
 };
 
 export default recentPosts;

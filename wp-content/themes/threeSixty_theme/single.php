@@ -55,25 +55,25 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
           <picture class="aspect-ratio feature-image">
             <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title_attribute(); ?>">
           </picture>
-          <div class="dynamic-content"  >
+          <div class="dynamic-content">
             <?php the_content(); ?>
           </div>
           <!--     add new code here -->
           <!--           tages -->
-            <?php
-            $tags = get_the_tags();
-            if (has_tag()) {
-              echo '<div class=tags-wrapper>';
-              $post_tags = get_the_tags();
-              foreach ($post_tags as $tag) {
-                $tag_link = get_tag_link($tag->term_id);
-                echo '<a  href="' . esc_url($tag_link) . '" class="tag-link text-sm gray-600 medium ">' . esc_html($tag->name) . '</a> ';
-              }
-              echo '</div>';
+          <?php
+          $tags = get_the_tags();
+          if (has_tag()) {
+            echo '<div class=tags-wrapper>';
+            $post_tags = get_the_tags();
+            foreach ($post_tags as $tag) {
+              $tag_link = get_tag_link($tag->term_id);
+              echo '<a  href="' . esc_url($tag_link) . '" class="tag-link text-sm gray-600 medium ">' . esc_html($tag->name) . '</a> ';
             }
-            ?>
-<!--           bootm content -->
-<!-- authot -->
+            echo '</div>';
+          }
+          ?>
+          <!--           bootm content -->
+          <!-- authot -->
           <div class="author-social-links">
             <div class="about-author">
 
@@ -144,7 +144,7 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
         </div>
       </div>
     </div>
-<!--     recent posts -->
+    <!--     recent posts -->
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts js-loaded">
       <div class="container">
         <h5 class="semi-bold recent-content-title">Related Posts</h5>

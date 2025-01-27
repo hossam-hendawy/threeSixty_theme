@@ -199,13 +199,9 @@ ol.theme-unordered-list-element {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
   @include marginX(auto);
   width: 144px;
   gap: 32px;
-  @include min-medium-screen {
-    margin-top: 80px;
-  }
 }
 
 .swiper-navigation {
@@ -225,15 +221,14 @@ ol.theme-unordered-list-element {
     height: size(56);
 
     path {
-      stroke: #475467;
+      stroke: $threeSixty_theme_gray-300;
     }
   }
 
   &:hover {
-
     svg {
       path {
-        stroke: #D0D5DD;
+        stroke: $threeSixty_theme_tertiary-600;
       }
     }
   }
@@ -246,9 +241,8 @@ ol.theme-unordered-list-element {
     right: 0;
   }
 
-  &.swiper-button-disabled {
-    opacity: 0;
-    pointer-events: none;
+  &.swiper-button-lock {
+
   }
 }
 
