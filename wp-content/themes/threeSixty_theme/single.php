@@ -58,8 +58,11 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
           <div class="dynamic-content">
             <?php the_content(); ?>
           </div>
+
           <!--     add new code here -->
-          <!--           tages -->
+
+          <!--   region tages -->
+
           <?php
           $tags = get_the_tags();
           if (has_tag()) {
@@ -72,8 +75,8 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
             echo '</div>';
           }
           ?>
-          <!--           bootm content -->
-          <!-- authot -->
+          <!--       endregion-->
+
           <div class="author-social-links">
             <div class="about-author">
               <?php if (!empty($user_image) && is_array($user_image)) { ?>
@@ -82,8 +85,8 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
                 </picture>
               <?php } ?>
               <div class="author-info">
-                <h5 class="text-sm semi-bold author-name"><?= $author_name ?></h5>
-                <h6 class="text-sm gray-600 author-jop"> <?= $user_jop_title ?></h6>
+                <h5 class="text-lg capital-text semi-bold gray-900 author-name"><?= $author_name ?></h5>
+                <h6 class="text-md capital-text regular gray-600 author-jop"> <?= $user_jop_title ?></h6>
               </div>
             </div>
             <div class="social-links">
@@ -142,6 +145,7 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
