@@ -226,9 +226,9 @@ function threeSixty_theme_breadcrumbs()
 
 include 'plugins-adjustments/gravity-from.php';
 
-include 'plugins-adjustments/tinymce/tinymce.php';
+//include 'plugins-adjustments/tinymce/tinymce.php';
 
-include 'plugins-adjustments/tinymce/cta-button-addon/tinymce-extension.php';
+//include 'plugins-adjustments/tinymce/cta-button-addon/tinymce-extension.php';
 
 include 'plugins-adjustments/acf.php';
 
