@@ -16,10 +16,8 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_permissions": "",
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "placement": "left",
+            "endpoint": 0
         },
         {
             "key": "field_63da2815fbf9a",
@@ -1022,5 +1020,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737996363
+    "modified": 1738002186
 }

@@ -456,3 +456,20 @@ ol.theme-unordered-list-element {
     }
   }
 }
+
+.categories {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  .cat-name {
+    padding: 2px 10px;
+    border-radius: 4px;
+    border: 1px solid;
+  }
+}
+
+#wpadminbar {
+display: block !important;
+}

@@ -10,6 +10,8 @@ import {Navigation} from 'swiper/modules';
  * @returns {Promise<void>}
  */
 const recentPosts = async (block) => {
+
+
   // add block code here
   const swiper = new Swiper(block.querySelector('.recent-posts-swiper'), {
     slidesPerView: 'auto',
