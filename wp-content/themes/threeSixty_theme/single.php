@@ -145,7 +145,6 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
