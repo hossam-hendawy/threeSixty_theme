@@ -63,6 +63,7 @@ header {
 
     .feature-image {
       margin-top: 24px;
+      margin-bottom: 59px;
       padding-top: 60%;
 
       img {
@@ -73,6 +74,13 @@ header {
     }
   }
 
+  h1 ,h2,h3,h4,h5,h6 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
 
   strong {
     font-weight: 600;
@@ -85,7 +93,8 @@ header {
     gap: 32px;
     display: flex;
     flex-direction: column;
-
+    border-left: none;
+    margin-bottom: 0;
     &:after {
       content: "";
       position: absolute;
@@ -118,6 +127,7 @@ header {
   }
 
   .dynamic-content {
+    width: 100%;
     max-width: 720px;
     margin-inline: auto;
 
@@ -163,7 +173,7 @@ header {
       text-underline-position: from-font;
 
       &:hover {
-        color: $threeSixty_theme_brand-700;
+        color: $threeSixty_theme_gold;
       }
     }
   }
