@@ -76,7 +76,6 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
           <!-- authot -->
           <div class="author-social-links">
             <div class="about-author">
-
               <?php if (!empty($user_image) && is_array($user_image)) { ?>
                 <picture class="image-author">
                   <img src="<?= $user_image['url'] ?>" alt="<?= $user_image['alt'] ?>">
@@ -88,19 +87,20 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
               </div>
             </div>
             <div class="social-links">
-              <a class="social-link text-sm semi-bold copy-link" href="#">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_273_4042)">
+              <div class="social-link text-sm semi-bold copy-link" aria-label="Copy link to clipboard" tabindex="0">
+                <title>Copy Link Icon</title>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <g clip-path="url(#copy-link)">
                     <path d="M4.16699 12.4998C3.39042 12.4998 3.00214 12.4998 2.69585 12.373C2.28747 12.2038 1.96302 11.8794 1.79386 11.471C1.66699 11.1647 1.66699 10.7764 1.66699 9.99984V4.33317C1.66699 3.39975 1.66699 2.93304 1.84865 2.57652C2.00844 2.26292 2.2634 2.00795 2.57701 1.84816C2.93353 1.6665 3.40024 1.6665 4.33366 1.6665H10.0003C10.7769 1.6665 11.1652 1.6665 11.4715 1.79337C11.8798 1.96253 12.2043 2.28698 12.3735 2.69536C12.5003 3.00165 12.5003 3.38993 12.5003 4.1665M10.167 18.3332H15.667C16.6004 18.3332 17.0671 18.3332 17.4236 18.1515C17.7372 17.9917 17.9922 17.7368 18.152 17.4232C18.3337 17.0666 18.3337 16.5999 18.3337 15.6665V10.1665C18.3337 9.23308 18.3337 8.76637 18.152 8.40985C17.9922 8.09625 17.7372 7.84128 17.4236 7.68149C17.0671 7.49984 16.6004 7.49984 15.667 7.49984H10.167C9.23357 7.49984 8.76686 7.49984 8.41034 7.68149C8.09674 7.84128 7.84177 8.09625 7.68198 8.40985C7.50033 8.76637 7.50033 9.23308 7.50033 10.1665V15.6665C7.50033 16.5999 7.50033 17.0666 7.68198 17.4232C7.84177 17.7368 8.09674 17.9917 8.41034 18.1515C8.76686 18.3332 9.23357 18.3332 10.167 18.3332Z" stroke="#364152" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                   </g>
                   <defs>
-                    <clipPath id="clip0_273_4042">
+                    <clipPath id="copy-link">
                       <rect width="20" height="20" fill="white"/>
                     </clipPath>
                   </defs>
                 </svg>
                 Copy link
-              </a>
+              </div>
               <a class="social-link" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_273_4048)">
