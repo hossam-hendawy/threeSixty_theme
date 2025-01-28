@@ -74,7 +74,7 @@ header {
     }
   }
 
-  h1 ,h2,h3,h4,h5,h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin-bottom: 16px;
   }
 
@@ -95,6 +95,7 @@ header {
     flex-direction: column;
     border-left: none;
     margin-bottom: 0;
+
     &:after {
       content: "";
       position: absolute;
@@ -341,6 +342,11 @@ header {
     }
   }
 
+  .tags-wrapper, .author-social-links {
+    max-width: 720px;
+    width: 100%;
+    margin-inline: auto;
+  }
 }
 
 .collection-block, .recent_posts {
