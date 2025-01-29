@@ -62,9 +62,12 @@ header {
     }
 
     .feature-image {
-      margin-top: 24px;
-      margin-bottom: 59px;
       padding-top: 60%;
+
+      @include media-screen-768 {
+        margin-bottom: 59px;
+        margin-top: 24px;
+      }
 
       img {
         border-radius: 0 !important;
@@ -79,7 +82,8 @@ header {
   }
 
   p {
-    margin-bottom: 24px;
+    //margin-bottom: 24px;
+    max-width: 100%;
   }
 
   strong {
@@ -113,7 +117,6 @@ header {
       font-style: italic;
       font-weight: 500;
       line-height: 133.333%;
-
       &:last-child {
         color: $threeSixty_theme_gray-600;
         font-family: $inter;
@@ -121,8 +124,8 @@ header {
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
+        margin-top: 0;
       }
-
     }
 
   }
@@ -346,6 +349,15 @@ header {
     max-width: 720px;
     width: 100%;
     margin-inline: auto;
+  }
+
+  .wp-block-group {
+    * {
+      margin-inline: 0 !important;
+    }
+    p , .wp-block-spacer {
+      margin: 0 !important;
+    }
   }
 }
 
