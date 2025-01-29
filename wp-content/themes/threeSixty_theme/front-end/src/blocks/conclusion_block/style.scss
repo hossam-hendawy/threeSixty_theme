@@ -1,0 +1,25 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author HOSSAM
+.conclusion_block {
+  .content-wrapper {
+    border-radius: 16px;
+    padding: 18px;
+    background: $threeSixty_theme_gray-50;
+    @include media-screen-768 {
+      padding: 32px;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .description {
+
+    max-width: 610px;
+  }
+
+
+}
