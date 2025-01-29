@@ -263,7 +263,7 @@ footer {
       flex-direction: row;
     }
 
-    &:after{
+    &:after {
       content: "";
       position: absolute;
       top: 0;
@@ -388,6 +388,18 @@ footer {
     }
   }
 
+  .flag-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 14px;
+
+    svg {
+      width: 32px;
+      height: 21.333px;
+    }
+
+  }
 
   .info-wrapper {
     display: flex;
@@ -405,7 +417,7 @@ footer {
       height: 16px;
     }
 
-    &:hover{
+    &:hover {
       color: $threeSixty_theme_gold;
     }
 
