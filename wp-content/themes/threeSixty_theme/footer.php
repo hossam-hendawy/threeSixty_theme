@@ -47,8 +47,9 @@ $first_column = get_field('first_column', 'options');
 $second_column = get_field('second_column', 'options');
 $third_column = get_field('third_column', 'options');
 $fourth_column = get_field('fourth_column', 'options');
-$contact_email = get_field('contact_email', 'options');
-$contact_number = get_field('contact_number', 'options');
+$contact_email = get_field('email', 'options');
+$contact_number = get_field('number', 'options');
+$location = get_field('location', 'options');
 $code_before_end_of_body_tag = get_field('code_before_end_of_body_tag', 'options');
 $footer_logo = get_field('footer_logo', 'options');
 $footer_text = get_field('footer_text', 'options');
@@ -91,19 +92,29 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
         </a>
         <div class="company-info flex-col">
           <?php if ($contact_number) : ?>
-            <a href="tel:<?= $contact_number ?>" class="en-h6 white-color contact-number hover-effect">
+            <a href="tel:<?= $contact_number ?>" class="en-h6 white-color contact-number info-wrapper">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M5.58685 5.90211C6.05085 6.86853 6.68337 7.77429 7.48443 8.57534C8.28548 9.37639 9.19124 10.0089 10.1577 10.4729C10.2408 10.5128 10.2823 10.5328 10.3349 10.5481C10.5218 10.6026 10.7513 10.5635 10.9096 10.4501C10.9542 10.4182 10.9923 10.3801 11.0685 10.3039C11.3016 10.0708 11.4181 9.95431 11.5353 9.87812C11.9772 9.59079 12.5469 9.59079 12.9889 9.87812C13.106 9.95431 13.2226 10.0708 13.4556 10.3039L13.5856 10.4338C13.9398 10.7881 14.117 10.9653 14.2132 11.1555C14.4046 11.5339 14.4046 11.9807 14.2132 12.3591C14.117 12.5494 13.9399 12.7265 13.5856 13.0808L13.4805 13.1859C13.1274 13.539 12.9508 13.7155 12.7108 13.8504C12.4445 14 12.0308 14.1075 11.7253 14.1066C11.45 14.1058 11.2619 14.0524 10.8856 13.9456C8.86333 13.3716 6.95509 12.2886 5.36311 10.6967C3.77112 9.10467 2.68814 7.19643 2.11416 5.17417C2.00735 4.79787 1.95395 4.60972 1.95313 4.33442C1.95222 4.02894 2.0598 3.61528 2.20941 3.34894C2.34424 3.10892 2.52078 2.93238 2.87386 2.5793L2.97895 2.47421C3.33325 2.11992 3.5104 1.94277 3.70065 1.84654C4.07903 1.65516 4.52587 1.65516 4.90424 1.84654C5.0945 1.94277 5.27164 2.11991 5.62594 2.47421L5.75585 2.60412C5.98892 2.83719 6.10546 2.95373 6.18165 3.07091C6.46898 3.51284 6.46898 4.08256 6.18165 4.52449C6.10546 4.64167 5.98892 4.75821 5.75585 4.99128C5.67964 5.06749 5.64154 5.10559 5.60965 5.15013C5.4963 5.30842 5.45717 5.53793 5.51165 5.72483C5.52698 5.77742 5.54694 5.81899 5.58685 5.90211Z" stroke="#EAAA08" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <?= $contact_number ?></a>
           <?php endif; ?>
           <?php if ($contact_email) : ?>
-            <a href="mailto:<?= $contact_email ?>" class="body white-color hover-effect"><?= $contact_email ?>
+            <a href="mailto:<?= $contact_email ?>" class="body white-color info-wrapper">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M1.33301 4.66663L6.77629 8.47692C7.21707 8.78547 7.43746 8.93974 7.67718 8.9995C7.88894 9.05228 8.11041 9.05228 8.32217 8.9995C8.56189 8.93974 8.78228 8.78547 9.22306 8.47692L14.6663 4.66663M4.53301 13.3333H11.4663C12.5864 13.3333 13.1465 13.3333 13.5743 13.1153C13.9506 12.9236 14.2566 12.6176 14.4484 12.2413C14.6663 11.8134 14.6663 11.2534 14.6663 10.1333V5.86663C14.6663 4.74652 14.6663 4.18647 14.4484 3.75864C14.2566 3.38232 13.9506 3.07636 13.5743 2.88461C13.1465 2.66663 12.5864 2.66663 11.4663 2.66663H4.53301C3.4129 2.66663 2.85285 2.66663 2.42503 2.88461C2.0487 3.07636 1.74274 3.38232 1.55099 3.75864C1.33301 4.18647 1.33301 4.74652 1.33301 5.86663V10.1333C1.33301 11.2534 1.33301 11.8134 1.55099 12.2413C1.74274 12.6176 2.0487 12.9236 2.42503 13.1153C2.85285 13.3333 3.4129 13.3333 4.53301 13.3333Z" stroke="#EAAA08" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+              <?= $contact_email ?>
             </a>
           <?php endif; ?>
+          <?php if (!empty($location) && is_array($location)) { ?>
+            <a class="body white-color info-wrapper" href="<?= $location['url'] ?>" target="_blank" aria-label="map (opens in a new tab)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M8.00033 8.66671C9.10489 8.66671 10.0003 7.77128 10.0003 6.66671C10.0003 5.56214 9.10489 4.66671 8.00033 4.66671C6.89576 4.66671 6.00033 5.56214 6.00033 6.66671C6.00033 7.77128 6.89576 8.66671 8.00033 8.66671Z" stroke="#EAAA08" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.00033 14.6667C10.667 12 13.3337 9.61223 13.3337 6.66671C13.3337 3.72119 10.9458 1.33337 8.00033 1.33337C5.05481 1.33337 2.66699 3.72119 2.66699 6.66671C2.66699 9.61223 5.33366 12 8.00033 14.6667Z" stroke="#EAAA08" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <?= $location['title'] ?>
+            </a>
+          <?php } ?>
         </div>
       </div>
       <div class="right-content">
@@ -223,7 +234,7 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
             $url = get_sub_field('url');
             $icon = get_sub_field('icon');
             ?>
-            <a href="<?= $url ?>" target="_blank" class="social-link">
+            <a href="<?= $url ?>" target="_blank" class="social-link" aria-label=" (opens in a new tab)">
               <?php if (!empty($icon) && is_array($icon)) { ?>
                 <picture class="icon-wrapper cover-image">
                   <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
