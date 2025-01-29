@@ -149,7 +149,7 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
       </div>
     </div>
 
-    <!--     region-recent-posts -->
+    <!--     region recent posts -->
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts">
       <div class="container">
         <h5 class="semi-bold recent-content-title">Related Posts</h5>

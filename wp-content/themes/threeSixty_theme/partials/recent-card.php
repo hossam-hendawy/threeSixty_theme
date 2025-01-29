@@ -46,6 +46,9 @@ $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_titl
     $categories = get_the_category();
     if ($categories) {
       foreach ($categories as $category) {
+        if ($category->slug === 'uncategorized') {
+          continue;
+        }
         $text_color = get_field('text_color', 'category_' . $category->term_id);
         $background_color = get_field('background_color', 'category_' . $category->term_id);
         $border_color = get_field('border_color', 'category_' . $category->term_id);
