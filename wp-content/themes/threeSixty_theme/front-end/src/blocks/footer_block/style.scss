@@ -273,15 +273,23 @@ footer {
     }
 
     .left-content {
-      width: 320px;
-
+      width: 100%;
+      flex-shrink: 0;
+      overflow: hidden;
+      @include media-screen-768 {
+        width: 320px;
+      }
 
       .company-info {
-        padding: 22px;
+        padding: 22px 12px;
         margin-top: 31px;
         border: 1px solid $threeSixty_theme_gray-800;
         gap: 13px;
         border-radius: 4px;
+        @include media-screen-768 {
+          width: 320px;
+          padding: 22px;
+        }
       }
     }
 
@@ -291,14 +299,20 @@ footer {
       gap: 37px;
       flex-wrap: wrap;
       width: 100%;
+      max-width: 806px;
       justify-content: space-between;
+      @include media-screen-768 {
+        gap: 18px;
+      }
       @include large-screen {
         width: 66.34%;
+        gap: 37px;
         flex-wrap: nowrap;
       }
 
       .links-wrapper {
         min-width: 174px;
+
         .column-title {
           margin-bottom: 12px;
         }
@@ -395,6 +409,7 @@ footer {
     .arabic-wrapper {
       display: none;
     }
+
     svg {
       width: 32px;
       height: 21.333px;
@@ -404,7 +419,8 @@ footer {
       .arabic-wrapper {
         display: flex;
       }
-      .english-wrapper{
+
+      .english-wrapper {
         display: none;
       }
     }
