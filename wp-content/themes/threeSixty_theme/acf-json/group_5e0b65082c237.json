@@ -171,11 +171,32 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "return_format": "array",
+                            "parent_repeater": "field_6793025993f8f"
+                        },
+                        {
+                            "key": "field_679b91cbe4fef",
+                            "label": "New",
+                            "name": "has_label",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
                             "parent_repeater": "field_6793025993f8f"
                         }
                     ]
@@ -256,6 +277,27 @@
                             },
                             "return_format": "",
                             "parent_repeater": "field_679302a42d400"
+                        },
+                        {
+                            "key": "field_679b93f2ce19e",
+                            "label": "New",
+                            "name": "has_label",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "parent_repeater": "field_679302a42d400"
                         }
                     ]
                 }
@@ -335,6 +377,27 @@
                             },
                             "return_format": "",
                             "parent_repeater": "field_679302b52d404"
+                        },
+                        {
+                            "key": "field_679b9434a1b52",
+                            "label": "New",
+                            "name": "has_label",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "parent_repeater": "field_679302b52d404"
                         }
                     ]
                 }
@@ -413,6 +476,27 @@
                                 "id": ""
                             },
                             "return_format": "array",
+                            "parent_repeater": "field_679302c82d409"
+                        },
+                        {
+                            "key": "field_679b94b52e603",
+                            "label": "New",
+                            "name": "has_label",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
                             "parent_repeater": "field_679302c82d409"
                         }
                     ]
@@ -971,5 +1055,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738163717
+    "modified": 1738249415
 }

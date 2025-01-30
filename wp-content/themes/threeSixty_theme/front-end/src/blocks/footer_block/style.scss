@@ -146,6 +146,30 @@ footer {
     }
   }
 
+  .link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6.5px;
+  }
+
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2px 4.4px;
+    border-radius: 6px;
+    border: 1px solid rgba(202, 133, 4, 0.30);
+    background: rgba(255, 255, 255, 0.10);
+    color: #EAAA08;
+    text-align: center;
+    font-family: $inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: normal;
+  }
+
   .copy-right {
     @include media-screen-from600-to1024 {
       flex-shrink: 0;

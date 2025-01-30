@@ -129,13 +129,20 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
+                $has_label = get_sub_field('has_label');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
-                    <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <?= $link['title'] ?></a>
+                  <div class="link-wrapper">
+                    <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                      <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <?= $link['title'] ?>
+                    </a>
+                    <?php if ($has_label) { ?>
+                      <div class="label text-xs medium">new</div>
+                    <?php } ?>
+                  </div>
                 <?php } ?>
               <?php endwhile; ?>
             </div>
@@ -154,13 +161,19 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
+                $has_label = get_sub_field('has_label');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
-                    <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <?= $link['title'] ?></a>
+                  <div class="link-wrapper">
+                    <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                      <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <?= $link['title'] ?></a>
+                    <?php if ($has_label) { ?>
+                      <div class="label text-xs medium">new</div>
+                    <?php } ?>
+                  </div>
                 <?php } ?>
               <?php endwhile; ?>
             </div>
@@ -179,14 +192,19 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
+                $has_label = get_sub_field('has_label');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
-                    <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <?= $link['title'] ?></a>
-
+                  <div class="link-wrapper">
+                    <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                      <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <?= $link['title'] ?></a>
+                    <?php if ($has_label) { ?>
+                      <div class="label text-xs medium">new</div>
+                    <?php } ?>
+                  </div>
                 <?php } ?>
               <?php endwhile; ?>
             </div>
@@ -206,13 +224,19 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
+                $has_label = get_sub_field('has_label');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
-                    <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <?= $link['title'] ?></a>
+                  <div class="link-wrapper">
+                    <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                      <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <?= $link['title'] ?></a>
+                    <?php if ($has_label) { ?>
+                      <div class="label text-xs medium">new</div>
+                    <?php } ?>
+                  </div>
                 <?php } ?>
               <?php endwhile; ?>
             </div>
@@ -269,7 +293,7 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
         Saudi Arabia - Arabic
       </div>
       <div class="language-wrapper  english-wrapper">
-        <svg  width="18" height="12" fill="none" viewBox="0 0 36 24" aria-hidden="true">
+        <svg width="18" height="12" fill="none" viewBox="0 0 36 24" aria-hidden="true">
           <g clip-path="url(#a)">
             <path fill="#0052B4" d="M36 0H0v23.996h36V0Z"/>
             <path fill="#F0F0F0" fill-rule="evenodd" d="M36 0v2.5l-9.052 6.033-2.08 1.386-3.119 2.079 3.12 2.08L36 21.496v2.499h-3.75l-10.784-7.188-1.386-.925L18 14.497l-2.08 1.386-1.386.925-10.785 7.188H0v-2.5l9.052-6.033 2.08-1.386 3.119-2.079-3.12-2.08-2.079-1.385L0 2.499V0h3.75l10.784 7.188 1.386.925L18 9.499l2.08-1.386 1.386-.925L32.251 0H36Z" clip-rule="evenodd"/>
