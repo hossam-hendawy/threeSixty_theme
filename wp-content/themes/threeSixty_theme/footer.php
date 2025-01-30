@@ -89,7 +89,6 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
             <?= \Theme\Helpers::get_image($footer_logo, 'large'); ?>
           </a>
         <?php endif; ?>
-        </a>
         <div class="company-info flex-col">
           <?php if ($contact_number) : ?>
             <a href="tel:<?= $contact_number ?>" class="en-h6 white-color contact-number info-wrapper">
@@ -126,13 +125,13 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
             <?php if (have_rows('footer_link')) : ?>
             <div class="links-wrapper flex-col gab-20">
               <?php if ($first_column): ?>
-                <div class="text-md semi-bold white-color uppercase-text"> <?= $first_column ?></div>
+                <div class="text-md semi-bold white-color uppercase-text column-title"> <?= $first_column ?></div>
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
                     <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -151,18 +150,17 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
             <?php if (have_rows('footer_link')) : ?>
             <div class="links-wrapper flex-col gab-20">
               <?php if ($second_column): ?>
-                <div class="text-md semi-bold white-color uppercase-text"> <?= $second_column ?></div>
+                <div class="text-md semi-bold white-color uppercase-text column-title"> <?= $second_column ?></div>
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
                     <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <?= $link['title'] ?></a>
-
                 <?php } ?>
               <?php endwhile; ?>
             </div>
@@ -177,13 +175,13 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
             <?php if (have_rows('footer_link')) : ?>
             <div class="links-wrapper flex-col gab-20">
               <?php if ($third_column): ?>
-                <div class="text-md semi-bold white-color uppercase-text"> <?= $third_column ?></div>
+                <div class="text-md semi-bold white-color uppercase-text column-title"> <?= $third_column ?></div>
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
                     <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -204,13 +202,13 @@ $fourth_column = (is_array($fourth_column) && isset($fourth_column['column_title
             <?php if (have_rows('footer_link')) : ?>
             <div class="links-wrapper flex-col gab-20">
               <?php if ($fourth_column): ?>
-                <div class="text-md semi-bold white-color uppercase-text"> <?= $fourth_column ?></div>
+                <div class="text-md semi-bold white-color uppercase-text column-title"> <?= $fourth_column ?></div>
               <?php endif; ?>
               <?php while (have_rows('footer_link')) : the_row();
                 $link = get_sub_field('link');
                 ?>
                 <?php if ($link) { ?>
-                  <a class="text-sm medium link" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                  <a class="text-sm medium link capital-text" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
                     <svg class="link-svg" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 10.5L4.5 6L0 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>

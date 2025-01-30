@@ -90,7 +90,7 @@ footer {
 
   .footer-logo {
     width: 320px;
-    height: auto;
+    height: 47px;
     max-height: 47px;
     display: block;
 
@@ -161,9 +161,7 @@ footer {
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;
-    @include media-screen-600 {
-      align-items: center;
-    }
+
     @include min-medium-screen {
       padding-bottom: 54px;
       gap: 12px;
@@ -253,13 +251,13 @@ footer {
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 90px;
+    gap: 45px;
     padding-block: 50px;
     flex-direction: column;
-    @include min-medium-screen {
-      padding-block: 100px;
-    }
+
     @include large-screen {
+      gap: 90px;
+      padding-block: 100px;
       flex-direction: row;
     }
 
@@ -276,10 +274,7 @@ footer {
 
     .left-content {
       width: 320px;
-      @include marginX(auto);
-      @include large-screen {
-        @include marginX(0);
-      }
+
 
       .company-info {
         padding: 22px;
@@ -298,20 +293,14 @@ footer {
       width: 100%;
       justify-content: space-between;
       @include large-screen {
-        width: 66.28%;
+        width: 66.34%;
         flex-wrap: nowrap;
-      }
-      @include large-screen {
-
       }
 
       .links-wrapper {
-        //@include large-screen {
         min-width: 174px;
-        //}
-        .col-title {
+        .column-title {
           margin-bottom: 12px;
-          text-transform: uppercase;
         }
 
         .link {
@@ -320,6 +309,7 @@ footer {
           display: flex;
           align-items: center;
           gap: 16px;
+          width: fit-content;
 
           .link-svg {
             width: 6px;
@@ -328,11 +318,11 @@ footer {
           }
 
           &:hover {
-            color: #CA8504;
+            color: $threeSixty_theme_gold;
 
             .link-svg {
               path {
-                stroke: #CA8504;
+                stroke: $threeSixty_theme_gold;
               }
             }
           }
@@ -349,9 +339,7 @@ footer {
     flex-wrap: wrap;
     gap: 25px;
     border-top: 1px solid $threeSixty_theme_gray-800;
-    @include small-screen {
-      justify-content: center;
-    }
+
 
     .captions {
       p {
