@@ -30,6 +30,7 @@
     padding-block: 50px;
     border-top: 1px solid $threeSixty_theme_gray-100;
     border-bottom: 1px solid $threeSixty_theme_gray-100;
+    min-height: 1410px;
     @include min-medium-screen{
       padding-block: 84px;
     }
@@ -66,10 +67,16 @@
     }
 
     .cta-link {
+      transition: opacity $duration , color $duration;
       display: none;
       @include media-screen-600{
         display: flex;
       }
+    }
+
+    .disabled {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }
