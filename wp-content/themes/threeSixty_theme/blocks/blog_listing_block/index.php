@@ -104,10 +104,3 @@ $description = get_field('description');
 </div>
 </section>
 <!-- endregion threeSixty_theme's Block -->
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-
-  });
-
-</script>

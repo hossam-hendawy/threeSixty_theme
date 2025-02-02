@@ -32,9 +32,6 @@ const blogListingBlock = async (block) => {
   block.querySelector("#next-page").addEventListener("click", function () {
     currentPage++;
     loadPosts(currentPage);
-
-    console.log(currentPage)
-
   });
 
   block.querySelector("#prev-page").addEventListener("click", function () {
@@ -42,9 +39,6 @@ const blogListingBlock = async (block) => {
       currentPage--;
       loadPosts(currentPage);
     }
-
-    console.log(currentPage)
-
   });
 
   loadPosts(currentPage);
