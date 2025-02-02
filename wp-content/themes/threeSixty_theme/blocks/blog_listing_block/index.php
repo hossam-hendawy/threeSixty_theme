@@ -72,6 +72,7 @@ if (isset($block)) {
   </div>
   <div class="bottom-content-wrapper">
     <div id="post-container">
+      <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
 
     </div>
   </div>

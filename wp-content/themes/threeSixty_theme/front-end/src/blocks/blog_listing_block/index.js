@@ -9,12 +9,18 @@ import { animations } from "../../scripts/general/animations";
  */
 const blogListingBlock = async (block) => {
   let currentPage = 1;
-  let totalPages = 1; // Default value, will be updated from the API
+  let totalPages = 1; // سيتم تحديثها بناءً على الـ API
 
   const prevPageBtn = block.querySelector("#prev-page");
   const nextPageBtn = block.querySelector("#next-page");
   const postContainer = document.getElementById("post-container");
-  const numbersContainer = block.querySelector(".numbers"); // Pagination numbers container
+  const numbersContainer = block.querySelector(".numbers"); // أرقام الصفحات
+  const loadingSpinner = document.createElement("div"); // إنشاء عنصر السبينر
+
+  // إضافة السبينر للـ DOM داخل postContainer
+  loadingSpinner.classList.add("loading-spinner");
+  loadingSpinner.style.display = "none";
+  postContainer.appendChild(loadingSpinner);
 
   function updateButtonStates() {
     prevPageBtn.classList.toggle("disabled", currentPage === 1);
@@ -23,6 +29,10 @@ const blogListingBlock = async (block) => {
 
   function loadPosts(page) {
     let url = `${window.location.origin}/threeSixty_theme/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+
+    postContainer.innerHTML = ""; // تفريغ المحتوى الحالي
+    postContainer.appendChild(loadingSpinner); // إضافة السبينر
+    loadingSpinner.style.display = "block"; // إظهار السبينر
 
     console.log("Fetching posts from:", url);
 
@@ -34,18 +44,22 @@ const blogListingBlock = async (block) => {
         return response.json();
       })
       .then(data => {
-        postContainer.innerHTML = data.posts; // Inject posts into the container
-        totalPages = data.totalPages; // Update total pages from response
+        loadingSpinner.style.display = "none"; // إخفاء السبينر بعد التحميل
+        postContainer.innerHTML = data.posts; // عرض البوستات
 
+        totalPages = data.totalPages; // تحديث إجمالي الصفحات
         currentPage = page;
-        generatePagination(); // Regenerate pagination buttons
-        updateButtonStates(); // Update button states
+        generatePagination(); // تحديث أزرار الأرقام
+        updateButtonStates(); // تحديث حالة الأزرار
       })
-      .catch(error => console.error("Error loading posts:", error));
+      .catch(error => {
+        loadingSpinner.style.display = "none"; // إخفاء السبينر في حالة الخطأ
+        console.error("Error loading posts:", error);
+      });
   }
 
   function generatePagination() {
-    numbersContainer.innerHTML = ""; // Clear existing numbers
+    numbersContainer.innerHTML = ""; // تفريغ أزرار الأرقام
 
     for (let i = 1; i <= totalPages; i++) {
       let numberElement = document.createElement("div");
@@ -53,7 +67,7 @@ const blogListingBlock = async (block) => {
       numberElement.innerText = i;
 
       if (i === currentPage) {
-        numberElement.classList.add("active"); // Highlight active page
+        numberElement.classList.add("active"); // تمييز الصفحة الحالية
       }
 
       numberElement.addEventListener("click", () => {
