@@ -8,10 +8,51 @@ import {animations} from "../../scripts/general/animations";
  */
 const blogListingBlock = async (block) => {
 
-  // add block code here
-// testing the new hidden value 
+  let currentPage = 1;
 
-    animations(block);
+  function loadPosts(page) {
+    let url = `${window.location.origin}/threeSixty_theme/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+
+    console.log("Fetching posts from:", url);
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById("post-container").innerHTML = data;
+        document.getElementById("current-page").innerText = page;
+      })
+      .catch(error => console.error("Error loading posts:", error));
+  }
+
+  block.querySelector("#next-page").addEventListener("click", function () {
+    currentPage++;
+    loadPosts(currentPage);
+
+    console.log(currentPage)
+
+  });
+
+  block.querySelector("#prev-page").addEventListener("click", function () {
+    if (currentPage > 1) {
+      currentPage--;
+      loadPosts(currentPage);
+    }
+
+    console.log(currentPage)
+
+  });
+
+  loadPosts(currentPage);
+
+
+
+
+  animations(block);
     imageLazyLoading(block);
 };
 
