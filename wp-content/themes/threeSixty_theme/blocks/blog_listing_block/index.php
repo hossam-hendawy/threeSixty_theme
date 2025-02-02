@@ -26,8 +26,6 @@ if (isset($block)) {
 /****************************
  *     Custom ACF Meta      *
  ****************************/
-$title = get_field('title');
-$description = get_field('description');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -84,16 +82,7 @@ $description = get_field('description');
       </svg>
       Previous
     </div>
-    <div style="display: none" class="numbers">
-      <div class="number active text-sm medium gray-600">1</div>
-      <div class="number text-sm medium gray-600">2</div>
-      <div class="number text-sm medium gray-600">3</div>
-      <div class="number text-sm medium gray-600">…</div>
-      <div class="number text-sm medium gray-600">8</div>
-      <div class="number text-sm medium gray-600">9</div>
-      <div class="number text-sm medium gray-600">10</div>
-    </div>
-    <div id="pagination-info" class="text-sm medium gray-600">Page <span id="current-page">1</span></div>
+    <div class="numbers"></div>
     <div id="next-page" class="cta-link text-sm gray-600 semi-bold">
       Next
       <svg width="20" height="21" viewBox="0 0 20 21" fill="none" class="arrow" aria-hidden="true">

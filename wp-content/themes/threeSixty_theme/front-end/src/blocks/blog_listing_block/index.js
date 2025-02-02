@@ -14,6 +14,7 @@ const blogListingBlock = async (block) => {
   const prevPageBtn = block.querySelector("#prev-page");
   const nextPageBtn = block.querySelector("#next-page");
   const postContainer = document.getElementById("post-container");
+  const numbersContainer = block.querySelector(".numbers"); // Pagination numbers container
 
   function updateButtonStates() {
     prevPageBtn.classList.toggle("disabled", currentPage === 1);
@@ -30,29 +31,50 @@ const blogListingBlock = async (block) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return response.json(); // Expecting JSON now
+        return response.json();
       })
       .then(data => {
         postContainer.innerHTML = data.posts; // Inject posts into the container
-        document.getElementById("current-page").innerText = page;
-
         totalPages = data.totalPages; // Update total pages from response
+
+        currentPage = page;
+        generatePagination(); // Regenerate pagination buttons
         updateButtonStates(); // Update button states
       })
       .catch(error => console.error("Error loading posts:", error));
   }
 
+  function generatePagination() {
+    numbersContainer.innerHTML = ""; // Clear existing numbers
+
+    for (let i = 1; i <= totalPages; i++) {
+      let numberElement = document.createElement("div");
+      numberElement.classList.add("number", "text-sm", "medium", "gray-600");
+      numberElement.innerText = i;
+
+      if (i === currentPage) {
+        numberElement.classList.add("active"); // Highlight active page
+      }
+
+      numberElement.addEventListener("click", () => {
+        if (i !== currentPage) {
+          loadPosts(i);
+        }
+      });
+
+      numbersContainer.appendChild(numberElement);
+    }
+  }
+
   nextPageBtn.addEventListener("click", function () {
     if (currentPage < totalPages) {
-      currentPage++;
-      loadPosts(currentPage);
+      loadPosts(currentPage + 1);
     }
   });
 
   prevPageBtn.addEventListener("click", function () {
     if (currentPage > 1) {
-      currentPage--;
-      loadPosts(currentPage);
+      loadPosts(currentPage - 1);
     }
   });
 
