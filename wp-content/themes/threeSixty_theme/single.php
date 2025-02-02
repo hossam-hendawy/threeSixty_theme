@@ -2,11 +2,8 @@
 get_header();
 global $post;
 $post_id = get_the_ID();
-$author_id = $post->post_author;
-$author_name = get_the_author_meta('display_name', $author_id);
-$author_jop = get_the_author_meta('display_name', $author_id);
-$author_image = get_the_author_meta('display_name', $author_id);
 $current_user_id = get_current_user_id();
+$author_name = get_the_author_meta('display_name', $current_user_id);
 $user_image = get_field('user_image', 'user_' . $current_user_id);
 $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
 ?>
