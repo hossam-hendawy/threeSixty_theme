@@ -367,15 +367,21 @@ ol.theme-unordered-list-element {
 
     .category {
       color: $threeSixty_theme_brand-700;
+      pointer-events: none;
     }
 
     .post-title {
       color: $threeSixty_theme_gray-900;
       transition: color $duration;
+      @include max-lines(2);
 
       &:hover {
         color: $post_title_hover;
       }
+    }
+
+    .post-excerpt {
+      @include max-lines(3);
     }
   }
 
@@ -471,5 +477,5 @@ ol.theme-unordered-list-element {
 }
 
 #wpadminbar {
-display: block !important;
+  display: block !important;
 }

@@ -32,65 +32,48 @@ $description = get_field('description');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="post-cards top-content-wrapper">
-    <div class="post-card">
-      <a href="#" class="post-image-card">
-        <picture class="post-image aspect-ratio">
-          <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="post-title">
-        </picture>
-      </a>
-      <div class="post-content flex-col">
-        <div class="text-sm semi-bold category">Design</div>
-        <a href="#" class="d-sm-h5 semi-bold post-title">The Future of Web
-          Presence:
-          Trends for 2024 and Beyond</a>
-        <div class="text-md regular gray-600">How do you create compelling
-          presentations that wow your colleagues and impress your managers?How
-          do you create compelling presentations that wow your colleagues and
-          impress your managers ...
-        </div>
-        <div class="about-author">
-          <picture class="image-author">
-            <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
-          </picture>
-          <div class="author-info">
-            <h5 class="text-sm semi-bold author-name">Dr. Muneer Hamed</h5>
-            <h6 class="text-sm gray-600 author-jop">Senior Marketing
-              Consultant</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="post-card">
-      <a href="#" class="post-image-card">
-        <picture class="post-image aspect-ratio">
-          <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="post-title">
-        </picture>
-      </a>
 
-      <div class="post-content flex-col">
-        <div class="text-sm semi-bold category">Design</div>
-        <a href="#" class="d-sm-h5 semi-bold post-title">The Future of Web
-          Presence:
-          Trends for 2024 and Beyond</a>
-        <div class="text-md regular gray-600">How do you create compelling
-          presentations that wow your colleagues and impress your managers?How
-          do you create compelling presentations that wow your colleagues and
-          impress your managers ...
-        </div>
-        <div class="about-author">
-          <picture class="image-author">
-            <img src=" <?= get_template_directory_uri() . '/images/backgrounds/author-image.png' ?>" alt="trustpilot">
+  <div class="post-cards top-content-wrapper">
+  <?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 2, // هنجيب أول بوستين بس
+    'orderby' => 'date',
+    'order' => 'DESC'
+  );
+  $query = new WP_Query($args);
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post(); ?>
+      <div class="post-card">
+        <a href="<?php the_permalink(); ?>" class="post-image-card">
+          <picture class="post-image aspect-ratio">
+            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
           </picture>
-          <div class="author-info">
-            <h5 class="text-sm semi-bold author-name">Dr. Muneer Hamed</h5>
-            <h6 class="text-sm gray-600 author-jop">Senior Marketing
-              Consultant</h6>
+        </a>
+        <div class="post-content flex-col">
+          <div class="text-sm semi-bold category"><?php the_category(', '); ?></div>
+          <a href="<?php the_permalink(); ?>" class="d-sm-h5 semi-bold post-title"><?php the_title(); ?></a>
+          <div class="text-md regular gray-600 post-excerpt">
+            <?php echo has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 20, '...'); ?>
+          </div>
+          <div class="about-author">
+            <picture class="image-author">
+              <img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>" alt="<?php the_author(); ?>">
+            </picture>
+            <div class="author-info">
+              <h5 class="text-sm semi-bold author-name"><?php the_author(); ?></h5>
+              <h6 class="text-sm gray-600 author-jop">Senior Marketing Consultant</h6>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <?php endwhile;
+    wp_reset_postdata();
+  endif;
+  ?>
   </div>
+
+
   <div class="bottom-content-wrapper">
     <div class="post-card horizontal-card">
       <a href="#" class="post-image-card">
