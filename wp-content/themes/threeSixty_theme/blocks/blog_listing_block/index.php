@@ -41,7 +41,7 @@ if (isset($block)) {
     $query = new WP_Query($args);
     if ($query->have_posts()) :
       while ($query->have_posts()) : $query->the_post();
-        get_template_part("partials/vertical-card", "", ["post_id" => get_the_ID()]);
+        get_template_part("partials/vertical-post-card", "", ["post_id" => get_the_ID()]);
         ?>
       <?php endwhile;
       wp_reset_postdata();
