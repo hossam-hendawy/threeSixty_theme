@@ -54,6 +54,5 @@ echo json_encode([
   "posts" => $posts_html,
   "totalPages" => $total_pages
 ]);
-
 exit;
 ?>
