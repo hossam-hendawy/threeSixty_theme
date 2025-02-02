@@ -27,14 +27,24 @@
   }
 
   .bottom-content-wrapper {
+    position: relative;
     padding-block: 50px;
     border-top: 1px solid $threeSixty_theme_gray-100;
     border-bottom: 1px solid $threeSixty_theme_gray-100;
-    min-height: 1410px;
-    @include min-medium-screen {
+    min-height: 1531px;
+    @include media-screen-992 {
       padding-block: 84px;
+      min-height: 1084px;
     }
-    position: relative;
+    @include min-medium-screen {
+      min-height: 1184px;
+    }
+    @include large-screen {
+      min-height: 1390px;
+    }
+    @include x-large-screen {
+      min-height: 1383px;
+    }
   }
 
   .controllers {
@@ -58,7 +68,7 @@
         align-items: center;
         flex-shrink: 0;
         align-self: stretch;
-        transition: background-color $duration , color $duration;
+        transition: background-color $duration, color $duration;
         border-radius: 8px;
         cursor: pointer;
 

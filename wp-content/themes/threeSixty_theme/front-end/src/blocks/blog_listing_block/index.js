@@ -97,6 +97,7 @@ const blogListingBlock = async (block) => {
 
   loadPosts(currentPage);
 
+
   animations(block);
   imageLazyLoading(block);
 };
