@@ -26,7 +26,7 @@ const blogListingBlock = async (block) => {
     nextPageBtn.classList.toggle("disabled", currentPage >= totalPages);
   }
 
-  let local = true
+  let local = false
   let url;
 
   function loadPosts(page) {
