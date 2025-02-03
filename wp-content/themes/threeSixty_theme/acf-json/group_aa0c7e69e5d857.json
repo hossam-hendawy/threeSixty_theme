@@ -159,28 +159,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_679188191d227",
-                    "label": "Number Of Posts",
-                    "name": "number_of_posts",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 3,
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_679188261d228",
                     "label": "Order",
                     "name": "order",
@@ -190,7 +168,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -202,8 +180,30 @@
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
-                    "layout": "vertical",
+                    "layout": "horizontal",
                     "save_other_choice": 0
+                },
+                {
+                    "key": "field_679188191d227",
+                    "label": "Number Of Posts",
+                    "name": "number_of_posts",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 3,
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -226,5 +226,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737728292
+    "modified": 1738605987
 }

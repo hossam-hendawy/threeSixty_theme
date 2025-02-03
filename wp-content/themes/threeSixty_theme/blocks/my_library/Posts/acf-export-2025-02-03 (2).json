@@ -1,0 +1,231 @@
+[
+    {
+        "key": "group_aa0c7e69e5d857",
+        "title": "Recent Posts",
+        "fields": [
+            {
+                "key": "field_aa0c7e69e5f1ed",
+                "label": "Block Content",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_6791cd2aa4749",
+                "label": "Title",
+                "name": "title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6791cd35a474a",
+                "label": "Cta Button",
+                "name": "cta_button",
+                "aria-label": "",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_6791cd68a474b",
+                "label": "Description",
+                "name": "description",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_679187841d224",
+                "label": "Programmatic OR Manual",
+                "name": "programmatic_or_manual",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "52",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "programmatic": "Programmatic",
+                    "manual": "Manual"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "horizontal",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_679187b01d225",
+                "label": "Recent Card",
+                "name": "recent_card",
+                "aria-label": "",
+                "type": "relationship",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_679187841d224",
+                            "operator": "==",
+                            "value": "manual"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "post"
+                ],
+                "taxonomy": "",
+                "filters": [
+                    "search"
+                ],
+                "return_format": "object",
+                "min": "",
+                "max": "",
+                "elements": ""
+            },
+            {
+                "key": "field_679187ea1d226",
+                "label": "Query Options",
+                "name": "query_options",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_679187841d224",
+                            "operator": "==",
+                            "value": "programmatic"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_679188261d228",
+                        "label": "Order",
+                        "name": "order",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "desc": "Latest",
+                            "asc": "Oldest"
+                        },
+                        "default_value": "",
+                        "return_format": "value",
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "layout": "horizontal",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_679188191d227",
+                        "label": "Number Of Posts",
+                        "name": "number_of_posts",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "70",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 3,
+                        "min": "",
+                        "max": "",
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/recent-posts"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
