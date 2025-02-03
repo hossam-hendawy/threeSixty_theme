@@ -41,10 +41,8 @@ if ($query->have_posts()) {
   wp_reset_postdata();
 }
 
-// تنظيف أي مخارج زائدة
 ob_end_clean();
 
-// **حل مشكلة التشفير**
 echo json_encode([
   "posts" => html_entity_decode($posts_html, ENT_QUOTES, 'UTF-8'),
   "totalPages" => $total_pages
