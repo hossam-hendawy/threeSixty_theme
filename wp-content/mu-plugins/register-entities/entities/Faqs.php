@@ -38,7 +38,7 @@ class Faqs extends Entity
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
-        'menu_icon' => 'dashicons-format-status',
+        'menu_icon' => 'dashicons-format-quote',
         'show_in_menu' => true,
         'show_in_nav_menus' => true,
         'show_in_admin_bar' => true,
