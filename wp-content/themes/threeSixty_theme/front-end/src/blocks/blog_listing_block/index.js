@@ -1,6 +1,6 @@
 import './style.scss';
-import { imageLazyLoading } from "../../scripts/functions/imageLazyLoading";
-import { animations } from "../../scripts/general/animations";
+import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
+import {animations} from "../../scripts/general/animations";
 
 /**
  * @author DELL
@@ -26,8 +26,16 @@ const blogListingBlock = async (block) => {
     nextPageBtn.classList.toggle("disabled", currentPage >= totalPages);
   }
 
+  let local = true
+  let url;
+
   function loadPosts(page) {
-    let url = `${window.location.origin}/threeSixty_theme/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+    if (local) {
+      url = `${window.location.origin}/threeSixty_theme/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+    } else {
+      url = `${window.location.origin}/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+    }
+
 
     postContainer.innerHTML = "";
     postContainer.appendChild(loadingSpinner);
@@ -71,10 +79,10 @@ const blogListingBlock = async (block) => {
         if (i !== currentPage) {
           loadPosts(i);
 
-          // block.querySelector(".bottom-content-wrapper").scrollIntoView({
-          //   behavior: "smooth",
-          //   block: "start"
-          // });
+          block.querySelector(".bottom-content-wrapper").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
         }
       });
 

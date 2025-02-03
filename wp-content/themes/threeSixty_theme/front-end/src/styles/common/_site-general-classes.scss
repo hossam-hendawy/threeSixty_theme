@@ -341,11 +341,15 @@ ol.theme-unordered-list-element {
     path {
       stroke: currentColor;
     }
+
+
   }
 
   &:hover {
     color: $threeSixty_theme_brand-600;
   }
+
+
 }
 
 .post-card {
@@ -479,3 +483,16 @@ ol.theme-unordered-list-element {
 #wpadminbar {
   display: block !important;
 }
+
+
+body.rtl {
+
+  .cta-link {
+    svg {
+      transform: rotate(360deg);
+      transform-origin: center;
+    }
+  }
+
+}
+
