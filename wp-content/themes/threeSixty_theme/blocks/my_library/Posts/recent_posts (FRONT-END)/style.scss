@@ -1,0 +1,108 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+@import "swiper/css";
+
+.recent_posts {
+  @include paddingY(65px);
+  @include min-medium-screen {
+    @include paddingY(128px);
+  }
+
+  .cards-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 40px;
+    @include min-medium-screen {
+      flex-direction: row;
+      margin-bottom: 80px;
+    }
+
+    .recent-content {
+      max-width: 590px;
+      margin-bottom: 15px;
+      @include min-medium-screen {
+        margin-bottom: 0;
+      }
+      @include large-screen {
+        max-width: 768px;
+      }
+
+      .recent-content-title {
+        color: $threeSixty_theme_gray-950;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .recent-posts-swiper {
+    margin-bottom: 50px;
+    @include large-screen {
+      margin-bottom: 80px;
+    }
+
+    .recent-card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: auto;
+
+      .featured-image {
+        padding-top: 62.5%;
+      }
+
+
+      .categories {
+        margin-top: auto;
+
+        .cat-name {
+          border-radius: 0;
+        }
+      }
+    }
+
+    .post-title {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      color: $threeSixty_theme_gray-950;
+      margin-block: 21px 20px;
+      transition: color $duration;
+      gap: 16px;
+      font-size: 24px;
+      line-height: 133.333%;
+      @include max-lines(2);
+
+      &:hover {
+        color: $threeSixty_theme_brand-600;
+      }
+
+      .post-title-svg {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+    }
+  }
+
+  .recent_posts_block {
+
+    .post-title {
+      @include max-lines(1);
+    }
+
+    .categories {
+      display: none;
+    }
+
+    .excerpt {
+      @include max-lines(2);
+    }
+
+  }
+}
