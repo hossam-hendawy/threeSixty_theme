@@ -13,12 +13,8 @@ require_once 'entities/Entity.php';
 
 global $entities;
 $entities = [
-    'Faqs',
-    ];
-
-$entities = [
     'Testimonials',
-];
+    'Faqs',];
 
 array_map(function ($entityName) {
   require dirname(__FILE__) . '/entities/' . $entityName . '.php';
