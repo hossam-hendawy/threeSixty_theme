@@ -53,29 +53,21 @@ header {
     gap: 24px;
     margin-bottom: 52px;
     @include min-medium-screen {
-      margin-bottom: 83px !important;
+      margin-bottom: 99px !important;
     }
 
-    .categories {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-
-      .cat-name {
-        padding: 2px 10px;
-        border-radius: 4px;
-        border: 1px solid;
-      }
-    }
 
     .post-title {
       color: $threeSixty_theme_gray-950;
     }
 
     .feature-image {
-      margin-top: 24px;
       padding-top: 60%;
+
+      @include media-screen-768 {
+        margin-bottom: 59px;
+        margin-top: 24px;
+      }
 
       img {
         border-radius: 0 !important;
@@ -83,6 +75,15 @@ header {
         height: 100% !important;
       }
     }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    //margin-bottom: 24px;
+    max-width: 100%;
   }
 
   strong {
@@ -96,6 +97,8 @@ header {
     gap: 32px;
     display: flex;
     flex-direction: column;
+    border-left: none;
+    margin-bottom: 0;
 
     &:after {
       content: "";
@@ -122,13 +125,14 @@ header {
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
+        margin-top: 0;
       }
-
     }
 
   }
 
   .dynamic-content {
+    width: 100%;
     max-width: 720px;
     margin-inline: auto;
 
@@ -174,7 +178,7 @@ header {
       text-underline-position: from-font;
 
       &:hover {
-        color: $threeSixty_theme_brand-700;
+        color: $threeSixty_theme_gold;
       }
     }
   }
@@ -203,7 +207,6 @@ header {
 
     ul {
       list-style: none;
-      display: none;
     }
 
     li {
@@ -232,7 +235,7 @@ header {
     flex-wrap: wrap;
     margin-bottom: 30px;
     @include min-medium-screen {
-      margin-bottom: 63px;
+      margin-bottom: 41px;
     }
 
     .tag-link {
@@ -254,7 +257,7 @@ header {
     border-top: 1px solid $threeSixty_theme_gray-200;
     flex-wrap: wrap;
     gap: 20px;
-    padding-block: 24px 16px;
+    padding-top: 24px;
 
     .about-author {
       gap: 16px;
@@ -262,14 +265,19 @@ header {
       align-items: center;
 
       .image-author {
-        width: 40px;
-        height: 40px;
+        width: 56px;
+        height: 56px;
+
         img {
           width: 100%;
           height: 100%;
           border-radius: 50%;
           object-fit: cover;
         }
+      }
+
+      h5, h6 {
+        margin-bottom: 0 !important;
       }
     }
 
@@ -279,64 +287,139 @@ header {
       gap: 12px;
 
       .social-link {
-        padding: 10px;
+        padding: 8px 9px;
+        min-width: 40px;
         border: 1px solid $threeSixty_theme_gray-300;
-        transition: background-color $duration;
-        &:hover {
-          background-color: $threeSixty_theme_brand-600;
-        }
+        transition: background-color $duration, border-color $duration;
+
+
         svg {
           @include square(20px)
         }
 
         &.copy-link {
+          min-width: 119px;
           display: flex;
           align-items: center;
-          padding: 10px 14px;
+          padding: 9.2px 14px;
           gap: 6px;
           color: #364152;
+          cursor: pointer;
+          position: relative;
+
+          .copied-text {
+            width: 84px;
+            height: 24px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            border-radius: 12px;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
+            background: $threeSixty_theme_tertiary-600;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: calc(100% - 1px);
+              left: 50%;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid $threeSixty_theme_tertiary-600;
+              transform: translateX(-50%);
+              pointer-events: none;
+            }
+
+            &.active {
+              pointer-events: auto;
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $threeSixty_theme_gold;
+          border-color: $threeSixty_theme_gold;
         }
       }
     }
   }
 
-  .recent_posts {
-    &:after {
-      position: absolute;
-      content: "";
-      height: 1px;
-      background-color: $threeSixty_theme_gray-300;
-      margin: 0 auto;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 48px);
+  .tags-wrapper, .author-social-links {
+    max-width: 720px;
+    width: 100%;
+    margin-inline: auto;
+  }
 
-      @include large-screen {
-        width: calc(100% - 224px);
-      }
+  .wp-block-group {
+    * {
+      margin-inline: 0 !important;
     }
 
-    .recent-content-title {
-      color: $threeSixty_theme_gray-950;
+    p, .wp-block-spacer {
+      margin: 0 !important;
     }
+  }
 
-    .recent-posts-swiper {
-      margin-top: 54px;
-      .recent-card {
-        .post-title {
-          .post-title-svg {
-            display: none;
-          }
-        }
-        .excerpt {
+  .author-name {
+    margin-bottom: 0 !important;
+  }
+}
+
+.collection-block, .recent_posts {
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: $threeSixty_theme_gray-300;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+
+    @include large-screen {
+      width: calc(100% - 224px);
+    }
+  }
+
+  .recent-content-title {
+    color: $threeSixty_theme_gray-950;
+  }
+
+  .recent-posts-swiper {
+    margin-top: 54px;
+
+    .recent-card {
+      .post-title {
+        .post-title-svg {
           display: none;
         }
       }
+
+      .excerpt {
+        display: none;
+      }
     }
   }
+}
 
+.collection-block {
+  &:after {
+    display: none;
+  }
 
+  .recent-content-title {
+    margin-bottom: 15px;
+  }
+
+  .text-xl {
+    max-width: 790px;
+  }
 }
 
 .single-post-container {

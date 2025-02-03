@@ -234,16 +234,16 @@ remove_action('wp_head', 'wp_generator');
 // endregion remove WordPress version number as a <meta> tag
 
 
-// save featured image dynamic after saving post
-add_action('save_post', 'update_featured_image_after_saving_cpt', 10, 3);
-function update_featured_image_after_saving_cpt($post_id, $post, $update)
-{
-  $post_types = ['post', 'articles', 'interviews', 'case_studies','books','teams'];
-  if (!in_array($post->post_type, $post_types) || !$update) {
-//    var_dump($post->post_type);
-//    exit;
-    return;
-  }
-  $featured_image = get_field('featured_image', $post_id) ?: "";
-  update_post_meta($post_id, '_thumbnail_id', $featured_image);
-}
+//// save featured image dynamic after saving post
+//add_action('save_post', 'update_featured_image_after_saving_cpt', 10, 3);
+//function update_featured_image_after_saving_cpt($post_id, $post, $update)
+//{
+//  $post_types = ['post', 'articles', 'interviews', 'case_studies','books','teams'];
+//  if (!in_array($post->post_type, $post_types) || !$update) {
+////    var_dump($post->post_type);
+////    exit;
+//    return;
+//  }
+//  $featured_image = get_field('featured_image', $post_id) ?: "";
+//  update_post_meta($post_id, '_thumbnail_id', $featured_image);
+//}

@@ -2,12 +2,12 @@
 @use "../../styles/mixins/mixins" as *;
 @import "swiper/css";
 
-// @author
 .recent_posts {
   @include paddingY(65px);
   @include min-medium-screen {
     @include paddingY(128px);
   }
+
   .cards-wrapper {
     display: flex;
     align-items: flex-start;
@@ -18,6 +18,7 @@
       flex-direction: row;
       margin-bottom: 80px;
     }
+
     .recent-content {
       max-width: 590px;
       margin-bottom: 15px;
@@ -27,48 +28,81 @@
       @include large-screen {
         max-width: 768px;
       }
+
       .recent-content-title {
         color: $threeSixty_theme_gray-950;
         margin-bottom: 15px;
       }
     }
   }
+
   .recent-posts-swiper {
+    margin-bottom: 50px;
+    @include large-screen {
+      margin-bottom: 80px;
+    }
+
     .recent-card {
+      display: flex;
+      flex-direction: column;
       position: relative;
-      height: 100%;
+      height: auto;
+
       .featured-image {
         padding-top: 62.5%;
       }
-      .post-title {
-        display: flex;
-        align-items: flex-start;
-        color: $threeSixty_theme_gray-950;
-        @include paddingY(20px , 8px);
-        transition: color $duration;
-        gap: 16px;
-        font-size: 24px;
-        line-height: 133.333%;
-        &:hover {
-          color: $threeSixty_theme_brand-600;
-        }
-        .post-title-svg {
-          flex-shrink: 0;
-          width: 24px;
-          height: 24px;
+
+
+      .categories {
+        margin-top: auto;
+
+        .cat-name {
+          border-radius: 0;
         }
       }
     }
-  }
-  .categories {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 17px;
-    .cat-name {
-      padding: 2px 10px;
-      border-radius: 4px;
+
+    .post-title {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      color: $threeSixty_theme_gray-950;
+      margin-block: 21px 20px;
+      transition: color $duration;
+      gap: 16px;
+      font-size: 24px;
+      line-height: 133.333%;
+      @include max-lines(2);
+
+      &:hover {
+        color: $threeSixty_theme_brand-600;
+      }
+
+      .post-title-svg {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
     }
+  }
+
+  .recent_posts_block {
+
+    .post-title {
+      @include max-lines(1);
+    }
+
+    .categories {
+      display: none;
+    }
+
+    .excerpt {
+      @include max-lines(2);
+    }
+
   }
 }

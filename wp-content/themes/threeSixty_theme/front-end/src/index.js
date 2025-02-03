@@ -6,6 +6,7 @@ import hero from './blocks/hero_block';
 import {initBlocks} from './blocks';
 import {getHeightOfViewPort} from './scripts/functions/getHeightOfViewPort';
 import {generateDataHover} from './scripts/functions/generateDataHover';
+import {copyToClipboard} from "./scripts/general/CopyToClipboard";
 import {initModal} from "./scripts/general/custom-modal";
 import {openPopup} from "./scripts/general/open-popup";
 import {scrollToHash} from './scripts/general/scroll-to-hash';
@@ -17,27 +18,13 @@ const reInvokableFunction = async (container = document) => {
   container.querySelector('.hero_block') && await hero(container.querySelector('.hero_block'));
   await initBlocks(container);
   generateDataHover(container);
-  scrollToHash(container);
+  // scrollToHash(container);
   getHeightOfViewPort(container);
   activePage(container);
   initModal()
   openPopup(container);
+  copyToClipboard(container);
   updateSVGInPictures();
-  const isWarm = document.body.classList.contains('warm-red-page');
-
-
-  if (isWarm) {
-    gsap.to(document.body,{backgroundColor:'#f84e35', ease:'none', scrollTrigger:{
-        scrub:1,
-        trigger:'.color-start',
-        endTrigger: '.color-end',
-        start:()=>'bottom center',
-        end:()=>'top center',
-      }})
-  }
-
-
-
   ScrollTrigger.refresh(false);
 
 };
