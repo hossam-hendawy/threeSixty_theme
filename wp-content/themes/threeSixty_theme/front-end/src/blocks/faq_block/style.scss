@@ -1,0 +1,109 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.faq_block {
+
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+
+  .accordion-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  .accordion-content > div {
+    overflow: hidden;
+  }
+
+
+  .accordion {
+    margin-top: size(65);
+    @include min-medium-screen {
+      max-width: size(768);
+      @include marginX(auto);
+    }
+  }
+
+  .accordion-panel {
+    border-radius: size(8);
+    @include paddingX(size(22));
+    //@include paddingY(size(22), size(22));
+    cursor: pointer;
+
+    &:not(:first-child) {
+      border-top: 1px solid #E4E7EC;
+      padding-top: 24px;
+    }
+    &:not(:last-child) {
+      margin-bottom: size(32);
+    }
+
+    @include small-screen {
+      &:not(:last-child) {
+        margin-bottom: size(13);
+      }
+    }
+
+    .title {
+      position: relative;
+    }
+
+    .answer {
+      max-width: size(400);
+      @include min-medium-screen{
+        max-width: 90%;
+      }
+      p {
+        @include font(16px, 400, 24px, $threeSixty_theme_gray-500, inherit, normal);
+      }
+      .spacer {
+        height: 8px;
+      }
+    }
+  }
+
+
+  .accordion-trigger {
+    text-align: left;
+    max-width: size(250);
+    @include font-size(18px, 28px);
+
+    @include min-medium-screen {
+      max-width: 85%;
+    }
+  }
+
+  .accordion-trigger .toggle-open {
+    @include square(size(16));
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    transition: transform $duration;
+    @include min-medium-screen{
+      @include square(size(20));
+    }
+  }
+
+
+  .accordion-trigger[aria-expanded="true"] .toggle-open {
+    transform: scaleY(-1);
+  }
+
+  .sub-title {
+    color: $threeSixty_theme_brand-600;
+  }
+  .title {
+    color: $threeSixty_theme_gray-950;
+  }
+  .description {
+    p {
+      line-height: 166.667%;
+      color: $threeSixty_theme_gray-500;
+    }
+  }
+}
