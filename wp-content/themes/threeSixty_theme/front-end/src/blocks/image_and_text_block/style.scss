@@ -48,6 +48,12 @@
       }
       .image {
         padding-top: 66.92%;
+        @include media-screen-768 {
+          padding-top: 39%;
+        }
+        @include min-medium-screen {
+          padding-top: 66.92%;
+        }
         img {
           object-fit: contain;
         }
