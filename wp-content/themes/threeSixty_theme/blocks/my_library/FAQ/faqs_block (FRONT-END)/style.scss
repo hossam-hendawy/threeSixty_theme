@@ -1,0 +1,114 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author HOSSAM
+.faqs_block {
+  @include paddingY(size(50));
+  @include min-medium-screen {
+    @include paddingY(size(60));
+  }
+  @include large-screen {
+    @include paddingY(size(98), size(87));
+  }
+
+  .main-title {
+    margin-bottom: size(32);
+    @include min-medium-screen {
+      margin-bottom: size(50);
+    }
+    @include large-screen {
+      margin-bottom: size(71);
+    }
+  }
+
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+
+  .accordion-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  .accordion-content > div {
+    overflow: hidden;
+  }
+
+
+  .accordion {
+    margin-top: size(65);
+    @include min-medium-screen {
+      max-width: size(768);
+      @include marginX(auto);
+    }
+  }
+
+  .accordion-panel {
+    border-radius: size(8);
+    background-color: $swight_theme_white;
+    @include paddingX(size(22));
+    @include paddingY(size(22), size(22));
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: size(32);
+    }
+
+    @include small-screen {
+      &:not(:last-child) {
+        margin-bottom: size(13);
+      }
+    }
+
+    .title {
+      position: relative;
+    }
+
+    .answer {
+      max-width: size(400);
+      @include min-medium-screen{
+        max-width: 90%;
+      }
+      p {
+        @include font(16px, 400, 28px, $swight_theme_dark_gray, inherit, normal);
+        @include min-medium-screen {
+          @include font-size(18px, 32px)
+        }
+      }
+
+      .spacer {
+        height: 20px;
+      }
+    }
+  }
+
+
+  .accordion-trigger {
+    text-align: left;
+    max-width: size(250);
+    @include font(18px, 400, 24px, $swight_theme_black, inherit, normal);
+    @include min-medium-screen {
+      @include font-size(26px, 30px);
+      max-width: 85%;
+    }
+  }
+
+  .accordion-trigger .toggle-open {
+    @include square(size(16));
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    transition: transform $duration;
+    @include min-medium-screen{
+      @include square(size(20));
+    }
+  }
+
+
+  .accordion-trigger[aria-expanded="true"] .toggle-open {
+    transform: scaleY(-1);
+  }
+}

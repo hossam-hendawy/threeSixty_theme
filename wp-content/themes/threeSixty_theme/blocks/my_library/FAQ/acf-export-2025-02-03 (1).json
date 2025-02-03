@@ -1,0 +1,200 @@
+[
+    {
+        "key": "group_66a8ab59538e2",
+        "title": "Faqs Block",
+        "fields": [
+            {
+                "key": "field_66a8ab595b9e9",
+                "label": "Block Content",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_66a8ab595f5b2",
+                "label": "Title",
+                "name": "title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_66a8ab596a4d6",
+                "label": "Programmatic Or Manual",
+                "name": "programmatic_or_manual",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "automatically": "Automatically",
+                    "manual": "Manual"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "horizontal",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_66a8ab596dfe4",
+                "label": "Faqs Card",
+                "name": "faqs_card",
+                "aria-label": "",
+                "type": "relationship",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_66a8ab596a4d6",
+                            "operator": "==",
+                            "value": "manual"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "faqs"
+                ],
+                "taxonomy": "",
+                "filters": [
+                    "search"
+                ],
+                "return_format": "id",
+                "min": "",
+                "max": "",
+                "elements": ""
+            },
+            {
+                "key": "field_66a8ab597192f",
+                "label": "Query Options",
+                "name": "query_options",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_66a8ab596a4d6",
+                            "operator": "==",
+                            "value": "automatically"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "acfe_seamless_style": 0,
+                "acfe_group_modal": 0,
+                "acfe_group_modal_close": 0,
+                "acfe_group_modal_button": "",
+                "acfe_group_modal_size": "large",
+                "sub_fields": [
+                    {
+                        "key": "field_66a8ab5988264",
+                        "label": "Order",
+                        "name": "order",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "asc": "Latest",
+                            "desc": "Oldest"
+                        },
+                        "default_value": "",
+                        "return_format": "value",
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "layout": "horizontal",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_66a8ab598bdda",
+                        "label": "Number Of Posts",
+                        "name": "number_of_posts",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "70",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": -1,
+                        "min": "",
+                        "max": "",
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/faqs-block"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
