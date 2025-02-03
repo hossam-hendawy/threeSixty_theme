@@ -10,9 +10,8 @@ $answer = get_field('answer', $post_id);
          <span>
         <?= $post_title ?>
          </span>
-        <svg class="toggle-open minus-plus" width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
-          <line class="vertical-line" x1="31" y1="16.5" x2="-8.74228e-08" y2="16.5" stroke="white" stroke-width="2"></line>
-          <line class="horizontal-line" x1="16" y1="4.37103e-08" x2="16" y2="31" stroke="white" stroke-width="2"></line>
+        <svg class="toggle-open minus-plus" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 10V18M8 14H16M22 14C22 19.5228 17.5228 24 12 24C6.47715 24 2 19.5228 2 14C2 8.47715 6.47715 4 12 4C17.5228 4 22 8.47715 22 14Z" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>

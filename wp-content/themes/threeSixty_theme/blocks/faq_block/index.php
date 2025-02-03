@@ -55,7 +55,7 @@ if ($programmatic_or_manual === 'programmatic') {
   <?php if ($programmatic_or_manual === "manual") { ?>
 
       <div class="accordion">
-        <div class="left-content flex-col gab-20">
+        <div class="content flex-col gab-20">
           <?php if ($sub_title): ?>
             <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
           <?php endif; ?>
@@ -73,7 +73,7 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
   <div class="accordion">
-    <div class="left-content flex-col gab-20">
+    <div class="content flex-col gab-20">
       <?php if ($sub_title): ?>
         <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
       <?php endif; ?>
@@ -81,7 +81,7 @@ if ($programmatic_or_manual === 'programmatic') {
         <h3 class="bold title"><?= $title ?></h3>
       <?php endif; ?>
       <?php if ($description): ?>
-        <div class="text-lg description"><?= $description ?></div>
+        <div class="text-xl description"><?= $description ?></div>
       <?php endif; ?>
     </div>
     <?php while ($the_query->have_posts()) {
