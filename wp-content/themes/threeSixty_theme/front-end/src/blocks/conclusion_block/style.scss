@@ -1,0 +1,19 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.conclusion_block {
+  .content {
+    background-color: $threeSixty_theme_gray-50;
+    padding: 32px;
+    .content-title {
+      color: $threeSixty_theme_gray-900;
+    }
+  }
+  &.in-single-page {
+    padding-block: 25px;
+    @include min-medium-screen {
+      padding-block: 48px;
+    }
+  }
+}
