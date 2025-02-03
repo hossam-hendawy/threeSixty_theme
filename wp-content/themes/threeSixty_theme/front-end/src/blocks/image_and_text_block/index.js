@@ -2,18 +2,18 @@ import './style.scss';
 import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
 /**
- * @author HOSSAM
+ * @author DELL
  * @param block {HTMLElement}
  * @returns {Promise<void>}
  */
-const conclusionBlock = async (block) => {
+const imageAndTextBlock = async (block) => {
 
   // add block code here
-// testing the new hidden value
+// testing the new hidden value 
 
     animations(block);
     imageLazyLoading(block);
 };
 
-export default conclusionBlock;
+export default imageAndTextBlock;
 
