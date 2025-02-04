@@ -1,0 +1,109 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.faq_block {
+  padding-block: 120px;
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+
+  .accordion-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  .accordion-content > div {
+    overflow: hidden;
+  }
+
+
+  .accordion {
+    @include marginX(auto);
+    max-width: size(680);
+    @include min-medium-screen {
+      max-width: size(768);
+    }
+  }
+
+  .accordion-panel {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: size(32);
+      border-bottom: 1px solid #E4E7EC;
+      padding-bottom: 24px;
+    }
+
+    @include small-screen {
+      &:not(:last-child) {
+        margin-bottom: size(13);
+      }
+    }
+
+    .title {
+      position: relative;
+    }
+
+    .answer {
+        max-width: 93.75%;
+      p {
+        @include font(16px, 400, 24px, $threeSixty_theme_gray-500, inherit, normal);
+      }
+      .spacer {
+        height: 8px;
+      }
+    }
+  }
+
+
+  .accordion-trigger {
+    @include font-size(18px, 28px);
+    color: #101828;
+    max-width: 90%;
+    text-align: left;
+  }
+
+  .accordion-trigger .toggle-open {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    transition: transform $duration;
+      @include square(size(24));
+    }
+
+  .svg-border {
+    @include square(24px);
+    border: 2px solid $threeSixty_theme_quinary-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .accordion-trigger[aria-expanded="true"] .toggle-open {
+    transform: scaleY(-1);
+  }
+
+  .content {
+    margin-bottom: 40px;
+    text-align: center;
+    @include min-medium-screen {
+      margin-bottom: 80px;
+    }
+  .sub-title {
+    color: $threeSixty_theme_brand-600;
+  }
+  .title {
+    color: $threeSixty_theme_gray-950;
+  }
+  .description {
+    p {
+        color: $threeSixty_theme_gray-500;
+    }
+  }
+  }
+
+}
