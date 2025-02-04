@@ -70,7 +70,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "small-filed",
+                "class": "small-field",
                 "id": ""
             },
             "default_value": "",
@@ -129,9 +129,17 @@
             "post_type": [
                 "faqs"
             ],
-            "taxonomy": "",
+            "taxonomy": [
+                "faq_category:elite-package",
+                "faq_category:basic-package",
+                "faq_category:starter-package",
+                "faq_category:pro-package",
+                "faq_category:premium-package",
+                "faq_category:advanced-package"
+            ],
             "filters": [
-                "search"
+                "search",
+                "taxonomy"
             ],
             "return_format": "object",
             "min": "",
@@ -163,28 +171,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_67a0ef5d24067",
-                    "label": "Number Of Posts",
-                    "name": "number_of_posts",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_67a0ef7e24068",
                     "label": "Order",
                     "name": "order",
@@ -194,7 +180,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -206,8 +192,30 @@
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
-                    "layout": "vertical",
+                    "layout": "horizontal",
                     "save_other_choice": 0
+                },
+                {
+                    "key": "field_67a0ef5d24067",
+                    "label": "Number Of Posts",
+                    "name": "number_of_posts",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -230,5 +238,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738600506
+    "modified": 1738678940
 }
