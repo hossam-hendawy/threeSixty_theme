@@ -3,7 +3,8 @@
 
 // @author DELL
 .faq_block {
-  padding-block: 120px;
+  padding-block: 120px 80px;
+
   .accordion-content {
     display: grid;
     grid-template-rows: 0fr;
@@ -29,6 +30,7 @@
 
   .accordion-panel {
     cursor: pointer;
+
     &:not(:last-child) {
       margin-bottom: size(32);
       border-bottom: 1px solid #E4E7EC;
@@ -46,10 +48,12 @@
     }
 
     .answer {
-        max-width: 93.75%;
+      max-width: 93.75%;
+
       p {
         @include font(16px, 400, 24px, $threeSixty_theme_gray-500, inherit, normal);
       }
+
       .spacer {
         height: 8px;
       }
@@ -71,8 +75,8 @@
     transform: translateY(-50%);
     display: flex;
     transition: transform $duration;
-      @include square(size(24));
-    }
+    @include square(size(24));
+  }
 
   .svg-border {
     @include square(24px);
@@ -93,17 +97,21 @@
     @include min-medium-screen {
       margin-bottom: 80px;
     }
-  .sub-title {
-    color: $threeSixty_theme_brand-600;
-  }
-  .title {
-    color: $threeSixty_theme_gray-950;
-  }
-  .description {
-    p {
-        color: $threeSixty_theme_gray-500;
+
+    .sub-title {
+      letter-spacing: normal;
+      color: $threeSixty_theme_brand-600;
     }
-  }
+
+    .title {
+      color: $threeSixty_theme_gray-950;
+    }
+
+    .description {
+      p {
+        color: $threeSixty_theme_gray-500;
+      }
+    }
   }
 
 }

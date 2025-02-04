@@ -53,17 +53,16 @@ if ($programmatic_or_manual === 'programmatic') {
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
   <?php if ($programmatic_or_manual === "manual") { ?>
-
       <div class="accordion">
         <div class="content flex-col gab-20">
           <?php if ($sub_title): ?>
-            <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
+            <div class="text-xl sub-title uppercase-text"><?= $sub_title ?></div>
           <?php endif; ?>
           <?php if ($title): ?>
-            <h3 class="bold title"><?= $title ?></h3>
+            <div class="d-lg-h3 bold title capital-text"><?= $title ?></div>
           <?php endif; ?>
           <?php if ($description): ?>
-            <div class="text-lg description"><?= $description ?></div>
+            <div class="text-xl description center-text"><?= $description ?></div>
           <?php endif; ?>
         </div>
 
