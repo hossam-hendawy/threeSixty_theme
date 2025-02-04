@@ -20,9 +20,10 @@
 
 
   .accordion {
+    @include marginX(auto);
+    max-width: size(680);
     @include min-medium-screen {
       max-width: size(768);
-      @include marginX(auto);
     }
   }
 
@@ -45,10 +46,7 @@
     }
 
     .answer {
-      max-width: size(400);
-      @include min-medium-screen{
-        max-width: 90%;
-      }
+        max-width: 93.75%;
       p {
         @include font(16px, 400, 24px, $threeSixty_theme_gray-500, inherit, normal);
       }
@@ -67,19 +65,23 @@
   }
 
   .accordion-trigger .toggle-open {
-    @include square(size(16));
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    display: block;
+    display: flex;
     transition: transform $duration;
-
-    @include min-medium-screen{
       @include square(size(24));
     }
-  }
 
+  .svg-border {
+    @include square(24px);
+    border: 2px solid $threeSixty_theme_quinary-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
 
   .accordion-trigger[aria-expanded="true"] .toggle-open {
     transform: scaleY(-1);
@@ -87,8 +89,8 @@
 
   .content {
     margin-bottom: 40px;
+    text-align: center;
     @include min-medium-screen {
-      text-align: center;
       margin-bottom: 80px;
     }
   .sub-title {
@@ -103,4 +105,5 @@
     }
   }
   }
+
 }
