@@ -59,7 +59,7 @@ if ($programmatic_or_manual === 'programmatic') {
             <div class="text-xl sub-title uppercase-text"><?= $sub_title ?></div>
           <?php endif; ?>
           <?php if ($title): ?>
-            <div class="d-lg-h3 bold title capital-text"><?= $title ?></div>
+            <div class="d-lg-h3 bold main-title title capital-text"><?= $title ?></div>
           <?php endif; ?>
           <?php if ($description): ?>
             <div class="text-xl description center-text"><?= $description ?></div>

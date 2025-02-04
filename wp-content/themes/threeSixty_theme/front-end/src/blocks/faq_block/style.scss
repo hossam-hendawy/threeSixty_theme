@@ -3,7 +3,18 @@
 
 // @author DELL
 .faq_block {
-  padding-block: 120px 80px;
+  @include paddingY(65px);
+  @include media-screen-992 {
+    @include paddingY(70px);
+  }
+  @include min-medium-screen {
+    padding-block: 120px 80px;
+  }
+
+  .main-title {
+    max-width: 768px;
+    margin-inline: auto;
+  }
 
   .accordion-content {
     display: grid;
