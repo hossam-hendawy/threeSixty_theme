@@ -32,9 +32,9 @@
     cursor: pointer;
 
     &:not(:last-child) {
-      margin-bottom: size(32);
+      margin-bottom: 24px;
       border-bottom: 1px solid #E4E7EC;
-      padding-bottom: 24px;
+      padding-bottom: 32px;
     }
 
     @include small-screen {
@@ -48,7 +48,7 @@
     }
 
     .answer {
-      max-width: 93.75%;
+      max-width: 88.75%;
 
       p {
         @include font(16px, 400, 24px, $threeSixty_theme_gray-500, inherit, normal);
