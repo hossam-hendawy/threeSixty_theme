@@ -87,6 +87,13 @@
     display: flex;
     transition: transform $duration;
     @include square(size(24));
+
+    .vertical-line {
+      transform: scaleY(1);
+      transform-origin: 50% 50%;
+      transition: transform $duration;
+    }
+
   }
 
   .svg-border {
@@ -99,7 +106,9 @@
   }
 
   .accordion-trigger[aria-expanded="true"] .toggle-open {
-    transform: scaleY(-1);
+    .vertical-line {
+      transform: scaleY(0);
+    }
   }
 
   .content {
