@@ -80,31 +80,6 @@
             "delay": 0
         },
         {
-            "key": "field_67a0ef0624064",
-            "label": "Programmatic OR Manual",
-            "name": "programmatic_or_manual",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "52",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "programmatic": "Programmatic",
-                "manual": "Manual"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_67a0ef2424065",
             "label": "Faq Card",
             "name": "faq_card",
@@ -112,15 +87,7 @@
             "type": "relationship",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67a0ef0624064",
-                        "operator": "==",
-                        "value": "manual"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -145,79 +112,6 @@
             "min": "",
             "max": "",
             "elements": ""
-        },
-        {
-            "key": "field_67a0ef4724066",
-            "label": "Query Options",
-            "name": "query_options",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67a0ef0624064",
-                        "operator": "==",
-                        "value": "programmatic"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_67a0ef7e24068",
-                    "label": "Order",
-                    "name": "order",
-                    "aria-label": "",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "30",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "desc": "Latest",
-                        "asc": "Oldest"
-                    },
-                    "default_value": "",
-                    "return_format": "value",
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "layout": "horizontal",
-                    "save_other_choice": 0
-                },
-                {
-                    "key": "field_67a0ef5d24067",
-                    "label": "Number Of Posts",
-                    "name": "number_of_posts",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "70",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
         }
     ],
     "location": [
@@ -238,5 +132,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738678940
+    "modified": 1738683386
 }
