@@ -6,7 +6,7 @@ class Faqs extends Entity
 {
   public static function init()
   {
-    // to copy
+    // Register Custom Post Type
     register_post_type('faqs', [
         'label' => __('faqs', 'tes_theme'),
         'description' => __('Faqs news and reviews', 'tes_theme'),
@@ -25,16 +25,11 @@ class Faqs extends Entity
             'not_found' => __('Not Found', 'tes_theme'),
             'not_found_in_trash' => __('Not found in Trash', 'tes_theme'),
         ),
-      // Features this CPT supports in Post Editor
         'supports' => array(
             'title',
+            'editor',
             'revisions'
         ),
-      // You can associate this CPT with a taxonomy or custom taxonomy.
-      /* A hierarchical CPT is like Pages and can have
-      * Parent and child items. A non-hierarchical CPT
-      * is like Posts.
-      */
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
@@ -50,7 +45,33 @@ class Faqs extends Entity
         'capability_type' => 'post',
         'show_in_rest' => true,
     ]);
+    
+    // Register Taxonomy
+    self::register_faq_taxonomy();
+  }
+  
+  private static function register_faq_taxonomy()
+  {
+    register_taxonomy('faq_category', ['faqs'], [
+        'hierarchical' => true,
+        'labels' => array(
+            'name' => _x('FAQ Categories', 'taxonomy general name', 'tes_theme'),
+            'singular_name' => _x('FAQ Category', 'taxonomy singular name', 'tes_theme'),
+            'search_items' => __('Search FAQ Categories', 'tes_theme'),
+            'all_items' => __('All FAQ Categories', 'tes_theme'),
+            'parent_item' => __('Parent FAQ Category', 'tes_theme'),
+            'parent_item_colon' => __('Parent FAQ Category:', 'tes_theme'),
+            'edit_item' => __('Edit FAQ Category', 'tes_theme'),
+            'update_item' => __('Update FAQ Category', 'tes_theme'),
+            'add_new_item' => __('Add New FAQ Category', 'tes_theme'),
+            'new_item_name' => __('New FAQ Category Name', 'tes_theme'),
+            'menu_name' => __('FAQ Categories', 'tes_theme'),
+        ),
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => ['slug' => 'faq-category'],
+    ]);
   }
 }
-
-
