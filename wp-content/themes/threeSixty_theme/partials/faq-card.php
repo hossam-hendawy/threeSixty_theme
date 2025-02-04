@@ -6,7 +6,7 @@ $answer = get_field('answer', $post_id);
 <div class="accordion-panel" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
   <?php if ($post_title) { ?>
     <div id="panel2-title" class="title">
-      <button class="accordion-trigger medium" aria-expanded="false" aria-controls="accordion1-content">
+      <button class="accordion-trigger medium" aria-expanded="false">
          <span>
         <?= $post_title ?>
          </span>
@@ -20,7 +20,7 @@ $answer = get_field('answer', $post_id);
     </div>
   <?php } ?>
   <?php if ($answer) { ?>
-    <div class="accordion-content" role="region" aria-labelledby="panel2-title" aria-hidden="true" id="panel2-content">
+    <div class="accordion-content" role="region" aria-labelledby="panel2-title">
       <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <p class="spacer"></p>
         <?= $answer ?>
