@@ -21,3 +21,43 @@ $image = get_field('image');
   );
   ?>
 </div>
+
+
+<script>
+  // Define a global array to hold the results
+  let imageSizeHistoryArray = [];
+
+  function logImageSizeHistoryArray(className) {
+    const viewportWidth = window.innerWidth; // Current viewport width
+
+    // Query the first image with the given class name as an example
+    const image = document.querySelector(className);
+    if (image) {
+      // Construct the entry for this viewport width with the image's rendered size
+      const entry = [viewportWidth, [image.offsetWidth, image.offsetHeight, 1]];
+
+      // Check if the viewportWidth already exists in the imageSizeHistoryArray
+      const existingIndex = imageSizeHistoryArray.findIndex(el => el[0] === viewportWidth);
+
+      // If it exists, update it. Otherwise, add the new entry.
+      if (existingIndex !== -1) {
+        imageSizeHistoryArray[existingIndex] = entry;
+      } else {
+        imageSizeHistoryArray.push(entry);
+      }
+    }
+
+    // Sort the array by viewportWidth for better readability
+    imageSizeHistoryArray.sort((a, b) => a[0] - b[0]);
+
+    // Format the array to the desired string representation
+    const formattedHistory = imageSizeHistoryArray.map(item => `${item[0]} => [${item[1].join(', ')}]`);
+
+    // Log the formatted string representation
+    console.log("[\n " + formattedHistory.join(",\n ") + "\n]");
+  }
+
+   logImageSizeHistoryArray('picture.image.aspect-ratio.aspect-ratio-5x4');
+
+
+</script>
