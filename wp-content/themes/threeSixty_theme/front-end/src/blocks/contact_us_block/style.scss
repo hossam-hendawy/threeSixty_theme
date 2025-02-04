@@ -1,0 +1,129 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.contact_us_block {
+  padding-block: 44px 65px;
+  @include min-medium-screen {
+    padding-block: 87px 128px;
+  }
+  .cards-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    @include min-medium-screen {
+      gap: 0;
+      flex-direction: row;
+    }
+    .left-content {
+      width: 100%;
+      @include min-medium-screen {
+        width: 42.83%;
+      }
+      .title {
+        color: #181D27;
+      }
+      .description {
+        color: #535862;
+      }
+      .steps-cards {
+        margin-top: 24px;
+        gap: 24px;
+        @include min-medium-screen {
+          margin-top: 48px;
+          gap: 48px;
+        }
+        .step-card {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          position: relative;
+          .left-step {
+            color: $threeSixty_theme_gold;
+            font-family: $inter;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 44px; /* 191.304% */
+            letter-spacing: -0.46px;
+            @include square(46px);
+            border-radius: 50%;
+            border: 2px solid $threeSixty_theme_gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+          }
+          .right-step {
+            width: 85%;
+            gap: 8px;
+            @include small-screen {
+              width: 80%;
+            }
+            .info-title {
+              color: $threeSixty_theme_gray-950;
+            }
+            .info-description {
+              p {
+                font-weight: 400;
+              }
+            }
+          }
+
+        }
+      }
+    }
+    .right-content {
+      width: 100%;
+      @include min-medium-screen {
+        width: 50%;
+      }
+      .get-in-touch {
+        padding: 48px 55px 54px;
+        border-radius: 15px;
+        background: $threeSixty_theme_white;
+        width: 607px;
+        height: 775px;
+        box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
+      }
+      .bottom-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 45px;
+        @include small-screen {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include min-medium-screen {
+          margin-top: 92px;
+        }
+        .same-style {
+          padding: 24px;
+          border-radius: 10px;
+          border: 1px solid #CDD5DF;
+          gap: 8px;
+          width: 48.02%;
+          @include small-screen {
+            width: 100%;
+          }
+          .same-title {
+            color: #4B5565;
+          }
+          .same-description {
+            color: $threeSixty_theme_gray-600;
+          }
+          .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $threeSixty_theme_brand-700;
+          }
+        }
+      }
+    }
+  }
+}
