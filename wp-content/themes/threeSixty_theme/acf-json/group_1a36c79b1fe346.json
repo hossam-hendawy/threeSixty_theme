@@ -1,9 +1,9 @@
 {
-    "key": "group_4df38591260082",
-    "title": "Image And Text Block",
+    "key": "group_1a36c79b1fe346",
+    "title": "Package Description",
     "fields": [
         {
-            "key": "field_4df3859126a47d",
+            "key": "field_1a36c79b1fb27f",
             "label": "Block Content",
             "name": "",
             "aria-label": "",
@@ -20,7 +20,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_67a0ad982f8f1",
+            "key": "field_67a261b63482d",
             "label": "Position Image",
             "name": "position_image",
             "aria-label": "",
@@ -40,27 +40,7 @@
             "ui": 1
         },
         {
-            "key": "field_67a2624970ad2",
-            "label": "Sub Title",
-            "name": "sub_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67a0ad7b2f8ee",
+            "key": "field_67a261e33482f",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -80,7 +60,7 @@
             "append": ""
         },
         {
-            "key": "field_67a0ad822f8ef",
+            "key": "field_67a261ec34830",
             "label": "Description",
             "name": "description",
             "aria-label": "",
@@ -100,7 +80,7 @@
             "delay": 0
         },
         {
-            "key": "field_67a0ad912f8f0",
+            "key": "field_67a261fb34831",
             "label": "Image",
             "name": "image",
             "aria-label": "",
@@ -130,7 +110,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/image-and-text-block"
+                "value": "acf\/package-description"
             }
         ]
     ],
@@ -143,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738695247
+    "modified": 1738695251
 }
