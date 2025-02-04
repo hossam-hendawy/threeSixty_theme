@@ -10,13 +10,12 @@ $answer = get_field('answer', $post_id);
          <span>
         <?= $post_title ?>
          </span>
-
-        <svg class="toggle-open minus-plus" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-          <line class="vertical-line" x1="25" y1="5" x2="25" y2="45" stroke="#98A2B3" stroke-width="4" stroke-linecap="round"></line>
-          <line class="horizontal-line" x1="5" y1="25" x2="45" y2="25" stroke="#98A2B3" stroke-width="4" stroke-linecap="round"></line>
+        <span class="toggle-open minus-plus">
+             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+          <line class="vertical-line" x1="25" y1="5" x2="25" y2="45" stroke="#98A2B3" stroke-width="5" stroke-linecap="round"></line>
+          <line class="horizontal-line" x1="5" y1="25" x2="45" y2="25" stroke="#98A2B3" stroke-width="5" stroke-linecap="round"></line>
         </svg>
-
-
+        </span>
       </button>
     </div>
   <?php } ?>
