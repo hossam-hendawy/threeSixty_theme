@@ -49,6 +49,9 @@
         color: $threeSixty_theme_gray-950;
       }
       .description {
+        @include large-screen {
+          max-width: 585px;
+        }
         p {
           color: $threeSixty_theme_gray-500;
         }
