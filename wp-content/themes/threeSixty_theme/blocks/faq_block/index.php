@@ -29,70 +29,29 @@ if (isset($block)) {
 $sub_title = get_field('sub_title');
 $title = get_field('title');
 $description = get_field('description');
-$programmatic_or_manual = get_field("programmatic_or_manual");
 $faqs_posts = get_field('faq_card');
-if ($programmatic_or_manual === 'programmatic') {
-  $query_options = get_field("query_options") ?: [];
-  $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : 3;
-  if ($number_of_posts > 3) {
-    $number_of_posts = 3;
-  }
-  $order = isset($query_options['order']) && in_array($query_options['order'], ['asc', 'desc']) ? $query_options['order'] : 'DESC';
-  $args = [
-    "post_type" => "faqs",
-    "posts_per_page" => $number_of_posts,
-    "order" => $order,
-    "post_status" => "publish",
-    "paged" => 1,
-    'orderby' => 'date',
-  ];
-  $the_query = new WP_Query($args);
-}
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <?php if ($programmatic_or_manual === "manual") { ?>
-
-      <div class="accordion">
-        <div class="content flex-col gab-20">
-          <?php if ($sub_title): ?>
-            <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
-          <?php endif; ?>
-          <?php if ($title): ?>
-            <h3 class="bold title"><?= $title ?></h3>
-          <?php endif; ?>
-          <?php if ($description): ?>
-            <div class="text-lg description"><?= $description ?></div>
-          <?php endif; ?>
-        </div>
-
-        <?php foreach (get_field("faq_card") as $card):
-          get_template_part("partials/faq-card", "", ["post_id" => $card->ID]);
-        endforeach; ?>
-      </div>
-  <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
   <div class="accordion">
     <div class="content flex-col gab-20">
       <?php if ($sub_title): ?>
-        <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
+        <div class="text-xl sub-title uppercase-text"><?= $sub_title ?></div>
       <?php endif; ?>
       <?php if ($title): ?>
-        <h3 class="bold title"><?= $title ?></h3>
+        <div class="d-lg-h3 bold main-title title"><?= $title ?></div>
       <?php endif; ?>
       <?php if ($description): ?>
-        <div class="text-xl description"><?= $description ?></div>
+        <div class="text-xl description center-text"><?= $description ?></div>
       <?php endif; ?>
     </div>
-    <?php while ($the_query->have_posts()) {
-          $the_query->the_post();
-          get_template_part("partials/faq-card", "", ["post_id" => get_the_ID()]);
-        } ?>
-        <?php wp_reset_postdata(); ?>
+    <?php if ($faqs_posts): ?>
+      <?php foreach ($faqs_posts as $card):
+        get_template_part("partials/faq-card", "", ["post_id" => $card->ID]);
+      endforeach; ?>
+    <?php endif; ?>
   </div>
-  <?php } ?>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
