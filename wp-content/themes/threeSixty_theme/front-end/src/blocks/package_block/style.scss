@@ -20,35 +20,43 @@
       @include min-medium-screen {
         width: 537px;
       }
-    }
 
-    .service-benefit {
-      display: flex;
-      align-items: center;
-      gap: 32px;
+      .service-benefit {
+        display: flex;
+        align-items: center;
+        gap: 32px;
 
-      .icon-wrapper {
-        width: 64px;
-        height: 64px;
-        flex-shrink: 0;
+        .icon-wrapper {
+          width: 64px;
+          height: 64px;
+          flex-shrink: 0;
 
-        svg, img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          svg, img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .service-benefit-wrapper {
+          gap: 8px;
+
+          .title {
+            color: $threeSixty_theme_gray-950;
+          }
+
+          .description {
+            max-width: 411px;
+          }
         }
       }
+    }
 
-      .service-benefit-wrapper {
-        gap: 8px;
-
-        .title {
-          color: $threeSixty_theme_gray-950;
-        }
-
-        .description {
-          max-width: 411px;
-        }
+    .right-content-wrapper {
+      width: 100%;
+      height: 500px;
+      @include min-medium-screen {
+        width: 613px;
       }
     }
   }

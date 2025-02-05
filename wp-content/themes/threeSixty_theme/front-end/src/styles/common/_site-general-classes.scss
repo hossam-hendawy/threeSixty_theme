@@ -485,6 +485,42 @@ ol.theme-unordered-list-element {
 }
 
 
+.package-box-wrapper {
+  background: $threeSixty_theme_white;
+  border: 1px solid #E4E7EC;
+  border-radius: 8px;
+  box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.14);
+
+  .package-title-and-price {
+    padding: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E4E7EC;
+    width: 100%;
+
+    .icon-and-package-title {
+      display: flex;
+      flex-direction: column;
+      @include min-medium-screen {
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      .title-and-excerpt {
+        gap: 4px;
+      }
+      .package-title {
+        color: $threeSixty_theme_gray-950;
+      }
+    }
+
+    .price {
+      color: $threeSixty_theme_gray-600;
+    }
+  }
+}
+
 body.rtl {
 
   .cta-link {

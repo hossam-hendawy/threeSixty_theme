@@ -26,8 +26,11 @@ if (isset($block)) {
 /****************************
  *     Custom ACF Meta      *
  ****************************/
-$title = get_field('title');
-$description = get_field('description');
+$post_id = get_the_ID();
+$package_title = get_field('package_title', $post_id);
+$package_excerpt = get_field('package_excerpt', $post_id);
+$package_price = get_field('package_price', $post_id);
+$package_icon = get_field('package_icon', $post_id);
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -59,7 +62,30 @@ $description = get_field('description');
         <?php } ?>
       <?php } ?>
     </div>
-    <div class="right-content-wrapper"></div>
+    <div class="right-content-wrapper">
+      <div class="package-box-wrapper">
+        <div class="package-title-and-price">
+          <div class="icon-and-package-title">
+            <?php if (!empty($package_icon) && is_array($package_icon)) { ?>
+              <picture class="package-icon-wrapper">
+                <img src="<?= $package_icon['url'] ?>" alt="<?= $package_icon['alt'] ?>">
+              </picture>
+            <?php } ?>
+            <div class="title-and-excerpt flex-col">
+              <?php if ($package_title): ?>
+                <div class="package-title d-xs-6 bold uppercase-text"><?= $package_title ?></div>
+              <?php endif; ?>
+              <?php if ($package_excerpt): ?>
+                <div class="text-md description regular gray-500"><?= $package_excerpt ?></div>
+              <?php endif; ?>
+            </div>
+          </div>
+          <?php if ($package_price): ?>
+            <div class="price d-lg-h3 bold gray-600"><?= $package_price ?></div>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
