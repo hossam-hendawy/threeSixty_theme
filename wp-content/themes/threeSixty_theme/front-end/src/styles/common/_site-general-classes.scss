@@ -511,7 +511,7 @@ ol.theme-unordered-list-element {
         gap: 4px;
       }
 
-      .package-title p{
+      .package-title p {
         color: $threeSixty_theme_gray-950;
       }
     }
@@ -524,8 +524,27 @@ ol.theme-unordered-list-element {
     sub {
       margin-top: -2px;
     }
-    .price , sub {
+
+    .price, sub {
       color: #475467;
+    }
+  }
+
+  .cta-button-wrapper {
+    padding: 38px;
+
+    .theme-cta-button {
+      width: 100%;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      border-radius: 4px;
+      background: $threeSixty_theme_gray-700;
+
+      &:hover {
+        background-color: $threeSixty_theme_brand-600;
+      }
     }
   }
 }

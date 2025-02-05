@@ -31,6 +31,7 @@ $package_title = get_field('package_title', $post_id);
 $package_excerpt = get_field('package_excerpt', $post_id);
 $package_price = get_field('package_price', $post_id);
 $package_icon = get_field('package_icon', $post_id);
+$get_started = get_field('get_started', $post_id);
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -86,6 +87,17 @@ $package_icon = get_field('package_icon', $post_id);
             <div class="price d-lg-h3 bold gray-600"><?= $package_price ?></div>
           </div>
           <?php endif; ?>
+        </div>
+        <div class="cta-button-wrapper">
+          <?php if (!empty($get_started) && is_array($get_started)) { ?>
+            <a class="theme-cta-button uppercase-text" href="<?= $get_started['url'] ?>" target="<?= $get_started['target'] ?>">
+              <?= $get_started['title'] ?>
+              <svg aria-hidden="true" width="18" height="21" viewBox="0 0 18 21" fill="none">
+                <path d="M11.878 20.23H0.38L6.156 10.22L11.878 20.23Z" fill="#9AA4B2"/>
+                <path d="M17.621 10.231L11.881 0.23H0.38L6.155 10.22L11.878 20.23L17.621 10.231Z" fill="#F9F9FB"/>
+              </svg>
+            </a>
+          <?php } ?>
         </div>
       </div>
     </div>
