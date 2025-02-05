@@ -33,6 +33,8 @@ $package_price = get_field('package_price', $post_id);
 $package_icon = get_field('package_icon', $post_id);
 $package_includes_icon = get_field('package_includes_icon', $post_id);
 $get_started = get_field('get_started', $post_id);
+$note = get_field('note', $post_id);
+$note_icon = get_field('note_icon', $post_id);
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -94,8 +96,8 @@ $get_started = get_field('get_started', $post_id);
             includes:
           </div>
           <div class="package-includes-wrapper">
-            <?php if (have_rows('package_includes' , $post_id)) { ?>
-              <?php while (have_rows('package_includes' , $post_id)) {
+            <?php if (have_rows('package_includes', $post_id)) { ?>
+              <?php while (have_rows('package_includes', $post_id)) {
                 the_row();
                 $text = get_sub_field('text');
                 ?>
@@ -105,7 +107,7 @@ $get_started = get_field('get_started', $post_id);
                       <img src="<?= $package_includes_icon['url'] ?>" alt="<?= $package_includes_icon['alt'] ?>">
                     </picture>
                   <?php } ?>
-                  <div class="xxx text-md medium"><?= $text ?></div>
+                  <div class="the-text text-md medium"><?= $text ?></div>
                 </div>
               <?php } ?>
             <?php } ?>
@@ -123,7 +125,16 @@ $get_started = get_field('get_started', $post_id);
           <?php } ?>
         </div>
       </div>
-      <div class="note-wrapper"></div>
+      <div class="note-wrapper">
+        <?php if (!empty($note_icon) && is_array($note_icon)) { ?>
+          <picture class="note-icon-wrapper">
+            <img src="<?= $note_icon['url'] ?>" alt="<?= $note_icon['alt'] ?>">
+          </picture>
+        <?php } ?>
+        <?php if ($note): ?>
+          <div class="note-text text-sm regular"><?= $note ?></div>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 </div>
