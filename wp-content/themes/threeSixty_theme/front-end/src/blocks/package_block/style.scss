@@ -57,6 +57,16 @@
       @include min-medium-screen {
         width: 613px;
       }
+
+
+      .note-wrapper {
+        padding: 26px;
+        border-radius: 8px;
+        border: 1px solid $threeSixty_theme_gray-300;
+        background: $threeSixty_theme_white;
+        display: flex;
+
+      }
     }
   }
 }

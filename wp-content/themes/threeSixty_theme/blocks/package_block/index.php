@@ -93,9 +93,7 @@ $get_started = get_field('get_started', $post_id);
           <div class="package-includes-title text-md semi-bold">This package
             includes:
           </div>
-
           <div class="package-includes-wrapper">
-
             <?php if (have_rows('package_includes' , $post_id)) { ?>
               <?php while (have_rows('package_includes' , $post_id)) {
                 the_row();
@@ -125,6 +123,7 @@ $get_started = get_field('get_started', $post_id);
           <?php } ?>
         </div>
       </div>
+      <div class="note-wrapper"></div>
     </div>
   </div>
 </div>
