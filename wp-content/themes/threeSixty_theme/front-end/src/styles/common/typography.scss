@@ -212,7 +212,7 @@ h6 , .d-xs-6, .d-xs-6 p {
 }
 
 
-.regular {
+.regular , .regular p {
   font-weight: 400;
 }
 
@@ -256,7 +256,7 @@ h6 , .d-xs-6, .d-xs-6 p {
   color: $threeSixty_theme_black;
 }
 
-.gray-500 {
+.gray-500 , .gray-500 p {
   color: $threeSixty_theme_gray_500;
 }
 
