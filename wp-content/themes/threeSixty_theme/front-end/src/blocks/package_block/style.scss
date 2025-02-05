@@ -4,21 +4,22 @@
 // @author HOSSAM
 .package_block {
   padding-block: 80px 128px;
-
   .content-wrapper {
     display: flex;
     flex-direction: column;
+
     @include min-medium-screen {
       flex-direction: row;
       justify-content: space-between;
     }
 
-
     .left-content-wrapper {
       width: 100%;
       gap: 48px;
+      margin-bottom: 45px;
       @include min-medium-screen {
-        width: 537px;
+        width: 44.19%;
+        margin-bottom: 0;
       }
 
       .service-benefit {
@@ -55,7 +56,7 @@
     .right-content-wrapper {
       width: 100%;
       @include min-medium-screen {
-        width: 613px;
+        width: 50.45%;
       }
 
 
@@ -67,11 +68,14 @@
         display: flex;
         margin-top: 55px;
         gap: 7px;
-
+        @include small-screen {
+          flex-direction: column;
+        }
         .note-icon-wrapper {
           width: 38px;
           height: 38px;
           margin-top: -10px;
+          flex-shrink: 0;
           img, svg {
             width: 100%;
             height: 100%;
@@ -85,5 +89,6 @@
         }
       }
     }
+
   }
 }

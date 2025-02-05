@@ -499,12 +499,17 @@ ol.theme-unordered-list-element {
     border-bottom: 1px solid #E4E7EC;
     width: 100%;
 
+    @include small-screen {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
     .icon-and-package-title {
       display: flex;
       flex-direction: column;
+      gap: 16px;
       @include min-medium-screen {
         flex-direction: row;
-        gap: 16px;
       }
 
       .title-and-excerpt {
@@ -545,6 +550,9 @@ ol.theme-unordered-list-element {
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 16px;
+      @include small-screen {
+        flex-direction: column;
+      }
     }
 
     .text {
@@ -552,7 +560,9 @@ ol.theme-unordered-list-element {
       align-items: center;
       gap: 12px;
       width: 45%;
-
+      @include small-screen {
+        width: 100%;
+      }
       .icon {
         flex-shrink: 0;
         width: 24px;
