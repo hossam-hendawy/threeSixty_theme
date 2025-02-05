@@ -44,9 +44,9 @@ $note_icon = get_field('note_icon', $post_id);
       <?php if (have_rows('service_benefits')) { ?>
         <?php while (have_rows('service_benefits')) {
           the_row();
-          $icon = get_sub_field('icon');
-          $title = get_sub_field('title');
-          $description = get_sub_field('description');
+          $icon = get_sub_field('icon' , $post_id);
+          $title = get_sub_field('title' , $post_id);
+          $description = get_sub_field('description' , $post_id);
           ?>
           <div class="service-benefit">
             <?php if (!empty($icon) && is_array($icon)) { ?>
