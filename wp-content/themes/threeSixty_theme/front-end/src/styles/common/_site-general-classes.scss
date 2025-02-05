@@ -530,6 +530,47 @@ ol.theme-unordered-list-element {
     }
   }
 
+  .package-includes {
+    padding-inline: 38px;
+    padding-block: 30px 34px;
+    border: 1px solid #E4E7EC;
+
+    .package-includes-title {
+      color: #101828;
+      margin-bottom: 32px;
+    }
+
+    .package-includes-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .text {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 45%;
+
+      .icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+
+        img, svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .xxx {
+        color: $threeSixty_theme_tertiary-600;
+      }
+    }
+  }
+
   .cta-button-wrapper {
     padding: 38px;
 

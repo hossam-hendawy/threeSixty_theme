@@ -31,6 +31,7 @@ $package_title = get_field('package_title', $post_id);
 $package_excerpt = get_field('package_excerpt', $post_id);
 $package_price = get_field('package_price', $post_id);
 $package_icon = get_field('package_icon', $post_id);
+$package_includes_icon = get_field('package_includes_icon', $post_id);
 $get_started = get_field('get_started', $post_id);
 ?>
 <!-- region threeSixty_theme's Block -->
@@ -82,11 +83,35 @@ $get_started = get_field('get_started', $post_id);
             </div>
           </div>
           <?php if ($package_price): ?>
-          <div class="price-container">
-            <sub class="d-md-h4 semi-bold gray-600">$</sub>
-            <div class="price d-lg-h3 bold gray-600"><?= $package_price ?></div>
-          </div>
+            <div class="price-container">
+              <sub class="d-md-h4 semi-bold gray-600">$</sub>
+              <div class="price d-lg-h3 bold gray-600"><?= $package_price ?></div>
+            </div>
           <?php endif; ?>
+        </div>
+        <div class="package-includes">
+          <div class="package-includes-title text-md semi-bold">This package
+            includes:
+          </div>
+
+          <div class="package-includes-wrapper">
+
+            <?php if (have_rows('package_includes' , $post_id)) { ?>
+              <?php while (have_rows('package_includes' , $post_id)) {
+                the_row();
+                $text = get_sub_field('text');
+                ?>
+                <div class="text">
+                  <?php if (!empty($package_includes_icon) && is_array($package_includes_icon)) { ?>
+                    <picture class="icon">
+                      <img src="<?= $package_includes_icon['url'] ?>" alt="<?= $package_includes_icon['alt'] ?>">
+                    </picture>
+                  <?php } ?>
+                  <div class="xxx text-md medium"><?= $text ?></div>
+                </div>
+              <?php } ?>
+            <?php } ?>
+          </div>
         </div>
         <div class="cta-button-wrapper">
           <?php if (!empty($get_started) && is_array($get_started)) { ?>
