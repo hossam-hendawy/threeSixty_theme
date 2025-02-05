@@ -510,13 +510,22 @@ ol.theme-unordered-list-element {
       .title-and-excerpt {
         gap: 4px;
       }
-      .package-title {
+
+      .package-title p{
         color: $threeSixty_theme_gray-950;
       }
     }
 
-    .price {
-      color: $threeSixty_theme_gray-600;
+    .price-container {
+      display: flex;
+      gap: 2px;
+    }
+
+    sub {
+      margin-top: -2px;
+    }
+    .price , sub {
+      color: #475467;
     }
   }
 }

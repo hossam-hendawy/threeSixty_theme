@@ -81,7 +81,10 @@ $package_icon = get_field('package_icon', $post_id);
             </div>
           </div>
           <?php if ($package_price): ?>
+          <div class="price-container">
+            <sub class="d-md-h4 semi-bold gray-600">$</sub>
             <div class="price d-lg-h3 bold gray-600"><?= $package_price ?></div>
+          </div>
           <?php endif; ?>
         </div>
       </div>
