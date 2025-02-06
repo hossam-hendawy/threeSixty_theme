@@ -1,0 +1,35 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.all_packages_block {
+  padding-bottom: 55px;
+  @include min-medium-screen {
+    padding-bottom: 112px;
+  }
+  background: linear-gradient(180deg, #FFF 0%, #F2F4F7 23.81%);
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 0;
+    @include large-screen {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px 32px;
+    }
+    .package-box-wrapper {
+      .package-includes {
+        .package-includes-title {
+          margin-bottom: 24px;
+        }
+        .package-includes-wrapper {
+          .text {
+            width: 47.05%;
+            @include small-screen {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
