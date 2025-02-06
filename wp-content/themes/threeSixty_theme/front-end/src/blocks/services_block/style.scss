@@ -3,7 +3,10 @@
 
 // @author DELL
 .services_block {
-  padding-block: 128px 120px;
+  padding-block: 65px 60px;
+  @include min-medium-screen {
+    padding-block: 128px 120px;
+  }
   .services-cards {
     display: grid;
     gap: 30px;
@@ -19,8 +22,8 @@
       gap: 32px;
 
       .icon-wrapper {
-        width: 64px;
-        height: 64px;
+        width: 57px;
+        height: 59px;
         flex-shrink: 0;
 
         svg, img {
