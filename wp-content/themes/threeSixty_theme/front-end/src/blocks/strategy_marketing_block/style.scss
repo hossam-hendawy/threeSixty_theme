@@ -38,7 +38,7 @@
     gap: 30px;
     grid-template-columns: repeat(1,1fr);
     @include min-medium-screen {
-      gap: 60px 107px;
+      gap: 70px 96px;
       grid-template-columns: repeat(2,1fr);
     }
     .marketing-services-card {
@@ -62,7 +62,12 @@
 
       .service-benefit-wrapper {
         .title {
-          color: $threeSixty_theme_gray-950;
+          color: #101828;
+        }
+        .description {
+          p {
+            color: $threeSixty_theme_tertiary-600;
+          }
         }
       }
     }
