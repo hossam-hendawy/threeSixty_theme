@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 40px 0;
-    @include large-screen {
+    @include min-medium-screen {
       grid-template-columns: repeat(2, 1fr);
       gap: 80px 32px;
     }
