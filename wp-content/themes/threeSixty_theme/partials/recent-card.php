@@ -12,26 +12,37 @@ $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_titl
 ?>
 <div class="swiper-slide recent-card">
   <a href="<?= $post_permalink ?>" target="_self">
-    <?php
-    $picture_class = 'aspect-ratio image-wrapper image-hover-effect featured-image';
-    echo bis_get_attachment_picture(
-      $thumbnail_id,
-      [
-        375 => [327, 205, 1],
-        600 => [266, 166, 1],
-        768 => [350, 219, 1],
-        992 => [462, 289, 1],
-        1024 => [312, 195, 1],
-        1280 => [384, 240, 1],
-        1440 => [384, 240, 1],
-        1920 => [384, 240, 1]
-      ],
-      [
-        'retina' => true, 'picture_class' => $picture_class,
-        'alt' => esc_attr($thumbnail_alt)
-      ]
-    );
-    ?>
+
+
+    <?php if ($thumbnail_id) { ?>
+      <?php
+      $picture_class = 'aspect-ratio image-wrapper image-hover-effect featured-image';
+      echo bis_get_attachment_picture(
+        $thumbnail_id,
+        [
+          375 => [327, 205, 1],
+          600 => [266, 166, 1],
+          768 => [350, 219, 1],
+          992 => [462, 289, 1],
+          1024 => [312, 195, 1],
+          1280 => [384, 240, 1],
+          1440 => [384, 240, 1],
+          1920 => [384, 240, 1]
+        ],
+        [
+          'retina' => true, 'picture_class' => $picture_class,
+          'alt' => esc_attr($thumbnail_alt)
+        ]
+      );
+      ?>
+    <?php } else { ?>
+      <picture class="aspect-ratio image-wrapper image-hover-effect featured-image">
+        <img src="<?= get_template_directory_uri() .'/images/image-not-found.jpg' ?>" alt="image-not-found">
+      </picture>
+    <?php } ?>
+
+
+
   </a>
   <a href="<?= $post_permalink ?>" target="_self" class="post-title d-xs-6 semi-bold"><?= $post_title ?>
     <svg class="post-title-svg" width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
