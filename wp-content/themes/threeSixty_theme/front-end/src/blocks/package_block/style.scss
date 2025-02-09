@@ -3,10 +3,15 @@
 
 // @author HOSSAM
 .package_block {
-  padding-block: 80px 128px;
+  padding-block: 40px 90px;
+  @include min-medium-screen {
+    padding-block: 80px 128px;
+  }
+
   .content-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 20px;
 
     @include min-medium-screen {
       flex-direction: row;
@@ -16,16 +21,27 @@
     .left-content-wrapper {
       width: 100%;
       gap: 48px;
-      margin-bottom: 45px;
+      margin-top: 45px;
       @include min-medium-screen {
-        width: 44.19%;
-        margin-bottom: 0;
+        width: 43.19%;
+        margin-top: 0;
       }
+      @include large-screen {
+        width: 44.19%;
+      }
+
 
       .service-benefit {
         display: flex;
         align-items: center;
         gap: 32px;
+
+        @include min-medium-screen {
+          gap: 15px;
+        }
+        @include large-screen {
+          gap: 32px;
+        }
 
         .icon-wrapper {
           width: 64px;
@@ -56,9 +72,21 @@
     .right-content-wrapper {
       width: 100%;
       @include min-medium-screen {
+        width: 57.45%;
+        margin-top: -220px;
+      }
+      @include large-screen {
         width: 50.45%;
+        margin-top: -220px;
       }
 
+
+      .package-title-and-price, .package-includes, .cta-button-wrapper {
+        padding-inline: 28px;
+        @include large-screen {
+          padding-inline: 38px;
+        }
+      }
 
       .note-wrapper {
         padding: 26px;
@@ -71,11 +99,13 @@
         @include small-screen {
           flex-direction: column;
         }
+
         .note-icon-wrapper {
           width: 38px;
           height: 38px;
           margin-top: -10px;
           flex-shrink: 0;
+
           img, svg {
             width: 100%;
             height: 100%;

@@ -32,7 +32,7 @@ $title = get_field('title');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <picture class="hero-image">
-  <img src="  <?= get_template_directory_uri() . '/images/backgrounds/hero-svg.png' ?>" alt="">
+  <img src="<?= get_template_directory_uri() . '/images/backgrounds/hero-svg.png' ?>" alt="">
 </picture>
 <div class="container">
   <div class="content-wrapper flex-col">
@@ -40,7 +40,7 @@ $title = get_field('title');
       threeSixty_theme_breadcrumbs();
     } ?>
     <?php if ($sub_title) { ?>
-      <div class="white-color uppercase-text"><?= $sub_title ?></div>
+      <div class="d-md-h4 sub-title  uppercase-text"><?= $sub_title ?></div>
     <?php } ?>
     <?php if ($title) { ?>
       <div class="text-xl white-color"><?= $title ?></div>
