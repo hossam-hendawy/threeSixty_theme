@@ -61,7 +61,7 @@
         },
         {
             "key": "field_67a8304cf4928",
-            "label": "Tap",
+            "label": "Service Details",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -108,7 +108,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -134,7 +134,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
@@ -178,7 +178,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -203,7 +203,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "70",
                 "class": "small-field",
                 "id": ""
             },
@@ -223,7 +223,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33.33",
                 "class": "",
                 "id": ""
             },
@@ -243,7 +243,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.33",
                 "class": "",
                 "id": ""
             },
@@ -263,7 +263,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.33",
                 "class": "",
                 "id": ""
             },
@@ -283,7 +283,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -308,7 +308,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "70",
                 "class": "",
                 "id": ""
             },
@@ -369,7 +369,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -394,7 +394,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "70",
                 "class": "small-field",
                 "id": ""
             },
@@ -423,5 +423,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739075793
+    "modified": 1739076344
 }
