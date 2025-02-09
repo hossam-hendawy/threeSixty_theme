@@ -7,7 +7,10 @@
   @include media-screen-992 {
     @include paddingY(70px);
   }
-  @include min-medium-screen {
+  @include min-medium-screen{
+    padding-block: 80px;
+  }
+  @include large-screen {
     padding-block: 120px 80px;
   }
 
@@ -94,10 +97,11 @@
     justify-content: center;
 
 
-    svg{
+    svg {
       width: 12px;
       height: 12px;
     }
+
     .vertical-line {
       transform: scaleY(1);
       transform-origin: 50% 50%;

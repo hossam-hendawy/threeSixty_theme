@@ -3,8 +3,11 @@
 
 // @author HOSSAM
 .package_block {
-  padding-block: 40px 90px;
-  @include min-medium-screen {
+  padding-block: 40px 65px;
+  @include min-medium-screen{
+    padding-bottom: 80px;
+  }
+  @include large-screen {
     padding-block: 80px 128px;
   }
 
@@ -21,7 +24,12 @@
     .left-content-wrapper {
       width: 100%;
       gap: 48px;
-      margin-top: 45px;
+      margin-top: 22px;
+      @include max-medium-screen {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       @include min-medium-screen {
         width: 43.19%;
         margin-top: 0;
@@ -35,9 +43,12 @@
         display: flex;
         align-items: center;
         gap: 32px;
-
+        @include media-screen-992{
+          width: 47%;
+        }
         @include min-medium-screen {
           gap: 15px;
+          width: 100%;
         }
         @include large-screen {
           gap: 32px;
