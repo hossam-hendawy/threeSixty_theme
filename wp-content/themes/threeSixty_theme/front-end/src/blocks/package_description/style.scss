@@ -4,9 +4,13 @@
 // @author DELL
 .package_description {
   padding-block: 65px;
-  @include min-medium-screen {
+  @include min-medium-screen{
+    padding-block: 80px;
+  }
+  @include large-screen {
     padding-block: 128px;
   }
+
   &:after {
     position: absolute;
     content: "";
@@ -21,6 +25,7 @@
       width: calc(100% - 224px);
     }
   }
+
   .cards-wrapper {
     display: flex;
     align-items: center;
@@ -31,48 +36,58 @@
       flex-direction: row;
       gap: 0;
     }
+
     &.content-reverse {
-      flex-direction: column-reverse;
+
       @include min-medium-screen {
         flex-direction: row-reverse;
       }
     }
+
     .left-content {
       width: 100%;
       @include min-medium-screen {
         width: 50.49%;
       }
+
       .sub-title {
         color: $threeSixty_theme_brand-600;
       }
+
       .title {
         color: $threeSixty_theme_gray-950;
       }
+
       .description {
         @include large-screen {
           max-width: 585px;
         }
+
         p {
           color: $threeSixty_theme_gray-500;
         }
       }
     }
+
     .right-image {
       width: 100%;
       @include min-medium-screen {
         width: 46.86%;
       }
+
       .image {
         padding-top: 66.92%;
         @include media-screen-768 {
           padding-top: 39%;
         }
         @include min-medium-screen {
-          padding-top: 66.92%;
+          padding-top: 70.3%;
         }
+
         img {
           object-fit: contain;
         }
+
       }
     }
   }

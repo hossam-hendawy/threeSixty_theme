@@ -17,26 +17,32 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
 ?>
 <div class="post-card horizontal-card">
   <a href="<?= $post_permalink ?>" class="post-image-card" target="_self">
-    <?php
-    $picture_class = 'post-image aspect-ratio';
-    echo bis_get_attachment_picture(
-      $thumbnail_id,
-      [
-        375 => [327, 196, 1],
-        600 => [552, 331, 1],
-        768 => [344, 206, 1],
-        992 => [444, 266, 1],
-        1024 => [461, 276, 1],
-        1280 => [580, 348, 1],
-        1440 => [580, 348, 1],
-        1920 => [580, 348, 1]
-      ],
-      [
-        'retina' => true, 'picture_class' => $picture_class,
-        'alt' => esc_attr($thumbnail_alt)
-      ]
-    );
-    ?>
+    <?php if ($thumbnail_id) { ?>
+      <?php
+      $picture_class = 'post-image aspect-ratio';
+      echo bis_get_attachment_picture(
+        $thumbnail_id,
+        [
+          375 => [327, 196, 1],
+          600 => [552, 331, 1],
+          768 => [344, 206, 1],
+          992 => [444, 266, 1],
+          1024 => [461, 276, 1],
+          1280 => [580, 348, 1],
+          1440 => [580, 348, 1],
+          1920 => [580, 348, 1]
+        ],
+        [
+          'retina' => true, 'picture_class' => $picture_class,
+          'alt' => esc_attr($thumbnail_alt)
+        ]
+      );
+      ?>
+    <?php } else { ?>
+      <picture class="post-image aspect-ratio">
+        <img src="<?= get_template_directory_uri() .'/images/image-not-found.jpg' ?>" alt="image-not-found">
+      </picture>
+    <?php } ?>
   </a>
   <div class="post-content flex-col">
     <h3 class="text-sm semi-bold category"><?php the_category(', '); ?></h3>

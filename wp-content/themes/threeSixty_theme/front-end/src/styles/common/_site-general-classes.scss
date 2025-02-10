@@ -504,6 +504,7 @@ ol.theme-unordered-list-element {
       align-items: flex-start;
       gap: 16px;
     }
+
     .icon-and-package-title {
       display: flex;
       flex-direction: column;
@@ -538,7 +539,7 @@ ol.theme-unordered-list-element {
   .package-includes {
     padding-inline: 38px;
     padding-block: 30px 34px;
-    border: 1px solid #E4E7EC;
+    border-bottom: 1px solid #E4E7EC;
 
     .package-includes-title {
       color: #101828;
@@ -563,6 +564,7 @@ ol.theme-unordered-list-element {
       @include small-screen {
         width: 100%;
       }
+
       .icon {
         flex-shrink: 0;
         width: 24px;
