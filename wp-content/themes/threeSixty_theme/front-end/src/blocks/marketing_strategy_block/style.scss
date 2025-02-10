@@ -1,0 +1,40 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.marketing_strategy_block {
+  padding-block: 65px;
+  @include min-medium-screen {
+    padding-block: 128px;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: $threeSixty_theme_gray-300;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    @include large-screen {
+      width: calc(100% - 224px);
+    }
+  }
+  .marketing-cards {
+    @include marginX(auto);
+    @include media-screen-600 {
+      max-width: 650px;
+    }
+    @include min-medium-screen {
+      max-width: 670px;
+    }
+    @include large-screen {
+      max-width: 815px;
+    }
+    .marketing-btn {
+      margin-top: 28px;
+      @include marginX(auto);
+    }
+  }
+}
