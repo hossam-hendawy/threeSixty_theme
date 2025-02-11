@@ -50,7 +50,6 @@ section {
   align-items: center;
   justify-content: flex-start;
   padding-block: 120px;
-  padding-inline: 55px;
   background-color: $threeSixty_theme_black;
   z-index: 2;
   min-height: 400px;
@@ -59,10 +58,10 @@ section {
     width: 100%;
   }
 
-
   .sub-title-and-title {
-    min-height: 134px;
+    padding-block: 9px;
   }
+
   .site-breadcrumb {
     text-transform: uppercase;
   }
@@ -85,7 +84,6 @@ section {
       gap: 10px;
     }
   }
-
 }
 
 // endregion

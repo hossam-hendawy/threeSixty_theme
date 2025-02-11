@@ -32,9 +32,9 @@ $description = get_field('description');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
-<picture class="hero-image">
-  <img src="<?= get_template_directory_uri() . '/images/backgrounds/hero-svg.png' ?>" alt="">
-</picture>
+<svg class="down-arrow" width="52" height="20" viewBox="0 0 52 20" fill="none" aria-hidden="true">
+  <path d="M25.9978 20L52 0.381556L25.9978 0.381554L1.31426e-06 0.381555L25.9978 20Z" fill="black"/>
+</svg>
 <div class="container">
   <div class="content-wrapper flex-col">
     <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
