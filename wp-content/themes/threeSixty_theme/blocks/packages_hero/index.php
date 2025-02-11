@@ -28,6 +28,7 @@ if (isset($block)) {
  ****************************/
 $sub_title = get_field('sub_title');
 $title = get_field('title');
+$description = get_field('description');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -39,15 +40,18 @@ $title = get_field('title');
     <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
       threeSixty_theme_breadcrumbs();
     } ?>
-    <?php if ($sub_title) { ?>
-      <div class="d-md-h4 sub-title  uppercase-text"><?= $sub_title ?></div>
-    <?php } ?>
-    <?php if ($title) { ?>
-      <div class="text-xl white-color"><?= $title ?></div>
+    <div class="sub-title-and-title">
+      <?php if ($sub_title) { ?>
+        <div class="d-md-h4 fw-300 sub-title uppercase-text"><?= $sub_title ?></div>
+      <?php } ?>
+      <?php if ($title) { ?>
+        <h1 class="d-xl-h2 fw-700 white-color uppercase-text"><?= $title ?></h1>
+      <?php } ?>
+    </div>
+    <?php if ($description) { ?>
+      <div class="description text-xl white-color regular"><?= $description ?></div>
     <?php } ?>
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->

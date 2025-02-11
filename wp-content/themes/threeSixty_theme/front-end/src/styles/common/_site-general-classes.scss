@@ -42,6 +42,55 @@ section {
 
 //endregion
 
+
+// region general in here block
+.hero_package, .packages_hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-block: 120px;
+  padding-inline: 55px;
+  background-color: $threeSixty_theme_black;
+  z-index: 2;
+  min-height: 400px;
+
+  .container {
+    width: 100%;
+  }
+
+
+  .sub-title-and-title {
+    min-height: 134px;
+  }
+  .site-breadcrumb {
+    text-transform: uppercase;
+  }
+
+  .sub-title {
+    span, p {
+      font-weight: 300;
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  .content-wrapper {
+    gap: 18px;
+    max-width: 500px;
+    @include min-medium-screen {
+      max-width: 634px;
+      gap: 10px;
+    }
+  }
+
+}
+
+// endregion
+
+
 //region blockquote
 
 blockquote.theme-blockquote, .wysiwyg-block blockquote {
