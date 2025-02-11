@@ -21,10 +21,10 @@
         },
         {
             "key": "field_67a261b63482d",
-            "label": "Position Image",
+            "label": "Image Position",
             "name": "position_image",
             "aria-label": "",
-            "type": "true_false",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,11 +33,16 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Right",
-            "ui_off_text": "Left",
-            "ui": 1
+            "choices": {
+                "left": "Left",
+                "right": "Right"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         },
         {
             "key": "field_67a261e33482f",
@@ -50,7 +55,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "small-field",
                 "id": ""
             },
             "default_value": "",
@@ -123,5 +128,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738695251
+    "modified": 1739293314
 }

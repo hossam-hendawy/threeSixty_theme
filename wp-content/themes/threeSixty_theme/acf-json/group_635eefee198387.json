@@ -189,7 +189,7 @@
                 "programmatic": "Programmatic",
                 "manual": "Manual"
             },
-            "default_value": "",
+            "default_value": "manual",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -199,7 +199,7 @@
         {
             "key": "field_679187b01d225",
             "label": "Package Card",
-            "name": "recent_card",
+            "name": "package_card",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -322,5 +322,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739292083
+    "modified": 1739292871
 }
