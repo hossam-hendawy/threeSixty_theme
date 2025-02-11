@@ -26,12 +26,24 @@ if (isset($block)) {
 /****************************
  *     Custom ACF Meta      *
  ****************************/
+$sub_title = get_field('sub_title');
 $title = get_field('title');
 $description = get_field('description');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
+  <div class="overview-content gab-20 flex-col">
+    <?php if ($sub_title): ?>
+      <h2 class="text-xl gold center-text sub-title"><?= $sub_title ?></h2>
+    <?php endif; ?>
+    <?php if ($title): ?>
+      <h3 class="d-lg-h3 gray-950 bold center-text overview-title"><?= $title ?></h3>
+    <?php endif; ?>
+    <?php if ($description): ?>
+      <div class="text-xl gray-500 center-text overview-description"><?= $description ?></div>
+    <?php endif; ?>
+  </div>
   <?php if (have_rows('service_benefits')) { ?>
     <div class="services-cards">
       <?php while (have_rows('service_benefits')) {

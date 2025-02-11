@@ -12,18 +12,31 @@
     padding-block: 128px;
   }
 
+
+  .overview-content {
+    border-bottom: 1px solid $threeSixty_theme_gray-300;
+    padding-bottom: 60px;
+
+    @include large-screen{
+      padding-bottom: 120px;
+    }
+  }
+
   .services-cards {
     display: grid;
-    gap: 30px;
+    gap: 15px;
     grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 50px;
+    margin-block: 50px;
+    @include media-screen-992{
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include min-medium-screen {
       gap: 60px 107px;
-      grid-template-columns: repeat(2, 1fr);
-      margin-bottom: 60px;
+      margin-block: 60px;
     }
     @include large-screen {
-      margin-bottom: 120px;
+      margin-block: 128px 120px;
     }
 
     .services-card {
@@ -71,7 +84,6 @@
 
     .package-box-wrapper {
       .package-title-and-price {
-
 
 
         @include min-medium-screen {
