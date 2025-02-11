@@ -59,9 +59,16 @@
     @include min-medium-screen {
       grid-template-columns: repeat(2, 1fr);
       gap: 80px 32px;
+      max-width: 1204px;
+      margin: 0 auto;
     }
 
     .package-box-wrapper {
+      .package-title-and-price {
+        @include min-medium-screen{
+          min-height: 160px;
+        }
+      }
       .package-includes {
         .package-includes-title {
           margin-bottom: 24px;
@@ -78,6 +85,4 @@
       }
     }
   }
-
-
 }

@@ -63,7 +63,7 @@ $description = get_field('description');
       <div class="package-title-and-price">
         <div class="icon-and-package-title">
           <picture class="package-icon-wrapper">
-            <img decoding="async" src="http://localhost/threeSixty_theme/wp-content/uploads/2025/02/Isolation_Mode-1.png" alt="">
+            <img decoding="async" src="http://localhost/threeSixty_theme/wp-content/uploads/2025/02/Isolation_Mode-1.svg" alt="">
           </picture>
           <div class="title-and-excerpt flex-col">
             <div class="package-title d-xs-6 bold uppercase-text"><p>STARTER
