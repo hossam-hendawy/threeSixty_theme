@@ -1,6 +1,6 @@
 {
     "key": "group_635eefee198387",
-    "title": "All Packages Block",
+    "title": "Packages Service Block",
     "fields": [
         {
             "key": "field_635eefee197a3e",
@@ -19,66 +19,66 @@
             "placement": "top",
             "endpoint": 0
         },
-      {
-        "key": "field_67902d52bcbff",
-        "label": "Sub Title",
-        "name": "sub_title",
-        "aria-label": "",
-        "type": "text",
-        "instructions": "",
-        "required": 0,
-        "conditional_logic": 0,
-        "wrapper": {
-          "width": "",
-          "class": "",
-          "id": ""
+        {
+            "key": "field_67902d52bcbff",
+            "label": "Sub Title",
+            "name": "sub_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
-        "default_value": "",
-        "maxlength": "",
-        "placeholder": "",
-        "prepend": "",
-        "append": ""
-      },
-      {
-        "key": "field_67902d60bcc00",
-        "label": "Title",
-        "name": "title",
-        "aria-label": "",
-        "type": "text",
-        "instructions": "",
-        "required": 0,
-        "conditional_logic": 0,
-        "wrapper": {
-          "width": "",
-          "class": "",
-          "id": ""
+        {
+            "key": "field_67902d60bcc00",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
-        "default_value": "",
-        "maxlength": "",
-        "placeholder": "",
-        "prepend": "",
-        "append": ""
-      },
-      {
-        "key": "field_67902d6abcc01",
-        "label": "Description",
-        "name": "description",
-        "aria-label": "",
-        "type": "wysiwyg",
-        "instructions": "",
-        "required": 0,
-        "conditional_logic": 0,
-        "wrapper": {
-          "width": "",
-          "class": "",
-          "id": ""
+        {
+            "key": "field_67902d6abcc01",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
-        "default_value": "",
-        "tabs": "all",
-        "toolbar": "full",
-        "media_upload": 0,
-        "delay": 0
-      },
         {
             "key": "field_67a2d1c1f4895",
             "label": "Service Benefits",
@@ -177,7 +177,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/all-packages-block"
+                "value": "acf\/packages-service-block"
             }
         ]
     ],
@@ -190,5 +190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739288869
+    "modified": 1739289739
 }

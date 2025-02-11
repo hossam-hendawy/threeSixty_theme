@@ -2,7 +2,7 @@
 @use "../../styles/mixins/mixins" as *;
 
 // @author DELL
-.all_packages_block {
+.packages_service_block {
   background: linear-gradient(180deg, #FFF 0%, #F2F4F7 23.81%);
   padding-block: 65px;
   @include min-medium-screen {
@@ -14,7 +14,6 @@
 
 
   .overview-content {
-    border-bottom: 1px solid $threeSixty_theme_gray-300;
     padding-bottom: 60px;
 
     @include large-screen {
@@ -26,17 +25,18 @@
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(1, 1fr);
-    margin-block: 50px;
+    padding-block: 50px;
+    border-top: 1px solid $threeSixty_theme_gray-300;
     @include media-screen-992 {
       gap: 30px;
       grid-template-columns: repeat(2, 1fr);
     }
     @include min-medium-screen {
       gap: 60px 107px;
-      margin-block: 60px;
+      padding-block: 60px;
     }
     @include large-screen {
-      margin-block: 128px 120px;
+      padding-block: 128px 120px;
     }
 
     .services-card {
