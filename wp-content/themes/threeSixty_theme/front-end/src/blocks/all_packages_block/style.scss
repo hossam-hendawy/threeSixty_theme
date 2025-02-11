@@ -3,11 +3,55 @@
 
 // @author DELL
 .all_packages_block {
-  padding-bottom: 55px;
-  @include min-medium-screen {
-    padding-bottom: 112px;
-  }
   background: linear-gradient(180deg, #FFF 0%, #F2F4F7 23.81%);
+
+  @include min-medium-screen {
+    padding-block: 128px;
+  }
+
+  .services-cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 50px;
+    @include min-medium-screen {
+      gap: 60px 107px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 120px;
+    }
+
+    .services-card {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      .icon-wrapper {
+        width: 57px;
+        height: 59px;
+        flex-shrink: 0;
+
+        svg, img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .service-benefit-wrapper {
+        gap: 8px;
+
+        .title {
+          color: $threeSixty_theme_gray-950;
+        }
+
+        .description {
+          max-width: 429px;
+        }
+      }
+    }
+
+  }
+
   .content-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -16,11 +60,13 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 80px 32px;
     }
+
     .package-box-wrapper {
       .package-includes {
         .package-includes-title {
           margin-bottom: 24px;
         }
+
         .package-includes-wrapper {
           .text {
             width: 47.05%;
@@ -32,4 +78,6 @@
       }
     }
   }
+
+
 }
