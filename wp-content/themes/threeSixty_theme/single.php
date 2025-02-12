@@ -6,6 +6,9 @@ $current_user_id = get_current_user_id();
 $author_name = get_the_author_meta('display_name', $current_user_id);
 $user_image = get_field('user_image', 'user_' . $current_user_id);
 $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
+var_dump($author_name);
+var_dump($user_image['url']);
+var_dump($user_jop_title);
 ?>
 <?php if (have_posts()): the_post(); ?>
   <div class="single-post-wrapper">

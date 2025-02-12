@@ -30,14 +30,16 @@ $position_image = get_field('position_image');
 $title = get_field('title');
 $description = get_field('description');
 $image = get_field('image');
+
+
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="cards-wrapper <?= $position_image? 'content-reverse':"" ?>">
+  <div class="cards-wrapper <?= $position_image === 'right' ? 'content-reverse' : "" ?>">
     <div class="left-content flex-col gab-40">
       <?php if ($title): ?>
-        <h5 class="semi-bold title"><?= $title ?></h5>
+        <h5 class="semi-bold title d-sm-h5"><?= $title ?></h5>
       <?php endif; ?>
       <?php if ($description): ?>
         <div class="text-lg description"><?= $description ?></div>

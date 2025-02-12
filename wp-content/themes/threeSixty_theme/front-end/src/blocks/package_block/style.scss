@@ -42,12 +42,11 @@
       .service-benefit {
         display: flex;
         align-items: center;
-        gap: 32px;
+        gap: 15px;
         @include media-screen-992{
           width: 47%;
         }
         @include min-medium-screen {
-          gap: 15px;
           width: 100%;
         }
         @include large-screen {

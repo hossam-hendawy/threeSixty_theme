@@ -32,48 +32,7 @@ $description = get_field('description');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="services-cards">
-    <div class="services-card">
-        <picture class="icon-wrapper">
-          <img decoding="async" src="http://localhost/threeSixty_theme/wp-content/uploads/2025/02/Layer_1-3.png" alt="">
-        </picture>
-        <div class="service-benefit-wrapper flex-col">
-          <div class="title text-xl bold">Improved Online Visibility</div>
-          <div class="text-md description regular gray-500"><p>Our tailored SEO strategies will help your website rank higher on search engines, making it easier for potential customers to find you.</p>
-          </div>
-        </div>
-    </div>
-    <div class="services-card">
-      <picture class="icon-wrapper">
-        <img decoding="async" src="http://localhost/threeSixty_theme/wp-content/uploads/2025/02/Layer_1-3.png" alt="">
-      </picture>
-      <div class="service-benefit-wrapper flex-col">
-        <div class="title text-xl bold">Improved Online Visibility</div>
-        <div class="text-md description regular gray-500"><p>Our tailored SEO strategies will help your website rank higher on search engines, making it easier for potential customers to find you.</p>
-        </div>
-      </div>
-    </div>
-    <div class="services-card">
-      <picture class="icon-wrapper">
-        <img decoding="async" src="http://localhost/threeSixty_theme/wp-content/uploads/2025/02/Layer_1-3.png" alt="">
-      </picture>
-      <div class="service-benefit-wrapper flex-col">
-        <div class="title text-xl bold">Improved Online Visibility</div>
-        <div class="text-md description regular gray-500"><p>Our tailored SEO strategies will help your website rank higher on search engines, making it easier for potential customers to find you.</p>
-        </div>
-      </div>
-    </div>
-    <div class="services-card">
-      <picture class="icon-wrapper">
-        <img decoding="async" src="http://localhost/threeSixty_theme/wp-content/uploads/2025/02/Layer_1-3.png" alt="">
-      </picture>
-      <div class="service-benefit-wrapper flex-col">
-        <div class="title text-xl bold">Improved Online Visibility</div>
-        <div class="text-md description regular gray-500"><p>Our tailored SEO strategies will help your website rank higher on search engines, making it easier for potential customers to find you.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
 </section>
 
