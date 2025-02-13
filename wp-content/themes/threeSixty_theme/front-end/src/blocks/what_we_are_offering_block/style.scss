@@ -38,7 +38,10 @@
       }
   }
   .offering-cards {
-    padding-block: 90px  80px;
+    padding-block: 45px  40px;
+    @include min-medium-screen {
+      padding-block: 90px  80px;
+    }
     .offering-card {
       border-radius: 8px;
       border: 1px solid #E4E7EC;
@@ -81,7 +84,16 @@
         }
         .offering-btn {
           width: 100%;
-          @include paddingY(15.5px);
+          @include paddingY(14.7px);
+          background-color: transparent;
+          color: $threeSixty_theme_gray-950;
+          border: 1px solid $threeSixty_theme_gray-300;
+          font-size: 16px;
+          line-height: 24px;
+          &:hover {
+            background-color: #CA8504;
+            color: $threeSixty_theme_white;
+          }
           .icon {
             width: 29px;
             height: 25px;
