@@ -61,7 +61,7 @@ $description = get_field('description');
                 </div>
               <?php } ?>
               <?php if (!empty($offering_link) && is_array($offering_link)) { ?>
-                <a class="theme-cta-button offering-btn" href="<?= $offering_link['url'] ?>" target="<?= $offering_link['target'] ?>">
+                <a class="theme-cta-button offering-btn btn-white" href="<?= $offering_link['url'] ?>" target="<?= $offering_link['target'] ?>">
                   <?= $offering_link['title'] ?>
                   <picture class="icon">
                     <img src="<?= $offering_icon['url'] ?>" alt="<?= $offering_icon['alt'] ?>">

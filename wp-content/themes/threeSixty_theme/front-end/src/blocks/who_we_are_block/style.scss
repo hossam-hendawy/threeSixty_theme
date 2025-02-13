@@ -1,0 +1,70 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.who_we_are_block {
+  padding-block: 65px;
+  @include min-medium-screen {
+    padding-block: 127px;
+  }
+  .cards-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    @include min-medium-screen {
+      flex-direction: row;
+      gap: 0;
+    }
+    .left-content {
+      width: 100%;
+      @include min-medium-screen {
+        width: 46.99%;
+      }
+      .sub-title {
+        color: $threeSixty_theme_brand-600;
+      }
+      .title {
+        p {
+          font-weight: 300;
+          color: $threeSixty_theme_gray-950;
+        }
+      }
+      .description {
+        @include min-medium-screen {
+          max-width: 495px;
+        }
+        @include large-screen {
+          max-width: 566px;
+        }
+        p {
+          color: $threeSixty_theme_gray-500;
+        }
+      }
+      .left-content-btn {
+        margin-top: 22px;
+        padding: 17.9px 48px;
+        width: 235px;
+      }
+    }
+    .right-image {
+      width: 100%;
+      @include min-medium-screen {
+        width: 28.64%;
+      }
+      .image {
+        padding-top: 66.92%;
+        @include media-screen-768 {
+          padding-top: 39%;
+        }
+        @include min-medium-screen {
+          padding-top: 66.92%;
+        }
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
