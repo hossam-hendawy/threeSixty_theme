@@ -58,13 +58,11 @@ $description = get_field('description');
           ?>
           <div class="swiper-slide offering-card">
             <div class="image-title flex-col">
-              <div class="offering-images">
               <?php if (!empty($offering_image) && is_array($offering_image)) { ?>
-                <picture class="offering-image image-wrapper cover-image aspect-ratio">
+                <picture class="offering-image image-wrapper cover-image ">
                   <img src="<?= $offering_image['url'] ?>" alt="<?= $offering_image['alt'] ?>">
                 </picture>
               <?php } ?>
-              </div>
               <?php if ($offering_title) { ?>
                 <div class="center-text offering-title d-xs-6"><?= $offering_title ?></div>
               <?php } ?>

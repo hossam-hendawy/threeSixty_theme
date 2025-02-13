@@ -38,11 +38,12 @@
           padding-bottom: 42px;
           @include paddingX(65px);
         }
-        .offering-images {
-          width: 39.06%;
-          .offering-image {
-            padding-top: 120%;
-          }
+        .offering-image {
+            width: 150px;
+            height: 125px;
+            img {
+              object-fit: contain;
+            }
         }
         .offering-title {
           p {
