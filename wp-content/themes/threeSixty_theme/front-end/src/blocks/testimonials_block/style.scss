@@ -1,23 +1,47 @@
 @use "../../styles/common/variables" as *;
 @use "../../styles/mixins/mixins" as *;
-@use "~swiper/css";
+@import "swiper/css";
 
 // @author DELL
 .testimonials_block {
   background: linear-gradient(270deg, #E4E7EC 0%, #FCFDFE 100%);
   padding-block: 128px;
+  .small-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding-left: 24px;
+    max-width: 220px;
+    @include large-screen {
+      display: none;
+    }
+    @include min-medium-screen {
+      padding-left: 55px;
+      max-width: 270px;
 
+    }
+    .title {
+      color: $threeSixty_theme_brand-600;
+      margin-bottom: 16px;
+    }
+    .description {
+      p {
+        color: $threeSixty_theme_gray-950;
+        font-weight: 700;
+      }
+    }
+  }
   .cards-wrapper {
     display: flex;
     align-items: center;
-    flex-direction: column;
     padding-left: 24px;
+    @include min-medium-screen {
+      padding-left: 55px;
+    }
     @include large-screen {
       padding-left: 112px;
-      flex-direction: row;
     }
-
-    .left-card {
+    .large-content {
       max-width: 384px;
 
       .title {
@@ -26,29 +50,38 @@
       }
 
       .description {
-        color: $threeSixty_theme_gray-950;
-
         p {
+          color: $threeSixty_theme_gray-950;
           font-weight: 700;
         }
       }
 
       .testimonial-navigations {
         margin: 30px 0 0 0;
-        //display: none;
-        //@include large-screen {
-        //  display: flex;
-        //}
+        &.large-screen {
+          display: none;
+          @include large-screen {
+            display: flex;
+          }
+        }
       }
-    }
 
+        display: none;
+        @include large-screen {
+          display: flex;
+          flex-direction: column;
+        }
+
+    }
     .testimonials-swiper {
       .testimonial-card {
-        padding: 60px 64px;
-        background-color: red;
+        padding: 30px;
+        background-color: $threeSixty_theme_white;
         box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.14);
         border-radius: 8px;
-
+        @include min-medium-screen {
+          padding: 60px 64px;
+        }
         .svg-quote {
           width: 64px;
           height: 42px;
@@ -76,11 +109,25 @@
           .about-author {
             .name {
               margin-bottom: 2px;
+              color: $threeSixty_theme_brand-700;
+            }
+            .jop-title {
+              color: $threeSixty_theme_tertiary-600;
             }
           }
 
 
         }
+
+      }
+    }
+  }
+  .testimonial-navigations {
+    &.small-screen {
+      display: flex;
+      margin-top: 40px;
+      @include large-screen {
+        display: none;
       }
     }
   }

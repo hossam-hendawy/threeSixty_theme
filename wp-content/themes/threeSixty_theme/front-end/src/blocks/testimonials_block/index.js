@@ -3,7 +3,6 @@ import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
 import {Swiper} from "swiper";
 import {Navigation} from 'swiper/modules';
-import {Autoplay} from "swiper/modules";
 /**
  * @author DELL
  * @param block {HTMLElement}
@@ -15,18 +14,17 @@ const testimonialsBlock = async (block) => {
   const swiper = new Swiper(block.querySelector('.testimonials-swiper'), {
     slidesPerView: 1,
     spaceBetween: 16,
-    loop: true,
     modules: [Navigation],
     breakpoints: {
       600: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1024: {
         spaceBetween: 20,
+        slidesPerView: 1.5,
+      },
+      768: {
         slidesPerView: 2,
+      },
+      900: {
+        slidesPerView: 2.5,
       },
       1280: {
         slidesPerView: 2.26,
@@ -38,7 +36,6 @@ const testimonialsBlock = async (block) => {
       prevEl: block.querySelector(".swiper-button-prev"),
     },
   });
-
 // testing the new hidden value
   animations(block);
   imageLazyLoading(block);

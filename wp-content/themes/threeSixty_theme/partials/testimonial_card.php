@@ -13,7 +13,6 @@ $image = get_field('image', $post_id);
     <g clip-path="url(#svg-quote)">
       <path d="M64 0.199951H47.986L32.7086 15.6983V41.7999H58.4191V15.6983H48.7226L64 0.199951Z" fill="#D0D5DD"/>
       <path d="M15.2774 0.199951L0 15.6983V41.7999H25.7025V15.6983H16.014L31.2914 0.199951H15.2774Z" fill="#D0D5DD"/>
-
     <defs>
       <clipPath id="svg-quote">
         <rect width="64" height="41.6" fill="white" transform="translate(0 0.199951)"/>
