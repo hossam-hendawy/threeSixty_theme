@@ -28,6 +28,7 @@ if (isset($block)) {
  ****************************/
 $title = get_field('title');
 $description = get_field('description');
+$marketing_icon = get_field('marketing_icon');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -48,19 +49,13 @@ $description = get_field('description');
         $marketing_description = get_sub_field('marketing_description');
         ?>
         <div class="marketing-services-card">
-          <picture class="icon-wrapper">
-            <svg class="icon-wrapper-svg" width="24" height="21" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_136_8237)">
-                <path d="M14.4524 24L0.65509 23.9627L7.58592 11.9877L14.4524 24Z" fill="#CA8504"/>
-                <path d="M21.3447 12.001L14.457 -3.01071e-07L0.655075 -9.04373e-07L7.58591 11.9877L14.4524 24L21.3447 12.001Z" fill="#EAAA08"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_136_8237">
-                  <rect width="24" height="20.6897" fill="white" transform="translate(21.3447) rotate(90)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </picture>
+          <?php if (!empty($marketing_icon) && is_array($marketing_icon)) { ?>
+            <div class="icon-wrapper">
+              <picture class="icon-wrapper-svg cover-image">
+                <img src="<?= $marketing_icon['url'] ?>" alt="<?= $marketing_icon['alt'] ?>">
+              </picture>
+            </div>
+          <?php } ?>
           <div class="service-benefit-wrapper">
             <?php if ($marketing_title) { ?>
             <div class="title text-xl semi-bold"><?= $marketing_title ?></div>

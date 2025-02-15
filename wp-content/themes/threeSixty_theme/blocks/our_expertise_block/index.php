@@ -46,13 +46,13 @@ $image = get_field('image');
         <div class="text-lg description"><?= $description ?></div>
       <?php endif; ?>
     </div>
+    <?php if (!empty($image) && is_array($image)) { ?>
     <div class="right-image">
-      <?php if (!empty($image) && is_array($image)) { ?>
         <picture class="image image-wrapper cover-image aspect-ratio">
           <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
         </picture>
-      <?php } ?>
     </div>
+    <?php } ?>
   </div>
 </div>
 </section>
