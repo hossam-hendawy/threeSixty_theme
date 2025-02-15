@@ -1,51 +1,83 @@
 @use "../../styles/common/variables" as *;
 @use "../../styles/mixins/mixins" as *;
-@import "swiper/css";
 
-// @author DELL
-.what_we_are_offering_block {
-  padding-block: 65px;
-  background-color: $threeSixty_theme_gray-100;
-  @include min-medium-screen {
-    padding-block: 128px;
+// @author HOSSAM
+.our_services_details_block {
+
+
+  .overview-content {
+    padding-bottom: 60px;
+
+    @include large-screen {
+      padding-bottom: 120px;
+    }
   }
 
-  .top-content {
+  .services-cards {
+    display: grid;
     gap: 15px;
-    @include marginX(auto);
-    @include media-screen-600 {
-      max-width: 630px;
+    grid-template-columns: repeat(1, 1fr);
+    padding-block: 50px;
+    border-top: 1px solid $threeSixty_theme_gray-300;
+    @include media-screen-992 {
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
     }
     @include min-medium-screen {
-      max-width: 800px;
+      gap: 60px 107px;
+      padding-block: 60px;
     }
     @include large-screen {
-      max-width: 768px;
+      padding-block: 128px 120px;
     }
 
-    .sub-title {
-      color: $threeSixty_theme_brand-600;
-    }
+    .services-card {
+      display: flex;
+      align-items: center;
+      gap: 32px;
 
-    .title {
-      color: $threeSixty_theme_gray-950;
-    }
+      .icon-wrapper {
+        width: 57px;
+        height: 59px;
+        flex-shrink: 0;
 
-    .description {
-      p {
-        line-height: 150%;
-        color: $threeSixty_theme_gray-500;
-        @include min-medium-screen {
-          font-size: 20px;
+        svg, img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .service-benefit-wrapper {
+        gap: 8px;
+
+        .title {
+          color: $threeSixty_theme_gray-950;
+        }
+
+        .description {
+          max-width: 429px;
         }
       }
     }
+
+  }
+
+
+  @include min-medium-screen {
+    padding-bottom: 128px;
   }
 
   .offering-cards {
-    padding-block: 45px 40px;
-    @include min-medium-screen {
-      padding-block: 90px 80px;
+    display: grid;
+    gap: 40px 15px;
+    grid-template-columns: repeat(1, 1fr);
+    @include media-screen-768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include large-screen {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 80px 32px;
     }
 
     .offering-card {

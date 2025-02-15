@@ -4,6 +4,7 @@
 // @author DELL
 .packages_hero {
   position: relative;
+  z-index: 33 !important;
   @include min-medium-screen {
     @include paddingY(126px);
     min-height: 518px;

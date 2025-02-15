@@ -17,8 +17,6 @@ $package_includes_icon = get_field('package_includes_icon', $post_id);
 $get_started = get_field('get_started', $post_id);
 $note = get_field('note', $post_id);
 $note_icon = get_field('note_icon', $post_id);
-
-
 ?>
 <?php if (have_posts()): the_post(); ?>
   <div class="single-package-wrapper">
@@ -99,10 +97,7 @@ $note_icon = get_field('note_icon', $post_id);
                 <?php endif; ?>
               </div>
               <div class="package-includes">
-                <div class="package-includes-title text-md semi-bold">This
-                  package
-                  includes:
-                </div>
+                <div class="package-includes-title text-md semi-bold">This package includes:</div>
                 <div class="package-includes-wrapper">
                   <?php if (have_rows('package_includes', $post_id)) { ?>
                     <?php while (have_rows('package_includes', $post_id)) {
@@ -147,7 +142,6 @@ $note_icon = get_field('note_icon', $post_id);
         </div>
       </div>
     </section>
-
     <?php the_content(); ?>
   </div>
 <?php endif; ?>

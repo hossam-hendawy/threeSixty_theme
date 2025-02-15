@@ -103,6 +103,4 @@ if ($programmatic_or_manual === 'programmatic') {
   <?php } ?>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
