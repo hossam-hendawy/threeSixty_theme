@@ -7,20 +7,7 @@
   @include min-medium-screen {
     padding-block: 128px;
   }
-  &:after {
-    position: absolute;
-    content: "";
-    height: 1px;
-    background-color: $threeSixty_theme_gray-300;
-    margin: 0 auto;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 48px);
-    @include large-screen {
-      width: calc(100% - 224px);
-    }
-  }
+
   .overview-content {
     gap: 15px;
     margin-bottom: 40px;
@@ -29,18 +16,21 @@
       max-width: 835px;
       margin-bottom: 80px;
     }
+
     .overview-title {
       color: $threeSixty_theme_gray-950;
     }
   }
+
   .marketing-services-cards {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     @include min-medium-screen {
       gap: 70px 96px;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
+
     .marketing-services-card {
       display: flex;
       align-items: center;
@@ -54,6 +44,7 @@
         border: 6px solid #E4E7EC;
         @include flex(center);
         justify-content: center;
+
         .icon-wrapper-svg {
           width: 24px;
           height: 21px;
@@ -64,6 +55,7 @@
         .title {
           color: #101828;
         }
+
         .description {
           p {
             color: $threeSixty_theme_tertiary-600;
@@ -74,3 +66,5 @@
 
   }
 }
+
+

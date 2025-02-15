@@ -8,7 +8,7 @@ if (isset($block)) {
   if (!empty($block['anchor'])) {
     $id = $block['anchor'];
   }
-
+  $className .= '  block-has-border ';
 // Create class attribute allowing for custom "className" and "align" values.
   if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
@@ -38,7 +38,8 @@ $marketing_icon = get_field('marketing_icon');
       <h4 class="bold overview-title"><?= $title ?></h4>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="text-xl gray-500  overview-description"><?= $description ?></div>
+      <div
+        class="text-xl gray-500  overview-description"><?= $description ?></div>
     <?php endif; ?>
   </div>
   <?php if (have_rows('marketing_services')) { ?>
@@ -52,16 +53,18 @@ $marketing_icon = get_field('marketing_icon');
           <?php if (!empty($marketing_icon) && is_array($marketing_icon)) { ?>
             <div class="icon-wrapper">
               <picture class="icon-wrapper-svg cover-image">
-                <img src="<?= $marketing_icon['url'] ?>" alt="<?= $marketing_icon['alt'] ?>">
+                <img src="<?= $marketing_icon['url'] ?>"
+                     alt="<?= $marketing_icon['alt'] ?>">
               </picture>
             </div>
           <?php } ?>
           <div class="service-benefit-wrapper">
             <?php if ($marketing_title) { ?>
-            <div class="title text-xl semi-bold"><?= $marketing_title ?></div>
+              <div class="title text-xl semi-bold"><?= $marketing_title ?></div>
             <?php } ?>
             <?php if ($marketing_description) { ?>
-            <div class="text-md description regular gray-500"><?= $marketing_description ?></div>
+              <div
+                class="text-md description regular gray-500"><?= $marketing_description ?></div>
             <?php } ?>
           </div>
         </div>
