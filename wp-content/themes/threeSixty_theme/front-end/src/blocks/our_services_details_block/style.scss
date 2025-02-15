@@ -3,7 +3,14 @@
 
 // @author HOSSAM
 .our_services_details_block {
-
+  background: linear-gradient(180deg, #FFF 0%, #F2F4F7 23.81%);
+  padding-block: 65px;
+  @include min-medium-screen {
+    padding-block: 80px;
+  }
+  @include large-screen {
+    padding-block: 128px;
+  }
 
   .overview-content {
     padding-bottom: 60px;
@@ -61,11 +68,6 @@
       }
     }
 
-  }
-
-
-  @include min-medium-screen {
-    padding-bottom: 128px;
   }
 
   .offering-cards {
