@@ -39,7 +39,7 @@ $image = get_field('image');
   <div class="cards-wrapper <?= $position_image === 'right' ? 'content-reverse' : "" ?>">
     <div class="left-content flex-col gab-40">
       <?php if ($title): ?>
-        <h5 class="semi-bold title d-sm-h5"><?= $title ?></h5>
+        <div class="semi-bold title d-sm-h5"><?= $title ?></div>
       <?php endif; ?>
       <?php if ($description): ?>
         <div class="text-lg description"><?= $description ?></div>

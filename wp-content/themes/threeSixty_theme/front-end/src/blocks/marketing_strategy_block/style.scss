@@ -32,6 +32,9 @@
     @include large-screen {
       max-width: 815px;
     }
+    .marketing-title {
+      color: #101828;
+    }
     .marketing-btn {
       margin-top: 28px;
       @include marginX(auto);
