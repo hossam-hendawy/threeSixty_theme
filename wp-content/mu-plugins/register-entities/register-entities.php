@@ -16,6 +16,7 @@ $entities = [
     'Testimonials',
     'Faqs',
     'Packages',
+    'Services',
     ];
 
 array_map(function ($entityName) {
