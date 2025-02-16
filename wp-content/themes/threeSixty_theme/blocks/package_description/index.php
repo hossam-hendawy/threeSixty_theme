@@ -3,12 +3,14 @@
 // Create id attribute allowing for custom "anchor" value.
 $id = '';
 $className = $dataClass = 'package_description';
+$has_border = get_field('has_border');
+$has_border = $has_border ? ' block-has-border' : ' ';
 if (isset($block)) {
   $id = 'block_' . uniqid();
   if (!empty($block['anchor'])) {
     $id = $block['anchor'];
   }
-
+  $className .= $has_border;
 // Create class attribute allowing for custom "className" and "align" values.
   if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
@@ -30,8 +32,6 @@ $position_image = get_field('position_image');
 $title = get_field('title');
 $description = get_field('description');
 $image = get_field('image');
-
-
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>

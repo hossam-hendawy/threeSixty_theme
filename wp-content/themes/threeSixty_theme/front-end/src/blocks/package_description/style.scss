@@ -11,21 +11,6 @@
     padding-block: 128px;
   }
 
-  &:after {
-    position: absolute;
-    content: "";
-    height: 1px;
-    background-color: $threeSixty_theme_gray-300;
-    margin: 0 auto;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 48px);
-    @include large-screen {
-      width: calc(100% - 224px);
-    }
-  }
-
   .title {
     p {
       font-weight: 600;

@@ -3,12 +3,14 @@
 // Create id attribute allowing for custom "anchor" value.
 $id = '';
 $className = $dataClass = 'get_in_touch_block';
+$has_border = get_field('has_border');
+$has_border = $has_border ? ' block-has-border' : ' ';
 if (isset($block)) {
   $id = 'block_' . uniqid();
   if (!empty($block['anchor'])) {
     $id = $block['anchor'];
   }
-
+  $className .= $has_border;
 // Create class attribute allowing for custom "className" and "align" values.
   if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
