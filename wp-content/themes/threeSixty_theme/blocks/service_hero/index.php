@@ -36,11 +36,9 @@ $description = get_field('description');
       <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
         threeSixty_theme_breadcrumbs();
       } ?>
-      <div class="sub-title-and-title">
         <?php if ($title) { ?>
-          <div class="d-md-h4 fw-300 sub-title uppercase-text"><?= $title ?></div>
+          <div class="d-md-h4 title uppercase-text"><?= $title ?></div>
         <?php } ?>
-      </div>
       <?php if ($description) { ?>
         <div class="description text-xl white-color regular"><?= $description ?></div>
       <?php } ?>

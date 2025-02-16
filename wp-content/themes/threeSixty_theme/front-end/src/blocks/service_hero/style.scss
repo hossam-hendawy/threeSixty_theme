@@ -24,5 +24,10 @@
     @include large-screen {
       max-width: 701px;
     }
+    .title {
+      p {
+        font-weight: 300;
+      }
+    }
   }
 }
