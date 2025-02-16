@@ -7,6 +7,7 @@
   @include min-medium-screen {
     padding-block: 128px;
   }
+
   .cards-wrapper {
     display: flex;
     align-items: center;
@@ -17,18 +18,24 @@
       flex-direction: row;
       gap: 0;
     }
+
     .left-content {
       width: 100%;
       @include min-medium-screen {
         width: 63.37%;
       }
+
       .sub-title {
         color: $threeSixty_theme_brand-600;
       }
+
       .title {
         color: $threeSixty_theme_gray-950;
       }
+
       .description {
+        max-width: 730px;
+
         p {
           line-height: 150%;
           color: $threeSixty_theme_gray-500;
@@ -38,6 +45,7 @@
         }
       }
     }
+
     .right-image {
       width: 100%;
       border-radius: 8px;
@@ -49,15 +57,17 @@
         width: 32.18%;
         padding: 85px 75px;
       }
+
       .image {
         padding-top: 46.92%;
         width: 100%;
         @include media-screen-768 {
-          padding-top:30%;
+          padding-top: 30%;
         }
         @include min-medium-screen {
           padding-top: 83.33%;
         }
+
         img {
           object-fit: contain;
         }

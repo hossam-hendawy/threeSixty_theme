@@ -26,6 +26,9 @@
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(1, 1fr);
+    @include media-screen-768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include min-medium-screen {
       gap: 70px 96px;
       grid-template-columns: repeat(2, 1fr);
@@ -34,7 +37,12 @@
     .marketing-services-card {
       display: flex;
       align-items: center;
+      flex-direction: column;
       gap: 16px;
+
+      @include media-screen-768 {
+        flex-direction: row;
+      }
 
       .icon-wrapper {
         width: 64px;
@@ -52,6 +60,14 @@
       }
 
       .service-benefit-wrapper {
+
+        .title, .description p {
+          text-align: center;
+          @include media-screen-768 {
+            text-align: left;
+          }
+        }
+
         .title {
           color: #101828;
         }
