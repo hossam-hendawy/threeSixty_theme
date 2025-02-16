@@ -8,6 +8,7 @@ if (isset($block)) {
   if (!empty($block['anchor'])) {
     $id = $block['anchor'];
   }
+  $className .= '  block-has-border ';
 
 // Create class attribute allowing for custom "className" and "align" values.
   if (!empty($block['className'])) {

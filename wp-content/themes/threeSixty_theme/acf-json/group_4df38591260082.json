@@ -29,7 +29,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -37,6 +37,26 @@
             "default_value": 0,
             "ui_on_text": "Right",
             "ui_off_text": "Left",
+            "ui": 1
+        },
+        {
+            "key": "field_67b211a55e0f4",
+            "label": "Has Border",
+            "name": "has_border",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No",
             "ui": 1
         },
         {
@@ -143,5 +163,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738695247
+    "modified": 1739723210
 }

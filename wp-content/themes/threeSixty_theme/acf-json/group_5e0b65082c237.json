@@ -956,6 +956,26 @@
             "endpoint": 0
         },
         {
+            "key": "field_67b213d482b02",
+            "label": "Has Border",
+            "name": "has_border",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No",
+            "ui": 1
+        },
+        {
             "key": "field_679a3aedab48d",
             "label": "Image",
             "name": "get_in_touch_image",
@@ -1055,5 +1075,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739057515
+    "modified": 1739723793
 }
