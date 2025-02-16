@@ -58,6 +58,63 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 1
+        },
+        {
+            "key": "field_67b212ce3ca76",
+            "label": "Service Card",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_67b212db3ca77",
+            "label": "Service Image",
+            "name": "service_image",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67b212f93ca78",
+            "label": "Service Exerpt",
+            "name": "service_exerpt",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "small-field",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
         }
     ],
     "location": [
@@ -78,5 +135,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739723137
+    "modified": 1739723541
 }
