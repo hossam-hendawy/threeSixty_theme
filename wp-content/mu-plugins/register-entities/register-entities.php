@@ -14,7 +14,6 @@ require_once 'entities/Entity.php';
 global $entities;
 $entities = [
     'Testimonials',
-    'Faqs',
     'Packages',
     'Services',
     ];
