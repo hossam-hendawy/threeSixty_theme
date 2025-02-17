@@ -64,9 +64,14 @@ if ($programmatic_or_manual === 'programmatic') {
   <?php if ($programmatic_or_manual === "manual") { ?>
     <div class="swiper recent-posts-swiper">
       <div class="swiper-wrapper">
-        <?php foreach (get_field("recent_card") as $card):
-          get_template_part("partials/recent-card", "", ["post_id" => $card->ID]);
-        endforeach; ?>
+        <?php
+        $cards = get_field("post_card");
+        if (is_array($cards)) {
+          foreach ($cards as $card) {
+            get_template_part("partials/recent-card", "", ["post_id" => $card->ID ?? null]);
+          }
+        }
+        ?>
       </div>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>

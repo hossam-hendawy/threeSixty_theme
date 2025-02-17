@@ -101,9 +101,9 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_679187b01d225",
-            "label": "Recent Card",
-            "name": "recent_card",
+            "key": "field_67b33e3aca112",
+            "label": "Post card",
+            "name": "post_card",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -226,5 +226,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739291931
+    "modified": 1739800301
 }
