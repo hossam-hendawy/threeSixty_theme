@@ -100,142 +100,68 @@
             "delay": 0
         },
         {
-            "key": "field_67a0ef0624064",
-            "label": "Programmatic OR Manual",
-            "name": "programmatic_or_manual",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "52",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "programmatic": "Programmatic",
-                "manual": "Manual"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_67a0ef2424065",
             "label": "Faq Card",
             "name": "faq_card",
             "aria-label": "",
-            "type": "relationship",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67a0ef0624064",
-                        "operator": "==",
-                        "value": "manual"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "faqs"
-            ],
-            "taxonomy": [
-                "faq_category:elite-package",
-                "faq_category:basic-package",
-                "faq_category:starter-package",
-                "faq_category:pro-package",
-                "faq_category:premium-package",
-                "faq_category:advanced-package"
-            ],
-            "filters": [
-                "search",
-                "taxonomy"
-            ],
-            "return_format": "object",
-            "min": "",
-            "max": "",
-            "elements": ""
-        },
-        {
-            "key": "field_67a0ef4724066",
-            "label": "Query Options",
-            "name": "query_options",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67a0ef0624064",
-                        "operator": "==",
-                        "value": "programmatic"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67a0ef7e24068",
-                    "label": "Order",
-                    "name": "order",
+                    "key": "field_67b2ff212ff47",
+                    "label": "Question",
+                    "name": "question",
                     "aria-label": "",
-                    "type": "radio",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "desc": "Latest",
-                        "asc": "Oldest"
-                    },
                     "default_value": "",
-                    "return_format": "value",
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "layout": "horizontal",
-                    "save_other_choice": 0
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67a0ef2424065"
                 },
                 {
-                    "key": "field_67a0ef5d24067",
-                    "label": "Number Of Posts",
-                    "name": "number_of_posts",
+                    "key": "field_67b2ff282ff48",
+                    "label": "Answer",
+                    "name": "answer",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "70",
-                        "class": "",
+                        "width": "",
+                        "class": "medium-field",
                         "id": ""
                     },
                     "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_67a0ef2424065"
                 }
             ]
         }
@@ -258,5 +184,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739724666
+    "modified": 1739784600
 }
