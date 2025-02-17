@@ -73,9 +73,14 @@ $cta_button = get_field('cta_button');
     </div>
   <?php } ?>
     <div class="content-wrapper">
-      <?php foreach (get_field("package_card") as $card):
-        get_template_part("partials/package-card", "", ["post_id" => $card->ID]);
-      endforeach; ?>
+      <?php
+      $cards = get_field("package_card");
+      if (is_array($cards)) {
+        foreach ($cards as $card) {
+          get_template_part("partials/package-card", "", ["post_id" => $card->ID]);
+        }
+      }
+      ?>
     </div>
   </div>
   <?php if (!empty($cta_button) && is_array($cta_button)) { ?>

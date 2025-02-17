@@ -7,7 +7,7 @@ $package_price = get_field('package_price', $post_id);
 $package_icon = get_field('package_icon', $post_id);
 $package_includes_icon = get_field('package_includes_icon', $post_id);
 ?>
-<?php if ($package_title) { ?>
+<?php if ($package_price) { ?>
   <div class="package-box-wrapper">
     <div class="package-title-and-price">
       <div class="icon-and-package-title">

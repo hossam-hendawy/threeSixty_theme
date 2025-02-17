@@ -83,9 +83,14 @@ if ($programmatic_or_manual === 'programmatic') {
   <?php if ($programmatic_or_manual === "manual") { ?>
     <div class="swiper testimonials-swiper">
       <div class="swiper-wrapper">
-        <?php foreach (get_field("testimonial_card") as $card):
-          get_template_part("partials/testimonial_card", "", ["post_id" => $card->ID]);
-        endforeach; ?>
+        <?php
+        $cards = get_field("testimonial_card");
+        if (is_array($cards)) {
+          foreach ($cards as $card) {
+            get_template_part("partials/testimonial_card", "", ["post_id" => $card->ID]);
+          }
+        }
+        ?>
       </div>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
