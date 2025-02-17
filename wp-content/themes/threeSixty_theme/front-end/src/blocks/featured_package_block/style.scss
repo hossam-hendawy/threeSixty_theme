@@ -3,7 +3,8 @@
 
 // @author DELL
 .featured_package_block {
-  background: linear-gradient(180deg, #FFF 0%, #F2F4F7 23.81%);
+  background: linear-gradient(180deg, #FFF 0%, #F2F4F7 100%);
+
   padding-block: 65px;
   @include min-medium-screen {
     padding-block: 80px;
