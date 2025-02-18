@@ -11,7 +11,11 @@
   .content-wrapper {
     gap: 10px;
     @include min-medium-screen {
-      max-width: 654px;
+      max-width: 704px;
+
     }
+
+    .description{
+      max-width: 654px;}
   }
 }

@@ -100,7 +100,6 @@ section {
   .overview-description {
     max-width: 703px;
     @include marginX(auto);
-
     @include min-medium-screen {
       max-width: 1080px;
     }

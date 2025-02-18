@@ -105,6 +105,4 @@ $description = get_field('description');
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
