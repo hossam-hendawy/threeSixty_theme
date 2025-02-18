@@ -3,31 +3,15 @@
 
 // @author DELL
 .service_hero {
-  overflow: hidden;
-  position: relative;
-  padding-block: 120px;
-  background-color: $threeSixty_theme_black;
-  z-index: 2;
-  min-height: 400px;
   @include min-medium-screen {
     @include paddingY(141px, 143px);
     min-height: 518px;
   }
+
   .content-wrapper {
     gap: 10px;
-    @include min-media-screen-600 {
-      max-width: 560px;
-    }
     @include min-medium-screen {
-      max-width: 640px;
-    }
-    @include large-screen {
-      max-width: 701px;
-    }
-    .title {
-      p {
-        font-weight: 300;
-      }
+      max-width: 654px;
     }
   }
 }
