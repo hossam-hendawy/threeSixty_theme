@@ -88,9 +88,14 @@ if ($programmatic_or_manual === 'programmatic') {
   <?php } ?>
   <?php if ($programmatic_or_manual === "manual") { ?>
     <div class="content-wrapper">
-        <?php foreach (get_field("package_card") as $card):
+      <?php
+      $cards = get_field("package_card");
+      if (is_array($cards)) {
+        foreach ($cards as $card) {
           get_template_part("partials/package-card", "", ["post_id" => $card->ID]);
-        endforeach; ?>
+        }
+      }
+      ?>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
     <div class="content-wrapper">
