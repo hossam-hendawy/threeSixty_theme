@@ -60,7 +60,9 @@
     @include min-medium-screen {
       padding-block: 90px 80px;
     }
-
+    @include small-screen {
+      @include paddingX(13px);
+    }
     .offering-card {
       height: auto;
       @include min-medium-screen {
