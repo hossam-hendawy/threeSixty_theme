@@ -80,11 +80,11 @@
             "delay": 0
         },
         {
-            "key": "field_67abc7cd07c5e",
-            "label": "Offering",
-            "name": "offering",
+            "key": "field_67b695a04359d",
+            "label": "Programmatic OR Manual",
+            "name": "programmatic_or_manual",
             "aria-label": "",
-            "type": "repeater",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -93,124 +93,121 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "programmatic": "Programmatic",
+                "manual": "Manual"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_67b695b54359e",
+            "label": "Service Card",
+            "name": "service_card",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67b695a04359d",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "services"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": ""
+        },
+        {
+            "key": "field_67b695da4359f",
+            "label": "Query Options",
+            "name": "query_options",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67b695a04359d",
+                        "operator": "==",
+                        "value": "programmatic"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67abc7e207c5f",
-                    "label": "Offering Image",
-                    "name": "offering_image",
+                    "key": "field_67b695ec435a0",
+                    "label": "Order",
+                    "name": "order",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_67abc7cd07c5e"
-                },
-                {
-                    "key": "field_67abc7e907c60",
-                    "label": "Offering Title",
-                    "name": "offering_title",
-                    "aria-label": "",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "small-field",
-                        "id": ""
+                    "choices": {
+                        "desc": "Latest",
+                        "asc": "Oldest"
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_67abc7cd07c5e"
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
                 },
                 {
-                    "key": "field_67abc81e07c61",
-                    "label": "Offering Description",
-                    "name": "offering_description",
+                    "key": "field_67b69610435a1",
+                    "label": "Number Of Posts",
+                    "name": "number_of_posts",
                     "aria-label": "",
-                    "type": "wysiwyg",
+                    "type": "number",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
-                        "class": "small-field",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_67abc7cd07c5e"
-                },
-                {
-                    "key": "field_67abe95fcf664",
-                    "label": "Offering Link",
-                    "name": "offering_link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "parent_repeater": "field_67abc7cd07c5e"
-                },
-                {
-                    "key": "field_67abe96dcf665",
-                    "label": "Offering Icon",
-                    "name": "offering_icon",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_67abc7cd07c5e"
+                    "default_value": -1,
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -233,5 +230,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739319667
+    "modified": 1740019292
 }
