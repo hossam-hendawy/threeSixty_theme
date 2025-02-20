@@ -5,8 +5,9 @@ $service_image = get_field('service_image', $post_id);
 $service_excerpt = get_field('service_excerpt', $post_id);
 $service_title = get_field('service_title', $post_id);
 $cta_icon = get_field('cta_icon', $post_id);
+
 ?>
-<div class="offering-card">
+<div class="offering-card <?= !empty($args['swiper-slide']) ? 'swiper-slide' : '' ?>">
   <div class="image-title flex-col">
     <?php if (!empty($service_image) && is_array($service_image)) { ?>
       <picture class="offering-image image-wrapper cover-image ">

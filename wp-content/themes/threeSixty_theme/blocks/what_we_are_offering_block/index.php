@@ -29,6 +29,21 @@ if (isset($block)) {
 $sub_title = get_field('sub_title');
 $title = get_field('title');
 $description = get_field('description');
+$programmatic_or_manual = get_field("programmatic_or_manual");
+if ($programmatic_or_manual === 'programmatic') {
+  $query_options = get_field("query_options") ?: [];
+  $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : -1;
+  $order = isset($query_options['order']) && in_array($query_options['order'], ['asc', 'desc']) ? $query_options['order'] : 'DESC';
+  $args = [
+    "post_type" => "services",
+    "posts_per_page" => $number_of_posts,
+    "order" => $order,
+    "post_status" => "publish",
+    "paged" => 1,
+    'orderby' => 'date',
+  ];
+  $the_query = new WP_Query($args);
+}
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -44,51 +59,75 @@ $description = get_field('description');
       <div class="text-lg description text-center"><?= $description ?></div>
     <?php endif; ?>
   </div>
-  <div class="swiper offering-cards">
-    <?php if (have_rows('offering')) { ?>
-      <div class="swiper-wrapper ">
-        <?php while (have_rows('offering')) {
-          the_row();
-          $offering_image = get_sub_field('offering_image');
-          $offering_title = get_sub_field('offering_title');
-          $offering_description = get_sub_field('offering_description');
-          $button_icon = get_sub_field('button_icon');
-          $offering_link = get_sub_field('offering_link');
-          $offering_icon = get_sub_field('offering_icon');
-          ?>
-          <div class="swiper-slide offering-card">
-            <div class="image-title flex-col">
-              <?php if (!empty($offering_image) && is_array($offering_image)) { ?>
-                <picture class="offering-image image-wrapper cover-image ">
-                  <img src="<?= $offering_image['url'] ?>" alt="<?= $offering_image['alt'] ?>">
-                </picture>
-              <?php } ?>
-              <?php if ($offering_title) { ?>
-                <div class="center-text offering-title d-xs-6"><?= $offering_title ?></div>
-              <?php } ?>
-            </div>
-            <div class="description-btn flex-col">
-              <?php if ($offering_description) { ?>
+  <?php if (have_rows('offering')) { ?>
+    <div class="swiper-wrapper ">
+      <?php while (have_rows('offering')) {
+        the_row();
+        $offering_image = get_sub_field('offering_image');
+        $offering_title = get_sub_field('offering_title');
+        $offering_description = get_sub_field('offering_description');
+        $button_icon = get_sub_field('button_icon');
+        $offering_link = get_sub_field('offering_link');
+        $offering_icon = get_sub_field('offering_icon');
+        ?>
+        <div class="swiper-slide offering-card">
+          <div class="image-title flex-col">
+            <?php if (!empty($offering_image) && is_array($offering_image)) { ?>
+              <picture class="offering-image image-wrapper cover-image ">
+                <img src="<?= $offering_image['url'] ?>" alt="<?= $offering_image['alt'] ?>">
+              </picture>
+            <?php } ?>
+            <?php if ($offering_title) { ?>
+              <div class="center-text offering-title d-xs-6"><?= $offering_title ?></div>
+            <?php } ?>
+          </div>
+          <div class="description-btn flex-col">
+            <?php if ($offering_description) { ?>
               <div class="description text-md regular center-text">
                 <?= $offering_description ?>
               </div>
-              <?php } ?>
-              <?php if (!empty($offering_link) && is_array($offering_link)) { ?>
-                <a class="theme-cta-button offering-btn btn-white" href="<?= $offering_link['url'] ?>" target="<?= $offering_link['target'] ?>">
-                  <?= $offering_link['title'] ?>
-                  <?php if ($offering_icon) { ?>
+            <?php } ?>
+            <?php if (!empty($offering_link) && is_array($offering_link)) { ?>
+              <a class="theme-cta-button offering-btn btn-white" href="<?= $offering_link['url'] ?>" target="<?= $offering_link['target'] ?>">
+                <?= $offering_link['title'] ?>
+                <?php if ($offering_icon) { ?>
                   <picture class="icon">
                     <img src="<?= $offering_icon['url'] ?>" alt="<?= $offering_icon['alt'] ?>">
                   </picture>
-                  <?php } ?>
-                </a>
-              <?php } ?>
-            </div>
+                <?php } ?>
+              </a>
+            <?php } ?>
           </div>
-        <?php } ?>
+        </div>
+      <?php } ?>
+    </div>
+  <?php } ?>
+
+  <?php if ($programmatic_or_manual === "manual") { ?>
+    <div class="swiper offering-cards">
+      <div class="swiper-wrapper">
+        <?php
+        $cards = get_field("service_card");
+        if (is_array($cards)) {
+          foreach ($cards as $card) {
+            get_template_part("partials/services-card", "", ["post_id" => $card->ID, "swiper-slide" => true]);
+          }
+        }
+        ?>
       </div>
-    <?php } ?>
-  </div>
+    </div>
+  <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
+    <div class="swiper offering-cards">
+      <div class="swiper-wrapper">
+        <?php while ($the_query->have_posts()) {
+          $the_query->the_post();
+          get_template_part("partials/services-card", "",
+            ["post_id" => get_the_ID(), "swiper-slide" => true]);
+        } ?>
+        <?php wp_reset_postdata(); ?>
+      </div>
+    </div>
+  <?php } ?>
   <div class="swiper-navigations">
     <div class="swiper-button-prev swiper-navigation arrow" role="button" tabindex="0" aria-label="Previous Slide">
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
