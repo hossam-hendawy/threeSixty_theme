@@ -4,7 +4,6 @@
 // @author DELL
 .featured_package_block {
   background: linear-gradient(180deg, #FFF 0%, #F2F4F7 100%);
-
   padding-block: 65px;
   @include min-medium-screen {
     padding-block: 80px;
@@ -22,18 +21,16 @@
     gap: 40px;
     @include min-medium-screen {
       flex-direction: row;
-      padding-bottom: 80px;
+      padding-bottom: 88px;
       gap: 0;
     }
   }
 
   .overview-content {
     padding-bottom: 40px;
-
     @include large-screen {
-      padding-bottom: 80px;
+      padding-bottom: 87px;
     }
-
   }
 
   .services-cards {
@@ -44,6 +41,7 @@
     @include min-medium-screen {
       width: 44.19%;
     }
+
     .services-card {
       display: flex;
       align-items: center;
@@ -73,21 +71,18 @@
         }
       }
     }
-
   }
 
   .content-wrapper {
     width: 100%;
     @include min-medium-screen {
+      width: 54.23%;
+    }
+    @include large-screen {
       width: 48.23%;
     }
 
     .package-box-wrapper {
-      .package-title-and-price {
-        @include min-medium-screen {
-          min-height: 160px;
-        }
-      }
 
       .package-includes {
         .package-includes-title {
@@ -103,10 +98,12 @@
           }
         }
       }
+
       .package-icon-wrapper {
         width: 62px;
         height: 54px;
         flex-shrink: 0;
+
         img {
           @include square(100%);
           object-fit: contain;
@@ -116,6 +113,7 @@
   }
 
   .featured-btn {
+    background-color: transparent;
     @include marginX(auto);
     width: 255px;
   }
