@@ -10,6 +10,12 @@
     padding-block: 128px;
   }
 
+  .container{
+    @include min-medium-screen{
+      padding-inline: 0;
+    }
+  }
+
   .top-content {
     gap: 15px;
     @include marginX(auto);
@@ -43,6 +49,12 @@
     }
   }
 
+  .swiper {
+    @include min-medium-screen{
+      padding-inline: 24px;
+    }
+  }
+
   .offering-cards {
     padding-block: 45px 40px;
     @include min-medium-screen {
@@ -50,6 +62,7 @@
     }
 
     .offering-card {
+      height: auto;
       @include min-medium-screen {
         padding-block: 70px 52px;
       }

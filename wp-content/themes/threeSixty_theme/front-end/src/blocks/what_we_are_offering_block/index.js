@@ -17,7 +17,7 @@ const whatWeAreOfferingBlock = async (block) => {
     spaceBetween: 16,
     modules: [Navigation],
     breakpoints: {
-      768: {
+      600: {
         slidesPerView: 2,
       },
       1024: {
