@@ -4,39 +4,66 @@
 // @author DELL
 .home_hero_block {
   background-color: $threeSixty_theme_black;
-  min-height: 690px;
+  min-height: 683px;
+  padding-top: 40px;
+  @include media-screen-768{
+    min-height: 459px;
+    padding-top: 0;
+  }
   @include min-medium-screen {
+    min-height: 630px;
+  }
+  @include large-screen {
     min-height: 710px;
   }
+
   .content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    @include min-medium-screen {
+    @include media-screen-768 {
       justify-content: space-between;
       flex-direction: row;
       gap: 0;
     }
+
     .left-content {
       gap: 21px;
       width: 100%;
       text-align: center;
-      @include min-medium-screen {
+      @include media-screen-768 {
         width: 50.08%;
         text-align: unset;
       }
-      .title {
-        p {
-          line-height: 111.111%;
+
+      .d-2xl-h1 p {
+        color: $threeSixty_theme_white;
+        font-family: $inter;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 110%;
+        font-style: normal;
+        letter-spacing: -1.44px;
+        @include min-medium-screen {
+          font-size: 42px;
+          line-height: 50px;
+        }
+        @include large-screen {
+          font-size: 72px;
+          line-height: 80px;
+          letter-spacing: -1.44px;
         }
       }
+
       .description {
         max-width: 440px;
         @include marginX(auto);
+        @include media-screen-768{
+          @include marginX(0);
+        }
         @include min-medium-screen {
           max-width: 450px;
-          @include marginX(0);
         }
         @include large-screen {
           max-width: 550px;
@@ -45,36 +72,57 @@
           color: $threeSixty_theme_gray-300;
         }
       }
+
       .content-wrapper-btn {
         margin-top: 10px;
         color: $threeSixty_theme_white;
         border: 1px solid $threeSixty_theme_brand-500;
         background-color: transparent;
-        transition: border-color $duration , background-color $duration;
+        transition: border-color $duration, background-color $duration;
         font-style: normal;
         font-weight: 600;
         font-size: 13px;
-        line-height:  155.556%;
+        line-height: 155.556%;
         @include marginX(auto);
-        @include min-medium-screen {
+        padding-inline: 10px;
+        gap: 12px;
+        @include media-screen-768{
+          padding-inline: 22px;
           @include marginX(0);
+        }
+        @include min-medium-screen {
           font-size: 18px;
         }
+
+        svg {
+
+          @include media-screen-768{
+            width: 31px;
+            height: 26.773px;
+          }
+        }
+
         &:hover {
           background-color: #344054;
           border-color: transparent;
         }
       }
     }
+
     .right-image {
       width: 100%;
       flex-shrink: 0;
-      @include min-medium-screen {
+
+      @include media-screen-768 {
         width: 51.89%;
       }
+
       .image {
         padding-top: 124.76%;
-        @include min-medium-screen {
+        @include media-screen-600{
+          padding-top: 80.76%;
+        }
+        @include media-screen-768 {
           padding-top: 124.76%;
         }
       }
