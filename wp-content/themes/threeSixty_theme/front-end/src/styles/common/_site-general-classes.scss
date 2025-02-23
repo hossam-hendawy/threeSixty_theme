@@ -681,7 +681,10 @@ ol.theme-unordered-list-element {
   }
 }
 
-.offering-cards {
+  .offering-cards {
+  @include small-screen {
+    @include paddingX(16px);
+  }
   .offering-card {
     border-radius: 8px;
     border: 1px solid #E4E7EC;
@@ -736,12 +739,18 @@ ol.theme-unordered-list-element {
       }
 
       .description {
-        max-width: 262px;
-        margin-inline: auto;
+        @include marginX(auto);
+        @include min-medium-screen {
+          max-width: 262px;
+        }
       }
 
       .offering-btn {
-        width: 100%;
+        width: fit-content;
+        @include marginX(auto);
+        @include min-medium-screen {
+          width: 100%;
+        }
 
         .icon {
           width: 29px;

@@ -4,8 +4,8 @@
 // @author DELL
 .about_us_block {
   background-color: $threeSixty_theme_black;
-  min-height: 440px;
-  @include paddingY(83px, 84px);
+  min-height: 535px;
+  @include paddingY(40px);
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -14,9 +14,11 @@
     @include paddingY(157px, 159px);
   }
 
-
   .content-wrapper {
     gap: 10px;
+    @include small-screen {
+      text-align: center;
+    }
     @include min-media-screen-600 {
       max-width: 450px;
     }

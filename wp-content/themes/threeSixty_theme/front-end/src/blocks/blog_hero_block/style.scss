@@ -4,8 +4,8 @@
 // @author DELL
 .blog_hero_block {
   background-color: $threeSixty_theme_black;
-  min-height: 440px;
-  @include paddingY(83px, 84px);
+  min-height: 633px;
+  @include paddingY(40px);
   justify-content: flex-start;
   align-items: center;
   display: flex;
@@ -13,8 +13,8 @@
   overflow: hidden;
   z-index: 2;
   @include min-medium-screen {
-    min-height: 516px;
-    @include paddingY(143px, 144px);
+    min-height: 518px;
+    @include paddingY(142px, 144px);
   }
 
   .container {
@@ -29,6 +29,9 @@
   .content-wrapper {
     gap: 10px;
     max-width: 500px;
+    @include small-screen {
+      text-align: center;
+    }
     @include min-medium-screen {
       max-width: 510px;
     }

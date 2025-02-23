@@ -46,7 +46,11 @@
       display: flex;
       align-items: center;
       gap: 32px;
-
+      @include small-screen {
+        text-align: center;
+        flex-direction: column;
+        gap: 18px;
+      }
       .icon-wrapper {
         width: 57px;
         height: 56px;
@@ -70,6 +74,7 @@
           max-width: 429px;
         }
       }
+
     }
   }
 
