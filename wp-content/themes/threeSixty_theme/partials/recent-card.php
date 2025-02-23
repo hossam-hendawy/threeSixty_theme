@@ -37,15 +37,15 @@ $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_titl
       ?>
     <?php } else { ?>
       <picture class="aspect-ratio image-wrapper image-hover-effect featured-image">
-        <img src="<?= get_template_directory_uri() .'/images/image-not-found.jpg' ?>" alt="image-not-found">
+        <img src="<?= get_template_directory_uri() . '/images/image-not-found.jpg' ?>" alt="image-not-found">
       </picture>
     <?php } ?>
 
 
-
   </a>
-  <a href="<?= $post_permalink ?>" target="_self" class="post-title d-xs-6 semi-bold"><?= $post_title ?>
-    <svg class="post-title-svg" width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <a href="<?= $post_permalink ?>" target="_self" class="post-title d-xs-6 semi-bold">
+    <span><?= $post_title ?></span>
+    <svg class="post-title-svg" width="24" height="28" viewBox="0 0 24 28" fill="none" aria-hidden="true">
       <path d="M7 21L17 11M17 11H7M17 11V21" stroke="#CA8504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>

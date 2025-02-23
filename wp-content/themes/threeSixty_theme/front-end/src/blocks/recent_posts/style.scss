@@ -14,8 +14,10 @@
     justify-content: space-between;
     flex-direction: column;
     margin-bottom: 40px;
-    @include min-medium-screen {
+    @include media-screen-992 {
       flex-direction: row;
+    }
+    @include min-medium-screen {
       margin-bottom: 80px;
     }
 
@@ -34,6 +36,10 @@
         margin-bottom: 15px;
       }
     }
+  }
+
+  .theme-cta-button {
+    min-width: 215px;
   }
 
   .recent-posts-swiper {
@@ -96,13 +102,30 @@
       @include max-lines(1);
     }
 
+    .post-title-svg {
+      display: block !important;
+    }
+
     .categories {
       display: none;
     }
 
     .excerpt {
+      display: -webkit-box !important;
+      font-weight: 400;
       @include max-lines(2);
     }
 
+  }
+
+  .recent-posts-in-home {
+    .post-title {
+      margin-bottom: 8px;
+
+      span {
+        display: block;
+        width: 90%;
+      }
+    }
   }
 }

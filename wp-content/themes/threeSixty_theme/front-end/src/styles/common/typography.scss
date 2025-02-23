@@ -179,7 +179,7 @@ h6, .d-xs-6, .d-xs-6 p {
   transition: border-color $duration;
 
   &:hover {
-    background-color: white;
+    background-color: transparent;
     border-color: $threeSixty_theme_brand-600;
   }
 }
