@@ -70,7 +70,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "medium-field",
                 "id": ""
             },
             "default_value": "",
@@ -139,5 +139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739436045
+    "modified": 1740287997
 }

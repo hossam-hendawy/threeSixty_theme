@@ -58,11 +58,24 @@ if ($programmatic_or_manual === 'programmatic') {
       <?php } ?>
     </div>
     <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
-      <a class="theme-cta-button " href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
+      <a class="theme-cta-button btn-white left-content-btn" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
+        <?= $cta_button['title'] ?>
+        <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none">
+          <g clip-path="url(#clip0_1377_4705)">
+            <path d="M16.6718 29L1.08116e-05 28.9549L8.37476 14.4851L16.6718 29Z" fill="#CA8504"></path>
+            <path d="M25 14.5012L16.6774 -3.63794e-07L1.90735e-06 -1.09278e-06L8.37476 14.4851L16.6717 29L25 14.5012Z" fill="#EAAA08"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_1377_4705">
+              <rect width="29" height="25" fill="white" transform="translate(25) rotate(90)"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
     <?php } ?>
   </div>
   <?php if ($programmatic_or_manual === "manual") { ?>
-    <div class="swiper recent-posts-swiper">
+    <div class="swiper recent-posts-swiper recent-posts-in-home">
       <div class="swiper-wrapper">
         <?php
         $cards = get_field("post_card");
@@ -75,7 +88,7 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
-    <div class="swiper recent-posts-swiper">
+    <div class="swiper recent-posts-swiper recent-posts-in-home">
       <div class="swiper-wrapper">
         <?php while ($the_query->have_posts()) {
           $the_query->the_post();

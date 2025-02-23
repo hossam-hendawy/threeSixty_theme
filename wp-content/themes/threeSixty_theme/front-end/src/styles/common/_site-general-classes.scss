@@ -42,6 +42,18 @@ section {
 
 //endregion
 
+body.home {
+
+  .get_in_touch_block {
+    padding-top: 0;
+  }
+
+  .recent_posts {
+    &:after{
+      display: none;
+    }
+  }
+}
 
 // region general in here block
 .hero_package, .packages_hero, .service_hero {
@@ -684,7 +696,7 @@ ol.theme-unordered-list-element {
     @include min-medium-screen {
       &:hover {
         //box-shadow: 0 32px 64px -12px rgba(16, 24.000000000000014, 40, 0.14);
-        box-shadow: 0 32px 25px -6px  rgba(16, 24.000000000000014, 40, 0.14);
+        box-shadow: 0 32px 25px -6px rgba(16, 24.000000000000014, 40, 0.14);
       }
     }
 
