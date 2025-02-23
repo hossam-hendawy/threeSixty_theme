@@ -121,6 +121,11 @@
           "slug": "gray-200",
           "color": "#E3E8EF",
           "name": "Gray-200"
+        },
+        {
+          "slug": "brand-500",
+          "color": "#EAAA08",
+          "name": "Brand-500"
         }
       ]
     },
