@@ -1,9 +1,8 @@
 import './style.scss';
-import { imageLazyLoading } from "../../scripts/functions/imageLazyLoading";
-import { animations } from "../../scripts/general/animations";
-import { Swiper } from "swiper";
-import { Navigation } from 'swiper/modules';
-
+import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
+import {animations} from "../../scripts/general/animations";
+import {Swiper} from "swiper";
+import {Navigation} from 'swiper/modules';
 /**
  * @author DELL
  * @param block {HTMLElement}
@@ -11,11 +10,7 @@ import { Navigation } from 'swiper/modules';
  */
 const testimonialsBlock = async (block) => {
 
-  const swiperButtonsNext = block.querySelectorAll('.swiper-button-next');
-  const swiperButtonsPrev = block.querySelectorAll('.swiper-button-prev');
-
-  console.log(swiperButtonsNext)
-  console.log(swiperButtonsPrev)
+  // add block code here
   const swiper = new Swiper(block.querySelector('.testimonials-swiper'), {
     slidesPerView: 1,
     spaceBetween: 16,
@@ -37,13 +32,14 @@ const testimonialsBlock = async (block) => {
       },
     },
     navigation: {
-      nextEl: swiperButtonsNext.length ? swiperButtonsNext : null,
-      prevEl: swiperButtonsPrev.length ? swiperButtonsPrev : null,
+      nextEl: block.querySelector(".swiper-button-next"),
+      prevEl: block.querySelector(".swiper-button-prev"),
     },
   });
-
+// testing the new hidden value
   animations(block);
   imageLazyLoading(block);
 };
 
 export default testimonialsBlock;
+
