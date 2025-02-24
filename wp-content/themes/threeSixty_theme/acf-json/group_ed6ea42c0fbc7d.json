@@ -50,14 +50,14 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "Small-field",
                 "id": ""
             },
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_67939f6abacd9",
@@ -156,7 +156,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": -1,
                     "min": "",
                     "max": "",
                     "placeholder": "",
@@ -210,5 +210,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737790279
+    "modified": 1740372264
 }

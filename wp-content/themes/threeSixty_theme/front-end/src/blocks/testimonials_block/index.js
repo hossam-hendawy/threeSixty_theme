@@ -1,8 +1,9 @@
 import './style.scss';
-import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
-import {animations} from "../../scripts/general/animations";
-import {Swiper} from "swiper";
-import {Navigation} from 'swiper/modules';
+import { imageLazyLoading } from "../../scripts/functions/imageLazyLoading";
+import { animations } from "../../scripts/general/animations";
+import { Swiper } from "swiper";
+import { Navigation } from 'swiper/modules';
+
 /**
  * @author DELL
  * @param block {HTMLElement}
@@ -10,7 +11,11 @@ import {Navigation} from 'swiper/modules';
  */
 const testimonialsBlock = async (block) => {
 
-  // add block code here
+  const swiperButtonsNext = block.querySelectorAll('.swiper-button-next');
+  const swiperButtonsPrev = block.querySelectorAll('.swiper-button-prev');
+
+  console.log(swiperButtonsNext)
+  console.log(swiperButtonsPrev)
   const swiper = new Swiper(block.querySelector('.testimonials-swiper'), {
     slidesPerView: 1,
     spaceBetween: 16,
@@ -18,13 +23,13 @@ const testimonialsBlock = async (block) => {
     breakpoints: {
       600: {
         spaceBetween: 20,
-        slidesPerView: 1.5,
+        slidesPerView: 2,
       },
       768: {
         slidesPerView: 2,
       },
-      900: {
-        slidesPerView: 2.5,
+      992: {
+        slidesPerView: 3,
       },
       1280: {
         slidesPerView: 2.26,
@@ -32,14 +37,13 @@ const testimonialsBlock = async (block) => {
       },
     },
     navigation: {
-      nextEl: block.querySelector(".swiper-button-next"),
-      prevEl: block.querySelector(".swiper-button-prev"),
+      nextEl: swiperButtonsNext.length ? swiperButtonsNext : null,
+      prevEl: swiperButtonsPrev.length ? swiperButtonsPrev : null,
     },
   });
-// testing the new hidden value
+
   animations(block);
   imageLazyLoading(block);
 };
 
 export default testimonialsBlock;
-

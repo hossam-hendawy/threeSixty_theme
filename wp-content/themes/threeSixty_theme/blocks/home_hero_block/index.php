@@ -33,6 +33,9 @@ $image = get_field('image');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
+<picture class="shape">
+  <img src="<?= get_template_directory_uri() . '/images/backgrounds/ThreeSixty-Hero-header.webp' ?>" alt="cover image">
+</picture>
 <div class="container">
   <div class="content-wrapper">
     <div class="left-content flex-col">
@@ -69,6 +72,4 @@ $image = get_field('image');
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
