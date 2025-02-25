@@ -1,0 +1,41 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+@use "src/styles/functions/autoplay-swiper";
+
+// @author HOSSAM
+.tools_and_platforms_block {
+  position: relative;
+  background-color: $threeSixty_theme_black;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 222 !important;
+
+  .arrow {
+    position: absolute;
+    width: 52px;
+    height: 19px;
+    top: calc(100% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  @include min-medium-screen {
+    height: 144px;
+  }
+
+  .autoplay-swiper-slide {
+    height: 25px;
+
+    @include min-medium-screen {
+      height: 40px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
