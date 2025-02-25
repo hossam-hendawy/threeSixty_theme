@@ -10,8 +10,10 @@ import {Navigation} from 'swiper/modules';
  */
 const testimonialsBlock = async (block) => {
 
+  let testimonialsSwiper = block.querySelector('.testimonials-swiper')
+
   // add block code here
-  const swiper = new Swiper(block.querySelector('.testimonials-swiper'), {
+  const swiper = new Swiper(testimonialsSwiper, {
     slidesPerView: 1,
     spaceBetween: 16,
     modules: [Navigation],
@@ -32,10 +34,12 @@ const testimonialsBlock = async (block) => {
       },
     },
     navigation: {
-      nextEl: block.querySelector(".swiper-button-next"),
-      prevEl: block.querySelector(".swiper-button-prev"),
+      nextEl: [...block.querySelectorAll(".swiper-button-next")],
+      prevEl: [...block.querySelectorAll(".swiper-button-prev")],
     },
   });
+
+
 // testing the new hidden value
   animations(block);
   imageLazyLoading(block);

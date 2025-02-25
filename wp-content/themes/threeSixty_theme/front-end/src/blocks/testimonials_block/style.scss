@@ -21,6 +21,9 @@
     top: 42px;
     right: 12%;
     display: none;
+    @include large-screen{
+      display: block;
+    }
   }
 
   // mobile
