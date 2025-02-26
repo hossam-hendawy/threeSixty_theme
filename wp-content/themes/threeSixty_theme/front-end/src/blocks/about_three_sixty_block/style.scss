@@ -7,27 +7,37 @@
   @include min-medium-screen {
     padding-block: 128px;
   }
+
   .cards-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 50px;
-    @include min-medium-screen {
+    @include media-screen-992{
+      align-items: flex-start;
       flex-direction: row;
       gap: 0;
     }
+    @include large-screen {
+      align-items: center;
+    }
+
     .left-content {
       width: 100%;
-      @include min-medium-screen {
-        width: 50%;
+      @include media-screen-992 {
+        width: 47%;
       }
+
       .sub-title {
+        letter-spacing: normal;
         color: $threeSixty_theme_brand-600;
       }
+
       .title {
         color: $threeSixty_theme_gray-950;
       }
+
       .description {
         p {
           line-height: 166.667%;
@@ -35,24 +45,30 @@
         }
       }
     }
+
     .right-image {
       width: 100%;
       display: flex;
-      padding: 118px 112px;
+      padding: 38px 112px;
       justify-content: center;
       align-items: center;
       background-color: $threeSixty_theme_gray-50;
-      @include min-medium-screen {
-        padding: 236px 112px;
+      @include media-screen-992{
+        padding: 125px 112px;
         width: 45.96%;
       }
+      @include large-screen {
+        padding: 236px 112px;
+      }
+
       .image {
         height: 127px;
-        width: 103px;
+        width: 123px;
         @include min-media-screen-600 {
           width: 239px;
           height: 229px;
         }
+
         img {
           object-fit: contain;
         }

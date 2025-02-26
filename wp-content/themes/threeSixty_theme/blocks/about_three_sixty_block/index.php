@@ -37,7 +37,7 @@ $image = get_field('image');
   <div class="cards-wrapper">
   <div class="left-content flex-col gab-20">
     <?php if ($sub_title): ?>
-      <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
+      <h2 class="text-xl sub-title"><?= $sub_title ?></h2>
     <?php endif; ?>
     <?php if ($title): ?>
       <h3 class="bold title"><?= $title ?></h3>
