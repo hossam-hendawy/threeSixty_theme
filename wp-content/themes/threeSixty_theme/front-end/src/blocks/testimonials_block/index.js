@@ -29,7 +29,7 @@ const testimonialsBlock = async (block) => {
         slidesPerView: 3,
       },
       1280: {
-        slidesPerView: 2.26,
+        slidesPerView: 2.39,
         spaceBetween: 30,
       },
     },

@@ -62,9 +62,14 @@
       padding-right: 0;
       padding-left: 36px;
     }
-    @include xx-large-screen {
-      padding-left: 112px;
+    @include x-large-screen {
+      padding-right: 0;
+      padding-left: 120px !important;
+      max-width: 1440px;
+      margin: 0 auto;
     }
+
+
 
     // desktop
     .large-content {
@@ -155,6 +160,15 @@
         }
 
       }
+    }
+  }
+
+  .swiper-slide{
+    height: auto;
+  }
+  .swiper-wrapper {
+    @include x-large-screen{
+      padding-left: 60px;
     }
   }
 
