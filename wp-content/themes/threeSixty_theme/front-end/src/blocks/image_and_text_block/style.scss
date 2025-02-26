@@ -83,7 +83,6 @@
     }
 
     &.content-reverse {
-      flex-direction: column-reverse;
       @include media-screen-992{
         flex-direction: row-reverse;
       }
