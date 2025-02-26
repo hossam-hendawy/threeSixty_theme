@@ -4,60 +4,106 @@
 // @author DELL
 .image_and_text_block {
   padding-block: 65px;
-  @include min-medium-screen {
+  @include media-screen-992{
     padding-block: 128px;
   }
+
   .cards-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     gap: 50px;
-    @include min-medium-screen {
+    @include media-screen-992 {
       flex-direction: row;
-      gap: 0;
+      gap: 50px;
     }
-    &.content-reverse {
-      flex-direction: column-reverse;
-      @include min-medium-screen {
-        flex-direction: row-reverse;
-      }
+    @include min-medium-screen {
+      gap: 100px;
     }
+
+    @include large-screen {
+      gap: 180px;
+    }
+
     .left-content {
       width: 100%;
-      @include min-medium-screen {
-        width: 51.97%;
+      @include media-screen-992{
+        width: 50%;
       }
+      @include min-medium-screen {
+        width: 59.97%;
+      }
+
       .sub-title {
         color: $threeSixty_theme_brand-600;
       }
+
       .title {
         color: $threeSixty_theme_gray-950;
       }
+
       .description {
-        p {
+        p, li {
           line-height: 166.667%;
           color: $threeSixty_theme_gray-500;
         }
+
+        ul, ol {
+          padding-inline: 19px 0;
+        }
       }
     }
+
     .right-image {
       width: 100%;
+      @include media-screen-992{
+        width: 40%;
+      }
       @include min-medium-screen {
         width: 43.08%;
       }
+
       .image {
         padding-top: 66.92%;
         @include media-screen-768 {
           padding-top: 39%;
         }
+        @include media-screen-992{
+          padding-top: 66.92%;
+        }
         @include min-medium-screen {
           padding-top: 66.92%;
         }
+
         img {
           object-fit: contain;
         }
       }
     }
+
+    &.content-reverse {
+      flex-direction: column-reverse;
+      @include media-screen-992{
+        flex-direction: row-reverse;
+      }
+      @include min-medium-screen {
+        flex-direction: row-reverse;
+      }
+
+      .left-content {
+        @include min-medium-screen {
+          width: 51.97%;
+        }
+      }
+
+      .right-image {
+        @include min-medium-screen {
+          //width: 43.08%;
+          width: 53.08%;
+        }
+      }
+    }
+
   }
 }
