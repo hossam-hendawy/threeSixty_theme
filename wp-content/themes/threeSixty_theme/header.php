@@ -254,7 +254,7 @@ $contact_us = get_field('cta_button', 'options');
               <?= $contact_us['title'] ?>
             </a>
           <?php } ?>
-          <button aria-label="Open Menu Links" class="burger-menu hide-only-lg">
+          <button aria-label="Open Menu Links" class="burger-menu">
             <span></span>
             <span></span>
             <span></span>

@@ -105,7 +105,6 @@ header {
     }
   }
 
-
   // burger menu
   .burger-menu {
     width: size(24);
@@ -118,7 +117,10 @@ header {
     border: none;
     background: transparent;
     padding: 0;
-
+    display: block;
+    @include min-medium-screen{
+      display: none;
+    }
     &:focus {
       outline: none !important;
     }
@@ -249,7 +251,7 @@ header {
     height: 100vh;
     transition: padding $duration;
     overflow: auto;
-    @include large-screen {
+    @include min-medium-screen {
       background-color: transparent;
       padding: 0;
       width: auto;
@@ -259,9 +261,12 @@ header {
   }
 
   .primary-menu {
-    @include large-screen {
+    @include min-medium-screen {
       display: flex;
       align-items: center;
+      gap: 18px;
+    }
+    @include large-screen{
       gap: 38px;
     }
   }
@@ -275,7 +280,7 @@ header {
       margin-bottom: size(28);
     }
 
-    @include large-screen {
+    @include min-medium-screen {
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -294,7 +299,6 @@ header {
 
   &.hide:not(.header-active) {
     transform: translateY(-100%);
-
   }
 
   &.header-transparent {
@@ -309,4 +313,3 @@ header {
     }
   }
 }
-
