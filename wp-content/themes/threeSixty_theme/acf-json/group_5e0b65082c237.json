@@ -20,9 +20,34 @@
             "endpoint": 0
         },
         {
+            "key": "field_63da2914fbf9f",
+            "label": "Header Logo",
+            "name": "header_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_63da2815fbf9a",
-            "label": "Header Links",
-            "name": "header_links",
+            "label": "Menu Links",
+            "name": "menu_links",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -38,13 +63,13 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Link",
+            "button_label": "Add Menu Links",
             "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_63da286cfbf9b",
-                    "label": "Link",
-                    "name": "link",
+                    "label": "Menu Link",
+                    "name": "menu_link",
                     "aria-label": "",
                     "type": "link",
                     "instructions": "",
@@ -59,6 +84,22 @@
                     "parent_repeater": "field_63da2815fbf9a"
                 }
             ]
+        },
+        {
+            "key": "field_669f976afeca4",
+            "label": "CTA Button",
+            "name": "cta_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_609bc694d0b79",
@@ -1075,5 +1116,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739723793
+    "modified": 1740955919
 }

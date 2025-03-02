@@ -15,6 +15,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 2;
+  padding-top: 90px;
 }
 
 section {
@@ -800,6 +801,43 @@ body.rtl {
     max-width: 1216px;
     @include large-screen {
       width: calc(100% - 224px);
+    }
+  }
+}
+
+
+.flag-wrapper {
+  margin-bottom: 14px;
+  width: fit-content;
+
+  .language-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+    transition: color $duration;
+
+    &:hover {
+      color: $threeSixty_theme_gold;
+    }
+  }
+
+  .arabic-wrapper {
+    display: none;
+  }
+
+  svg {
+    width: 32px;
+    height: 21.333px;
+  }
+
+  body.rtl & {
+    .arabic-wrapper {
+      display: flex;
+    }
+
+    .english-wrapper {
+      display: none;
     }
   }
 }

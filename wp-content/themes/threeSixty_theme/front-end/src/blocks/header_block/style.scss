@@ -6,15 +6,16 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 99999;
   transform: translateX(0);
   transition: transform $duration, background $duration;
-  background: chartreuse;
+  background: $threeSixty_theme_black;
+  height: 90px;
+  display: flex;
+  align-items: center;
 
   .container {
-    @include large-screen {
-      @include paddingX(size(32));
-    }
+    width: 100%;
   }
 
   // header
@@ -23,55 +24,77 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    @include paddingY(size(19));
+    padding-block: 20px;
     transition: padding $duration;
-    @include large-screen {
-      flex-direction: row-reverse;
-      @include paddingY(size(58))
-    }
   }
 
   // logo
   .main-logo {
     display: block;
-    width: size(167);
-    height: size(34);
-    @include large-screen {
-      width: size(179);
-      height: size(46);
-    }
-
-    img, svg {
-      @include square(100%);
-      object-fit: contain;
-    }
-
-  }
-
-
-  .mobile-logo {
-    display: block;
-    z-index: 10;
-    width: size(110);
-    height: size(46);
+    width: 166px;
+    height: 51px;
+    position: relative;
+    z-index: 22;
     @include min-medium-screen {
-      width: size(167);
-    }
-    @include large-screen {
-      display: none;
+      width: 226px;
+      height: 51px;
     }
 
     img, svg {
       @include square(100%);
       object-fit: contain;
     }
-
   }
 
   .book-now-and-burger-menu {
     display: flex;
     align-items: center;
+    gap: 16px;
 
+    .content-us {
+      padding-inline: 14px;
+      padding-block: 8px;
+      min-width: 134px;
+      min-height: 40px;
+      gap: 10px;
+      font-family: $inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      color: $threeSixty_theme_brand-500;
+      background-color: transparent;
+      border: 1px solid $threeSixty_theme_brand-500;
+      display: none;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background-color: $threeSixty_theme_white;
+        border-color: $threeSixty_theme_white;
+      }
+
+      @include min-medium-screen {
+        display: flex;
+      }
+    }
+
+    .flag-wrapper {
+      margin-bottom: 0;
+
+      body.rtl & {
+        .arabic-wrapper {
+          display: flex;
+        }
+
+        .english-wrapper {
+          display: none;
+        }
+      }
+    }
   }
 
   // burger menu
@@ -179,25 +202,11 @@ header {
     }
   }
 
-
   // links
   .navbar {
     position: relative;
     align-items: center;
     flex-direction: row;
-    margin-left: auto;
-
-    .main-logo {
-      display: none;
-    }
-
-    @include large-screen {
-      margin-right: size(67);
-
-      .main-logo {
-        display: flex;
-      }
-    }
 
     @include max-medium-screen {
       position: fixed;
@@ -210,11 +219,11 @@ header {
 
     .nav-item {
       text-transform: capitalize;
-      color: navy;
+      color: $threeSixty_theme_white;
       transition: color $duration;
 
       &:hover {
-        color: azure;
+        color: $threeSixty_theme_brand-500;
       }
     }
 
@@ -226,7 +235,7 @@ header {
   .navbar-wrapper {
     @include paddingY(size(90), size(100));
     @include paddingX(size(24));
-    background: coral;
+    background: $threeSixty_theme_black;
     width: 100%;
     height: 100vh;
     transition: padding $duration;
@@ -244,8 +253,7 @@ header {
     @include large-screen {
       display: flex;
       align-items: center;
-      @include marginX(size(-27.5));
-
+      gap: 38px;
     }
   }
 
@@ -259,12 +267,10 @@ header {
     }
 
     @include large-screen {
-      @include paddingX(size(32));
       &:not(:last-child) {
         margin-bottom: 0;
       }
     }
-
 
     .header-link-active {
       color: violet;
@@ -277,7 +283,6 @@ header {
     }
   }
 
-
   &.hide:not(.header-active) {
     transform: translateY(-100%);
 
@@ -288,13 +293,10 @@ header {
   }
 
   &.sticky {
-    background-color: red !important;
-
     .header-wrapper {
       @include large-screen {
         @include paddingY(size(25));
       }
     }
   }
-
 }

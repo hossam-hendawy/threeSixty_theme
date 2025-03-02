@@ -1,12 +1,6 @@
 @use "../common/variables" as *;
 @use "../mixins/mixins" as *;
 
-
-header {
-  background-color: black;
-  height: 90px;
-}
-
 .single-post {
 
   .site-breadcrumb {
