@@ -2,33 +2,83 @@
 @use "../../styles/mixins/mixins" as *;
 
 header {
-  position: relative;
-  height: 90px;
-  background-color: black;
-  &.fixed {
-    position: fixed;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: translateX(0);
+  transition: transform $duration, background $duration;
+  background: chartreuse;
+
+  .container {
+    @include large-screen {
+      @include paddingX(size(32));
+    }
   }
 
   // header
   .header-wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: relative;
-    padding-inline: $container-padding-sm;
+    @include paddingY(size(19));
     transition: padding $duration;
-    @include marginX(auto);
-    padding-block: 13px;
     @include large-screen {
-      padding-inline: $container-padding-md;
-      padding-block: 32px;
+      flex-direction: row-reverse;
+      @include paddingY(size(58))
     }
+  }
+
+  // logo
+  .main-logo {
+    display: block;
+    width: size(167);
+    height: size(34);
+    @include large-screen {
+      width: size(179);
+      height: size(46);
+    }
+
+    img, svg {
+      @include square(100%);
+      object-fit: contain;
+    }
+
+  }
+
+
+  .mobile-logo {
+    display: block;
+    z-index: 10;
+    width: size(110);
+    height: size(46);
+    @include min-medium-screen {
+      width: size(167);
+    }
+    @include large-screen {
+      display: none;
+    }
+
+    img, svg {
+      @include square(100%);
+      object-fit: contain;
+    }
+
+  }
+
+  .book-now-and-burger-menu {
+    display: flex;
+    align-items: center;
+
   }
 
   // burger menu
   .burger-menu {
-    width: 24px;
-    height: 32px;
+    width: size(24);
+    height: size(16);
+    //position: relative;
     z-index: 10;
     cursor: pointer;
     transform: translate3d(0, 0, 0);
@@ -36,18 +86,6 @@ header {
     border: none;
     background: transparent;
     padding: 0;
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: transparent;
-      width: 55px;
-      height: 55px;
-    }
 
     &:focus {
       outline: none !important;
@@ -56,8 +94,8 @@ header {
     span {
       display: block;
       width: 100%;
-      height: 2PX;
-      margin-bottom: 6px;
+      height: size(2);
+      margin-bottom: size(6);
       position: relative;
       z-index: 1;
       transition: color $duration;
@@ -74,7 +112,7 @@ header {
         opacity: .99;
         transition: background-color $duration;
         display: table;
-        border-radius: 10PX;
+        border-radius: size(10);
       }
 
       &:nth-of-type(even) {
@@ -108,7 +146,7 @@ header {
       }
 
       &:first-child {
-        margin: 0 auto 6PX;
+        margin: 0 auto size(6);
       }
     }
 
@@ -141,75 +179,122 @@ header {
     }
   }
 
+
   // links
   .navbar {
+    position: relative;
     align-items: center;
     flex-direction: row;
-    position: fixed;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    width: 100%;
-    transition: opacity 300ms ease-in;
-    pointer-events: none;
+    margin-left: auto;
+
+    .main-logo {
+      display: none;
+    }
+
+    @include large-screen {
+      margin-right: size(67);
+
+      .main-logo {
+        display: flex;
+      }
+    }
+
+    @include max-medium-screen {
+      position: fixed;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      width: 100%;
+      transition: transform 300ms ease-in;
+    }
+
+    .nav-item {
+      text-transform: capitalize;
+      color: navy;
+      transition: color $duration;
+
+      &:hover {
+        color: azure;
+      }
+    }
 
     &.header-links-active {
-      opacity: 1;
-      pointer-events: auto;
+      transform: translateX(0);
     }
   }
 
   .navbar-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-block: 35.9px 5vh;
-    padding-inline: $container-padding-sm;
-    background: $threeSixty_theme_warm_red;
+    @include paddingY(size(90), size(100));
+    @include paddingX(size(24));
+    background: coral;
     width: 100%;
     height: 100vh;
     transition: padding $duration;
     overflow: auto;
-
-    @include min-medium-screen {
-      padding-block: 32px;
-      padding-inline: $container-padding-md;
+    @include large-screen {
+      background-color: transparent;
+      padding: 0;
+      width: auto;
+      height: auto;
+      overflow: visible;
     }
   }
 
-  .header-logo {
+  .primary-menu {
+    @include large-screen {
+      display: flex;
+      align-items: center;
+      @include marginX(size(-27.5));
+
+    }
+  }
+
+  .menu-item {
     position: relative;
-    z-index: 2;
-    margin-bottom: 51px;
-    width: 100%;
-  }
+    cursor: pointer;
+    list-style: none;
 
-  .page-links-wrapper {
-    row-gap: 24px;
-  }
-
-  .vh {
-    .header-logo {
-      margin-bottom: 4vh;
-      flex-shrink: 0;
-      //height: 38.6vh;
+    &:not(:last-child) {
+      margin-bottom: size(28);
     }
 
-    .page-links-wrapper {
-      flex: 1 1 100%;
+    @include large-screen {
+      @include paddingX(size(32));
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
 
-    .page-link {
-      height: 100%;
 
-      .symbol {
-        height: 80%;
+    .header-link-active {
+      color: violet;
+    }
+
+    &.active-page-link {
+      a {
+        color: aqua;
       }
     }
   }
 
-  &.sticky {
+
+  &.hide:not(.header-active) {
+    transform: translateY(-100%);
+
   }
 
+  &.header-transparent {
+    background: transparent;
+  }
+
+  &.sticky {
+    background-color: red !important;
+
+    .header-wrapper {
+      @include large-screen {
+        @include paddingY(size(25));
+      }
+    }
+  }
 
 }

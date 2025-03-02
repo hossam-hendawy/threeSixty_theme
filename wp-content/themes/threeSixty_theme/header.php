@@ -131,21 +131,56 @@
 <!--end preloader style-->
 <!-- ACF Fields -->
 <?php
-$warm_red_page = get_field('warm_red_page', get_the_ID());
-$warm_red_page = $warm_red_page ?' warm-red-page ' : '';
+$header_logo = get_field('header_logo', 'options');
+$contact_us = get_field('cta_button', 'options');
 ?>
 <!-- END ACF -->
-<body <?php body_class($warm_red_page); ?>>
+<body <?php body_class(); ?>>
 <div class="page-transition"></div>
 <a skip-to-main-content href="#main-content"> <?= __('Skip to main content', 'threeSixty_theme') ?></a>
 <?= $code_after_body_tag ?>
 <!-- remove header if page template if full with no header and footer-->
 <main id="main-content" class="theme-wp-site-blocks">
-  <header class="tes-header">
-    <div class="header-wrapper">
-
+  <header class="threeSixty-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <?php if ($header_logo) { ?>
+          <a href="<?= site_url() . '/' ?>" class="mobile-logo">
+            <?= \Theme\Helpers::get_image($header_logo, 'medium'); ?>
+          </a>
+        <?php } ?>
+        <div class="book-now-and-burger-menu">
+          <button aria-label="Open Menu Links" class="burger-menu hide-only-lg">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <!--     links  -->
+        <nav class="navbar">
+          <div class="navbar-wrapper">
+            <?php if (have_rows('menu_links', 'options')) { ?>
+              <ul class="primary-menu">
+                <?php
+                $counter = 0;
+                while (have_rows('menu_links', 'options')) {
+                  the_row();
+                  $menu_link = get_sub_field('menu_link');
+                  ?>
+                  <?php if ($menu_link) { ?>
+                    <li class="menu-item">
+                      <a class="header-link nav-item capital-text" href="<?= $menu_link['url'] ?>" target="<?= $menu_link['target'] ?>">
+                        <?= $menu_link['title'] ?></a>
+                    </li>
+                    <?php
+                    $counter++;
+                  }
+                }
+                ?>
+              </ul>
+            <?php } ?>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
-
-
-
