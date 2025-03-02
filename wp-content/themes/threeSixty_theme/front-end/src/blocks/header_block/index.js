@@ -58,7 +58,7 @@ export default async (header) => {
       // region prevent page scroll
       document.documentElement.classList.add('modal-opened');
       // endregion prevent page scroll
-      gsap.fromTo(menuLinks.querySelectorAll('.menu-item'), {
+      gsap.fromTo(menuLinks.querySelectorAll('.menu-item , .mobile-cta'), {
         y: 30,
         autoAlpha: 0,
       }, {
@@ -70,34 +70,6 @@ export default async (header) => {
       });
     }
   });
-
-  // logo animation
-  const lineOne = header.querySelector(".line-1")
-  const lineTwo = header.querySelector(".line-2")
-  const lineThree = header.querySelector(".line-3")
-
-  const logoAnimation = gsap.timeline({
-      delay: .5,
-      repeat: -1,
-      repeatDelay: .2,
-      yoyo: true,
-      defaults: {
-        duration: .7,
-        ease: "power3.out"
-      }
-    }
-  )
-    .from(lineOne, {
-      drawSVG: 0
-    })
-    .from(lineTwo, {
-      drawSVG: "100% 100%"
-    }, "<30%")
-    .from(lineThree, {
-      x: -110,
-      opacity: 0
-    }, "<30%")
-    .call(null, [], "<3");
 
 
   // prevent link if it's the same link of current page
