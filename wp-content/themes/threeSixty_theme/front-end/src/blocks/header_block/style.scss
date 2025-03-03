@@ -287,13 +287,7 @@ header {
     }
 
     .header-link-active {
-      color: violet;
-    }
-
-    &.active-page-link {
-      a {
-        color: aqua;
-      }
+      color: $threeSixty_theme_brand-500;
     }
   }
 
@@ -313,3 +307,4 @@ header {
     }
   }
 }
+

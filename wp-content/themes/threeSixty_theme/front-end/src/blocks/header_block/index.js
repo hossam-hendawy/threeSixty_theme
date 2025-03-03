@@ -18,11 +18,10 @@ export default async (header) => {
   const scrollHandler = () => {
     const currentScroll = window.scrollY;
     header.classList.toggle('sticky', currentScroll >= 20);
-
-    if (window.innerWidth > 992) {
-      header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
-    }
-
+    header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
+    // if (window.innerWidth > 992) {
+    //   header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
+    // }
     lastScroll = currentScroll;
   };
 
@@ -72,7 +71,7 @@ export default async (header) => {
   });
 
 
-  // prevent link if it's the same link of current page
+
   header.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', event => {
       if ((anchor.href === window.location.href || anchor.href === window.location.href + '#' || anchor.href === window.location.href.slice(0, -1))) {
