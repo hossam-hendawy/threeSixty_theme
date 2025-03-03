@@ -17,8 +17,11 @@
       max-width: 1000px;
     }
     .content {
-      border-bottom: 1px solid red;
-      @include paddingY(50px);
+      //border-bottom: 1px solid $threeSixty_theme_gray-300;
+      @include paddingY(30px,50px);
+      @include min-medium-screen {
+        @include paddingY(50px);
+      }
       position: relative;
       .title {
         margin-bottom: 20px;
