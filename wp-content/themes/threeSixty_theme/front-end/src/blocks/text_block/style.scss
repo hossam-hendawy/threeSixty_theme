@@ -4,25 +4,17 @@
 // @author DELL
 .text_block {
   .content-wrapper {
-    @include marginX(auto);
-    padding-left: 30px;
-    @include media-screen-768 {
-      max-width: 456px;
-    }
-    @include min-medium-screen {
-      max-width: 460px;
-    }
     @include large-screen {
       padding-left: 0;
       max-width: 1000px;
+      @include marginX(auto);
     }
     .content {
-      //border-bottom: 1px solid $threeSixty_theme_gray-300;
+      border-top: 1px solid $threeSixty_theme_gray-300;
       @include paddingY(30px,50px);
       @include min-medium-screen {
         @include paddingY(50px);
       }
-      position: relative;
       .title {
         margin-bottom: 20px;
         font-weight: 700;
@@ -31,6 +23,23 @@
         }
         @include large-screen {
           font-size: 30px;
+        }
+      }
+      .description {
+        ol {
+            margin-left: 18px;
+          @include min-medium-screen {
+            margin-left: 17px;
+          }
+          @include large-screen {
+            margin-left: 20px;
+          }
+        }
+        ul {
+          margin-left: 15px;
+          @include large-screen {
+            margin-left: 17.9px;
+          }
         }
       }
     }

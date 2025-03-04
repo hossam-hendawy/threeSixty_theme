@@ -38,7 +38,7 @@ if (isset($block)) {
         $title = get_sub_field('title');
         $description = get_sub_field('description');
         ?>
-        <div class="content block-has-border">
+        <div class="content ">
           <?php if ($title) { ?>
             <h5 class="title d-sm-h5"><?= $title ?></h5>
           <?php } ?>
@@ -49,7 +49,6 @@ if (isset($block)) {
       <?php } ?>
     </div>
   <?php } ?>
-
 </div>
 </section>
 
