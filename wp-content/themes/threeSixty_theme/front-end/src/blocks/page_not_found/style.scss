@@ -3,6 +3,8 @@
 
 // @author HOSSAM
 .page_not_found {
-background-color: aqua;
-  height: 500px;
+  padding-block: 200px;
+  .content-wrapper {
+    margin-top: 50px;
+  }
 }

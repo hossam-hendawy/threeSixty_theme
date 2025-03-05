@@ -12,7 +12,6 @@ $sub_title = get_field('sub_title', 'options');
 $description = get_field('description', 'options');
 ?>
   <section id="page_not_found" class="page_not_found" data-section-class="page_not_found" aria-labelledby="page-not-found-heading"  >
-
     <div class="site-logo not-found-logo" role="img" aria-labelledby="not-found-logo-description">
       <svg  width="1344" height="389" viewBox="0 0 1344 389" fill="none">
         <title id="not-found-logo-description">404 Not Found Logo</title>
