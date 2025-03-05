@@ -11,7 +11,7 @@ $image = get_field('image' , $post_id);
 <?php if (have_posts()): the_post(); ?>
   <div class="single-services-wrapper">
     <!--     hero block -->
-    <section id="block_67b2101a9ff74" class="threeSixty_theme-block service_hero js-loaded" data-section-class="service_hero">
+    <section id="block_67b2101a9ff74" class="threeSixty_theme-block service_hero service-hero-in-single-page js-loaded" data-section-class="service_hero">
       <?php if (!empty($image) && is_array($image)) { ?>
         <picture class="isolation-mode">
           <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">

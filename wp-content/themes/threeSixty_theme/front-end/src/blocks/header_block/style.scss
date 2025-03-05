@@ -2,309 +2,309 @@
 @use "../../styles/mixins/mixins" as *;
 
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  transform: translateX(0);
-  transition: transform $duration, background $duration;
-  background: $threeSixty_theme_black;
-  height: 90px;
-  display: flex;
-  align-items: center;
-
-  .container {
+    position: fixed;
     width: 100%;
-  }
-
-  // header
-  .header-wrapper {
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    transform: translateX(0);
+    transition: transform $duration, background $duration;
+    background: $threeSixty_theme_black;
+    height: 90px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding-block: 20px;
-    transition: padding $duration;
-  }
 
-  // logo
-  .main-logo {
-    display: block;
-    width: 166px;
-    height: 51px;
-    position: relative;
-    z-index: 22;
-    @include media-screen-768 {
-      width: 226px;
+    .container {
+      width: 100%;
+    }
+
+    // header
+    .header-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding-block: 20px;
+      transition: padding $duration;
+    }
+
+    // logo
+    .main-logo {
+      display: block;
+      width: 166px;
       height: 51px;
+      position: relative;
+      z-index: 22;
+      @include media-screen-768 {
+        width: 226px;
+        height: 51px;
+      }
+
+      img, svg {
+        @include square(100%);
+        object-fit: contain;
+      }
     }
 
-    img, svg {
-      @include square(100%);
-      object-fit: contain;
-    }
-  }
+    .book-now-and-burger-menu {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      z-index: 22;
+      .flag-wrapper {
+        margin-bottom: 0;
 
-  .book-now-and-burger-menu {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    position: relative;
-    z-index: 22;
-    .flag-wrapper {
-      margin-bottom: 0;
+        body.rtl & {
+          .arabic-wrapper {
+            display: flex;
+          }
 
-      body.rtl & {
-        .arabic-wrapper {
-          display: flex;
+          .english-wrapper {
+            display: none;
+          }
         }
+      }
+    }
 
-        .english-wrapper {
+    .content-us {
+      padding-inline: 14px;
+      padding-block: 8px;
+      min-width: 134px;
+      min-height: 40px;
+      gap: 10px;
+      font-family: $inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      color: $threeSixty_theme_brand-500;
+      background-color: transparent;
+      border: 1px solid $threeSixty_theme_brand-500;
+      display: none;
+
+      &.mobile-cta {
+        display: flex;
+        @include media-screen-768 {
           display: none;
         }
       }
-    }
-  }
 
-  .content-us {
-    padding-inline: 14px;
-    padding-block: 8px;
-    min-width: 134px;
-    min-height: 40px;
-    gap: 10px;
-    font-family: $inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-    color: $threeSixty_theme_brand-500;
-    background-color: transparent;
-    border: 1px solid $threeSixty_theme_brand-500;
-    display: none;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
 
-    &.mobile-cta {
-      display: flex;
+      &:hover {
+        background-color: $threeSixty_theme_white;
+        border-color: $threeSixty_theme_white;
+      }
+
       @include media-screen-768 {
+        display: flex;
+      }
+    }
+
+    // burger menu
+    .burger-menu {
+      width: size(24);
+      height: size(16);
+      //position: relative;
+      z-index: 10;
+      cursor: pointer;
+      transform: translate3d(0, 0, 0);
+      flex-shrink: 0;
+      border: none;
+      background: transparent;
+      padding: 0;
+      display: block;
+      @include min-medium-screen{
         display: none;
       }
-    }
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    &:hover {
-      background-color: $threeSixty_theme_white;
-      border-color: $threeSixty_theme_white;
-    }
-
-    @include media-screen-768 {
-      display: flex;
-    }
-  }
-
-  // burger menu
-  .burger-menu {
-    width: size(24);
-    height: size(16);
-    //position: relative;
-    z-index: 10;
-    cursor: pointer;
-    transform: translate3d(0, 0, 0);
-    flex-shrink: 0;
-    border: none;
-    background: transparent;
-    padding: 0;
-    display: block;
-    @include min-medium-screen{
-      display: none;
-    }
-    &:focus {
-      outline: none !important;
-    }
-
-    span {
-      display: block;
-      width: 100%;
-      height: size(2);
-      margin-bottom: size(6);
-      position: relative;
-      z-index: 1;
-      transition: color $duration;
-      color: white;
-
-      &:after, &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: currentColor;
-        opacity: .99;
-        transition: background-color $duration;
-        display: table;
-        border-radius: size(10);
+      &:focus {
+        outline: none !important;
       }
 
-      &:nth-of-type(even) {
+      span {
+        display: block;
+        width: 100%;
+        height: size(2);
+        margin-bottom: size(6);
+        position: relative;
+        z-index: 1;
+        transition: color $duration;
+        color: white;
+
+        &:after, &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: currentColor;
+          opacity: .99;
+          transition: background-color $duration;
+          display: table;
+          border-radius: size(10);
+        }
+
+        &:nth-of-type(even) {
+          &:before {
+            transform-origin: right;
+            transform: scaleX(0) translateZ(0);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+          }
+
+          &:after {
+            transform-origin: left;
+            transform: scaleX(1) translateZ(0);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
+          }
+        }
+
         &:before {
           transform-origin: right;
-          transform: scaleX(0) translateZ(0);
-          transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+          transform: scaleX(1) translateZ(0);
+          transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
         }
 
         &:after {
           transform-origin: left;
-          transform: scaleX(1) translateZ(0);
-          transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
-        }
-      }
-
-      &:before {
-        transform-origin: right;
-        transform: scaleX(1) translateZ(0);
-        transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
-      }
-
-      &:after {
-        transform-origin: left;
-        transform: scaleX(0) translateZ(0);
-        transition: transform .6s cubic-bezier(.165, .84, .44, 1);
-      }
-
-      &:last-child {
-        margin: 0 auto;
-      }
-
-      &:first-child {
-        margin: 0 auto size(6);
-      }
-    }
-
-    &:hover {
-      span {
-
-        &:nth-of-type(even) {
-          &:before {
-            transform: scaleX(1) translateZ(0);
-            transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
-          }
-
-          &:after {
-            transform: scaleX(0) translateZ(0);
-            transition: transform .6s cubic-bezier(.165, .84, .44, 1);
-          }
-        }
-
-        &:before {
           transform: scaleX(0) translateZ(0);
           transition: transform .6s cubic-bezier(.165, .84, .44, 1);
         }
 
-        &:after {
-          transform: scaleX(1) translateZ(0);
-          transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
+        &:last-child {
+          margin: 0 auto;
         }
 
+        &:first-child {
+          margin: 0 auto size(6);
+        }
       }
-    }
-  }
-
-  // links
-  .navbar {
-    position: relative;
-    align-items: center;
-    flex-direction: row;
-
-    @include max-medium-screen {
-      position: fixed;
-      top: 0;
-      right: 0;
-      transform: translateX(100%);
-      width: 100%;
-      transition: transform 300ms ease-in;
-    }
-
-    .nav-item {
-      text-transform: capitalize;
-      color: $threeSixty_theme_white;
-      transition: color $duration;
 
       &:hover {
+        span {
+
+          &:nth-of-type(even) {
+            &:before {
+              transform: scaleX(1) translateZ(0);
+              transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
+            }
+
+            &:after {
+              transform: scaleX(0) translateZ(0);
+              transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+            }
+          }
+
+          &:before {
+            transform: scaleX(0) translateZ(0);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+          }
+
+          &:after {
+            transform: scaleX(1) translateZ(0);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
+          }
+
+        }
+      }
+    }
+
+    // links
+    .navbar {
+      position: relative;
+      align-items: center;
+      flex-direction: row;
+
+      @include max-medium-screen {
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        width: 100%;
+        transition: transform 300ms ease-in;
+      }
+
+      .nav-item {
+        text-transform: capitalize;
+        color: $threeSixty_theme_white;
+        transition: color $duration;
+
+        &:hover {
+          color: $threeSixty_theme_brand-500;
+        }
+      }
+
+      &.header-links-active {
+        transform: translateX(0);
+      }
+    }
+
+    .navbar-wrapper {
+      @include paddingY(size(90), size(100));
+      @include paddingX(size(24));
+      background: $threeSixty_theme_black;
+      width: 100%;
+      height: 100vh;
+      transition: padding $duration;
+      overflow: auto;
+      @include min-medium-screen {
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+      }
+    }
+
+    .primary-menu {
+      @include min-medium-screen {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      @include large-screen{
+        gap: 38px;
+      }
+    }
+
+    .menu-item {
+      position: relative;
+      cursor: pointer;
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-bottom: size(28);
+      }
+
+      @include min-medium-screen {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+
+      .header-link-active {
         color: $threeSixty_theme_brand-500;
       }
     }
 
-    &.header-links-active {
-      transform: translateX(0);
-    }
-  }
-
-  .navbar-wrapper {
-    @include paddingY(size(90), size(100));
-    @include paddingX(size(24));
-    background: $threeSixty_theme_black;
-    width: 100%;
-    height: 100vh;
-    transition: padding $duration;
-    overflow: auto;
-    @include min-medium-screen {
-      background-color: transparent;
-      padding: 0;
-      width: auto;
-      height: auto;
-      overflow: visible;
-    }
-  }
-
-  .primary-menu {
-    @include min-medium-screen {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    @include large-screen{
-      gap: 38px;
-    }
-  }
-
-  .menu-item {
-    position: relative;
-    cursor: pointer;
-    list-style: none;
-
-    &:not(:last-child) {
-      margin-bottom: size(28);
+    &.hide:not(.header-active) {
+      transform: translateY(-100%);
     }
 
-    @include min-medium-screen {
-      &:not(:last-child) {
-        margin-bottom: 0;
+    &.header-transparent {
+      background: transparent;
+    }
+
+    &.sticky {
+      .header-wrapper {
+        @include large-screen {
+          @include paddingY(size(25));
+        }
       }
     }
-
-    .header-link-active {
-      color: $threeSixty_theme_brand-500;
-    }
-  }
-
-  &.hide:not(.header-active) {
-    transform: translateY(-100%);
-  }
-
-  &.header-transparent {
-    background: transparent;
-  }
-
-  &.sticky {
-    .header-wrapper {
-      @include large-screen {
-        @include paddingY(size(25));
-      }
-    }
-  }
 }
 

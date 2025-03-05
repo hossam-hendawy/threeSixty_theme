@@ -26,12 +26,18 @@ if (isset($block)) {
 /****************************
  *     Custom ACF Meta      *
  ****************************/
+$image = get_field('image');
 $sub_title = get_field('sub_title');
 $title = get_field('title');
 $description = get_field('description');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
+<?php if (!empty($image) && is_array($image)) { ?>
+  <picture class="isolation-mode">
+    <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+  </picture>
+<?php } ?>
 <svg class="down-arrow" width="52" height="20" viewBox="0 0 52 20" fill="none" aria-hidden="true">
   <path d="M25.9978 20L52 0.381556L25.9978 0.381554L1.31426e-06 0.381555L25.9978 20Z" fill="black"/>
 </svg>
