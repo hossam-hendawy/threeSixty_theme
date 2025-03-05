@@ -6,12 +6,17 @@ $post_id = get_the_ID();
 $service_target = get_field('service_target', $post_id);
 $post_title = get_the_title($post_id);
 $service_description = get_field('service_description', $post_id);
-
+$image = get_field('image' , $post_id);
 ?>
 <?php if (have_posts()): the_post(); ?>
   <div class="single-services-wrapper">
     <!--     hero block -->
     <section id="block_67b2101a9ff74" class="threeSixty_theme-block service_hero js-loaded" data-section-class="service_hero">
+      <?php if (!empty($image) && is_array($image)) { ?>
+        <picture class="isolation-mode">
+          <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+        </picture>
+      <?php } ?>
       <div class="container">
         <div class="content-wrapper flex-col">
           <?php if (function_exists('threeSixty_theme_breadcrumbs')) {

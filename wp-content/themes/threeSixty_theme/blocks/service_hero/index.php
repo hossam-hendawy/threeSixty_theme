@@ -26,12 +26,18 @@ if (isset($block)) {
 /****************************
  *     Custom ACF Meta      *
  ****************************/
+$image = get_field('image');
 $sub_title = get_field('sub_title');
 $title = get_field('title');
 $description = get_field('description');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
+<?php if (!empty($image) && is_array($image)) { ?>
+  <picture class="isolation-mode">
+    <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+  </picture>
+<?php } ?>
 <div class="container">
   <div class="content-wrapper flex-col">
     <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
