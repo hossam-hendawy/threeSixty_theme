@@ -1,0 +1,67 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.mab_block {
+  padding-block: 40px;
+  @include min-medium-screen {
+    padding-block: 80px;
+  }
+  .content-wrapper {
+    gap: 16px;
+    @include marginX(auto);
+    text-align: center;
+    max-width: 620px;
+    @include large-screen {
+      max-width: 768px;
+    }
+    .title {
+      margin-bottom: 4px;
+    }
+    .content-wrapper-btn {
+      @include marginX(auto);
+      min-width: 87px;
+      color: $threeSixty_theme_brand-600;
+      border: 1.5px solid $threeSixty_theme_brand-600;
+      padding-block: 1px ;
+      font-size: 14px;
+      transition: color $duration , border-color $duration;
+      padding-inline: 0;
+      &:hover {
+        color: $threeSixty_theme_gray-700;
+        border-color: $threeSixty_theme_gray-700;
+      }
+    }
+  }
+  .aaa {
+    width: fit-content;
+    &:hover {
+      .hidden-content {
+        opacity: 1;
+      }
+    }
+  }
+  .hidden-content {
+    opacity: 0;
+    gap: 4px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: $threeSixty_theme_white;
+    //background-color: red;
+    max-width: 190px;
+    text-align: center;
+    transition: opacity $duration;
+    .country-flag {
+      width: 34px;
+      height: 20px;
+      @include marginX(auto);
+    }
+    .country-name {
+      margin-top: 4px;
+      color: #181D27;
+    }
+    .location {
+      color: #535862;
+    }
+  }
+}
