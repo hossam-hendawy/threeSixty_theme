@@ -16,6 +16,12 @@ body {
   position: relative;
   z-index: 2;
   padding-top: 90px;
+
+  &.error404{
+    .get_in_touch_block{
+      display: none;
+    }
+  }
 }
 
 section {
@@ -442,16 +448,14 @@ ol.theme-unordered-list-element {
 // region site logo
 .site-logo {
   width: 100%;
-  position: absolute;
+  position: relative;
   pointer-events: none;
   height: auto;
   z-index: -2;
-  top: 37.5px;
-  left: 0;
+
   padding-inline: $container-padding-sm;
   @include min-medium-screen {
     padding-inline: $container-padding-md;
-    top: 32px;
   }
 
   img, svg {
