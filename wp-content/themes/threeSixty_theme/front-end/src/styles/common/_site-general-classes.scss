@@ -151,6 +151,20 @@ body.home {
   }
 }
 
+.service-hero-in-single-page{
+  .isolation-mode {
+    @include min-medium-screen{
+      right: 0;
+    }
+    @include large-screen{
+      right: 32px;
+    }
+    @include x-large-screen {
+      right: 114px;
+    }
+  }
+}
+
 // endregion
 
 .overview-content {
