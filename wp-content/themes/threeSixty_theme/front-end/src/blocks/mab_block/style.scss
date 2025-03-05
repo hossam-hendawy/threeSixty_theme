@@ -1,0 +1,26 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.mab_block {
+  padding-block: 40px;
+  @include min-medium-screen {
+    padding-block: 80px;
+  }
+  .content-wrapper {
+    gap: 16px;
+    @include marginX(auto);
+    text-align: center;
+    max-width: 620px;
+    @include large-screen {
+      max-width: 768px;
+    }
+    .title {
+      margin-bottom: 4px;
+    }
+    .content-wrapper-btn {
+      @include marginX(auto);
+      max-width: 87px;
+    }
+  }
+}
