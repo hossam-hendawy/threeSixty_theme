@@ -3,7 +3,6 @@
 
 // @author DELL
 .hero_package {
-  overflow: hidden;
   @include min-medium-screen {
     @include paddingY(108px, 109px);
     min-height: 674px;

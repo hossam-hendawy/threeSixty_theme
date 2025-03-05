@@ -7,6 +7,7 @@ $post_id = get_the_ID();
 $package_target = get_field('package_target', $post_id);
 $post_title = get_the_title($post_id);
 $package_description = get_field('package_description', $post_id);
+$image = get_field('image' , $post_id);
 
 // package block
 $package_title = get_field('package_title', $post_id);
@@ -22,6 +23,12 @@ $note_icon = get_field('note_icon', $post_id);
   <div class="single-package-wrapper">
     <!--     hero block -->
     <section id="block_67a82e9404ae9" class="threeSixty_theme-block hero_package js-loaded" data-section-class="hero_package">
+      <?php if (!empty($image) && is_array($image)) { ?>
+        <picture class="isolation-mode">
+          <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+        </picture>
+      <?php } ?>
+
       <div class="container">
         <div class="content-wrapper flex-col">
           <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
