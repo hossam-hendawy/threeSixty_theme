@@ -59,6 +59,7 @@ body.home {
 // region general in here block
 .hero_package, .packages_hero, .service_hero, .about_us_block {
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -99,7 +100,7 @@ body.home {
   }
 }
 
-.about_us_block, .blog_hero_block {
+.about_us_block, .blog_hero_block , .service_hero {
   &:after {
     content: '';
     position: absolute;
@@ -142,9 +143,10 @@ body.home {
       right: 12.4%;
     }
 
-    svg {
+    svg , img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
