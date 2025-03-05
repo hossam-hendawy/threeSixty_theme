@@ -12,8 +12,10 @@
     @include marginX(auto);
     text-align: center;
     max-width: 620px;
+    margin-bottom: 40px;
     @include large-screen {
       max-width: 768px;
+      margin-bottom: 80px;
     }
     .title {
       margin-bottom: 4px;
