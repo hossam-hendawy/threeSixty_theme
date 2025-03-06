@@ -28,8 +28,8 @@ if (isset($block)) {
  ****************************/
 $title = get_field('title');
 $description = get_field('description');
-
-
+$get_in_touch_title = get_field('get_in_touch_title');
+$get_in_touch_description = get_field('get_in_touch_description');
 ?>
 ?>
 <!-- region threeSixty_theme's Block -->
@@ -60,7 +60,7 @@ $description = get_field('description');
             <h4 class="text-xl bold info-title"><?= $info_title ?></h4>
             <?php } ?>
             <?php if ($info_description) { ?>
-            <div class="info-description text-md"><?= $info_description ?></div>
+            <div class="info-description gray-500 text-md"><?= $info_description ?></div>
             <?php } ?>
           </div>
         </div>
@@ -69,19 +69,44 @@ $description = get_field('description');
       <?php } ?>
     </div>
     <div class="right-content">
-      <div class="get-in-touch"></div>
-      <div class="bottom-content">
-        <div class="support same-style flex-col">
-          <h3 class="text-xl bold same-title">Customer Support</h3>
-          <div class="text-md same-description">Speak to our friendly team.</div>
-          <div class="phone-number text-md medium">
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.11388 7.61365L4.60777 4.10754M4.60777 15.8927L8.1403 12.3601M12.8845 12.3866L16.3907 15.8927M16.3907 4.10754L12.8576 7.6406M18.8337 10.0001C18.8337 14.6025 15.1027 18.3334 10.5003 18.3334C5.89795 18.3334 2.16699 14.6025 2.16699 10.0001C2.16699 5.39771 5.89795 1.66675 10.5003 1.66675C15.1027 1.66675 18.8337 5.39771 18.8337 10.0001ZM13.8337 10.0001C13.8337 11.841 12.3413 13.3334 10.5003 13.3334C8.65938 13.3334 7.16699 11.841 7.16699 10.0001C7.16699 8.15913 8.65938 6.66675 10.5003 6.66675C12.3413 6.66675 13.8337 8.15913 13.8337 10.0001Z" stroke="#A15C07" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            support@3sixty.sa
-          </div>
-        </div>
+      <div class="get-in-touch">
+        <?php if ($get_in_touch_title) { ?>
+        <h3 class="get-in-touch-title bold"><?= $get_in_touch_title ?></h3>
+        <?php } ?>
+        <?php if ($get_in_touch_description) { ?>
+        <div class="get-in-touch-description text-xl"><?= $get_in_touch_description ?></div>
+        <?php } ?>
       </div>
+      <?php if (have_rows('information_card')) { ?>
+      <div class="bottom-content">
+        <?php while (have_rows('information_card')) {
+          the_row();
+          $information_title = get_sub_field('information_title');
+          $information_description = get_sub_field('information_description');
+          $icon = get_sub_field('icon');
+          $number = get_sub_field('number');
+          ?>
+        <div class="information-support flex-col">
+          <?php if ($information_title) { ?>
+          <h3 class="text-xl bold information-title"><?= $information_title ?></h3>
+          <?php } ?>
+          <?php if ($information_description) { ?>
+          <div class="text-md information-description"><?= $information_description ?></div>
+          <?php } ?>
+          <?php if ($number) { ?>
+          <div class="phone-number text-md medium">
+            <?php if ($icon) { ?>
+            <picture class="icon cover-image">
+              <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
+            </picture>
+            <?php } ?>
+            <?= $number ?>
+          </div>
+          <?php } ?>
+        </div>
+        <?php } ?>
+      </div>
+      <?php } ?>
     </div>
   </div>
 </div>

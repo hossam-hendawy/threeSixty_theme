@@ -9,7 +9,6 @@
   }
   .cards-wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-direction: column;
     gap: 50px;
@@ -85,15 +84,31 @@
         padding: 48px 55px 54px;
         border-radius: 15px;
         background: $threeSixty_theme_white;
-        //width: 607px;
-        //height: 775px;
         box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
+        .get-in-touch-title {
+          color:  #181D27;
+
+        }
+        .get-in-touch-description {
+          margin-top: 24px;
+          p {
+            color: #535862;
+            a {
+              color: $threeSixty_theme_brand-700;
+              &:hover {
+                color: #CDD5DF;
+              }
+            }
+          }
+        }
       }
       .bottom-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 45px;
+        flex-wrap: wrap;
+        row-gap: 20px;
         @include small-screen {
           flex-direction: column;
           gap: 20px;
@@ -101,7 +116,7 @@
         @include min-medium-screen {
           margin-top: 92px;
         }
-        .same-style {
+        .information-support {
           padding: 24px;
           border-radius: 10px;
           border: 1px solid #CDD5DF;
@@ -110,10 +125,10 @@
           @include small-screen {
             width: 100%;
           }
-          .same-title {
-            color: #4B5565;
+          .information-title {
+            color: #1F2A37;
           }
-          .same-description {
+          .information-description {
             color: $threeSixty_theme_gray-600;
           }
           .phone-number {
@@ -121,6 +136,9 @@
             align-items: center;
             gap: 10px;
             color: $threeSixty_theme_brand-700;
+            .icon {
+              @include square(20px);
+            }
           }
         }
       }
