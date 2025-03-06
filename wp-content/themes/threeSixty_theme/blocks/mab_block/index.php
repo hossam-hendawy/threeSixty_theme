@@ -30,16 +30,14 @@ if (isset($block)) {
  ****************************/
 $title = get_field('title');
 $description = get_field('description');
-$cta_link = get_field('cta_link');
+$lapel = get_field('lapel');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
   <div class="content-wrapper flex-col">
-    <?php if (!empty($cta_link) && is_array($cta_link)) { ?>
-      <a class="theme-cta-button medium  content-wrapper-btn btn-white" href="<?= $cta_link['url'] ?>" target="<?= $cta_link['target'] ?>">
-        <?= $cta_link['title'] ?>
-      </a>
+    <?php if ($lapel) { ?>
+    <div class="text-sm lapel medium"><?= $lapel ?></div>
     <?php } ?>
     <?php if ($title): ?>
       <h4 class="title semi-bold"><?= $title ?></h4>

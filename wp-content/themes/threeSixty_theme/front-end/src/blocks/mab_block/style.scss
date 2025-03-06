@@ -20,19 +20,11 @@
     .title {
       margin-bottom: 4px;
     }
-    .content-wrapper-btn {
+    .lapel {
       @include marginX(auto);
-      min-width: 87px;
+      padding: 4px 12px;
       color: $threeSixty_theme_brand-600;
       border: 1.5px solid $threeSixty_theme_brand-600;
-      padding-block: 1px ;
-      font-size: 14px;
-      transition: color $duration , border-color $duration;
-      padding-inline: 0;
-      &:hover {
-        color: $threeSixty_theme_gray-700;
-        border-color: $threeSixty_theme_gray-700;
-      }
     }
   }
   .aaa {
