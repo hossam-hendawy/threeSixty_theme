@@ -21,8 +21,8 @@
         },
         {
             "key": "field_67c9969c4ceef",
-            "label": "Lapel",
-            "name": "lapel",
+            "label": "Label",
+            "name": "label",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -98,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741264688
+    "modified": 1741265639
 }
