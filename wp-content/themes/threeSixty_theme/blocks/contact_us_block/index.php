@@ -31,7 +31,6 @@ $description = get_field('description');
 $get_in_touch_title = get_field('get_in_touch_title');
 $get_in_touch_description = get_field('get_in_touch_description');
 ?>
-?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
