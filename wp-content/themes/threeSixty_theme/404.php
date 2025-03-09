@@ -12,7 +12,6 @@ $sub_title = get_field('sub_title', 'options');
 $description = get_field('description', 'options');
 ?>
   <section id="page_not_found" class="page_not_found" data-section-class="page_not_found" aria-labelledby="page-not-found-heading"  >
-
     <div class="site-logo not-found-logo" role="img" aria-labelledby="not-found-logo-description">
       <svg  width="1344" height="389" viewBox="0 0 1344 389" fill="none">
         <title id="not-found-logo-description">404 Not Found Logo</title>
@@ -22,11 +21,10 @@ $description = get_field('description', 'options');
       </svg>
     </div>
     <div class="container">
-      <div class="content-wrapper">
-
-        <h1>Page Not Found</h1>
-        <p>Oops! The page you were looking for doesn’t exit.</p>
-        <a href="<?= site_url() ?>">home</a>
+      <div class="content-wrapper flex-col gab-20">
+        <h1 class="center-text">Page Not Found</h1>
+        <p class="center-text">Oops! The page you were looking for doesn’t exit.</p>
+        <a class="theme-cta-button" href="<?= site_url() ?>">home</a>
       </div>
     </div>
   </section>

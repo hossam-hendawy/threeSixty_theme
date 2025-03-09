@@ -20,11 +20,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_67c7a37f29075",
-            "label": "Cta Link",
-            "name": "cta_link",
+            "key": "field_67c9969c4ceef",
+            "label": "Label",
+            "name": "label",
             "aria-label": "",
-            "type": "link",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,7 +33,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_67c7a361a23a8",
@@ -94,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741136804
+    "modified": 1741265639
 }
