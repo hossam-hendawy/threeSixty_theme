@@ -263,9 +263,11 @@ body.home {
   .isolation-mode {
     @include min-medium-screen {
       right: 0;
+      width: 519px;
     }
     @include large-screen {
       right: 32px;
+      width: 549px;
     }
     @include x-large-screen {
       right: 114px;
