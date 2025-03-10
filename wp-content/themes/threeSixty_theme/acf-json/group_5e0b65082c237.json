@@ -67,6 +67,27 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "key": "field_67ce33e2684fc",
+                    "label": "Has Mega Menu",
+                    "name": "has_mega_menu",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
                     "key": "field_63da286cfbf9b",
                     "label": "Menu Link",
                     "name": "menu_link",
@@ -74,13 +95,68 @@
                     "type": "link",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce33e2684fc",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
                     "return_format": "array",
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
+                    "key": "field_67ce37a742e69",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
+                    "key": "field_67ce37b142e6a",
+                    "label": "Select Content",
+                    "name": "select_content",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "services": "Services",
+                        "packages": "Packages"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0,
                     "parent_repeater": "field_63da2815fbf9a"
                 }
             ]
@@ -749,62 +825,62 @@
             "placement": "top",
             "endpoint": 0
         },
-          {
-              "key": "field_679a45d457833",
-              "label": "Number",
-              "name": "number",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                  "width": "",
-                  "class": "",
-                  "id": ""
-              },
-              "default_value": "",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-          },
-          {
-              "key": "field_679a45a057832",
-              "label": "Email",
-              "name": "email",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                  "width": "",
-                  "class": "",
-                  "id": ""
-              },
-              "default_value": "",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-          },
-          {
-              "key": "field_679a45f357834",
-              "label": "Location",
-              "name": "location",
-              "aria-label": "",
-              "type": "link",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                  "width": "",
-                  "class": "",
-                  "id": ""
-              },
-              "return_format": "array"
-          },
+        {
+            "key": "field_679a45d457833",
+            "label": "Number",
+            "name": "number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_679a45a057832",
+            "label": "Email",
+            "name": "email",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_679a45f357834",
+            "label": "Location",
+            "name": "location",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
         {
             "key": "field_61e3fb60d7e96",
             "label": "Third Party Code",
@@ -1116,5 +1192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740955919
+    "modified": 1741568162
 }
