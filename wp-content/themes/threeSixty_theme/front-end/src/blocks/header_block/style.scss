@@ -294,6 +294,37 @@ header {
     }
   }
 
+  .has-mega-menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .arrow-icon {
+      width: 16px;
+      height: 16px;
+      transition: transform $duration;
+      path {
+        fill: white;
+      }
+    }
+
+    @include min-medium-screen{
+      &.active {
+        .nav-item {
+          color: $threeSixty_theme_brand-600;
+        }
+
+        .arrow-icon {
+          transform: scaleY(-1);
+
+          path {
+            fill: $threeSixty_theme_brand-600;
+          }
+        }
+      }
+    }
+  }
+
   &.hide:not(.header-active) {
     transform: translateY(-100%);
   }
