@@ -342,6 +342,7 @@ $contact_us = get_field('cta_button', 'options');
                     </div>
                   <?php } ?>
                 </div>
+
                 <div class="right-content flex-col">
                   <div class="info-box-card">
                     <h5 class="text-xl text-uppercase white-color bold right-content-title">
@@ -412,6 +413,8 @@ $contact_us = get_field('cta_button', 'options');
                     </div>
                   </div>
                 </div>
+
+
               </div>
             <?php } ?>
             <?php $index++; ?>

@@ -2,7 +2,7 @@
 
 <?php
 $hide_get_in_touch = get_field('hide_get_in_touch', get_the_ID());
-  $get_in_touch_title = get_field('get_in_touch_title', 'options');
+$get_in_touch_title = get_field('get_in_touch_title', 'options');
 $image = get_field('get_in_touch_image', 'options');
 $get_in_touch_description = get_field('get_in_touch_description', 'options');
 $get_in_touch_cta_button = get_field('get_in_touch_cta_button', 'options');
