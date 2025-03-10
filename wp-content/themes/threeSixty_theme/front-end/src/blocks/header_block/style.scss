@@ -308,19 +308,6 @@ header {
     align-items: center;
     gap: 5px;
 
-    .arrow-icon {
-      width: 16px;
-      height: 16px;
-      transition: transform $duration;
-
-      path {
-        fill: white;
-      }
-
-      @include max-medium-screen {
-        transform: rotate(-90deg);
-      }
-    }
 
     @include min-medium-screen {
       &.active {
@@ -338,6 +325,21 @@ header {
       }
     }
   }
+
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform $duration;
+
+    path {
+      fill: white;
+    }
+
+    @include max-medium-screen {
+      transform: rotate(-90deg);
+    }
+  }
+
 
   //&.hide:not(.header-active) {
   //  transform: translateY(-100%);
@@ -478,6 +480,9 @@ header {
 
     .left-content-title, .right-content-title {
       padding-bottom: 24px;
+      width: 100%;
+      display: block;
+      transition: color $duration;
       border-bottom: 1px solid $threeSixty_theme_tertiary-600;
       @include media-screen-768 {
         padding-bottom: 12px;
@@ -486,6 +491,24 @@ header {
       @include min-medium-screen {
         padding-bottom: 24px;
         font-size: 16px;
+      }
+
+      &:hover {
+        color: $threeSixty_theme_brand-600;
+
+        .arrow-icon path {
+          fill: $threeSixty_theme_brand-600;
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .arrow-icon {
+          transform: rotate(-90deg);
+        }
       }
     }
 

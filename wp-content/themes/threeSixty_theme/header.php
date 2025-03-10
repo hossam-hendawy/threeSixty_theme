@@ -283,8 +283,6 @@ $contact_us = get_field('cta_button', 'options');
             the_row();
             $has_mega_menu = get_sub_field('has_mega_menu');
             $select_content = get_sub_field('select_content');
-            $text = $select_content === 'services' ? 'Our Services' : 'Our  Packages';
-
             ?>
             <?php if ($has_mega_menu) { ?>
               <div class="mega-menu-wrapper" data-index="submenu-wrapper-<?= $index; ?>">
@@ -294,37 +292,56 @@ $contact_us = get_field('cta_button', 'options');
                   </svg>
                   Back
                 </div>
-
                 <div class="left-content">
-                  <h4 class="text-xl text-uppercase white-color bold left-content-title"> <?= $text ?></h4>
                   <?php if ($select_content === 'services') {
                     $services = get_sub_field("services");
+                    $services_page = get_sub_field("services_page");
                     ?>
+                    <?php if (!empty($services_page) && is_array($services_page)) { ?>
+                      <a class="text-xl text-uppercase white-color bold left-content-title" href="<?= $services_page['url'] ?>" target="<?= $services_page['target'] ?>">
+                        <span>
+                        <?= $services_page['title'] ?>
+                          <svg aria-hidden="true" class="arrow-icon" viewBox="0 0 320 512">
+                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                      </svg>
+                        </span>
+                      </a>
+                    <?php } ?>
                     <div class="package-wrapper">
                       <?php
                       if (is_array($services)) {
                         foreach ($services as $card) {
-                          get_template_part("partials/mega-menu-services", "", ["post_id" => $card->ID , "services" => 'services-card']);
+                          get_template_part("partials/mega-menu-services", "", ["post_id" => $card->ID, "services" => 'services-card']);
                         }
                       }
                       ?>
                     </div>
                   <?php } else {
                     $packages = get_sub_field("packages");
+                    $packages_page = get_sub_field("packages_page");
                     ?>
+                    <?php if (!empty($packages_page) && is_array($packages_page)) { ?>
+                      <a class="text-xl text-uppercase white-color bold left-content-title" href="<?= $packages_page['url'] ?>" target="<?= $packages_page['target'] ?>">
+                        <span>
+                        <?= $packages_page['title'] ?>
+                          <svg aria-hidden="true" class="arrow-icon" viewBox="0 0 320 512">
+                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                      </svg>
+                        </span>
+                      </a>
+                    <?php } ?>
                     <div class="package-wrapper">
+
                       <?php
                       if (is_array($packages)) {
                         foreach ($packages as $card) {
-                          get_template_part("partials/mega-menu-services", "", ["post_id" => $card->ID , "packages" => 'packages-card']);
+                          get_template_part("partials/mega-menu-services", "", ["post_id" => $card->ID, "packages" => 'packages-card']);
                         }
                       }
                       ?>
                     </div>
                   <?php } ?>
                 </div>
-
-
                 <div class="right-content flex-col">
                   <div class="info-box-card">
                     <h5 class="text-xl text-uppercase white-color bold right-content-title">

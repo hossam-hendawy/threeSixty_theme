@@ -7,6 +7,7 @@
   @include min-medium-screen {
     padding-block: 80px;
   }
+
   .content-wrapper {
     gap: 16px;
     @include marginX(auto);
@@ -17,9 +18,11 @@
       max-width: 768px;
       margin-bottom: 80px;
     }
+
     .title {
       margin-bottom: 4px;
     }
+
     .label-info {
       @include marginX(auto);
       padding: 4px 12px;
@@ -27,14 +30,17 @@
       border: 1.5px solid $threeSixty_theme_brand-600;
     }
   }
+
   .aaa {
     width: fit-content;
+
     &:hover {
       .hidden-content {
         opacity: 1;
       }
     }
   }
+
   .hidden-content {
     opacity: 0;
     gap: 4px;
@@ -45,17 +51,36 @@
     max-width: 190px;
     text-align: center;
     transition: opacity $duration;
+
     .country-flag {
       width: 34px;
       height: 20px;
       @include marginX(auto);
     }
+
     .country-name {
       margin-top: 4px;
       color: #181D27;
     }
+
     .location {
       color: #535862;
     }
   }
+
+  div {
+    animation: e-hotspot-expand 2s infinite;
+  }
+
+  @keyframes e-hotspot-expand {
+    0% {
+      opacity: 1;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+
 }

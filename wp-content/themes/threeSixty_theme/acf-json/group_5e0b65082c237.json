@@ -211,6 +211,31 @@
                     "parent_repeater": "field_63da2815fbf9a"
                 },
                 {
+                    "key": "field_67cf70dbe25db",
+                    "label": "Packages Page",
+                    "name": "packages_page",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce37b142e6a",
+                                "operator": "==",
+                                "value": "packages"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
                     "key": "field_67ce3b6be033c",
                     "label": "Services",
                     "name": "services",
@@ -243,6 +268,31 @@
                     "min": "",
                     "max": "",
                     "elements": "",
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
+                    "key": "field_67cf70f4e25dc",
+                    "label": "Services Page",
+                    "name": "services_page",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce37b142e6a",
+                                "operator": "==",
+                                "value": "services"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
                     "parent_repeater": "field_63da2815fbf9a"
                 }
             ]
@@ -1278,5 +1328,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741568983
+    "modified": 1741649049
 }
