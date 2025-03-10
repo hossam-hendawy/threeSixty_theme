@@ -83,44 +83,29 @@ export default async (header) => {
 
 
   const body = document.querySelector('body');
-
   const megaMenus = header.querySelectorAll(".menu-item.has-mega-menu");
   const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
-  const mobileMegaWrappers = header.querySelectorAll(".mega-menu-wrapper-in-mobile");
 
   megaMenus.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
       e.preventDefault();
       megaMenus.forEach(item => item.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
-
       this.classList.add("active");
       const submenuIndex = this.getAttribute("data-submenu-index");
       const targetWrapper = header.querySelector(`.mega-menu-wrapper[data-index="${submenuIndex}"]`);
       body.classList.add("active");
+      document.documentElement.classList.add('modal-opened');
       if (targetWrapper) {
         targetWrapper.classList.add("active");
       }
     });
   });
 
-  const dddd = header.querySelectorAll(".menu-item.has-mega-menu");
-  dddd.forEach(link => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      mobileMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
-      const submenuIndex = link.getAttribute("data-submenu-index");
-      const targetWrapper = header.querySelector(`.mega-menu-wrapper-in-mobile[data-index="${submenuIndex}"]`);
-      if (targetWrapper) {
-        targetWrapper.classList.add("active");
-      }
-    });
-  });
 
   const backSteps = header.querySelectorAll(".back-step");
   backSteps.forEach(step => {
     step.addEventListener("click", () => {
-      mobileMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
       megaMenus.forEach(menuItem => menuItem.classList.remove("active"));
     });
@@ -129,7 +114,7 @@ export default async (header) => {
   document.addEventListener("click", (event) => {
     const isMenuClick = event.target.closest(".menu-item.has-mega-menu");
     const isMegaMenuClick = event.target.closest(".mega-menu-wrapper");
-
+    document.documentElement.classList.remove('modal-opened');
     if (!isMenuClick && !isMegaMenuClick) {
       megaMenus.forEach(menuItem => menuItem.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));

@@ -53,6 +53,9 @@ section {
   z-index: 3 !important;
 }
 
+.modal-opened {
+  overflow: hidden;
+}
 // region container
 .container {
   @include marginX(auto);
