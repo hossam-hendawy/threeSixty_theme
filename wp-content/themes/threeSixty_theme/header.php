@@ -167,10 +167,10 @@ $contact_us = get_field('cta_button', 'options');
                       data-submenu-index="submenu-wrapper-<?= $index; ?>"
                     <?php endif; ?>>
                     <?php if ($has_mega_menu) { ?>
-                      <div class="header-link nav-item text-md fw-500" role="button"  aria-expanded="false" tabindex="0">
+                      <div class="header-link nav-item text-md fw-500" role="button" aria-expanded="false" tabindex="0">
                         <?= $text ?>
                       </div>
-                      <svg aria-hidden="true" class="arrow-icon" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                      <svg aria-hidden="true" class="arrow-icon" viewBox="0 0 320 512">
                         <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
                       </svg>
                     <?php } else { ?>
@@ -282,6 +282,9 @@ $contact_us = get_field('cta_button', 'options');
           while (have_rows('menu_links', 'options')) {
             the_row();
             $has_mega_menu = get_sub_field('has_mega_menu');
+            $select_content = get_sub_field('select_content');
+            $text = $select_content === 'services' ? 'Our Services' : 'Our  Packages';
+
             ?>
             <?php if ($has_mega_menu) { ?>
               <div class="mega-menu-wrapper" data-index="submenu-wrapper-<?= $index; ?>">
@@ -291,129 +294,145 @@ $contact_us = get_field('cta_button', 'options');
                   </svg>
                   Back
                 </div>
+
                 <div class="left-content">
-                  <h4 class="text-xl text-uppercase white-color bold left-content-title">
-                    Our Services</h4>
-                  <div class="package-wrapper">
-                    <div class="package-box">
-                      <picture class="package-icon cover-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
-                          <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
-                          <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
-                          <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
-                          <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
-                        </svg>
-                      </picture>
-                      <div class="title-and-excerpt">
-                        <div class="package-title text-xl white-color">SEO
-                          Optimization
+                  <h4 class="text-xl text-uppercase white-color bold left-content-title"> <?= $text ?></h4>
+                  <?php if ($select_content === 'services') {
+                    $services = get_sub_field("services");
+                    ?>
+                    <div class="package-wrapper">
+                      <?php
+                      if (is_array($services)) {
+                        foreach ($services as $card) {
+                          get_template_part("partials/mega-menu-services", "", ["post_id" => $card->ID]);
+                        }
+                      }
+                      ?>
+                    </div>
+                  <?php } else { ?>
+                    <div class="package-wrapper">
+                      <div class="package-box">
+                        <picture class="package-icon cover-image">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
+                            <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
+                            <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
+                            <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
+                            <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
+                          </svg>
+                        </picture>
+                        <div class="title-and-excerpt">
+                          <div class="package-title text-xl white-color">SEO
+                            Optimization
+                          </div>
+                          <div class="package-description text-sm">Full SEO and
+                            content
+                            marketing for large businesses.
+                          </div>
                         </div>
-                        <div class="package-description text-sm">Full SEO and
-                          content
-                          marketing for large businesses.
+                      </div>
+                      <div class="package-box">
+                        <picture class="package-icon cover-image">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
+                            <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
+                            <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
+                            <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
+                            <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
+                          </svg>
+                        </picture>
+                        <div class="title-and-excerpt">
+                          <div class="package-title text-xl white-color">Strategy
+                            &
+                            Digital marketing
+                          </div>
+                          <div class="package-description text-sm">Basic website
+                            design
+                            and SEO for startups.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="package-box">
+                        <picture class="package-icon cover-image">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
+                            <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
+                            <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
+                            <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
+                            <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
+                          </svg>
+                        </picture>
+                        <div class="title-and-excerpt">
+                          <div class="package-title text-xl white-color">Web
+                            Development
+                          </div>
+                          <div class="package-description text-sm">UX optimization
+                            and
+                            advanced social media services.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="package-box">
+                        <picture class="package-icon cover-image">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
+                            <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
+                            <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
+                            <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
+                            <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
+                          </svg>
+                        </picture>
+                        <div class="title-and-excerpt">
+                          <div class="package-title text-xl white-color">Visual
+                            Graphic
+                            Design
+                          </div>
+                          <div class="package-description text-sm">Comprehensive
+                            SEO,
+                            email marketing, and ads.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="package-box">
+                        <picture class="package-icon cover-image">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
+                            <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
+                            <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
+                            <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
+                            <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
+                          </svg>
+                        </picture>
+                        <div class="title-and-excerpt">
+                          <div class="package-title text-xl white-color">UI/UX
+                            Creative
+                            Design
+                          </div>
+                          <div class="package-description text-sm">Enhanced SEO
+                            and
+                            social media management.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="package-box">
+                        <picture class="package-icon cover-image">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
+                            <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
+                            <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
+                            <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
+                            <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
+                          </svg>
+                        </picture>
+                        <div class="title-and-excerpt">
+                          <div class="package-title text-xl white-color">Market
+                            Research
+                          </div>
+                          <div class="package-description text-sm">Complete
+                            digital
+                            solutions for rapid business growth.
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="package-box">
-                      <picture class="package-icon cover-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
-                          <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
-                          <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
-                          <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
-                          <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
-                        </svg>
-                      </picture>
-                      <div class="title-and-excerpt">
-                        <div class="package-title text-xl white-color">Strategy
-                          &
-                          Digital marketing
-                        </div>
-                        <div class="package-description text-sm">Basic website
-                          design
-                          and SEO for startups.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="package-box">
-                      <picture class="package-icon cover-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
-                          <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
-                          <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
-                          <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
-                          <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
-                        </svg>
-                      </picture>
-                      <div class="title-and-excerpt">
-                        <div class="package-title text-xl white-color">Web
-                          Development
-                        </div>
-                        <div class="package-description text-sm">UX optimization
-                          and
-                          advanced social media services.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="package-box">
-                      <picture class="package-icon cover-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
-                          <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
-                          <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
-                          <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
-                          <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
-                        </svg>
-                      </picture>
-                      <div class="title-and-excerpt">
-                        <div class="package-title text-xl white-color">Visual
-                          Graphic
-                          Design
-                        </div>
-                        <div class="package-description text-sm">Comprehensive
-                          SEO,
-                          email marketing, and ads.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="package-box">
-                      <picture class="package-icon cover-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
-                          <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
-                          <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
-                          <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
-                          <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
-                        </svg>
-                      </picture>
-                      <div class="title-and-excerpt">
-                        <div class="package-title text-xl white-color">UI/UX
-                          Creative
-                          Design
-                        </div>
-                        <div class="package-description text-sm">Enhanced SEO
-                          and
-                          social media management.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="package-box">
-                      <picture class="package-icon cover-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
-                          <path d="M22 37H1L11.4975 18.491H11.5025L22 37Z" fill="#3F621A"/>
-                          <path d="M21.9975 37L11.5 18.491H32.5" fill="#669F2A"/>
-                          <path d="M22 0L11.5025 18.509H11.4975L1 0" fill="#669F2A"/>
-                          <path d="M32.5 18.509H11.5L21.9975 0" fill="#669F2A"/>
-                        </svg>
-                      </picture>
-                      <div class="title-and-excerpt">
-                        <div class="package-title text-xl white-color">Market
-                          Research
-                        </div>
-                        <div class="package-description text-sm">Complete
-                          digital
-                          solutions for rapid business growth.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <?php } ?>
                 </div>
+
+
                 <div class="right-content flex-col">
                   <div class="info-box-card">
                     <h5 class="text-xl text-uppercase white-color bold right-content-title">

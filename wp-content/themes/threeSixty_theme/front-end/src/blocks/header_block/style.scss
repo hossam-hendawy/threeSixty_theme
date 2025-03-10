@@ -297,6 +297,7 @@ header {
       }
 
     }
+
     .header-link-active {
       color: $threeSixty_theme_brand-500;
     }
@@ -401,6 +402,7 @@ header {
       min-height: 550px;
     }
     @include large-screen {
+      padding-block: 0;
       min-height: 720px;
       gap: 50px;
     }
@@ -442,28 +444,32 @@ header {
           .title-and-excerpt {
             .package-title {
               font-weight: 300;
-              transition: color $duration;
 
+              br {
+                display: none;
+              }
+
+              p {
+                transition: color $duration;
+              }
               strong {
                 font-weight: 700;
               }
             }
 
-            .package-description {
+            .package-description p {
               color: $threeSixty_theme_quinary-400;
             }
           }
 
           &:hover {
-            .package-title {
+            .package-title p {
               color: $threeSixty_theme_brand-600;
             }
-
           }
         }
       }
     }
-
 
     .left-content-title, .right-content-title {
       padding-bottom: 24px;
@@ -571,8 +577,4 @@ header {
       pointer-events: auto;
     }
   }
-
-
 }
-
-

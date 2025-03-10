@@ -27,13 +27,13 @@ export default async (header) => {
     //   header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
     // }
 
-    desktopMegaWrappers.forEach(wrapper => {
-      wrapper.classList.remove('active');
-    });
-
-    megaMenus.forEach(wrapper => {
-      wrapper.classList.remove('active');
-    });
+    // desktopMegaWrappers.forEach(wrapper => {
+    //   wrapper.classList.remove('active');
+    // });
+    //
+    // megaMenus.forEach(wrapper => {
+    //   wrapper.classList.remove('active');
+    // });
 
     lastScroll = currentScroll;
   };
