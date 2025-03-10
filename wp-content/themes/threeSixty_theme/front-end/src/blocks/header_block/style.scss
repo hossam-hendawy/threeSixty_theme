@@ -338,9 +338,9 @@ header {
     }
   }
 
-  &.hide:not(.header-active) {
-    transform: translateY(-100%);
-  }
+  //&.hide:not(.header-active) {
+  //  transform: translateY(-100%);
+  //}
 
   &.header-transparent {
     background: transparent;
@@ -574,4 +574,5 @@ header {
 
 
 }
+
 

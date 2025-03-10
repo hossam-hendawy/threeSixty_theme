@@ -3,8 +3,8 @@ import {gsap} from "gsap";
 import {imageLazyLoading} from '../../scripts/functions/imageLazyLoading';
 import {animations} from '../../scripts/general/animations';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger)
 /**
  *
  * @param header {HTMLElement}
@@ -12,11 +12,13 @@ gsap.registerPlugin(ScrollTrigger)
  */
 export default async (header) => {
 
+  const body = document.querySelector('body');
+  const megaMenus = header.querySelectorAll(".menu-item.has-mega-menu");
+  const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
   const burgerMenu = header.querySelector('.burger-menu');
   const menuLinks = header.querySelector('.navbar');
 
   let lastScroll = 0;
-
   const scrollHandler = () => {
     const currentScroll = window.scrollY;
     header.classList.toggle('sticky', currentScroll >= 20);
@@ -24,6 +26,15 @@ export default async (header) => {
     // if (window.innerWidth > 992) {
     //   header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
     // }
+
+    desktopMegaWrappers.forEach(wrapper => {
+      wrapper.classList.remove('active');
+    });
+
+    megaMenus.forEach(wrapper => {
+      wrapper.classList.remove('active');
+    });
+
     lastScroll = currentScroll;
   };
 
@@ -82,9 +93,7 @@ export default async (header) => {
   });
 
 
-  const body = document.querySelector('body');
-  const megaMenus = header.querySelectorAll(".menu-item.has-mega-menu");
-  const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
+
 
   megaMenus.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
