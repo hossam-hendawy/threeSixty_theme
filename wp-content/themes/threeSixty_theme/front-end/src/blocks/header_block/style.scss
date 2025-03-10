@@ -289,6 +289,14 @@ header {
       }
     }
 
+    &:hover {
+      .arrow-icon {
+        path {
+          fill: $threeSixty_theme_brand-600;
+        }
+      }
+
+    }
     .header-link-active {
       color: $threeSixty_theme_brand-500;
     }
@@ -303,12 +311,17 @@ header {
       width: 16px;
       height: 16px;
       transition: transform $duration;
+
       path {
         fill: white;
       }
+
+      @include max-medium-screen {
+        transform: rotate(-90deg);
+      }
     }
 
-    @include min-medium-screen{
+    @include min-medium-screen {
       &.active {
         .nav-item {
           color: $threeSixty_theme_brand-600;

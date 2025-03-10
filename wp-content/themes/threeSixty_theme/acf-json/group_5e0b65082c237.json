@@ -120,7 +120,15 @@
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce33e2684fc",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "50",
                         "class": "",
@@ -141,7 +149,15 @@
                     "type": "radio",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce33e2684fc",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "50",
                         "class": "",
@@ -157,6 +173,76 @@
                     "other_choice": 0,
                     "layout": "horizontal",
                     "save_other_choice": 0,
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
+                    "key": "field_67ce3b53e033b",
+                    "label": "Packages",
+                    "name": "packages",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce37b142e6a",
+                                "operator": "==",
+                                "value": "packages"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "packages"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "return_format": "object",
+                    "min": "",
+                    "max": "",
+                    "elements": "",
+                    "parent_repeater": "field_63da2815fbf9a"
+                },
+                {
+                    "key": "field_67ce3b6be033c",
+                    "label": "Services",
+                    "name": "services",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67ce37b142e6a",
+                                "operator": "==",
+                                "value": "services"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "services"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "return_format": "object",
+                    "min": "",
+                    "max": "",
+                    "elements": "",
                     "parent_repeater": "field_63da2815fbf9a"
                 }
             ]
@@ -1192,5 +1278,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741568162
+    "modified": 1741568983
 }
