@@ -45,7 +45,7 @@ export default async (header) => {
   burgerMenu.addEventListener('click', function () {
     if (burgerMenu.classList.contains('burger-menu-active')) {
       // region allow page scroll
-      document.documentElement.classList.remove('modal-opened');
+      document.documentElement.classList.remove('stop-scroll');
       // endregion allow page scroll
       burgerMenu.classList.remove('burger-menu-active');
       menuLinks.classList.remove('header-links-active');
@@ -57,7 +57,7 @@ export default async (header) => {
       header.classList.add('header-active');
       burgerTl.play();
       // region prevent page scroll
-      document.documentElement.classList.add('modal-opened');
+      document.documentElement.classList.add('stop-scroll');
       // endregion prevent page scroll
       gsap.fromTo(menuLinks.querySelectorAll('.menu-item , .mobile-cta'), {
         y: 30,
@@ -89,18 +89,31 @@ export default async (header) => {
   megaMenus.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
       e.preventDefault();
+      e.stopPropagation();
+
+      const isActive = this.classList.contains("active");
+
       megaMenus.forEach(item => item.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
-      this.classList.add("active");
-      const submenuIndex = this.getAttribute("data-submenu-index");
-      const targetWrapper = header.querySelector(`.mega-menu-wrapper[data-index="${submenuIndex}"]`);
-      body.classList.add("active");
-      document.documentElement.classList.add('modal-opened');
-      if (targetWrapper) {
-        targetWrapper.classList.add("active");
+      body.classList.remove("active");
+      // document.documentElement.classList.remove('modal-opened');
+
+      if (!isActive) {
+        this.classList.add("active");
+
+        const submenuIndex = this.getAttribute("data-submenu-index");
+        const targetWrapper = header.querySelector(`.mega-menu-wrapper[data-index="${submenuIndex}"]`);
+
+        if (targetWrapper) {
+          targetWrapper.classList.add("active");
+        }
+
+        // body.classList.add("active");
+        // document.documentElement.classList.add('modal-opened');
       }
     });
   });
+
 
 
   const backSteps = header.querySelectorAll(".back-step");
@@ -118,7 +131,7 @@ export default async (header) => {
     if (!isMenuClick && !isMegaMenuClick) {
       megaMenus.forEach(menuItem => menuItem.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
-      body.classList.remove("active");
+      // body.classList.remove("active");
     }
   });
 

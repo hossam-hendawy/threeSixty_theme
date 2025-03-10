@@ -53,7 +53,7 @@ section {
   z-index: 3 !important;
 }
 
-.modal-opened {
+.modal-opened  , .stop-scroll{
   overflow: hidden;
 }
 // region container
