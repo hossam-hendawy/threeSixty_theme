@@ -195,11 +195,11 @@ function threeSixty_theme_breadcrumbs()
     if ($prev_url) {
       // Get the previous page title
       $prev_post_id = url_to_postid($prev_url);
-      if ($prev_post_id) {
+      if ($prev_post_id && $prev_url !== get_permalink()) {
+        // Avoid showing the current page twice
         $prev_title = get_the_title($prev_post_id);
         echo '<a href="' . esc_url($prev_url) . '">' . esc_html($prev_title) . '</a>';
         echo ' / ';
-
       }
     }
 

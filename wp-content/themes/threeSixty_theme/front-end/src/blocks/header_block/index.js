@@ -3,6 +3,7 @@ import {gsap} from "gsap";
 import {imageLazyLoading} from '../../scripts/functions/imageLazyLoading';
 import {animations} from '../../scripts/general/animations';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger)
 /**
  *
@@ -10,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
  * @returns {Promise<void>}
  */
 export default async (header) => {
+
   const burgerMenu = header.querySelector('.burger-menu');
   const menuLinks = header.querySelector('.navbar');
 
@@ -71,13 +73,68 @@ export default async (header) => {
   });
 
 
-
   header.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', event => {
       if ((anchor.href === window.location.href || anchor.href === window.location.href + '#' || anchor.href === window.location.href.slice(0, -1))) {
         event.stopPropagation();
       }
     });
+  });
+
+
+  const body = document.querySelector('body');
+
+  const megaMenus = header.querySelectorAll(".menu-item.has-mega-menu");
+  const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
+  const mobileMegaWrappers = header.querySelectorAll(".mega-menu-wrapper-in-mobile");
+
+  megaMenus.forEach((menuItem) => {
+    menuItem.addEventListener("click", function (e) {
+      e.preventDefault();
+      megaMenus.forEach(item => item.classList.remove("active"));
+      desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
+
+      this.classList.add("active");
+      const submenuIndex = this.getAttribute("data-submenu-index");
+      const targetWrapper = header.querySelector(`.mega-menu-wrapper[data-index="${submenuIndex}"]`);
+      body.classList.add("active");
+      if (targetWrapper) {
+        targetWrapper.classList.add("active");
+      }
+    });
+  });
+
+  const dddd = header.querySelectorAll(".menu-item.has-mega-menu");
+  dddd.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      mobileMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
+      const submenuIndex = link.getAttribute("data-submenu-index");
+      const targetWrapper = header.querySelector(`.mega-menu-wrapper-in-mobile[data-index="${submenuIndex}"]`);
+      if (targetWrapper) {
+        targetWrapper.classList.add("active");
+      }
+    });
+  });
+
+  const backSteps = header.querySelectorAll(".back-step");
+  backSteps.forEach(step => {
+    step.addEventListener("click", () => {
+      mobileMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
+      desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
+      megaMenus.forEach(menuItem => menuItem.classList.remove("active"));
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const isMenuClick = event.target.closest(".menu-item.has-mega-menu");
+    const isMegaMenuClick = event.target.closest(".mega-menu-wrapper");
+
+    if (!isMenuClick && !isMegaMenuClick) {
+      megaMenus.forEach(menuItem => menuItem.classList.remove("active"));
+      desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
+      body.classList.remove("active");
+    }
   });
 
 

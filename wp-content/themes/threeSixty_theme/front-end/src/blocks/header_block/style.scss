@@ -14,6 +14,7 @@ header {
   display: flex;
   align-items: center;
 
+
   .container {
     width: 100%;
   }
@@ -309,41 +310,48 @@ header {
     }
   }
 
-
   .mega-menu-wrapper {
-    background: red;
+    background: $threeSixty_theme_black;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
     position: absolute;
     top: calc(100% - 1px);
     width: 100%;
     z-index: 2;
+    opacity: 0;
+    transition: opacity $duration;
+    pointer-events: none;
+    padding-block: 30px;
 
     &:after {
       content: "";
       position: absolute;
-      top: 0;
+      top: -12px;
       width: 100vw;
-      height: 100%;
+      height: calc(100% + 12px);
       left: 50%;
       transform: translateX(-50%);
       background-color: $threeSixty_theme_black;
       z-index: -1;
+      pointer-events: none;
     }
 
     @include max-medium-screen {
-      position: absolute;
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       top: calc(100% - 1px);
-      left: 0;
-
-      //transition: opacity $duration;
-      //opacity: 0;
-      //pointer-events: none;
-      //overflow-y: scroll;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      @include paddingX(size(24));
+      padding-top: 50px;
+    }
+    @include media-screen-768 {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 50px;
     }
     @include min-medium-screen {
       min-height: 550px;
@@ -413,14 +421,14 @@ header {
     }
 
 
-    .left-content-title , .right-content-title {
+    .left-content-title, .right-content-title {
       padding-bottom: 24px;
       border-bottom: 1px solid $threeSixty_theme_tertiary-600;
-      @include media-screen-768{
+      @include media-screen-768 {
         padding-bottom: 12px;
         font-size: 14px;
       }
-      @include min-medium-screen{
+      @include min-medium-screen {
         padding-bottom: 24px;
         font-size: 16px;
       }
@@ -454,7 +462,7 @@ header {
           display: flex;
           align-items: center;
           gap: 16px;
-          @include media-screen-768{
+          @include media-screen-768 {
             padding-block: 6px;
           }
           @include min-medium-screen {
@@ -467,10 +475,10 @@ header {
 
           .package-title {
             line-height: 30px;
-            @include media-screen-768{
+            @include media-screen-768 {
               font-size: 14px;
             }
-            @include min-medium-screen{
+            @include min-medium-screen {
               font-size: 16px;
             }
           }
@@ -479,6 +487,8 @@ header {
     }
 
     .back-step {
+      position: absolute;
+      top: 0;
       width: 100%;
       height: fit-content;
       color: $threeSixty_theme_white;
@@ -518,5 +528,5 @@ header {
     }
   }
 
-}
 
+}
