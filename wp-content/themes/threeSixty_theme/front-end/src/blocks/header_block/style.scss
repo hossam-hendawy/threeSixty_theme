@@ -347,13 +347,13 @@ header {
     background: transparent;
   }
 
-  &.sticky {
-    .header-wrapper {
-      @include large-screen {
-        @include paddingY(size(25));
-      }
-    }
-  }
+  //&.sticky {
+  //  .header-wrapper {
+  //    @include large-screen {
+  //      @include paddingY(size(25));
+  //    }
+  //  }
+  //}
 
   .mega-menu-wrapper {
     background: $threeSixty_theme_black;
@@ -452,9 +452,14 @@ header {
               p {
                 transition: color $duration;
               }
+
               strong {
                 font-weight: 700;
               }
+            }
+
+            .package-description {
+              color: $threeSixty_theme_quinary-400;
             }
 
             .package-description p {
@@ -578,3 +583,5 @@ header {
     }
   }
 }
+
+
