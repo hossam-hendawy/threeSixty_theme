@@ -9,7 +9,15 @@ import {animations} from "../../scripts/general/animations";
 const mabBlock = async (block) => {
 
   // add block code here
-// testing the new hidden value 
+  block.querySelectorAll('.hotspot-circle').forEach(circle => {
+    circle.addEventListener('click', function () {
+      const hiddenContent = this.querySelector('.hidden-content');
+      hiddenContent.classList.toggle('show');
+    });
+  });
+
+
+// testing the new hidden value
 
     animations(block);
     imageLazyLoading(block);

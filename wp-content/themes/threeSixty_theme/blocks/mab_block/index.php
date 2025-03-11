@@ -36,22 +36,6 @@ $image = get_field('image');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-
-
-  <div class="hotspot-circle">
-    <div class="hotspot-expand">
-    <div class="outer-circle"></div>
-    <div class="inner-circle"></div>
-    </div>
-    <div class="hidden-content flex-col">
-      <picture class="country-flag cover-image">
-      </picture>
-      <h5 class="text-xs semi-bold country-name">Saudi Arabia, Mah</h5>
-      <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman, Madinah 42331</h5>
-    </div>
-  </div>
-
-
   <div class="content-wrapper flex-col">
     <?php if ($label) { ?>
     <div class="text-sm label-info medium"><?= $label ?></div>
@@ -63,18 +47,21 @@ $image = get_field('image');
       <div class=" text-xl description"><?= $description ?></div>
     <?php endif; ?>
   </div>
-
   <div class="image-wrapper">
     <?php if (!empty($image) && is_array($image)) { ?>
       <picture class="image cover-image aspect-ratio">
         <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
-
+        <div class="circle pulse orange hotspot-circle ">
+          <div class="hidden-content flex-col">
+            <picture class="country-flag cover-image">
+            </picture>
+            <h5 class="text-xs semi-bold country-name">Saudi Arabia, Mah</h5>
+            <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman, Madinah 42331</h5>
+          </div>
+        </div>
       </picture>
     <?php } ?>
-
   </div>
-
-
 </div>
 </section>
 
