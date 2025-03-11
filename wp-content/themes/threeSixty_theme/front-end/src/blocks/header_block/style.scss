@@ -290,6 +290,11 @@ header {
     }
 
     &:hover {
+
+      .header-link {
+        color: $threeSixty_theme_brand-600;
+      }
+
       .arrow-icon {
         path {
           fill: $threeSixty_theme_brand-600;
@@ -531,6 +536,9 @@ header {
         padding: 64px 42px 62px 67px;
       }
 
+      .right-content-title {
+        color: $threeSixty_theme_white;
+      }
 
       .info-box-wrapper {
         margin-top: 16px;
@@ -552,12 +560,17 @@ header {
           }
 
           .package-title {
+            transition: color $duration;
             line-height: 30px;
             @include media-screen-768 {
               font-size: 14px;
             }
             @include min-medium-screen {
               font-size: 16px;
+            }
+
+            &:hover {
+              color: $threeSixty_theme_brand-600;
             }
           }
         }

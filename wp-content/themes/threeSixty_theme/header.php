@@ -343,74 +343,63 @@ $contact_us = get_field('cta_button', 'options');
                   <?php } ?>
                 </div>
                 <div class="right-content flex-col">
-                  <div class="info-box-card">
-                    <h5 class="text-xl text-uppercase white-color bold right-content-title">
-                      Help & Support</h5>
-                    <div class="info-box-wrapper">
-                      <div class="info-box">
-                        <picture class="info-box-image cover-image">
-                          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.96445 8.96448L5.42893 5.42896M5.42893 19.5711L8.96448 16.0355M16.0355 16.0355L19.5711 19.571M19.5711 5.42891L16.0355 8.96445M22.5 12.5C22.5 18.0228 18.0228 22.5 12.5 22.5C6.97715 22.5 2.5 18.0228 2.5 12.5C2.5 6.97715 6.97715 2.5 12.5 2.5C18.0228 2.5 22.5 6.97715 22.5 12.5ZM17.5 12.5C17.5 15.2614 15.2614 17.5 12.5 17.5C9.73858 17.5 7.5 15.2614 7.5 12.5C7.5 9.73858 9.73858 7.5 12.5 7.5C15.2614 7.5 17.5 9.73858 17.5 12.5Z" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </picture>
-                        <div class="package-title text-md semi-bold white-color">
-                          SEO
-                          Optimization
-
-                        </div>
-                      </div>
-                      <div class="info-box">
-                        <picture class="info-box-image cover-image">
-                        </picture>
-                        <div class="package-title text-md semi-bold white-color">
-                          SEO
-                          Optimization
-
-                        </div>
-                      </div>
-                      <div class="info-box">
-                        <picture class="info-box-image cover-image">
-                        </picture>
-                        <div class="package-title text-md semi-bold white-color">
-                          SEO
-                          Optimization
-
-                        </div>
+                  <?php
+                  $help_and_support = get_field('help_and_support', 'options');
+                  if ($help_and_support) :
+                    ?>
+                    <div class="info-box-card">
+                      <h5 class="text-xl text-uppercase white-color bold right-content-title">
+                        Help & Support
+                      </h5>
+                      <div class="info-box-wrapper">
+                        <?php if (!empty($help_and_support['links'])) : ?>
+                          <?php foreach ($help_and_support['links'] as $link_item) : ?>
+                            <div class="info-box">
+                              <?php if (!empty($link_item['icon'])) : ?>
+                                <picture class="info-box-image cover-image">
+                                  <img src="<?php echo esc_url($link_item['icon']['url']); ?>" alt="<?php echo esc_attr($link_item['icon']['alt']); ?>">
+                                </picture>
+                              <?php endif; ?>
+                              <?php if (!empty($link_item['link'])) : ?>
+                                  <a class="package-title text-md semi-bold white-color" href="<?php echo esc_url($link_item['link']['url']); ?>" target="<?php echo esc_attr($link_item['link']['target']); ?>">
+                                    <?php echo esc_html($link_item['link']['title']); ?>
+                                  </a>
+                              <?php endif; ?>
+                            </div>
+                          <?php endforeach; ?>
+                        <?php endif; ?>
                       </div>
                     </div>
-                  </div>
-                  <div class="info-box-card">
-                    <h5 class="text-xl text-uppercase white-color bold right-content-title">
-                      contact</h5>
-                    <div class="info-box-wrapper">
-                      <div class="info-box">
-                        <picture class="info-box-image cover-image">
-                        </picture>
-                        <div class="package-title text-md semi-bold white-color">
-                          SEO
-                          Free Consulting
-                        </div>
-                      </div>
-                      <div class="info-box">
-                        <picture class="info-box-image cover-image">
-                        </picture>
-                        <div class="package-title text-md semi-bold white-color">
-                          SEO
-                          Optimization
+                  <?php endif; ?>
 
-                        </div>
-                      </div>
-                      <div class="info-box">
-                        <picture class="info-box-image cover-image">
-                        </picture>
-                        <div class="package-title text-md semi-bold white-color">
-                          SEO
-                          Optimization
-
-                        </div>
+                  <?php
+                  $contact = get_field('contact', 'options');
+                  if ($contact) :
+                    ?>
+                    <div class="info-box-card">
+                      <h5 class="text-xl text-uppercase white-color bold right-content-title">
+                        Contact
+                      </h5>
+                      <div class="info-box-wrapper">
+                        <?php if (!empty($contact['links'])) : ?>
+                          <?php foreach ($contact['links'] as $link_item) : ?>
+                            <div class="info-box">
+                              <?php if (!empty($link_item['icon'])) : ?>
+                                <picture class="info-box-image cover-image">
+                                  <img src="<?php echo esc_url($link_item['icon']['url']); ?>" alt="<?php echo esc_attr($link_item['icon']['alt']); ?>">
+                                </picture>
+                              <?php endif; ?>
+                              <?php if (!empty($link_item['link'])) : ?>
+                                  <a class="package-title text-md semi-bold white-color" href="<?php echo esc_url($link_item['link']['url']); ?>" target="<?php echo esc_attr($link_item['link']['target']); ?>">
+                                    <?php echo esc_html($link_item['link']['title']); ?>
+                                  </a>
+                              <?php endif; ?>
+                            </div>
+                          <?php endforeach; ?>
+                        <?php endif; ?>
                       </div>
                     </div>
-                  </div>
+                  <?php endif; ?>
                 </div>
               </div>
             <?php } ?>
