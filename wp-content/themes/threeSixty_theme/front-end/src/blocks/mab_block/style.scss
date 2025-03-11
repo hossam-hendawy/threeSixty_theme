@@ -31,23 +31,63 @@
     }
   }
 
-  .aaa {
+  .hotspot-circle {
     border-radius: 50%;
     @include square(8px);
     background-color: red;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
     @include large-screen {
       //position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 56%;
+      left: 48%;
     }
+
     &:hover {
       .hidden-content {
         opacity: 1;
       }
     }
+    .hotspot-expand {
+      color: green;
+      cursor: pointer;
+      display: grid;
+      @include square(15px);
+      font-size: 18px;
+      grid-auto-flow: column;
+      justify-content: center;
+      position: relative;
+      &:before {
+        box-sizing: content-box;
+        content: "";
+        height: 100%;
+        left: -5px;
+        padding: 5px;
+        position: absolute;
+        top: -5px;
+        width: 100%;
+        z-index: -2;
+      }
+      .inner-circle {
+        background-color: red;
+        left: 50%;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
     .inner-circle {
       padding: 10px;
     }
+    .outer-circle {
+      animation: e-hotspot-expand 2s infinite;
+    }
+
   }
 
   .hidden-content {
@@ -89,9 +129,6 @@
     }
   }
 
-  .outer-circle {
-    animation: e-hotspot-expand 2s infinite;
-  }
 
   @keyframes e-hotspot-expand {
     0% {

@@ -38,9 +38,11 @@ $image = get_field('image');
 <div class="container">
 
 
-  <div class="aaa ">
+  <div class="hotspot-circle">
+    <div class="hotspot-expand">
     <div class="outer-circle"></div>
     <div class="inner-circle"></div>
+    </div>
     <div class="hidden-content flex-col">
       <picture class="country-flag cover-image">
       </picture>
