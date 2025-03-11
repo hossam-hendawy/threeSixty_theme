@@ -16,7 +16,7 @@
     margin-bottom: 40px;
     @include large-screen {
       max-width: 768px;
-      margin-bottom: 80px;
+      margin-bottom: 81px;
     }
 
     .title {
@@ -32,23 +32,33 @@
   }
 
   .aaa {
-    width: fit-content;
-
+    border-radius: 50%;
+    @include square(8px);
+    background-color: red;
+    @include large-screen {
+      //position: absolute;
+      top: 50%;
+      left: 50%;
+    }
     &:hover {
       .hidden-content {
         opacity: 1;
       }
     }
+    .inner-circle {
+      padding: 10px;
+    }
   }
 
   .hidden-content {
+    //width: 100%;
     opacity: 0;
     gap: 4px;
     border-radius: 8px;
     padding: 12px 16px;
     background-color: $threeSixty_theme_white;
     //background-color: red;
-    max-width: 190px;
+    width: 190px;
     text-align: center;
     transition: opacity $duration;
 
@@ -68,7 +78,18 @@
     }
   }
 
-  div {
+
+  .image-wrapper {
+    width: 100%;
+    @include large-screen {
+      padding-inline: 96px;
+    }
+    .image {
+      padding-top: 47.16%;
+    }
+  }
+
+  .outer-circle {
     animation: e-hotspot-expand 2s infinite;
   }
 

@@ -31,10 +31,25 @@ if (isset($block)) {
 $title = get_field('title');
 $description = get_field('description');
 $label = get_field('label');
+$image = get_field('image');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
+
+
+  <div class="aaa ">
+    <div class="outer-circle"></div>
+    <div class="inner-circle"></div>
+    <div class="hidden-content flex-col">
+      <picture class="country-flag cover-image">
+      </picture>
+      <h5 class="text-xs semi-bold country-name">Saudi Arabia, Mah</h5>
+      <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman, Madinah 42331</h5>
+    </div>
+  </div>
+
+
   <div class="content-wrapper flex-col">
     <?php if ($label) { ?>
     <div class="text-sm label-info medium"><?= $label ?></div>
@@ -46,15 +61,18 @@ $label = get_field('label');
       <div class=" text-xl description"><?= $description ?></div>
     <?php endif; ?>
   </div>
-  <div class="aaa">
-    hover-here
-    <div class="hidden-content flex-col">
-      <picture class="country-flag cover-image">
+
+  <div class="image-wrapper">
+    <?php if (!empty($image) && is_array($image)) { ?>
+      <picture class="image cover-image aspect-ratio">
+        <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+
       </picture>
-      <h5 class="text-xs semi-bold country-name">Saudi Arabia, Mah</h5>
-      <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman, Madinah 42331</h5>
-    </div>
+    <?php } ?>
+
   </div>
+
+
 </div>
 </section>
 
