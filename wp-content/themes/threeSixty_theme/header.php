@@ -361,11 +361,9 @@ $contact_us = get_field('cta_button', 'options');
                                 </picture>
                               <?php endif; ?>
                               <?php if (!empty($link_item['link'])) : ?>
-                                <div class="package-title text-md semi-bold white-color">
-                                  <a href="<?php echo esc_url($link_item['link']['url']); ?>" target="<?php echo esc_attr($link_item['link']['target']); ?>">
+                                  <a class="package-title text-md semi-bold white-color" href="<?php echo esc_url($link_item['link']['url']); ?>" target="<?php echo esc_attr($link_item['link']['target']); ?>">
                                     <?php echo esc_html($link_item['link']['title']); ?>
                                   </a>
-                                </div>
                               <?php endif; ?>
                             </div>
                           <?php endforeach; ?>
@@ -392,11 +390,9 @@ $contact_us = get_field('cta_button', 'options');
                                 </picture>
                               <?php endif; ?>
                               <?php if (!empty($link_item['link'])) : ?>
-                                <div class="package-title text-md semi-bold white-color">
-                                  <a href="<?php echo esc_url($link_item['link']['url']); ?>" target="<?php echo esc_attr($link_item['link']['target']); ?>">
+                                  <a class="package-title text-md semi-bold white-color" href="<?php echo esc_url($link_item['link']['url']); ?>" target="<?php echo esc_attr($link_item['link']['target']); ?>">
                                     <?php echo esc_html($link_item['link']['title']); ?>
                                   </a>
-                                </div>
                               <?php endif; ?>
                             </div>
                           <?php endforeach; ?>
