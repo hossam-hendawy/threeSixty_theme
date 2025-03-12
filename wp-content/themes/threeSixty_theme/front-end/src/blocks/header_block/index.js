@@ -4,20 +4,17 @@ import {imageLazyLoading} from '../../scripts/functions/imageLazyLoading';
 import {animations} from '../../scripts/general/animations';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
 /**
  *
  * @param header {HTMLElement}
  * @returns {Promise<void>}
  */
 export default async (header) => {
-
   const body = document.querySelector('body');
   const megaMenus = header.querySelectorAll(".menu-item.has-mega-menu");
   const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
   const burgerMenu = header.querySelector('.burger-menu');
   const menuLinks = header.querySelector('.navbar');
-
   let lastScroll = 0;
   const scrollHandler = () => {
     const currentScroll = window.scrollY;
@@ -83,7 +80,6 @@ export default async (header) => {
     }
   });
 
-
   header.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', event => {
       if ((anchor.href === window.location.href || anchor.href === window.location.href + '#' || anchor.href === window.location.href.slice(0, -1))) {
@@ -91,9 +87,6 @@ export default async (header) => {
       }
     });
   });
-
-
-
 
   megaMenus.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
@@ -120,8 +113,6 @@ export default async (header) => {
     });
   });
 
-
-
   const backSteps = header.querySelectorAll(".back-step");
   backSteps.forEach(step => {
     step.addEventListener("click", () => {
@@ -141,8 +132,6 @@ export default async (header) => {
     }
   });
 
-
   animations(header);
   imageLazyLoading(header);
 };
-
