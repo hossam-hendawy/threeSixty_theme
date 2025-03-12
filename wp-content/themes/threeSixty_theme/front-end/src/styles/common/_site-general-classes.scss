@@ -55,6 +55,9 @@ section {
 
 .modal-opened  , .stop-scroll{
   overflow: hidden;
+  @include min-medium-screen {
+    overflow: auto;
+  }
 }
 // region container
 .container {
