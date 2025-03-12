@@ -21,19 +21,19 @@ export default async (header) => {
   let lastScroll = 0;
   const scrollHandler = () => {
     const currentScroll = window.scrollY;
-    header.classList.toggle('sticky', currentScroll >= 20);
+    header.classList.toggle('sticky', currentScroll >= 200);
     header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
     // if (window.innerWidth > 992) {
     //   header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
     // }
 
-    // desktopMegaWrappers.forEach(wrapper => {
-    //   wrapper.classList.remove('active');
-    // });
-    //
-    // megaMenus.forEach(wrapper => {
-    //   wrapper.classList.remove('active');
-    // });
+    desktopMegaWrappers.forEach(wrapper => {
+      wrapper.classList.remove('active');
+    });
+
+    megaMenus.forEach(wrapper => {
+      wrapper.classList.remove('active');
+    });
 
     lastScroll = currentScroll;
   };
@@ -97,11 +97,8 @@ export default async (header) => {
 
   megaMenus.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
-      e.preventDefault();
       e.stopPropagation();
-
       const isActive = this.classList.contains("active");
-
       megaMenus.forEach(item => item.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
       body.classList.remove("active");
