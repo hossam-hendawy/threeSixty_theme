@@ -32,13 +32,24 @@ $title = get_field('title');
 $description = get_field('description');
 $label = get_field('label');
 $image = get_field('image');
+
+$saudi_arabia_location = get_field('saudi_arabia_location');
+$egypt_location = get_field('egypt_location');
+
+
+$saudi_arabia_link = (is_array($saudi_arabia_location) && isset($saudi_arabia_location['link'])) ? $saudi_arabia_location['link'] : '';
+$saudi_arabia_flag = (is_array($saudi_arabia_location) && isset($saudi_arabia_location['flag'])) ? $saudi_arabia_location['flag'] : '';
+$saudi_arabia_county_name = (is_array($saudi_arabia_location) && isset($saudi_arabia_location['county_name'])) ? $saudi_arabia_location['county_name'] : '';
+$saudi_arabia_description = (is_array($saudi_arabia_location) && isset($saudi_arabia_location['description'])) ? $saudi_arabia_location['description'] : '';
+
+
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
   <div class="content-wrapper flex-col">
     <?php if ($label) { ?>
-    <div class="text-sm label-info medium"><?= $label ?></div>
+      <div class="text-sm label-info medium"><?= $label ?></div>
     <?php } ?>
     <?php if ($title): ?>
       <h4 class="title semi-bold"><?= $title ?></h4>
@@ -49,31 +60,45 @@ $image = get_field('image');
   </div>
   <div class="image-wrapper">
     <?php if (!empty($image) && is_array($image)) { ?>
-      <picture class="image cover-image aspect-ratio">
-        <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+      <div class="image cover-image aspect-ratio">
+
+        <img class="map-image" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+
         <div class="circle hotspot-circle">
           <div class="hidden-content flex-col">
-            <picture class="country-flag cover-image">
-            </picture>
-            <h5 class="text-xs semi-bold country-name">EGYPT, Cairo</h5>
-            <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman, Madinah 42331</h5>
-            <svg class="hidden-content-svg" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.0711 0.485289C14.962 0.485289 15.4081 1.56243 14.7782 2.1924L8.70711 8.26347C8.31658 8.654 7.68342 8.654 7.29289 8.26347L1.22183 2.1924C0.591867 1.56243 1.03803 0.485289 1.92894 0.485289L14.0711 0.485289Z" fill="white"/>
-            </svg>
-          </div>
-        </div>
-        <div class="circle hotspot-circle sa">
-          <div class="hidden-content flex-col">
-            <picture class="country-flag cover-image">
+
+            <picture class="country-flag">
             </picture>
             <h5 class="text-xs semi-bold country-name">Saudi Arabia, Mah</h5>
-            <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman, Madinah 42331</h5>
+            <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman,
+              Madinah 42331</h5>
             <svg class="hidden-content-svg" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.0711 0.485289C14.962 0.485289 15.4081 1.56243 14.7782 2.1924L8.70711 8.26347C8.31658 8.654 7.68342 8.654 7.29289 8.26347L1.22183 2.1924C0.591867 1.56243 1.03803 0.485289 1.92894 0.485289L14.0711 0.485289Z" fill="white"/>
             </svg>
           </div>
         </div>
-      </picture>
+
+        <div class="circle hotspot-circle sa">
+          <a href="<?= $saudi_arabia_link ?>" class="hidden-content flex-col" target="_blank" aria-label="map (opens in a new tab)">
+            <?php if (!empty($saudi_arabia_flag) && is_array($saudi_arabia_flag)): ?>
+              <picture class="country-flag">
+                <img src="<?= $saudi_arabia_flag['url'] ?>" alt="<?= $saudi_arabia_flag['alt'] ?>">
+              </picture>
+            <?php endif; ?>
+            <?php if ($saudi_arabia_county_name): ?>
+              <h5 class="text-xs semi-bold country-name"><?= $saudi_arabia_county_name ?></h5>
+            <?php endif; ?>
+            <?php if ($saudi_arabia_description): ?>
+              <h5 class="text-xs location"><?= $saudi_arabia_description ?></h5>
+            <?php endif; ?>
+            <svg class="hidden-content-svg" width="16" height="9" viewBox="0 0 16 9" fill="none" aria-hidden="true">
+              <path d="M14.0711 0.485289C14.962 0.485289 15.4081 1.56243 14.7782 2.1924L8.70711 8.26347C8.31658 8.654 7.68342 8.654 7.29289 8.26347L1.22183 2.1924C0.591867 1.56243 1.03803 0.485289 1.92894 0.485289L14.0711 0.485289Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+
     <?php } ?>
   </div>
 </div>
