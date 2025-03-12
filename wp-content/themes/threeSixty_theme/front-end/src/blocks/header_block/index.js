@@ -15,22 +15,28 @@ export default async (header) => {
   const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
   const burgerMenu = header.querySelector('.burger-menu');
   const menuLinks = header.querySelector('.navbar');
+
+  const megaMenuHeight = header.querySelector('.mega-menu-wrapper')?.getBoundingClientRect().height || 0;
+
   let lastScroll = 0;
   const scrollHandler = () => {
     const currentScroll = window.scrollY;
-    header.classList.toggle('sticky', currentScroll >= 200);
+    header.classList.toggle('sticky', currentScroll >= 600);
     header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
+
     // if (window.innerWidth > 992) {
     //   header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
     // }
 
-    desktopMegaWrappers.forEach(wrapper => {
-      wrapper.classList.remove('active');
-    });
+    if (currentScroll >= megaMenuHeight /2){
+      desktopMegaWrappers.forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
+      megaMenus.forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
+    }
 
-    megaMenus.forEach(wrapper => {
-      wrapper.classList.remove('active');
-    });
 
     lastScroll = currentScroll;
   };
