@@ -345,7 +345,7 @@ footer {
           color: $threeSixty_theme_gray-300;
           transition: color $duration, path $duration;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           gap: 16px;
           width: fit-content;
 
@@ -353,6 +353,7 @@ footer {
             width: 6px;
             height: 12px;
             flex-shrink: 0;
+            margin-top: 5.5px;
           }
 
           &:hover {

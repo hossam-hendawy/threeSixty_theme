@@ -14,7 +14,7 @@ const mabBlock = async (block) => {
       const hiddenContent = this.querySelector('.hidden-content');
 
       // إذا كان العنصر المفتوح هو نفسه الذي تم النقر عليه، فقم بإغلاقه فقط
-      if (hiddenContent.classList.contains('show')) {
+      if (hiddenContent.classList.contains('show'))  {
         hiddenContent.classList.remove('show');
       } else {
         // إغلاق جميع العناصر المفتوحة الأخرى
