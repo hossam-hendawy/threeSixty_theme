@@ -1,0 +1,173 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author HOSSAM
+.map_block {
+  padding-block: 40px;
+  @include min-medium-screen {
+    padding-block: 80px 85px;
+  }
+
+  .content-wrapper {
+    gap: 16px;
+    @include marginX(auto);
+    text-align: center;
+    max-width: 620px;
+    margin-bottom: 80px;
+    @include large-screen {
+      max-width: 768px;
+    }
+
+    .title {
+      margin-bottom: 4px;
+    }
+
+    .label-info {
+      @include marginX(auto);
+      padding: 4px 12px;
+      color: $threeSixty_theme_brand-600;
+      border: 1.5px solid $threeSixty_theme_brand-600;
+    }
+  }
+
+  .hotspot-circle {
+    z-index: 1;
+    transform: translate(56%);
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 1px 1px $threeSixty_theme_gold;
+    background-color: $threeSixty_theme_gold;
+    animation: hotspot-circle 2s infinite;
+    @keyframes hotspot-circle {
+      0% {
+        box-shadow: 0 0 0 0 rgba(202, 133, 4, 0.5);
+      }
+      100% {
+        box-shadow: 0 0 0 10px rgba(202, 133, 4, 0);
+      }
+    }
+    top: 48%;
+    left: 54%;
+    @include min-media-screen-600 {
+      top: 48.5%;
+      left: 54.8%;
+    }
+    @include min-medium-screen {
+      top: 48.2%;
+      left: 55%;
+    }
+    @include large-screen {
+      top: 48.2%;
+      left: 56%;
+    }
+    @include x-large-screen {
+      top: 48.2%;
+      left: 55%;
+    }
+    &.sa {
+      top: 48%;
+      left: 58.6%;
+      @include min-media-screen-600 {
+        top: 48.5%;
+        left: 59.2%;
+      }
+      @include min-medium-screen {
+        top: 48.3%;
+        left: 59.5%;
+      }
+      @include large-screen {
+        left: 59.5%;
+      }
+    }
+  }
+
+  .map-image {
+    pointer-events: none;
+  }
+
+  .hidden-content {
+    pointer-events: none;
+    position: absolute;
+    bottom: calc(100% + 16px);
+    opacity: 0;
+    gap: 4px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: $threeSixty_theme_white;
+    width: 190px;
+    text-align: center;
+    transition: opacity $duration;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 12px 16px -4px rgba(10, 13, 18, 0.08), 0px 4px 6px -2px rgba(10, 13, 18, 0.03), 0px 2px 2px -1px rgba(10, 13, 18, 0.04);
+
+    .country-flag {
+      width: 34px;
+      height: 20px;
+      @include marginX(auto);
+
+      img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .country-name {
+      margin-top: 4px;
+      color: #181D27;
+    }
+
+    .location {
+      color: #535862;
+    }
+
+    &.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .hidden-content-svg {
+      width: 16px;
+      height: 6px;
+      bottom: -4.7%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+  }
+
+  .circle {
+    &:after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      background-color: transparent;
+      width: 300%;
+      height: 300%;
+    }
+  }
+
+
+  .image-wrapper {
+    width: 100%;
+    padding-bottom: 50px;
+    @include min-medium-screen {
+      padding-bottom: 85px;
+    }
+    @include large-screen {
+      padding-inline: 96px;
+    }
+
+    .image {
+      padding-top: 47.16%;
+    }
+  }
+}

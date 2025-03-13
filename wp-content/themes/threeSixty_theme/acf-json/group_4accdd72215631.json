@@ -1,6 +1,6 @@
 {
     "key": "group_4accdd72215631",
-    "title": "Mab Block",
+    "title": "Map Block",
     "fields": [
         {
             "key": "field_4accdd7221361b",
@@ -310,7 +310,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/mab-block"
+                "value": "acf\/map-block"
             }
         ]
     ],
@@ -323,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741822976
+    "modified": 1741824473
 }
