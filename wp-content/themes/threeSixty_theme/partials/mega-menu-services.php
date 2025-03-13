@@ -8,8 +8,8 @@ $post_permalink = get_permalink($post_id);
   $service_excerpt = get_field('service_excerpt', $post_id);
   $service_title = get_field('service_title', $post_id);
   $cta_icon = get_field('cta_icon', $post_id);
+  $mega_menu_description = get_field('mega_menu_description', $post_id);
   ?>
-
   <a href="<?= $post_permalink ?>" class="package-box">
     <?php if (!empty($cta_icon) && is_array($cta_icon)) { ?>
       <picture class="package-icon cover-image" aria-hidden="true">
@@ -20,9 +20,9 @@ $post_permalink = get_permalink($post_id);
       <?php if ($service_title) { ?>
         <div class="package-title text-xl white-color"><?= $service_title ?></div>
       <?php } ?>
-      <?php if ($service_excerpt) { ?>
+      <?php if ($mega_menu_description) { ?>
         <div class="package-description text-sm">
-          <?= $service_excerpt ?>
+          <?= $mega_menu_description ?>
         </div>
       <?php } ?>
     </div>
@@ -35,8 +35,8 @@ $post_permalink = get_permalink($post_id);
   $package_price = get_field('package_price', $post_id);
   $package_icon = get_field('package_icon', $post_id);
   $package_includes_icon = get_field('package_includes_icon', $post_id);
+  $mega_menu_description = get_field('mega_menu_description', $post_id);
   ?>
-
   <a href="<?= $post_permalink ?>" class="package-box">
     <?php if (!empty($package_icon) && is_array($package_icon)) { ?>
       <picture class="package-icon cover-image" aria-hidden="true">
@@ -47,12 +47,11 @@ $post_permalink = get_permalink($post_id);
       <?php if ($package_title) { ?>
         <div class="package-title text-xl white-color"><?= $package_title ?></div>
       <?php } ?>
-      <?php if ($package_excerpt) { ?>
+      <?php if ($mega_menu_description) { ?>
         <div class="package-description text-sm">
-          <?= $package_excerpt ?>
+          <?= $mega_menu_description ?>
         </div>
       <?php } ?>
     </div>
   </a>
-
 <?php } ?>
