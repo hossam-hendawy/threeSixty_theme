@@ -1,8 +1,8 @@
 @use "../../styles/common/variables" as *;
 @use "../../styles/mixins/mixins" as *;
 
-// @author DELL
-.mab_block {
+// @author HOSSAM
+.map_block {
   padding-block: 40px;
   @include min-medium-screen {
     padding-block: 80px 85px;
@@ -13,10 +13,9 @@
     @include marginX(auto);
     text-align: center;
     max-width: 620px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     @include large-screen {
       max-width: 768px;
-      margin-bottom: 80px;
     }
 
     .title {
@@ -85,6 +84,10 @@
     }
   }
 
+  .map-image {
+    pointer-events: none;
+  }
+
   .hidden-content {
     pointer-events: none;
     position: absolute;
@@ -99,11 +102,19 @@
     transition: opacity $duration;
     left: 50%;
     transform: translate(-50%);
+    box-shadow: 0px 12px 16px -4px rgba(10, 13, 18, 0.08), 0px 4px 6px -2px rgba(10, 13, 18, 0.03), 0px 2px 2px -1px rgba(10, 13, 18, 0.04);
 
     .country-flag {
       width: 34px;
       height: 20px;
       @include marginX(auto);
+
+      img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .country-name {
@@ -117,6 +128,7 @@
 
     &.show {
       opacity: 1;
+      pointer-events: auto;
     }
 
     .hidden-content-svg {
@@ -129,6 +141,20 @@
     }
 
   }
+
+  .circle {
+    &:after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      background-color: transparent;
+      width: 300%;
+      height: 300%;
+    }
+  }
+
 
   .image-wrapper {
     width: 100%;

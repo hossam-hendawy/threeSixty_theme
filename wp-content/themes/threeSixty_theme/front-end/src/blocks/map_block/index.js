@@ -2,13 +2,12 @@ import './style.scss';
 import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
 /**
- * @author DELL
+ * @author HOSSAM
  * @param block {HTMLElement}
  * @returns {Promise<void>}
  */
-const mabBlock = async (block) => {
+const mapBlock = async (block) => {
 
-  // add block code here
   block.querySelectorAll('.hotspot-circle').forEach(circle => {
     circle.addEventListener('click', function () {
       const hiddenContent = this.querySelector('.hidden-content');
@@ -28,14 +27,9 @@ const mabBlock = async (block) => {
     });
   });
 
-
-
-
-// testing the new hidden value
-
     animations(block);
     imageLazyLoading(block);
 };
 
-export default mabBlock;
+export default mapBlock;
 

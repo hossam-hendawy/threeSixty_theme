@@ -4,36 +4,39 @@ import {imageLazyLoading} from '../../scripts/functions/imageLazyLoading';
 import {animations} from '../../scripts/general/animations';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
 /**
  *
  * @param header {HTMLElement}
  * @returns {Promise<void>}
  */
 export default async (header) => {
-
   const body = document.querySelector('body');
   const megaMenus = header.querySelectorAll(".menu-item.has-mega-menu");
   const desktopMegaWrappers = header.querySelectorAll(".mega-menu-wrapper");
   const burgerMenu = header.querySelector('.burger-menu');
   const menuLinks = header.querySelector('.navbar');
 
+  const megaMenuHeight = header.querySelector('.mega-menu-wrapper')?.getBoundingClientRect().height || 0;
+
   let lastScroll = 0;
   const scrollHandler = () => {
     const currentScroll = window.scrollY;
-    header.classList.toggle('sticky', currentScroll >= 20);
+    header.classList.toggle('sticky', currentScroll >= 600);
     header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
+
     // if (window.innerWidth > 992) {
     //   header.classList.toggle("hide", currentScroll >= 200 && currentScroll > lastScroll);
     // }
 
-    // desktopMegaWrappers.forEach(wrapper => {
-    //   wrapper.classList.remove('active');
-    // });
-    //
-    // megaMenus.forEach(wrapper => {
-    //   wrapper.classList.remove('active');
-    // });
+    if (currentScroll >= megaMenuHeight /2){
+      desktopMegaWrappers.forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
+      megaMenus.forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
+    }
+
 
     lastScroll = currentScroll;
   };
@@ -83,7 +86,6 @@ export default async (header) => {
     }
   });
 
-
   header.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', event => {
       if ((anchor.href === window.location.href || anchor.href === window.location.href + '#' || anchor.href === window.location.href.slice(0, -1))) {
@@ -92,16 +94,10 @@ export default async (header) => {
     });
   });
 
-
-
-
   megaMenus.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
-      e.preventDefault();
       e.stopPropagation();
-
       const isActive = this.classList.contains("active");
-
       megaMenus.forEach(item => item.classList.remove("active"));
       desktopMegaWrappers.forEach(wrapper => wrapper.classList.remove("active"));
       body.classList.remove("active");
@@ -123,8 +119,6 @@ export default async (header) => {
     });
   });
 
-
-
   const backSteps = header.querySelectorAll(".back-step");
   backSteps.forEach(step => {
     step.addEventListener("click", () => {
@@ -144,8 +138,6 @@ export default async (header) => {
     }
   });
 
-
   animations(header);
   imageLazyLoading(header);
 };
-
