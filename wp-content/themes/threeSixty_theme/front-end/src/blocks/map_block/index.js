@@ -17,7 +17,7 @@ const mapBlock = async (block) => {
         hiddenContent.classList.remove('show');
       } else {
         // إغلاق جميع العناصر المفتوحة الأخرى
-        document.querySelectorAll('.hidden-content.show').forEach(content => {
+        block.querySelectorAll('.hidden-content.show').forEach(content => {
           content.classList.remove('show');
         });
 

@@ -1,0 +1,28 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author DELL
+.contact_us_hero {
+  background-color: $threeSixty_theme_black;
+  @include paddingY(40px);
+  @include min-medium-screen {
+    min-height: 516px;
+    @include paddingY(157px, 159px);
+  }
+
+  .content-wrapper {
+    gap: 10px;
+    @include small-screen {
+      text-align: center;
+    }
+    @include min-media-screen-600 {
+      max-width: 380px;
+    }
+    @include min-medium-screen {
+      max-width: 380px;
+    }
+    @include large-screen {
+      max-width: 470px;
+    }
+  }
+}
