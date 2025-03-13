@@ -43,6 +43,13 @@ $saudi_arabia_county_name = (is_array($saudi_arabia_location) && isset($saudi_ar
 $saudi_arabia_description = (is_array($saudi_arabia_location) && isset($saudi_arabia_location['description'])) ? $saudi_arabia_location['description'] : '';
 
 
+$egypt_location_link = (is_array($egypt_location) && isset($egypt_location['link'])) ? $egypt_location['link'] : '';
+$egypt_location_flag = (is_array($egypt_location) && isset($egypt_location['flag'])) ? $egypt_location['flag'] : '';
+$egypt_location_county_name = (is_array($egypt_location) && isset($egypt_location['county_name'])) ? $egypt_location['county_name'] : '';
+$egypt_location_description = (is_array($egypt_location) && isset($egypt_location['description'])) ? $saudi_arabia_location['description'] : '';
+
+
+
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -61,23 +68,25 @@ $saudi_arabia_description = (is_array($saudi_arabia_location) && isset($saudi_ar
   <div class="image-wrapper">
     <?php if (!empty($image) && is_array($image)) { ?>
       <div class="image cover-image aspect-ratio">
-
         <img class="map-image" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
-
         <div class="circle hotspot-circle">
-          <div class="hidden-content flex-col">
-
-            <picture class="country-flag">
-            </picture>
-            <h5 class="text-xs semi-bold country-name">Saudi Arabia, Mah</h5>
-            <h5 class="text-xs location">Ahmed Bin Asad Street Bir Uthman,
-              Madinah 42331</h5>
-            <svg class="hidden-content-svg" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="<?= $egypt_location_link ?>" class="hidden-content flex-col" target="_blank" aria-label="map (opens in a new tab)">
+            <?php if (!empty($egypt_location_flag) && is_array($egypt_location_flag)): ?>
+              <picture class="country-flag">
+                <img src="<?= $egypt_location_flag['url'] ?>" alt="<?= $egypt_location_flag['alt'] ?>">
+              </picture>
+            <?php endif; ?>
+            <?php if ($egypt_location_county_name): ?>
+              <h5 class="text-xs semi-bold country-name"><?= $egypt_location_county_name ?></h5>
+            <?php endif; ?>
+            <?php if ($egypt_location_description): ?>
+              <h5 class="text-xs location"><?= $egypt_location_description ?></h5>
+            <?php endif; ?>
+            <svg class="hidden-content-svg" width="16" height="9" viewBox="0 0 16 9" fill="none" aria-hidden="true">
               <path d="M14.0711 0.485289C14.962 0.485289 15.4081 1.56243 14.7782 2.1924L8.70711 8.26347C8.31658 8.654 7.68342 8.654 7.29289 8.26347L1.22183 2.1924C0.591867 1.56243 1.03803 0.485289 1.92894 0.485289L14.0711 0.485289Z" fill="white"/>
             </svg>
-          </div>
+          </a>
         </div>
-
         <div class="circle hotspot-circle sa">
           <a href="<?= $saudi_arabia_link ?>" class="hidden-content flex-col" target="_blank" aria-label="map (opens in a new tab)">
             <?php if (!empty($saudi_arabia_flag) && is_array($saudi_arabia_flag)): ?>
@@ -97,12 +106,8 @@ $saudi_arabia_description = (is_array($saudi_arabia_location) && isset($saudi_ar
           </a>
         </div>
       </div>
-
-
     <?php } ?>
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
