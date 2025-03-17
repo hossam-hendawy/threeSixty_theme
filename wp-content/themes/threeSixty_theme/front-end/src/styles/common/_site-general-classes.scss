@@ -53,12 +53,13 @@ section {
   z-index: 3 !important;
 }
 
-.modal-opened  , .stop-scroll{
+.modal-opened, .stop-scroll {
   overflow: hidden;
   @include min-medium-screen {
     overflow: auto;
   }
 }
+
 // region container
 .container {
   @include marginX(auto);
@@ -93,7 +94,7 @@ body.home {
 }
 
 // region general in here block
-.hero_package, .packages_hero, .service_hero, .about_us_block {
+.hero_package, .packages_hero, .service_hero, .about_us_block, .contact_us_hero {
   position: relative;
   display: flex;
   align-items: center;
@@ -152,7 +153,9 @@ body.home {
 
 }
 
-.about_us_block, .blog_hero_block, .service_hero, .hero_package, .packages_hero {
+.about_us_block, .blog_hero_block,
+.service_hero, .hero_package,
+.packages_hero, .contact_us_hero {
 
   &:after {
     content: '';

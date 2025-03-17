@@ -40,11 +40,9 @@ $description = get_field('description');
       <h1 class="d-xl-h2 white-color bold uppercase-text"><?= $title ?></h1>
     <?php } ?>
     <?php if ($description) { ?>
-      <div class="text-xl white-color blog-description"><?= $description ?></div>
+      <div class="text-xl white-color description"><?= $description ?></div>
     <?php } ?>
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->

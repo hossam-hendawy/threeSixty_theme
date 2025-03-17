@@ -3,13 +3,11 @@
 
 // @author DELL
 .about_us_block {
-  background-color: $threeSixty_theme_black;
   @include paddingY(40px);
   @include min-medium-screen {
     min-height: 518px;
     @include paddingY(157px, 159px);
   }
-
   .content-wrapper {
     gap: 10px;
     @include small-screen {
@@ -25,5 +23,4 @@
       max-width: 580px;
     }
   }
-
 }
