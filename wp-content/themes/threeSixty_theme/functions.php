@@ -189,20 +189,6 @@ function threeSixty_theme_breadcrumbs()
   echo ' / ';
 
   if (is_singular()) {
-    // Get the referrer URL
-    $prev_url = wp_get_referer();
-
-    if ($prev_url) {
-      // Get the previous page title
-      $prev_post_id = url_to_postid($prev_url);
-      if ($prev_post_id && $prev_url !== get_permalink()) {
-        // Avoid showing the current page twice
-        $prev_title = get_the_title($prev_post_id);
-        echo '<a href="' . esc_url($prev_url) . '">' . esc_html($prev_title) . '</a>';
-        echo ' / ';
-      }
-    }
-
     // Display the current page title
     echo '<span>' . esc_html(get_the_title()) . '</span>';
   } elseif (is_category() || is_tag() || is_tax()) {
@@ -213,7 +199,12 @@ function threeSixty_theme_breadcrumbs()
     echo '<span>' . esc_html(post_type_archive_title('', false)) . '</span>';
   } elseif (is_search()) {
     // Display the search query
-    echo '<span>' . esc_html__('Search Results for: ', 'twentytwentyone') . esc_html(get_search_query()) . '</span>';
+    if ($current_language === 'ar') {
+      $search_label = 'نتائج البحث عن : ';
+    } else {
+      $search_label = __('Search Results for : ', 'twentytwentyone');
+    }
+    echo '<span>' . esc_html($search_label) . esc_html(get_search_query()) . '</span>';
   } elseif (is_404()) {
     $not_found_label = $current_language === 'ar' ? '404 لم يتم العثور على الصفحة' : '404 Not Found';
     echo '<span>' . esc_html($not_found_label) . '</span>';
