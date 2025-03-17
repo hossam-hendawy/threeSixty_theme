@@ -188,10 +188,13 @@ function threeSixty_theme_breadcrumbs()
   // Add the separator
   echo ' / ';
 
-  if (is_singular()) {
-    // Display the current page title
+  if (is_singular('post')){
     echo '<a href="' . site_url('blog') . '">Blog</a>';
     echo ' / ';
+  }
+
+  if (is_singular()) {
+    // Display the current page title
     echo '<span>' . esc_html(get_the_title()) . '</span>';
   } elseif (is_category() || is_tag() || is_tax()) {
     // Display the term name for categories, tags, and custom taxonomies
