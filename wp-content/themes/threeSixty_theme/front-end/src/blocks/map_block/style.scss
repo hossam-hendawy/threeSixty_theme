@@ -3,9 +3,12 @@
 
 // @author HOSSAM
 .map_block {
-  padding-block: 40px;
-  @include min-medium-screen {
-    padding-block: 80px 85px;
+  padding-block: 40px 80px;
+  @include media-screen-768{
+    padding-block: 60px 90px;
+  }
+  @include large-screen {
+    padding-block: 80px 185px;
   }
 
   .content-wrapper {
@@ -13,9 +16,10 @@
     @include marginX(auto);
     text-align: center;
     max-width: 620px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     @include large-screen {
       max-width: 768px;
+      margin-bottom: 80px;
     }
 
     .title {
@@ -36,10 +40,12 @@
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     box-shadow: 0 0 1px 1px $threeSixty_theme_gold;
     background-color: $threeSixty_theme_gold;
+    top: 48%;
+    left: 54%;
     animation: hotspot-circle 2s infinite;
     @keyframes hotspot-circle {
       0% {
@@ -49,9 +55,9 @@
         box-shadow: 0 0 0 10px rgba(202, 133, 4, 0);
       }
     }
-    top: 48%;
-    left: 54%;
     @include min-media-screen-600 {
+      width: 8px;
+      height: 8px;
       top: 48.5%;
       left: 54.8%;
     }
@@ -67,6 +73,7 @@
       top: 48.2%;
       left: 55%;
     }
+
     &.sa {
       top: 48%;
       left: 58.6%;
@@ -155,13 +162,8 @@
     }
   }
 
-
   .image-wrapper {
     width: 100%;
-    padding-bottom: 50px;
-    @include min-medium-screen {
-      padding-bottom: 85px;
-    }
     @include large-screen {
       padding-inline: 96px;
     }
@@ -170,4 +172,6 @@
       padding-top: 47.16%;
     }
   }
+
 }
+
