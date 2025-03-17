@@ -190,6 +190,8 @@ function threeSixty_theme_breadcrumbs()
 
   if (is_singular()) {
     // Display the current page title
+    echo '<a href="' . site_url('blog') . '">Blog</a>';
+    echo ' / ';
     echo '<span>' . esc_html(get_the_title()) . '</span>';
   } elseif (is_category() || is_tag() || is_tax()) {
     // Display the term name for categories, tags, and custom taxonomies
