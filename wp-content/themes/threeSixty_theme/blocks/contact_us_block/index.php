@@ -83,7 +83,7 @@ $get_in_touch_description = get_field('get_in_touch_description');
           $information_title = get_sub_field('information_title');
           $information_description = get_sub_field('information_description');
           $icon = get_sub_field('icon');
-          $number = get_sub_field('number');
+          $text = get_sub_field('text');
           ?>
         <div class="information-support flex-col">
           <?php if ($information_title) { ?>
@@ -92,14 +92,14 @@ $get_in_touch_description = get_field('get_in_touch_description');
           <?php if ($information_description) { ?>
           <div class="text-md information-description"><?= $information_description ?></div>
           <?php } ?>
-          <?php if ($number) { ?>
+          <?php if ($text) { ?>
           <div class="phone-number text-md medium">
             <?php if ($icon) { ?>
             <picture class="icon cover-image">
               <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
             </picture>
             <?php } ?>
-            <?= $number ?>
+            <?= $text ?>
           </div>
           <?php } ?>
         </div>
@@ -110,6 +110,4 @@ $get_in_touch_description = get_field('get_in_touch_description');
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->

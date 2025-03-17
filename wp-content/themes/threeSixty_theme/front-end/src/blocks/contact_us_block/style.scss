@@ -7,6 +7,7 @@
   @include min-medium-screen {
     padding-block: 87px 128px;
   }
+
   .cards-wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,30 +17,38 @@
       gap: 0;
       flex-direction: row;
     }
+
     .left-content {
       width: 100%;
       @include min-medium-screen {
         width: 42.83%;
       }
+
+      .content {
+        p {
+          color: #535862;
+        }
+      }
+
       .title {
         color: #181D27;
       }
-      .description {
-        color: #535862;
-      }
+
+
       .steps-cards {
         margin-top: 24px;
-        gap: 24px;
         @include min-medium-screen {
           margin-top: 48px;
-          gap: 48px;
         }
+
         .step-card {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
           position: relative;
+
           .left-step {
+            background: $threeSixty_theme_white;
             color: $threeSixty_theme_gold;
             font-family: $inter;
             font-size: 23px;
@@ -54,18 +63,24 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            z-index: 2;
 
           }
+
           .right-step {
             width: 85%;
             gap: 8px;
             @include small-screen {
               width: 80%;
             }
+
             .info-title {
               color: $threeSixty_theme_gray-950;
             }
+
             .info-description {
+              max-width: 420px;
+
               p {
                 font-weight: 400;
               }
@@ -75,26 +90,41 @@
         }
       }
     }
+
     .right-content {
       width: 100%;
       @include min-medium-screen {
         width: 50%;
+        margin-top: -409px;
       }
+
       .get-in-touch {
         padding: 48px 55px 54px;
         border-radius: 15px;
         background: $threeSixty_theme_white;
         box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
+
+        min-height: 775px;
+
         .get-in-touch-title {
-          color:  #181D27;
+          color: #181D27;
 
         }
+
         .get-in-touch-description {
           margin-top: 24px;
+
           p {
             color: #535862;
+
+            strong {
+              font-weight: 500;
+            }
+
             a {
               color: $threeSixty_theme_brand-700;
+              font-weight: 500;
+
               &:hover {
                 color: $threeSixty_theme_gold;
               }
@@ -102,6 +132,7 @@
           }
         }
       }
+
       .bottom-content {
         display: flex;
         align-items: center;
@@ -116,6 +147,7 @@
         @include min-medium-screen {
           margin-top: 92px;
         }
+
         .information-support {
           padding: 24px;
           border-radius: 10px;
@@ -125,17 +157,33 @@
           @include small-screen {
             width: 100%;
           }
+
           .information-title {
             color: #1F2A37;
           }
+
           .information-description {
             color: $threeSixty_theme_gray-600;
+
+            p {
+              font-weight: 400;
+            }
           }
+
           .phone-number {
             display: flex;
             align-items: center;
             gap: 10px;
             color: $threeSixty_theme_brand-700;
+
+            p, a {
+              color: $threeSixty_theme_brand-700;
+              transition: color $duration;
+              &:hover {
+                color: $threeSixty_theme_gold;
+              }
+            }
+
             .icon {
               @include square(20px);
             }
@@ -143,5 +191,29 @@
         }
       }
     }
+  }
+
+  .step-card {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+
+      @include min-medium-screen {
+        padding-bottom: 48px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 23px;
+        width: 1px;
+        height: 100%;
+        background: $threeSixty_theme_gold;
+      }
+
+    }
+
   }
 }

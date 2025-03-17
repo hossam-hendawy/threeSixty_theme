@@ -257,23 +257,23 @@
                 },
                 {
                     "key": "field_67c8e1ab77c52",
-                    "label": "Number",
-                    "name": "number",
+                    "label": "Text",
+                    "name": "text",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "small-field",
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 1,
                     "parent_repeater": "field_67c8dd516715e"
                 }
             ]
@@ -297,5 +297,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741218389
+    "modified": 1742255363
 }
