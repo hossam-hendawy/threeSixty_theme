@@ -4,7 +4,10 @@
 // @author DELL
 .contact_us_block {
   padding-block: 44px 65px;
-  @include min-medium-screen {
+  @include min-medium-screen{
+    padding-block: 87px 80px;
+  }
+  @include large-screen {
     padding-block: 87px 128px;
   }
 
@@ -19,7 +22,7 @@
     }
 
     .left-content {
-      width: 100%;
+      max-width: 520px;
       @include min-medium-screen {
         width: 42.83%;
       }
@@ -103,9 +106,11 @@
         border-radius: 15px;
         background: $threeSixty_theme_white;
         box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
+        min-height: 400px;
 
-        min-height: 775px;
-
+        @include min-medium-screen{
+          min-height: 775px;
+        }
         .get-in-touch-title {
           color: #181D27;
 
@@ -144,7 +149,10 @@
           flex-direction: column;
           gap: 20px;
         }
-        @include min-medium-screen {
+        @include min-medium-screen{
+          margin-top: 50px;
+        }
+        @include large-screen {
           margin-top: 92px;
         }
 
@@ -156,6 +164,12 @@
           width: 48.02%;
           @include small-screen {
             width: 100%;
+          }
+          @include min-medium-screen{
+            padding-inline: 18px;
+          }
+          @include large-screen{
+            padding: 24px;
           }
 
           .information-title {
@@ -214,6 +228,5 @@
       }
 
     }
-
   }
 }
