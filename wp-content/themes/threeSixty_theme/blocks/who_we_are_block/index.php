@@ -36,18 +36,18 @@ $image = get_field('image');
 
 <div class="container">
   <div class="cards-wrapper">
-    <div class="left-content flex-col gab-20">
+    <div class="left-content flex-col gab-20 ">
       <?php if ($sub_title): ?>
-        <h1 class="text-xl sub-title"><?= $sub_title ?></h1>
+        <h1 class="text-xl sub-title iv-st-from-bottom"><?= $sub_title ?></h1>
       <?php endif; ?>
       <?php if ($title): ?>
-        <div class="title d-lg-h3"><?= $title ?></div>
+        <div class="title d-lg-h3 iv-st-from-bottom"><?= $title ?></div>
       <?php endif; ?>
       <?php if ($description): ?>
-        <div class="text-lg description"><?= $description ?></div>
+        <div class="text-lg description iv-st-from-bottom"><?= $description ?></div>
       <?php endif; ?>
       <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
-        <a class="theme-cta-button btn-white left-content-btn" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
+        <a class="theme-cta-button btn-white left-content-btn iv-st-from-bottom" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
           <?= $cta_button['title'] ?>
           <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1377_4705)">
