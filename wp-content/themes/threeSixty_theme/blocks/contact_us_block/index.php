@@ -38,10 +38,10 @@ $get_in_touch_description = get_field('get_in_touch_description');
     <div class="left-content">
       <div class="flex-col gab-20 content">
         <?php if ($title) { ?>
-        <h5 class="bold title"><?= $title ?></h5>
+        <h5 class="bold title iv-st-from-bottom"><?= $title ?></h5>
         <?php } ?>
         <?php if ($description) { ?>
-        <div class="text-xl"><?= $description ?></div>
+        <div class="text-xl iv-st-from-bottom"><?= $description ?></div>
         <?php } ?>
       </div>
       <?php if (have_rows('step')) { ?>
@@ -52,7 +52,7 @@ $get_in_touch_description = get_field('get_in_touch_description');
           $info_description = get_sub_field('info_description');
           $index = get_row_index();
           ?>
-        <div class="step-card">
+        <div class="step-card iv-st-from-bottom">
           <div class="left-step"><?= $index ?></div>
           <div class="right-step flex-col">
             <?php if ($info_title) { ?>
@@ -67,7 +67,7 @@ $get_in_touch_description = get_field('get_in_touch_description');
       </div>
       <?php } ?>
     </div>
-    <div class="right-content">
+    <div class="right-content iv-st-from-bottom">
       <div class="get-in-touch">
         <?php if ($get_in_touch_title) { ?>
         <h3 class="get-in-touch-title bold"><?= $get_in_touch_title ?></h3>
@@ -85,7 +85,7 @@ $get_in_touch_description = get_field('get_in_touch_description');
           $icon = get_sub_field('icon');
           $text = get_sub_field('text');
           ?>
-        <div class="information-support flex-col">
+        <div class="information-support flex-col iv-st-from-bottom">
           <?php if ($information_title) { ?>
           <h3 class="text-xl bold information-title"><?= $information_title ?></h3>
           <?php } ?>

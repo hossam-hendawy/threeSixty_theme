@@ -52,18 +52,18 @@ $egypt_location_description = (is_array($egypt_location) && isset($egypt_locatio
 <div class="container">
   <div class="content-wrapper flex-col">
     <?php if ($label) { ?>
-      <div class="text-sm label-info medium"><?= $label ?></div>
+      <div class="text-sm label-info medium iv-st-from-bottom"><?= $label ?></div>
     <?php } ?>
     <?php if ($title): ?>
-      <h4 class="title semi-bold"><?= $title ?></h4>
+      <h4 class="title semi-bold iv-st-from-bottom"><?= $title ?></h4>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class=" text-xl description"><?= $description ?></div>
+      <div class=" text-xl description iv-st-from-bottom"><?= $description ?></div>
     <?php endif; ?>
   </div>
+  <?php if (!empty($image) && is_array($image)) { ?>
   <div class="image-wrapper">
-    <?php if (!empty($image) && is_array($image)) { ?>
-      <div class="image cover-image aspect-ratio">
+      <div class="image cover-image aspect-ratio iv-st-from-bottom">
         <img class="map-image" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
         <div class="circle hotspot-circle">
           <a href="<?= $egypt_location_link ?>" class="hidden-content flex-col" target="_blank" aria-label="map (opens in a new tab)">
@@ -102,10 +102,8 @@ $egypt_location_description = (is_array($egypt_location) && isset($egypt_locatio
           </a>
         </div>
       </div>
-    <?php } ?>
   </div>
-
-
+  <?php } ?>
   <div class="ccc" style="display:none;">
 
      <svg class="ssssssssss" xmlns="http://www.w3.org/2000/svg" width="449" height="518" viewBox="0 0 449 518" fill="none"><g opacity="0.8" clip-path="url(#clip0_243_7188)"><path d="M149.575 518L449 517.195L298.589 258.734L149.575 518Z" fill="url(#paint0_linear_243_7188)"></path><path d="M0 259.022L149.475 0H449L298.589 258.734L149.575 518L0 259.022Z" fill="url(#paint1_linear_243_7188)"></path></g><defs><linearGradient id="paint0_linear_243_7188" x1="299" y1="259" x2="235.178" y2="501.181" gradientUnits="userSpaceOnUse"><stop></stop><stop offset="1" stop-color="#3E4A5B"></stop></linearGradient><linearGradient id="paint1_linear_243_7188" x1="158.223" y1="-2.03715e-06" x2="150.111" y2="517.873" gradientUnits="userSpaceOnUse"><stop></stop><stop offset="1" stop-color="#536279"></stop></linearGradient><clipPath id="clip0_243_7188"><rect width="449" height="518" fill="white"></rect></clipPath></defs></svg>

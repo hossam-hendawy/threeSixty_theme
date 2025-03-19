@@ -51,13 +51,13 @@ if ($programmatic_or_manual === 'programmatic') {
 <div class="container">
   <div class="overview-content gab-20 flex-col">
     <?php if ($sub_title): ?>
-      <h2 class="text-xl gold center-text sub-title"><?= $sub_title ?></h2>
+      <h2 class="text-xl gold center-text sub-title iv-st-from-bottom"><?= $sub_title ?></h2>
     <?php endif; ?>
     <?php if ($title): ?>
-      <h3 class="d-lg-h3 gray-950 bold center-text overview-title"><?= $title ?></h3>
+      <h3 class="d-lg-h3 gray-950 bold center-text overview-title iv-st-from-bottom"><?= $title ?></h3>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="text-xl gray-500 center-text overview-description"><?= $description ?></div>
+      <div class="text-xl gray-500 center-text overview-description iv-st-from-bottom"><?= $description ?></div>
     <?php endif; ?>
   </div>
   <?php if (have_rows('service_benefits')) { ?>
@@ -68,7 +68,7 @@ if ($programmatic_or_manual === 'programmatic') {
         $title = get_sub_field('title');
         $description = get_sub_field('description');
         ?>
-        <div class="services-card">
+        <div class="services-card iv-st-from-bottom">
           <?php if (!empty($icon) && is_array($icon)) { ?>
             <picture class="icon-wrapper">
               <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
@@ -87,7 +87,7 @@ if ($programmatic_or_manual === 'programmatic') {
     </div>
   <?php } ?>
   <?php if ($programmatic_or_manual === "manual") { ?>
-    <div class="content-wrapper">
+    <div class="content-wrapper iv-st-from-bottom">
       <?php
       $cards = get_field("package_card");
       if (is_array($cards)) {
@@ -98,7 +98,7 @@ if ($programmatic_or_manual === 'programmatic') {
       ?>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
-    <div class="content-wrapper">
+    <div class="content-wrapper iv-st-from-bottom">
         <?php while ($the_query->have_posts()) {
           $the_query->the_post();
           get_template_part("partials/package-card", "", ["post_id" => get_the_ID()]);

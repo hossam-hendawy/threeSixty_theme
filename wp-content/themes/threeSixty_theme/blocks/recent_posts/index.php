@@ -51,14 +51,14 @@ if ($programmatic_or_manual === 'programmatic') {
   <div class="cards-wrapper">
     <div class="recent-content flex-col">
       <?php if ($title) { ?>
-        <h3 class="d-lg-h3 bold recent-content-title"><?= $title ?></h3>
+        <h3 class="d-lg-h3 bold recent-content-title iv-st-from-bottom"><?= $title ?></h3>
       <?php } ?>
       <?php if ($description) { ?>
-        <div class="text-xl gray-500"><?= $description ?></div>
+        <div class="text-xl gray-500 iv-st-from-bottom"><?= $description ?></div>
       <?php } ?>
     </div>
     <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
-      <a class="theme-cta-button btn-white left-content-btn" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
+      <a class="theme-cta-button btn-white left-content-btn iv-st-from-bottom" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
         <?= $cta_button['title'] ?>
         <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none">
           <g clip-path="url(#clip0_1377_4705)">
@@ -75,7 +75,7 @@ if ($programmatic_or_manual === 'programmatic') {
     <?php } ?>
   </div>
   <?php if ($programmatic_or_manual === "manual") { ?>
-    <div class="swiper recent-posts-swiper recent-posts-in-home">
+    <div class="swiper recent-posts-swiper recent-posts-in-home iv-st-from-bottom">
       <div class="swiper-wrapper">
         <?php
         $cards = get_field("post_card");
@@ -88,7 +88,7 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
-    <div class="swiper recent-posts-swiper recent-posts-in-home">
+    <div class="swiper recent-posts-swiper recent-posts-in-home iv-st-from-bottom">
       <div class="swiper-wrapper">
         <?php while ($the_query->have_posts()) {
           $the_query->the_post();
@@ -98,7 +98,7 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
     </div>
   <?php } ?>
-  <div class="swiper-navigations">
+  <div class="swiper-navigations iv-st-from-bottom">
     <div class="swiper-button-prev swiper-navigation arrow" role="button" tabindex="0" aria-label="Previous Slide">
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
         <path class="border" d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="Red"/>

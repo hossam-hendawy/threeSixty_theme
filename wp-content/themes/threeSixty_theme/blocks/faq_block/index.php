@@ -39,13 +39,13 @@ $faqs_posts = get_field('faq_card');
   <div class="accordion">
     <div class="content flex-col gab-20">
       <?php if ($sub_title): ?>
-        <div class="text-xl sub-title uppercase-text"><?= $sub_title ?></div>
+        <div class="text-xl sub-title uppercase-text iv-st-from-bottom"><?= $sub_title ?></div>
       <?php endif; ?>
       <?php if ($title): ?>
-        <div class="d-lg-h3 bold main-title title"><?= $title ?></div>
+        <div class="d-lg-h3 bold main-title title iv-st-from-bottom"><?= $title ?></div>
       <?php endif; ?>
       <?php if ($description): ?>
-        <div class="text-xl description center-text"><?= $description ?></div>
+        <div class="text-xl description center-text iv-st-from-bottom"><?= $description ?></div>
       <?php endif; ?>
     </div>
     <?php if (have_rows('faq_card')) { ?>
@@ -54,7 +54,7 @@ $faqs_posts = get_field('faq_card');
         $question = get_sub_field('question');
         $answer = get_sub_field('answer');
         ?>
-        <div class="accordion-panel" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="accordion-panel iv-st-from-bottom" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <?php if ($question) { ?>
             <div id="panel2-title" class="title">
               <button class="accordion-trigger medium" aria-expanded="false">

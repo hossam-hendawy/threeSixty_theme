@@ -41,10 +41,10 @@ $description = get_field('description');
         ?>
         <div class="content ">
           <?php if ($title) { ?>
-            <h3 class="title d-lg-h3 bold"><?= $title ?></h3>
+            <h3 class="title d-lg-h3 bold iv-st-from-bottom"><?= $title ?></h3>
           <?php } ?>
           <?php if ($description) { ?>
-            <div class="description text-md gray-500"><?= $description ?></div>
+            <div class="description text-md gray-500 iv-st-from-bottom"><?= $description ?></div>
           <?php } ?>
         </div>
       <?php } ?>
