@@ -50,17 +50,18 @@ if ($programmatic_or_manual === 'programmatic') {
 <div class="container">
   <div class="top-content flex-col">
     <?php if ($sub_title): ?>
-      <h1 class="text-xl sub-title text-center"><?= $sub_title ?></h1>
+      <h1 class="text-xl sub-title text-center iv-st-from-bottom"><?= $sub_title ?></h1>
     <?php endif; ?>
     <?php if ($title): ?>
-      <h3 class="bold title text-center"><?= $title ?></h3>
+      <h3 class="bold title text-center iv-st-from-bottom"><?= $title ?></h3>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="text-lg description text-center"><?= $description ?></div>
+      <div class="text-lg description text-center iv-st-from-bottom"><?= $description ?></div>
     <?php endif; ?>
   </div>
+
   <?php if (have_rows('offering')) { ?>
-    <div class="swiper-wrapper ">
+    <div class="swiper-wrapper iv-st-from-bottom">
       <?php while (have_rows('offering')) {
         the_row();
         $offering_image = get_sub_field('offering_image');
@@ -104,7 +105,7 @@ if ($programmatic_or_manual === 'programmatic') {
   <?php } ?>
 
   <?php if ($programmatic_or_manual === "manual") { ?>
-    <div class="swiper offering-cards">
+    <div class="swiper offering-cards iv-st-from-bottom">
       <div class="swiper-wrapper">
         <?php
         $cards = get_field("service_card");
@@ -117,7 +118,7 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
     </div>
   <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
-    <div class="swiper offering-cards">
+    <div class="swiper offering-cards iv-st-from-bottom">
       <div class="swiper-wrapper">
         <?php while ($the_query->have_posts()) {
           $the_query->the_post();
@@ -128,7 +129,7 @@ if ($programmatic_or_manual === 'programmatic') {
       </div>
     </div>
   <?php } ?>
-  <div class="swiper-navigations">
+  <div class="swiper-navigations iv-st-from-bottom">
     <div class="swiper-button-prev swiper-navigation arrow" role="button" tabindex="0" aria-label="Previous Slide">
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
         <path class="border" d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="Red"/>
