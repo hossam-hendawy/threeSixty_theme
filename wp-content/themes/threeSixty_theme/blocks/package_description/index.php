@@ -39,19 +39,19 @@ $image = get_field('image');
   <div class="cards-wrapper <?= $position_image === 'right' ? 'content-reverse' : "" ?>">
     <div class="left-content flex-col gab-40">
       <?php if ($title): ?>
-        <div class="semi-bold title d-sm-h5"><?= $title ?></div>
+        <div class="semi-bold title d-sm-h5 iv-st-from-bottom"><?= $title ?></div>
       <?php endif; ?>
       <?php if ($description): ?>
-        <div class="text-lg description"><?= $description ?></div>
+        <div class="text-lg description iv-st-from-bottom"><?= $description ?></div>
       <?php endif; ?>
     </div>
-    <div class="right-image">
-      <?php if (!empty($image) && is_array($image)) { ?>
+    <?php if (!empty($image) && is_array($image)) { ?>
+    <div class="right-image iv-st-from-bottom">
         <picture class="image image-wrapper cover-image aspect-ratio">
           <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
         </picture>
-      <?php } ?>
     </div>
+    <?php } ?>
   </div>
 </div>
 </section>

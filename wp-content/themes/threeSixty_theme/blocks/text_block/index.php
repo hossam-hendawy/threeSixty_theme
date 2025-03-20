@@ -40,10 +40,10 @@ if (isset($block)) {
         ?>
         <div class="content ">
           <?php if ($title) { ?>
-            <h5 class="title d-sm-h5 bold"><?= $title ?></h5>
+            <h5 class="title d-sm-h5 bold iv-st-from-bottom"><?= $title ?></h5>
           <?php } ?>
           <?php if ($description) { ?>
-            <div class="description text-lg gray-500"><?= $description ?></div>
+            <div class="description text-lg gray-500 iv-st-from-bottom"><?= $description ?></div>
           <?php } ?>
         </div>
       <?php } ?>

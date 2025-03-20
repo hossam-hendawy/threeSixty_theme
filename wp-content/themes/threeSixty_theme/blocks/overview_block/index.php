@@ -35,13 +35,13 @@ $description = get_field('description');
 <div class="container">
   <div class="overview-content gab-20 flex-col">
     <?php if ($sub_title): ?>
-      <h2 class="text-xl gold center-text sub-title"><?= $sub_title ?></h2>
+      <h2 class="text-xl gold center-text sub-title iv-st-from-bottom"><?= $sub_title ?></h2>
     <?php endif; ?>
     <?php if ($title): ?>
-      <h3 class="d-lg-h3 gray-950 bold center-text overview-title"><?= $title ?></h3>
+      <h3 class="d-lg-h3 gray-950 bold center-text overview-title iv-st-from-bottom"><?= $title ?></h3>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="text-xl gray-500 center-text overview-description"><?= $description ?></div>
+      <div class="text-xl gray-500 center-text overview-description iv-st-from-bottom"><?= $description ?></div>
     <?php endif; ?>
   </div>
 </div>

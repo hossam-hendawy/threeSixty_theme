@@ -36,13 +36,13 @@ $cta_button = get_field('cta_button');
 <div class="container">
   <div class="overview-content gab-20 flex-col">
     <?php if ($sub_title): ?>
-      <h2 class="text-xl gold center-text sub-title"><?= $sub_title ?></h2>
+      <h2 class="text-xl gold center-text sub-title iv-st-from-bottom"><?= $sub_title ?></h2>
     <?php endif; ?>
     <?php if ($title): ?>
-      <h3 class="d-lg-h3 gray-950 bold center-text overview-title"><?= $title ?></h3>
+      <h3 class="d-lg-h3 gray-950 bold center-text overview-title iv-st-from-bottom"><?= $title ?></h3>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="text-xl gray-500 center-text overview-description"><?= $description ?></div>
+      <div class="text-xl gray-500 center-text overview-description iv-st-from-bottom"><?= $description ?></div>
     <?php endif; ?>
   </div>
   <div class="cards-wrapper">
@@ -54,7 +54,7 @@ $cta_button = get_field('cta_button');
         $title = get_sub_field('title');
         $description = get_sub_field('description');
         ?>
-        <div class="services-card">
+        <div class="services-card iv-st-from-bottom">
           <?php if (!empty($icon) && is_array($icon)) { ?>
             <picture class="icon-wrapper">
               <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
@@ -72,7 +72,7 @@ $cta_button = get_field('cta_button');
       <?php } ?>
     </div>
   <?php } ?>
-    <div class="content-wrapper">
+    <div class="content-wrapper iv-st-from-bottom">
       <?php
       $cards = get_field("package_card");
       if (is_array($cards)) {
@@ -84,7 +84,7 @@ $cta_button = get_field('cta_button');
     </div>
   </div>
   <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
-    <a class="theme-cta-button btn-white featured-btn" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
+    <a class="theme-cta-button btn-white featured-btn iv-st-from-bottom" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
       <?= $cta_button['title'] ?>
       <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1377_4705)">
