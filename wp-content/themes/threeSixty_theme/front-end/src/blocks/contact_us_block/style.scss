@@ -4,7 +4,7 @@
 // @author DELL
 .contact_us_block {
   padding-block: 44px 65px;
-  @include min-medium-screen{
+  @include min-medium-screen {
     padding-block: 87px 80px;
   }
   @include large-screen {
@@ -108,9 +108,10 @@
         box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
         min-height: 400px;
 
-        @include min-medium-screen{
+        @include min-medium-screen {
           min-height: 775px;
         }
+
         .get-in-touch-title {
           color: #181D27;
 
@@ -149,7 +150,7 @@
           flex-direction: column;
           gap: 20px;
         }
-        @include min-medium-screen{
+        @include min-medium-screen {
           margin-top: 50px;
         }
         @include large-screen {
@@ -165,10 +166,10 @@
           @include small-screen {
             width: 100%;
           }
-          @include min-medium-screen{
+          @include min-medium-screen {
             padding-inline: 18px;
           }
-          @include large-screen{
+          @include large-screen {
             padding: 24px;
           }
 
@@ -193,6 +194,7 @@
             p, a {
               color: $threeSixty_theme_brand-700;
               transition: color $duration;
+
               &:hover {
                 color: $threeSixty_theme_gold;
               }
@@ -229,4 +231,38 @@
 
     }
   }
+
+  .form-wrapper {
+    margin-top: 48px;
+
+    .quform-sub-label, .quform-label > label {
+      color: #1F2A37;
+      font-family: $inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+    }
+
+    input, textarea {
+      border-radius: 8px;
+      border: 1px solid #D2D6DB;
+      background: #FFF;
+      padding: 10px 14px;
+    }
+
+    textarea {
+      height: 85px;
+    }
+
+    .quform-label > label > .quform-required {
+      color: #4D5761;
+      font-family: $inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+
 }

@@ -30,6 +30,7 @@ $title = get_field('title');
 $description = get_field('description');
 $get_in_touch_title = get_field('get_in_touch_title');
 $get_in_touch_description = get_field('get_in_touch_description');
+$form = get_field('form');
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
@@ -75,6 +76,9 @@ $get_in_touch_description = get_field('get_in_touch_description');
         <?php if ($get_in_touch_description) { ?>
         <div class="get-in-touch-description text-xl"><?= $get_in_touch_description ?></div>
         <?php } ?>
+        <div class="form-wrapper">
+          <?= $form?>
+        </div>
       </div>
       <?php if (have_rows('information_card')) { ?>
       <div class="bottom-content">
