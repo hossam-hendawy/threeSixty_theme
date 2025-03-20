@@ -235,6 +235,14 @@
   .form-wrapper {
     margin-top: 48px;
 
+
+    .quform .quform-element-group>.quform-spacer, .quform .quform-inner-name .quform-spacer {
+
+      .quform-inner {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
     .quform-sub-label, .quform-label > label {
       color: #1F2A37;
       font-family: $inter;
@@ -244,6 +252,10 @@
       line-height: 20px; /* 142.857% */
     }
 
+    .quform-element-column, .quform-options-columns>.quform-option {
+      padding-inline: 16px;
+
+    }
     input, textarea {
       border-radius: 8px;
       border: 1px solid #D2D6DB;
