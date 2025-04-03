@@ -111,7 +111,7 @@
         @include large-screen {
           box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
           min-height: 775px;
-          padding: 48px 55px 54px;
+          padding: 48px 55px 36px;
 
         }
 
@@ -276,6 +276,7 @@
       padding: 10px 14px;
       height: 44px;
       @include input-style;
+
       &::placeholder {
         @include input-style;
       }
@@ -308,7 +309,7 @@
       transition: background-color $duration;
 
       &:hover {
-        background-color: $threeSixty_theme_gold;
+        background-color: $threeSixty_theme_brand-600;
       }
     }
 
@@ -332,7 +333,7 @@
       line-height: 100%;
       padding: 0;
       flex-shrink: 0;
-      @include media-screen-768{
+      @include media-screen-768 {
         font-size: 20px;
       }
 
@@ -361,8 +362,46 @@
     .quform-loading {
       display: none !important;
     }
+
+    input[type="checkbox"] {
+      width: 20px !important;
+      height: 20px !important;
+      border-radius: 6px;
+      border: 1px solid #CDD5DF !important;
+      border: none !important;
+    }
+
+
+    .quform-option {
+      margin-top: 32px;
+      .quform-option-label{
+        padding-left: 12px;
+      }
+
+
+      .quform-option-text {
+        color: #4B5565;
+        font-family: $inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+
+        a {
+          text-decoration-line: underline !important;
+          transition: color $duration;
+
+          &:hover {
+            color: $threeSixty_theme_brand-600;
+          }
+        }
+      }
+    }
   }
 
+  .quform-edit-form {
+    display: none;
+  }
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
