@@ -33,7 +33,7 @@ $marketing_icon = get_field('marketing_icon');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="overview-content flex-col">
+  <div class="overview-content flex-col iv-st-from-bottom">
     <?php if ($title): ?>
       <h4 class="bold overview-title"><?= $title ?></h4>
     <?php endif; ?>
@@ -43,7 +43,7 @@ $marketing_icon = get_field('marketing_icon');
     <?php endif; ?>
   </div>
   <?php if (have_rows('marketing_services')) { ?>
-    <div class="marketing-services-cards">
+    <div class="marketing-services-cards iv-st-from-bottom">
       <?php while (have_rows('marketing_services')) {
         the_row();
         $marketing_title = get_sub_field('marketing_title');

@@ -34,7 +34,7 @@ $cta_button = get_field('cta_button');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="marketing-cards flex-col gab-20">
+  <div class="marketing-cards flex-col gab-20 iv-st-from-bottom">
     <?php if ($title) { ?>
       <h4 class="bold text-center marketing-title"><?= $title ?></h4>
     <?php } ?>

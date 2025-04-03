@@ -52,7 +52,7 @@ $note_icon = get_field('note_icon', $post_id);
     <section id="block_67a8210050f5e" class="threeSixty_theme-block package_block js-loaded" data-section-class="package_block">
       <div class="container">
         <div class="content-wrapper">
-          <div class="left-content-wrapper flex-col">
+          <div class="left-content-wrapper flex-col iv-st-from-bottom">
             <?php if (have_rows('service_benefits')) { ?>
               <?php while (have_rows('service_benefits')) {
                 the_row();
@@ -78,7 +78,7 @@ $note_icon = get_field('note_icon', $post_id);
               <?php } ?>
             <?php } ?>
           </div>
-          <div class="right-content-wrapper">
+          <div class="right-content-wrapper iv-st-from-bottom">
             <div class="package-box-wrapper">
               <div class="package-title-and-price">
                 <div class="icon-and-package-title">
