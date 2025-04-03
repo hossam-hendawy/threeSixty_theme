@@ -56,6 +56,4 @@ $image = get_field('image');
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
