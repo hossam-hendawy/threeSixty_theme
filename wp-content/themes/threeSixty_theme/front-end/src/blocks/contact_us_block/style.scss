@@ -236,12 +236,21 @@
     margin-top: 48px;
 
 
-    .quform .quform-element-group>.quform-spacer, .quform .quform-inner-name .quform-spacer {
+    .quform-spacer {
+      margin-bottom: 0;
+      padding-bottom: 18px;
+    }
+
+    .quform .quform-element-group > .quform-spacer, .quform .quform-inner-name .quform-spacer {
 
       .quform-inner {
         display: flex;
         flex-direction: column-reverse;
       }
+    }
+
+    .quform-label {
+      margin-bottom: 6px;
     }
     .quform-sub-label, .quform-label > label {
       color: #1F2A37;
@@ -252,19 +261,37 @@
       line-height: 20px; /* 142.857% */
     }
 
-    .quform-element-column, .quform-options-columns>.quform-option {
+    .quform-element-column, .quform-options-columns > .quform-option {
       padding-inline: 16px;
 
     }
+
     input, textarea {
       border-radius: 8px;
       border: 1px solid #D2D6DB;
       background: #FFF;
       padding: 10px 14px;
+      height: 44px;
+      color: #9DA4AE;
+      font-family: $inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      &::placeholder{
+        color: #9DA4AE;
+        font-family: $inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
     }
 
     textarea {
       height: 85px;
+      padding: 10px 14px !important;
     }
 
     .quform-label > label > .quform-required {
@@ -274,6 +301,35 @@
       font-style: normal;
       font-weight: 500;
       line-height: 20px; /* 142.857% */
+    }
+
+    .quform-element-submit {
+      border-radius: 4px;
+      background: #344054;
+      height: 48px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 11px;
+      margin-bottom: 0;
+    }
+
+    .quform-element-submit>div {
+      width: 100%;
+      height: 100%;
+      max-width: unset;
+    }
+    .quform-element-submit button {
+      width: 100%;
+      height: 100%;
+      color: $threeSixty_theme_white;
+      font-family: $inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      padding: 0;
     }
   }
 
