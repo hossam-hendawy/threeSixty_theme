@@ -102,14 +102,17 @@
       }
 
       .get-in-touch {
-        padding: 48px 55px 54px;
+        padding: 20px;
         border-radius: 15px;
         background: $threeSixty_theme_white;
-        box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
+        box-shadow: 0 -9px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
         min-height: 400px;
 
-        @include min-medium-screen {
+        @include large-screen {
+          box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
           min-height: 775px;
+          padding: 48px 55px 54px;
+
         }
 
         .get-in-touch-title {
@@ -235,7 +238,6 @@
   .form-wrapper {
     margin-top: 48px;
 
-
     .quform-spacer {
       margin-bottom: 0;
       padding-bottom: 18px;
@@ -252,6 +254,7 @@
     .quform-label {
       margin-bottom: 6px;
     }
+
     .quform-sub-label, .quform-label > label {
       color: #1F2A37;
       font-family: $inter;
@@ -272,21 +275,10 @@
       background: #FFF;
       padding: 10px 14px;
       height: 44px;
-      color: #9DA4AE;
-      font-family: $inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      &::placeholder{
-        color: #9DA4AE;
-        font-family: $inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
+      @include input-style;
+      &::placeholder {
+        @include input-style;
       }
-
     }
 
     textarea {
@@ -313,24 +305,78 @@
       justify-content: center;
       margin-top: 11px;
       margin-bottom: 0;
+      transition: background-color $duration;
+
+      &:hover {
+        background-color: $threeSixty_theme_gold;
+      }
     }
 
-    .quform-element-submit>div {
+    .quform-element-submit > div {
+      flex-shrink: 0;
       width: 100%;
       height: 100%;
       max-width: unset;
+      margin: 0;
+      padding: 0;
     }
+
     .quform-element-submit button {
       width: 100%;
       height: 100%;
       color: $threeSixty_theme_white;
       font-family: $inter;
-      font-size: 20px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 600;
       line-height: 100%;
       padding: 0;
+      flex-shrink: 0;
+      @include media-screen-768{
+        font-size: 20px;
+      }
+
+    }
+
+    span.quform-button-submit-text {
+      position: relative;
+      flex-shrink: 0;
+
+      &:after {
+        content: "";
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2220%22%20viewBox%3D%220%200%2016%2020%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M10.67%2019.28H0L5.36%209.99L10.67%2019.28Z%22%20fill%3D%22%23D0D5DD%22/%3E%3Cpath%20d%3D%22M16%2010L10.67%200.72H0L5.36%209.99L10.67%2019.28L16%2010Z%22%20fill%3D%22%23F2F4F7%22/%3E%3C/svg%3E') no-repeat center;
+        background-size: contain;
+        position: absolute !important;
+        width: 18.56px !important;
+        height: 16px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+        left: calc(100% + 15px);
+        cursor: pointer !important;
+        pointer-events: none !important;
+        transition: transform $duration !important;
+      }
+    }
+
+    .quform-loading {
+      display: none !important;
     }
   }
 
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    @include input-style;
+    outline: none;
+    color: #9DA4AE !important;
+    caret-color: #9DA4AE;
+    -webkit-text-fill-color: #9DA4AE;
+    -webkit-box-shadow: 0 0 0 1000px $threeSixty_theme_white inset;
+  }
 }
