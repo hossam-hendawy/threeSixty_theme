@@ -36,25 +36,23 @@ $image = get_field('image');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="cards-wrapper <?= $position_image === 'right' ? 'content-reverse' : "" ?>">
+  <div class="cards-wrapper iv-st-from-bottom <?= $position_image === 'right' ? 'content-reverse' : "" ?>">
     <div class="left-content flex-col gab-40">
       <?php if ($title): ?>
-        <div class="semi-bold title d-sm-h5 iv-st-from-bottom"><?= $title ?></div>
+        <div class="semi-bold title d-sm-h5"><?= $title ?></div>
       <?php endif; ?>
       <?php if ($description): ?>
-        <div class="text-lg description iv-st-from-bottom"><?= $description ?></div>
+        <div class="text-lg description"><?= $description ?></div>
       <?php endif; ?>
     </div>
     <?php if (!empty($image) && is_array($image)) { ?>
-    <div class="right-image iv-st-from-bottom">
+      <div class="right-image">
         <picture class="image image-wrapper cover-image aspect-ratio">
           <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
         </picture>
-    </div>
+      </div>
     <?php } ?>
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->

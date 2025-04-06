@@ -12,7 +12,7 @@ $has_border = $has_border ? ' block-has-border' : ' ';
 <?php if (!$hide_get_in_touch) { ?>
   <section id="block_6797a0278885a" class="threeSixty_theme-block get_in_touch_block  block-has-border" data-section-class="get_in_touch_block">
     <div class="container">
-      <div class="join-us-card">
+      <div class="join-us-card iv-st-from-bottom">
         <!-- image -->
         <?php if (!empty($image) && is_array($image)) { ?>
           <picture class="question-svg">

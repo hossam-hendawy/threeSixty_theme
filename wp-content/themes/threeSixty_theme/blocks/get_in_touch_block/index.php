@@ -36,7 +36,7 @@ $cta_button = get_field('cta_button');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="join-us-card">
+  <div class="join-us-card iv-st-from-bottom">
     <!-- image -->
     <?php if (!empty($image) && is_array($image)) { ?>
       <picture class="question-svg">

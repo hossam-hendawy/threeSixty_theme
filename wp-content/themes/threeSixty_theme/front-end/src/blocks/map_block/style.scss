@@ -177,11 +177,11 @@
   .ccc {
     display: none;
     position: relative;
-    width: 800px;
-
+    max-width: size(1215);
     background: black;
     z-index: 2;
     height: 518px;
+
     .sdd {
       position: absolute;
       top: 0;
