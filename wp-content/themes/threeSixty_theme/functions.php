@@ -175,43 +175,39 @@ include 'wp-general/global-variables.php';
 
 // endregion wp general
 
+
 function threeSixty_theme_breadcrumbs()
 {
-  global $current_language;
-
-  $home_label = $current_language === 'ar' ? 'الرئيسية' : 'Home';
-
   // Start the breadcrumb with a link to the home page
   echo '<nav class="site-breadcrumb">';
+
+  // 🏠 الكلمة "Home" أو "الرئيسية"
+  $home_label = apply_filters('wpml_translate_single_string', 'Home', 'theme-breadcrumbs', 'Home Label');
   echo '<a href="' . esc_url(home_url('/')) . '">' . esc_html($home_label) . '</a>';
 
   // Add the separator
   echo ' / ';
 
-  if (is_singular('post')){
-    echo '<a href="' . site_url('blog') . '">Blog</a>';
+  if (is_singular('post')) {
+    // 📄 الكلمة "Blog"
+    $blog_label = apply_filters('wpml_translate_single_string', 'Blog', 'theme-breadcrumbs', 'Blog Label');
+    echo '<a href="' . site_url('blog') . '">' . esc_html($blog_label) . '</a>';
     echo ' / ';
   }
 
   if (is_singular()) {
-    // Display the current page title
     echo '<span>' . esc_html(get_the_title()) . '</span>';
   } elseif (is_category() || is_tag() || is_tax()) {
-    // Display the term name for categories, tags, and custom taxonomies
     echo '<span>' . esc_html(single_term_title('', false)) . '</span>';
   } elseif (is_post_type_archive()) {
-    // Display the post type archive title
     echo '<span>' . esc_html(post_type_archive_title('', false)) . '</span>';
   } elseif (is_search()) {
-    // Display the search query
-    if ($current_language === 'ar') {
-      $search_label = 'نتائج البحث عن : ';
-    } else {
-      $search_label = __('Search Results for : ', 'twentytwentyone');
-    }
+    // 🔍 "Search Results for :"
+    $search_label = apply_filters('wpml_translate_single_string', 'Search Results for : ', 'theme-breadcrumbs', 'Search Label');
     echo '<span>' . esc_html($search_label) . esc_html(get_search_query()) . '</span>';
   } elseif (is_404()) {
-    $not_found_label = $current_language === 'ar' ? '404 لم يتم العثور على الصفحة' : '404 Not Found';
+    // ❌ "404 Not Found"
+    $not_found_label = apply_filters('wpml_translate_single_string', '404 Not Found', 'theme-breadcrumbs', '404 Label');
     echo '<span>' . esc_html($not_found_label) . '</span>';
   }
 
@@ -239,3 +235,11 @@ include 'custom-acf-fields/acf-table-field/acf-table.php';
 //include_once __DIR__ . '/acf-my-new-field/init.php';
 
 
+
+function register_breadcrumb_strings_for_wpml() {
+  do_action('wpml_register_single_string', 'theme-breadcrumbs', 'Home Label', 'Home');
+  do_action('wpml_register_single_string', 'theme-breadcrumbs', 'Blog Label', 'Blog');
+  do_action('wpml_register_single_string', 'theme-breadcrumbs', 'Search Label', 'Search Results for : ');
+  do_action('wpml_register_single_string', 'theme-breadcrumbs', '404 Label', '404 Not Found');
+}
+add_action('init', 'register_breadcrumb_strings_for_wpml');
