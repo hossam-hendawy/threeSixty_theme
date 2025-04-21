@@ -33,6 +33,7 @@
       gap: 70px 96px;
       grid-template-columns: repeat(2, 1fr);
     }
+
     .marketing-services-card {
       display: flex;
       align-items: center;
@@ -63,7 +64,7 @@
         .title, .description p {
           text-align: center;
           @include media-screen-768 {
-            text-align: left;
+            text-align: start;
           }
         }
 

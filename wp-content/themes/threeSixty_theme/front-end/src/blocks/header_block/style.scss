@@ -56,16 +56,6 @@ header {
 
     .flag-wrapper {
       margin-bottom: 0;
-
-      body.rtl & {
-        .arabic-wrapper {
-          display: flex;
-        }
-
-        .english-wrapper {
-          display: none;
-        }
-      }
     }
   }
 

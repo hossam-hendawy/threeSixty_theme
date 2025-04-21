@@ -1030,23 +1030,9 @@ body.rtl {
     }
   }
 
-  .arabic-wrapper {
-    display: none;
-  }
-
   svg {
     width: 32px;
     height: 21.333px;
-  }
-
-  body.rtl & {
-    .arabic-wrapper {
-      display: flex;
-    }
-
-    .english-wrapper {
-      display: none;
-    }
   }
 }
 
