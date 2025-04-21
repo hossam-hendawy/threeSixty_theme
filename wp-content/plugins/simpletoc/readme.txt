@@ -1,10 +1,10 @@
 === SimpleTOC - Table of Contents Block ===
 Contributors: MarcDK
-Tags: TOC, Table of Contents, Gutenberg, block, FAQ
+Tags: TOC, Table of Contents, Gutenberg, Block, Accessibility
 Requires at least: 5.9
 Donate link: https://marc.tv/out/donate
 Tested up to: 6.7
-Stable tag: 6.6.0
+Stable tag: 6.7.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,6 +20,10 @@ The maximum depth of the toc can be configured in in the blocks' sidebar among m
 SimpleTOC is open-source and developed on [GitHub Pages](https://github.com/mtoensing/SimpleTOC). If you find a bug or have an idea for a feature please feel free to contribute and create a pull request. 
 
 [Spin up](https://demo.tastewp.com/simpletoc) a new WordPress instance with the SimpleTOC plugin already installed.
+
+= Accessibility =
+
+This plugin is designed & developed for WCAG 2.2 level AA conformance. The plugin is tested with assistive technology and intended to be accessible, however some third party plugins or themes may affect the individual accessibility on a given website. If you find an accessibility issue, please let us know and we'll try to address it promptly.
 
 = Features =
 
@@ -51,6 +55,13 @@ SimpleTOC is open-source and developed on [GitHub Pages](https://github.com/mtoe
 * Works with popular AMP plugins.
 
 == Changelog ==
+
+= 6.7.2 = 
+* Added: Support for GenerateBlocks 2.0. Thanks @blronaldhuereca 
+* Added: Included an accessibility statement in the plugin description. Thanks Gen Herres.
+
+= 6.6.1 = 
+* Added: Initialize the JavaScript for the TOC accordion on page load or after the document has fully loaded. Thanks blronaldhuereca https://github.com/mtoensing/simpletoc/pull/63 
 
 = 6.6.0 =
 * Added: Testest compatibility with WordPress 6.7

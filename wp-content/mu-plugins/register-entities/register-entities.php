@@ -14,6 +14,7 @@ require_once 'entities/Entity.php';
 global $entities;
 $entities = [
     'Testimonials',
+    'Faqs',
     'Packages',
     'Services',
     ];
@@ -60,4 +61,3 @@ add_action('save_post', function () {
     $className::save_post();
   }, $entities);
 });
-
