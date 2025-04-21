@@ -144,7 +144,6 @@
 
       .bottom-content {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         margin-top: 45px;
         flex-wrap: wrap;
@@ -226,7 +225,7 @@
         content: '';
         position: absolute;
         top: 0;
-        left: 23px;
+        inset-inline-start: 23px;
         width: 1px;
         height: 100%;
         background: $threeSixty_theme_gold;

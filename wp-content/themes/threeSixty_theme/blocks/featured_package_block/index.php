@@ -34,20 +34,20 @@ $cta_button = get_field('cta_button');
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
-  <div class="overview-content gab-20 flex-col">
+  <div class="overview-content gab-20 flex-col iv-st-from-bottom">
     <?php if ($sub_title): ?>
-      <h2 class="text-xl gold center-text sub-title iv-st-from-bottom"><?= $sub_title ?></h2>
+      <h2 class="text-xl gold center-text sub-title"><?= $sub_title ?></h2>
     <?php endif; ?>
     <?php if ($title): ?>
-      <h3 class="d-lg-h3 gray-950 bold center-text overview-title iv-st-from-bottom"><?= $title ?></h3>
+      <h3 class="d-lg-h3 gray-950 bold center-text overview-title"><?= $title ?></h3>
     <?php endif; ?>
     <?php if ($description): ?>
-      <div class="text-xl gray-500 center-text overview-description iv-st-from-bottom"><?= $description ?></div>
+      <div class="text-xl gray-500 center-text overview-description"><?= $description ?></div>
     <?php endif; ?>
   </div>
   <div class="cards-wrapper">
   <?php if (have_rows('service_benefits')) { ?>
-    <div class="services-cards">
+    <div class="services-cards iv-st-from-bottom">
       <?php while (have_rows('service_benefits')) {
         the_row();
         $icon = get_sub_field('icon');
@@ -72,7 +72,7 @@ $cta_button = get_field('cta_button');
       <?php } ?>
     </div>
   <?php } ?>
-    <div class="content-wrapper iv-st-from-bottom">
+    <div class="content-wrapper">
       <?php
       $cards = get_field("package_card");
       if (is_array($cards)) {
@@ -101,6 +101,4 @@ $cta_button = get_field('cta_button');
   <?php } ?>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->

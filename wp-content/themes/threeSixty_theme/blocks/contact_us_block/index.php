@@ -46,14 +46,14 @@ $form = get_field('form');
         <?php } ?>
       </div>
       <?php if (have_rows('step')) { ?>
-      <div class="steps-cards flex-col">
+      <div class="steps-cards iv-st-from-bottom  flex-col">
         <?php while (have_rows('step')) {
           the_row();
           $info_title = get_sub_field('info_title');
           $info_description = get_sub_field('info_description');
           $index = get_row_index();
           ?>
-        <div class="step-card iv-st-from-bottom">
+        <div class="step-card ">
           <div class="left-step"><?= $index ?></div>
           <div class="right-step flex-col">
             <?php if ($info_title) { ?>

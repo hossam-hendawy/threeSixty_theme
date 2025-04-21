@@ -532,12 +532,6 @@ ol.theme-unordered-list-element {
 
   &.swiper-button-prev {
     left: 0;
-
-
-    body.rtl & {
-      transform: scale(-1);
-    }
-
   }
 
   &.swiper-button-next {
@@ -557,6 +551,11 @@ ol.theme-unordered-list-element {
 
     pointer-events: none
   }
+
+  body.rtl & {
+    transform: scale(-1);
+  }
+
 }
 
 // endregion swiper navigation
@@ -1049,4 +1048,9 @@ body.rtl {
       display: none;
     }
   }
+}
+
+
+#wpadminbar {
+  display: none;
 }

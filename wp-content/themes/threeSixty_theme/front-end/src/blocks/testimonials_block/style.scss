@@ -19,9 +19,9 @@
     width: 665px;
     height: 162px;
     top: 42px;
-    right: 12%;
+    inset-inline-end: 12%;
     display: none;
-    @include large-screen{
+    @include large-screen {
       display: block;
     }
   }
@@ -60,15 +60,14 @@
     align-items: center;
     @include large-screen {
       padding-right: 0;
-      padding-left: 36px;
+      padding-inline-start: 36px;
     }
     @include x-large-screen {
       padding-right: 0;
-      padding-left: 120px !important;
+      padding-inline-start: 120px !important;
       max-width: 1440px;
       margin: 0 auto;
     }
-
 
 
     // desktop
@@ -91,20 +90,20 @@
         display: flex;
         flex-direction: column;
         max-width: 314px;
+        flex-shrink: 0;
       }
-
     }
 
     .testimonials-swiper {
       padding-inline: 24px 38px;
       padding-block: 28px;
       @include large-screen {
-        padding-left: 29px;
+        padding-inline-start: 29px;
         padding-inline: 0;
 
       }
       @include xx-large-screen {
-        padding-left: 76px;
+        padding-inline-start: 76px;
       }
 
       .testimonial-card {
@@ -163,12 +162,13 @@
     }
   }
 
-  .swiper-slide{
+  .swiper-slide {
     height: auto;
   }
+
   .swiper-wrapper {
-    @include x-large-screen{
-      padding-left: 60px;
+    @include x-large-screen {
+      padding-inline-start: 60px;
     }
   }
 
