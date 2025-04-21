@@ -84,7 +84,7 @@
 
   .accordion-trigger .toggle-open {
     position: absolute;
-    right: 0;
+    inset-inline-end: 0;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -145,6 +145,12 @@
       p {
         color: $threeSixty_theme_gray-500;
       }
+    }
+  }
+
+  body.rtl & {
+    .toggle-open {
+
     }
   }
 

@@ -11,12 +11,12 @@
   }
 
   .logo {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
     display: none;
     @include media-screen-992 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
       width: 548px;
       height: 241%;
       display: block;
@@ -24,7 +24,7 @@
     @include min-medium-screen {
       display: block;
       width: 664px;
-      height: 161%;
+      height: 200%;
     }
     @include large-screen {
       width: 736px;
@@ -111,6 +111,18 @@
 
         img {
           object-fit: contain;
+        }
+      }
+    }
+  }
+
+
+  body.rtl & {
+    .left-content {
+      p {
+        text-align: center;
+        @include media-screen-992 {
+          text-align: right;
         }
       }
     }

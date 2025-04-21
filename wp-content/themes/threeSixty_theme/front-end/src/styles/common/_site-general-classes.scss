@@ -532,6 +532,12 @@ ol.theme-unordered-list-element {
 
   &.swiper-button-prev {
     left: 0;
+
+
+    body.rtl & {
+      transform: scale(-1);
+    }
+
   }
 
   &.swiper-button-next {

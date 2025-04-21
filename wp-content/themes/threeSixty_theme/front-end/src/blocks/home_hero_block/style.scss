@@ -148,4 +148,13 @@
       }
     }
   }
+
+
+  body.rtl & {
+    .image {
+      img{
+        transform: scaleX(-1);
+      }
+    }
+  }
 }

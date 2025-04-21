@@ -348,6 +348,10 @@ $base-size: 10;
     background-color: $threeSixty_theme_brand-600;
   }
 
+  body.rtl & {
+   flex-direction: row-reverse;
+  }
+
 }
 
 @mixin under-line {

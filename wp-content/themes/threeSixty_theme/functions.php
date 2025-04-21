@@ -235,11 +235,17 @@ include 'custom-acf-fields/acf-table-field/acf-table.php';
 //include_once __DIR__ . '/acf-my-new-field/init.php';
 
 
+function t($text, $context = 'theme-breadcrumbs', $name = '') {
+  return apply_filters('wpml_translate_single_string', $text, $context, $name ?: $text);
+}
+
 
 function register_breadcrumb_strings_for_wpml() {
   do_action('wpml_register_single_string', 'theme-breadcrumbs', 'Home Label', 'Home');
   do_action('wpml_register_single_string', 'theme-breadcrumbs', 'Blog Label', 'Blog');
   do_action('wpml_register_single_string', 'theme-breadcrumbs', 'Search Label', 'Search Results for : ');
   do_action('wpml_register_single_string', 'theme-breadcrumbs', '404 Label', '404 Not Found');
+  do_action('wpml_register_single_string', 'text', 'Explore More Label', 'Explore More');
+  do_action('wpml_register_single_string', 'text', 'This package includes: Label', 'This package includes:');
 }
 add_action('init', 'register_breadcrumb_strings_for_wpml');

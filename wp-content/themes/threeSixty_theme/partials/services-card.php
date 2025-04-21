@@ -24,13 +24,12 @@ $cta_icon = get_field('cta_icon', $post_id);
       </div>
     <?php } ?>
     <a class="theme-cta-button offering-btn btn-white" href="<?= $post_permalink ?>" target="_self">
-      Explore More
+      <?= $text_label = t('Explore More', 'text', 'Explore More Label'); ?>
       <?php if (!empty($cta_icon) && is_array($cta_icon)) { ?>
         <picture class="icon" aria-hidden="true">
           <img src="<?= $cta_icon['url'] ?>" alt="<?= $cta_icon['alt'] ?>">
         </picture>
       <?php } ?>
-
     </a>
   </div>
 </div>

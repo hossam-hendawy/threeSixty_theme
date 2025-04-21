@@ -33,8 +33,9 @@ $package_includes_icon = get_field('package_includes_icon', $post_id);
       <?php endif; ?>
     </div>
     <div class="package-includes">
-      <div class="package-includes-title text-md semi-bold">This
-        package includes:</div>
+      <div class="package-includes-title text-md semi-bold">
+        <?= $text_label = t('This package includes:', 'text', 'This package includes: Label'); ?>
+      </div>
       <div class="package-includes-wrapper">
         <?php
         if (have_rows('package_includes', $post_id)) {
@@ -62,7 +63,7 @@ $package_includes_icon = get_field('package_includes_icon', $post_id);
     </div>
     <div class="cta-button-wrapper">
       <a class="theme-cta-button" href="<?= $post_permalink ?>" target="_self">
-        Explore More
+        <?= $text_label = t('Explore More', 'text', 'Explore More Label'); ?>
         <svg aria-hidden="true" width="18" height="21" viewBox="0 0 18 21" fill="none">
           <path d="M11.878 20.23H0.38L6.156 10.22L11.878 20.23Z" fill="#9AA4B2"/>
           <path d="M17.621 10.231L11.881 0.23H0.38L6.155 10.22L11.878 20.23L17.621 10.231Z" fill="#F9F9FB"/>
