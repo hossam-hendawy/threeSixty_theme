@@ -7,7 +7,7 @@ $post_id = get_the_ID();
 $package_target = get_field('package_target', $post_id);
 $post_title = get_the_title($post_id);
 $package_description = get_field('package_description', $post_id);
-$image = get_field('image' , $post_id);
+$image = get_field('image', $post_id);
 
 // package block
 $package_title = get_field('package_title', $post_id);
@@ -104,7 +104,7 @@ $note_icon = get_field('note_icon', $post_id);
                 <?php endif; ?>
               </div>
               <div class="package-includes">
-                <div class="package-includes-title text-md semi-bold">This package includes:</div>
+                <div class="package-includes-title text-md semi-bold"><?= $text_label = t('This package includes:', 'text', 'This package includes: Label'); ?></div>
                 <div class="package-includes-wrapper">
                   <?php if (have_rows('package_includes', $post_id)) { ?>
                     <?php while (have_rows('package_includes', $post_id)) {

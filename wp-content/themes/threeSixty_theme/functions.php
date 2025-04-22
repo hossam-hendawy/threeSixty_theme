@@ -247,6 +247,7 @@ function register_breadcrumb_strings_for_wpml() {
   do_action('wpml_register_single_string', 'theme-breadcrumbs', '404 Label', '404 Not Found');
   do_action('wpml_register_single_string', 'text', 'Explore More Label', 'Explore More');
   do_action('wpml_register_single_string', 'text', 'This package includes: Label', 'This package includes:');
+  do_action('wpml_register_single_string', 'text', 'This package includes: Label', 'This package includes:');
   do_action('wpml_register_single_string', 'text', 'Contact Label', 'Contact');
   do_action('wpml_register_single_string', 'text', 'Help & Support Label', 'Help & Support');
   do_action('wpml_register_single_string', 'text', 'Back Label', 'Back');

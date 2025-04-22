@@ -220,39 +220,45 @@ body.home {
   .isolation-mode {
     width: 363px;
     height: 92%;
-    right: 50%;
+    inset-inline-end: 50%;
     transform: translateX(50%);
+
+    body.rtl & {
+      transform: translateX(-50%);
+    }
     @include media-screen-600 {
-      transform: translateX(0);
-      right: -9px;
+      transform: translateX(0) !important;
+      inset-inline-end: -9px;
       width: 369px;
       height: 94%;
     }
     @include media-screen-768 {
       width: 345px;
       height: 88%;
-      right: 27px;
+      inset-inline-end: 27px;
     }
     @include media-screen-992 {
       width: 380px;
       height: 98%;
-      right: 60px;
+      inset-inline-end: 60px;
     }
     @include min-medium-screen {
       width: 389px;
       height: 88%;
-      right: 72px;
+      inset-inline-end: 72px;
       top: -5px;
     }
     @include large-screen {
-      right: 98px;
+      inset-inline-end: 98px;
       width: 449px;
       height: 100%;
     }
     @include x-large-screen {
-      right: 126px;
+      inset-inline-end: 126px;
       top: -10px;
     }
+
+
   }
 }
 
@@ -260,37 +266,37 @@ body.home {
   .isolation-mode {
     width: 363px;
     height: 92%;
-    right: 50%;
+    inset-inline-end: 50%;
     transform: translateX(50%);
     @include media-screen-600 {
       transform: translateX(0);
-      right: -9px;
+      inset-inline-end: -9px;
       width: 369px;
       height: 94%;
     }
     @include media-screen-768 {
       width: 345px;
       height: 88%;
-      right: 27px;
+      inset-inline-end: 27px;
     }
     @include media-screen-992 {
       width: 380px;
       height: 98%;
-      right: 60px;
+      inset-inline-end: 60px;
     }
     @include min-medium-screen {
       width: 381px;
       height: 444px;
-      right: 75px;
+      inset-inline-end: 75px;
       top: -5px;
     }
     @include large-screen {
-      right: 98px;
+      inset-inline-end: 98px;
       width: 511px;
       height: 502px;
     }
     @include x-large-screen {
-      right: 160px;
+      inset-inline-end: 160px;
       top: 10px;
     }
   }
@@ -299,15 +305,15 @@ body.home {
 .service-hero-in-single-page {
   .isolation-mode {
     @include min-medium-screen {
-      right: 0;
+      inset-inline-end: 0;
       width: 519px;
     }
     @include large-screen {
-      right: 32px;
+      inset-inline-end: 32px;
       width: 549px;
     }
     @include x-large-screen {
-      right: 114px;
+      inset-inline-end: 114px;
     }
   }
 }
@@ -1038,9 +1044,4 @@ body.rtl {
     width: 32px;
     height: 21.333px;
   }
-}
-
-
-#wpadminbar {
-  display: none;
 }

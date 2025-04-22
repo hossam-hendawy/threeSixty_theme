@@ -92,8 +92,8 @@ $note_icon = get_field('note_icon', $post_id);
           <?php endif; ?>
         </div>
         <div class="package-includes">
-          <div class="package-includes-title text-md semi-bold">This package
-            includes:
+          <div class="package-includes-title text-md semi-bold">
+            <?= $text_label = t('This package includes:', 'text', 'This package includes: Label'); ?>
           </div>
           <div class="package-includes-wrapper">
             <?php if (have_rows('package_includes', $post_id)) { ?>
