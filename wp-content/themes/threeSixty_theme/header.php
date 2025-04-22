@@ -295,7 +295,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                   <svg width="9" height="14" viewBox="0 0 9 14" fill="none" aria-hidden="true">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.96337e-07 6.92177L7.65076 0.299006L9 1.49262L2.69485 6.94426L8.84436 12.5105L7.49847 13.7012L2.96337e-07 6.92177Z" fill="#818093"></path>
                   </svg>
-                  Back
+                  <?= $text_label = t('Back', 'text', 'Back Label'); ?>
                 </div>
                 <div class="left-content">
                   <?php if ($select_content === 'services') {
@@ -354,7 +354,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                     ?>
                     <div class="info-box-card">
                       <h5 class="text-xl text-uppercase white-color bold right-content-title">
-                        Help & Support
+                        <?= $text_label = t('Help & Support', 'text', 'Help & Support Label'); ?>
                       </h5>
                       <div class="info-box-wrapper">
                         <?php if (!empty($help_and_support['links'])) : ?>
@@ -383,7 +383,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                     ?>
                     <div class="info-box-card">
                       <h5 class="text-xl text-uppercase white-color bold right-content-title">
-                        Contact
+                        <?= $text_label = t('Contact', 'text', 'Contact Label'); ?>
                       </h5>
                       <div class="info-box-wrapper">
                         <?php if (!empty($contact['links'])) : ?>

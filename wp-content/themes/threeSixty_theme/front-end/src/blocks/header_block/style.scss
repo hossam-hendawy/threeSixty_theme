@@ -80,6 +80,10 @@ header {
       @include media-screen-768 {
         display: none;
       }
+
+      body.rtl & {
+        margin-right: auto;
+      }
     }
 
     svg {
@@ -215,10 +219,13 @@ header {
     @include max-medium-screen {
       position: fixed;
       top: 0;
-      right: 0;
+      inset-inline-end: 0;
       transform: translateX(100%);
       width: 100%;
       transition: transform 300ms ease-in;
+      body.rtl & {
+        transform: translateX(-100%);
+      }
     }
 
     .nav-item {
@@ -232,7 +239,7 @@ header {
     }
 
     &.header-links-active {
-      transform: translateX(0);
+      transform: translateX(0) !important;
     }
   }
 
@@ -303,7 +310,6 @@ header {
     align-items: center;
     gap: 5px;
 
-
     @include min-medium-screen {
       &.active {
         .nav-item {
@@ -318,6 +324,10 @@ header {
           }
         }
       }
+    }
+
+    body.rtl & {
+      flex-direction: row-reverse;
     }
   }
 
@@ -471,6 +481,7 @@ header {
             }
           }
         }
+
         @include min-medium-screen {
           width: 80.15%;
         }
@@ -505,6 +516,11 @@ header {
 
         .arrow-icon {
           transform: rotate(-90deg);
+        }
+
+        body.rtl & {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
         }
       }
     }
@@ -589,6 +605,10 @@ header {
       svg {
         path {
           fill: currentColor;
+        }
+
+        body.rtl & {
+          transform: scaleX(-1);
         }
       }
 
