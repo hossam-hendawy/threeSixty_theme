@@ -2,35 +2,36 @@
 require_once('../../../wp-load.php');
 
 header('Content-Type: application/json; charset=UTF-8');
-
 ob_clean();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+$current_lang = apply_filters('wpml_current_language', NULL);
 
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $posts_per_page = 3;
 $offset = 2 + ($page - 1) * $posts_per_page;
 
 $args = array(
-  'post_type'      => 'post',
+  'post_type' => 'post',
   'posts_per_page' => $posts_per_page,
-  'orderby'        => 'date',
-  'order'          => 'DESC',
-  'offset'         => $offset
+  'orderby' => 'date',
+  'order' => 'DESC',
+  'offset' => $offset,
+  'lang' => $current_lang
 );
 
 if (function_exists('icl_get_current_language')) {
   $current_lang = icl_get_current_language();
-  $args = array_merge($args, ['lang' => $current_lang]);
+  $args['lang'] = $current_lang;
 }
-
-$total_posts = wp_count_posts()->publish;
-$total_pages = ceil(($total_posts - 2) / $posts_per_page);
 
 $query = new WP_Query($args);
 
-$posts_html = "";
+$total_posts = $query->found_posts;
+$total_pages = ceil(($total_posts - 2) / $posts_per_page);
 
+$posts_html = "";
 if ($query->have_posts()) {
   while ($query->have_posts()) {
     $query->the_post();
@@ -49,4 +50,3 @@ echo json_encode([
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG);
 
 exit;
-

@@ -24,6 +24,7 @@ if (isset($block)) {
   endif;
 }
 /****************************
+ *
  *     Custom ACF Meta      *
  ****************************/
 ?>
@@ -51,7 +52,6 @@ if (isset($block)) {
   <div class="bottom-content-wrapper">
     <div id="post-container">
       <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
-
     </div>
   </div>
   <div class="controllers iv-st-from-bottom">
@@ -59,11 +59,11 @@ if (isset($block)) {
       <svg width="20" height="21" viewBox="0 0 20 21" fill="none" aria-hidden="true" class="arrow">
         <path d="M15.8337 10.2297H4.16699M4.16699 10.2297L10.0003 16.0631M4.16699 10.2297L10.0003 4.3964" stroke="#4B5565" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
-      Previous
+      <?= $text_label = t('Previous', 'text', 'Previous Label'); ?>
     </div>
     <div class="numbers"></div>
     <div id="next-page" class="cta-link text-sm gray-600 semi-bold">
-      Next
+      <?= $text_label = t('Next', 'text', 'Next Label'); ?>
       <svg width="20" height="21" viewBox="0 0 20 21" fill="none" class="arrow" aria-hidden="true">
         <path d="M4.16699 10.2297H15.8337M15.8337 10.2297L10.0003 4.3964M15.8337 10.2297L10.0003 16.0631" stroke="#4B5565" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
