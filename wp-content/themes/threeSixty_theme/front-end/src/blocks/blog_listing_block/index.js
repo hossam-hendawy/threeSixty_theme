@@ -26,6 +26,16 @@ const blogListingBlock = async (block) => {
     nextPageBtn.classList.toggle("disabled", currentPage >= totalPages);
   }
 
+  function scrollToBottomContent(block) {
+    const target = block.querySelector(".bottom-content-wrapper");
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }
+
   let local = true
   let url;
 
@@ -78,11 +88,7 @@ const blogListingBlock = async (block) => {
       numberElement.addEventListener("click", () => {
         if (i !== currentPage) {
           loadPosts(i);
-
-          block.querySelector(".bottom-content-wrapper").scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
+          scrollToBottomContent(block)
         }
       });
 
@@ -94,12 +100,14 @@ const blogListingBlock = async (block) => {
   nextPageBtn.addEventListener("click", function () {
     if (currentPage < totalPages) {
       loadPosts(currentPage + 1);
+      scrollToBottomContent(block)
     }
   });
 
   prevPageBtn.addEventListener("click", function () {
     if (currentPage > 1) {
       loadPosts(currentPage - 1);
+      scrollToBottomContent(block)
     }
   });
 
