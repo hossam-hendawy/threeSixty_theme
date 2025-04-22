@@ -141,7 +141,6 @@ $current_lang = apply_filters('wpml_current_language', NULL);
 <div class="page-transition"></div>
 <a skip-to-main-content href="#main-content"> <?= __('Skip to main content', 'threeSixty_theme') ?></a>
 <?= $code_after_body_tag ?>
-<!-- remove header if page template if full with no header and footer-->
 <main id="main-content" class="theme-wp-site-blocks">
   <header class="threeSixty-header">
     <div class="container">
