@@ -251,8 +251,10 @@ function register_breadcrumb_strings_for_wpml() {
   do_action('wpml_register_single_string', 'text', 'Contact Label', 'Contact');
   do_action('wpml_register_single_string', 'text', 'Help & Support Label', 'Help & Support');
   do_action('wpml_register_single_string', 'text', 'Back Label', 'Back');
-
-
-
+  do_action('wpml_register_single_string', 'text', 'Copied Label', 'Copied');
+  do_action('wpml_register_single_string', 'text', 'Copied Label', 'Copied');
+  do_action('wpml_register_single_string', 'text', 'Copy link Label', 'Copy link');
+  do_action('wpml_register_single_string', 'text', 'Previous Label', 'Previous');
+  do_action('wpml_register_single_string', 'text', 'Next Label', 'Next');
 }
 add_action('init', 'register_breadcrumb_strings_for_wpml');

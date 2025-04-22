@@ -6,7 +6,11 @@ ob_clean();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$current_lang = apply_filters('wpml_current_language', NULL);
+$lang = $_GET['lang'] ?? 'en';
+
+if (function_exists('do_action')) {
+  do_action('wpml_switch_language', $lang);
+}
 
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $posts_per_page = 3;
@@ -18,16 +22,10 @@ $args = array(
   'orderby' => 'date',
   'order' => 'DESC',
   'offset' => $offset,
-  'lang' => $current_lang
+  'lang' => $lang
 );
 
-if (function_exists('icl_get_current_language')) {
-  $current_lang = icl_get_current_language();
-  $args['lang'] = $current_lang;
-}
-
 $query = new WP_Query($args);
-
 $total_posts = $query->found_posts;
 $total_pages = ceil(($total_posts - 2) / $posts_per_page);
 

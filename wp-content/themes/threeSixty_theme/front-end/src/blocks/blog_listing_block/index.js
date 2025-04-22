@@ -9,7 +9,7 @@ import {animations} from "../../scripts/general/animations";
  */
 const blogListingBlock = async (block) => {
   let currentPage = 1;
-  let totalPages = 1; // سيتم تحديثها بناءً على الـ API
+  let totalPages = 1;
 
   const prevPageBtn = block.querySelector("#prev-page");
   const nextPageBtn = block.querySelector("#next-page");
@@ -36,16 +36,18 @@ const blogListingBlock = async (block) => {
     }
   }
 
-  let local = true
+  const currentLangAttr = document.documentElement.lang || 'en';
+  const currentLang = currentLangAttr === 'en-US' ? 'en' : currentLangAttr;
+
+  let local = false
   let url;
 
   function loadPosts(page) {
     if (local) {
-      url = `${window.location.origin}/threeSixty_theme/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+      url = `${window.location.origin}/threeSixty_theme/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}&lang=${currentLang}`;
     } else {
-      url = `${window.location.origin}/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}`;
+      url = `${window.location.origin}/wp-content/themes/threeSixty_theme/load-posts.php?page=${page}&lang=${currentLang}`;
     }
-
 
     postContainer.innerHTML = "";
     postContainer.appendChild(loadingSpinner);
@@ -112,7 +114,6 @@ const blogListingBlock = async (block) => {
   });
 
   loadPosts(currentPage);
-
 
   animations(block);
   imageLazyLoading(block);

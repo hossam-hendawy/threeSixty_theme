@@ -86,7 +86,7 @@
 
   blockquote {
     max-width: 689px;
-    padding-left: 20px;
+    padding-inline-start: 20px;
     position: relative;
     gap: 32px;
     display: flex;
@@ -100,7 +100,7 @@
       height: 100%;
       width: 1.5px;
       background-color: $threeSixty_theme_brand-700;
-      left: 0;
+      inset-inline-start: 0;
       top: 0;
     }
 
