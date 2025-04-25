@@ -298,16 +298,6 @@ $base-size: 10;
 }
 
 
-@mixin micro-text {
-  font-family: $TitlingGothicFB;
-  font-size: 8px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 2.24px;
-  text-transform: uppercase;
-}
-
 @mixin theme-cta-style {
   display: block;
   width: fit-content;
@@ -317,7 +307,7 @@ $base-size: 10;
   background-color: $threeSixty_theme_gray-700;
   cursor: pointer;
   color: $threeSixty_theme_white;
-  font-family: $inter;
+  font-family: inherit;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -348,9 +338,9 @@ $base-size: 10;
     background-color: $threeSixty_theme_brand-600;
   }
 
-  body.rtl & {
-   flex-direction: row-reverse;
-  }
+  //body.rtl & {
+  // flex-direction: row-reverse;
+  //}
 
 }
 
@@ -432,7 +422,7 @@ $base-size: 10;
 
 @mixin input-style {
   color: #9DA4AE;
-  font-family: $inter;
+  font-family: inherit;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

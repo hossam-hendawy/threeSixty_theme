@@ -144,7 +144,9 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                       <?= $link['title'] ?>
                     </a>
                     <?php if ($has_label) { ?>
-                      <div class="label text-xs medium">new</div>
+                      <div class="label text-xs medium">
+                        <?= $text_label = t('New', 'text', 'New Label'); ?>
+                      </div>
                     <?php } ?>
                   </div>
                 <?php } ?>
@@ -175,7 +177,9 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                       </svg>
                       <?= $link['title'] ?></a>
                     <?php if ($has_label) { ?>
-                      <div class="label text-xs medium">new</div>
+                      <div class="label text-xs medium">
+                        <?= $text_label = t('New', 'text', 'New Label'); ?>
+                      </div>
                     <?php } ?>
                   </div>
                 <?php } ?>
@@ -206,7 +210,9 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                       </svg>
                       <?= $link['title'] ?></a>
                     <?php if ($has_label) { ?>
-                      <div class="label text-xs medium">new</div>
+                      <div class="label text-xs medium">
+                        <?= $text_label = t('New', 'text', 'New Label'); ?>
+                      </div>
                     <?php } ?>
                   </div>
                 <?php } ?>
@@ -238,7 +244,9 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                       </svg>
                       <?= $link['title'] ?></a>
                     <?php if ($has_label) { ?>
-                      <div class="label text-xs medium">new</div>
+                      <div class="label text-xs medium">
+                        <?= $text_label = t('New', 'text', 'New Label'); ?>
+                      </div>
                     <?php } ?>
                   </div>
                 <?php } ?>

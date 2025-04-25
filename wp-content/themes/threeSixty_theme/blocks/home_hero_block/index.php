@@ -30,11 +30,18 @@ $title = get_field('title');
 $description = get_field('description');
 $cta_button = get_field('cta_button');
 $image = get_field('image');
+$current_lang = apply_filters('wpml_current_language', NULL);
+
 ?>
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <picture class="shape">
-  <img src="<?= get_template_directory_uri() . '/images/backgrounds/ThreeSixty-Hero-header.webp' ?>" alt="cover image">
+    <?php if ($current_lang === 'ar') { ?>
+      <img src="<?= get_template_directory_uri() . '/images/backgrounds/ThreeSixty-Hero-header-ar.webp' ?>" alt="cover image">
+    <?php } elseif ($current_lang === 'en') {
+      ?>
+      <img src="<?= get_template_directory_uri() . '/images/backgrounds/ThreeSixty-Hero-header.webp' ?>" alt="cover image">
+    <?php } ?>
 </picture>
 <div class="container">
   <div class="content-wrapper">

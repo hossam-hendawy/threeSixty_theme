@@ -380,32 +380,6 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
 
 //endregion blockquote
 
-// region list and unordered list
-
-ul.theme-list-element {
-  // Margin Left for the default bullet width remove it if the bullet will be customized
-  margin-left: size(20);
-  @include font(22px, 400, 36px, $threeSixty_theme_white, $montserrat);
-
-  li {
-    font: inherit;
-    color: inherit
-  }
-}
-
-ol.theme-unordered-list-element {
-  // Margin Left for the default bullet width remove it if the bullet will be customized
-  margin-left: size(20);
-  @include font(22px, 400, 36px, $threeSixty_theme_white, $montserrat);
-
-  li {
-    font: inherit;
-    color: inherit
-  }
-}
-
-// endregion list and unordered list
-
 // region  wysiwyg
 
 .wysiwyg-block {
@@ -570,32 +544,6 @@ ol.theme-unordered-list-element {
 
 // endregion swiper navigation
 
-// region tabs
-.tabs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-
-  .tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include micro-text;
-    padding: 16px 24px;
-    border-radius: 40px;
-    color: #716A6D;
-    transition: background-color $duration, color $duration;
-    cursor: pointer;
-
-    &:hover, &.active, &.swiper-slide-active {
-      color: $threeSixty_theme_off_white;
-      background: rgba(243, 233, 231, 0.10);
-    }
-  }
-}
-
-//endregion
 
 // region site logo
 .site-logo {

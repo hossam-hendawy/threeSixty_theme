@@ -262,5 +262,6 @@ function register_breadcrumb_strings_for_wpml() {
   do_action('wpml_register_single_string', 'text', 'Previous Label', 'Previous');
   do_action('wpml_register_single_string', 'text', 'Next Label', 'Next');
   do_action('wpml_register_single_string', 'text', 'Related Posts Label', 'Related Posts');
+  do_action('wpml_register_single_string', 'text', 'New Label', 'New');
 }
 add_action('init', 'register_breadcrumb_strings_for_wpml');

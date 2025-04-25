@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background:  $threeSixty_theme_gray;
+  background: $threeSixty_theme_gray;
   //background: rgba(0, 0, 0, 0.5); /* color of the tracking area */
 }
 
@@ -337,7 +337,7 @@ svg {
 
 .no-posts {
   display: none;
-  @include font(48px, 400, 56px, $threeSixty_theme_white, $montserrat  );
+  @include font(48px, 400, 56px, $threeSixty_theme_white, inherit);
 
   &.active {
     display: block;
@@ -445,10 +445,11 @@ svg {
     right: size(20);
     z-index: 1;
     @include square(size(50));
-    @include min-medium-screen{
+    @include min-medium-screen {
       top: size(32);
       right: size(32);
     }
+
     svg {
       @include square(100%);
     }

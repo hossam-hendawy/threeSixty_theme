@@ -99,6 +99,11 @@ footer {
       height: 100%;
       object-fit: cover;
     }
+
+    body.rtl & {
+      width: 176px;
+      height: 43px;
+    }
   }
 
   .left-content-wrapper {
@@ -162,7 +167,7 @@ footer {
     background: rgba(255, 255, 255, 0.10);
     color: #EAAA08;
     text-align: center;
-    font-family: $inter;
+    font-family: inherit;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;

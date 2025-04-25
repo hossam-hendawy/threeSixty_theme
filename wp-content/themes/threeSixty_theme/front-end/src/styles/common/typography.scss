@@ -7,10 +7,14 @@ body {
   font-family: $inter;
 }
 
+body.rtl {
+  font-family: $tajawal;
+}
+
 // region font family TitlingGothicFB
 h1, .d-2xl-h1, .d-2xl-h1 p {
   color: $threeSixty_theme_gray-900;
-  font-family: $inter;
+  font-family: inherit;
   font-size: 32px;
   font-weight: 400;
   line-height: 110%;
@@ -25,7 +29,7 @@ h1, .d-2xl-h1, .d-2xl-h1 p {
 
 h2, .d-xl-h2, .d-xl-h2 p {
   color: $threeSixty_theme_gray-900;
-  font-family: $inter;
+  font-family: inherit;
   font-size: 32px;
   font-weight: 400;
   line-height: 110%;
@@ -39,7 +43,7 @@ h2, .d-xl-h2, .d-xl-h2 p {
 }
 
 h3, .d-lg-h3, .d-lg-h3 p {
-  font-family: $inter;
+  font-family: inherit;
   color: $threeSixty_theme_gray-900;
   font-size: 24px;
   font-weight: 400;
@@ -57,7 +61,7 @@ h3, .d-lg-h3, .d-lg-h3 p {
 }
 
 h4, .d-md-h4, .d-md-h4 p {
-  font-family: $inter;
+  font-family: inherit;
   color: $threeSixty_theme_gray-900;
   font-size: 28px;
   font-weight: 400;
@@ -72,7 +76,7 @@ h4, .d-md-h4, .d-md-h4 p {
 }
 
 h5, .d-sm-h5, .d-sm-h5 p {
-  font-family: $inter;
+  font-family: inherit;
   color: $threeSixty_theme_gray-900;
   font-size: 24px;
   font-weight: 400;
@@ -85,7 +89,7 @@ h5, .d-sm-h5, .d-sm-h5 p {
 }
 
 h6, .d-xs-6, .d-xs-6 p {
-  font-family: $inter;
+  font-family: inherit;
   color: $threeSixty_theme_gray-900;
   font-size: 22px;
   font-weight: 400;
@@ -98,7 +102,7 @@ h6, .d-xs-6, .d-xs-6 p {
 
 .text-lg p, .text-lg, p {
   color: $threeSixty_theme_gray-600;
-  font-family: $inter;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 400;
   line-height: 155%;
@@ -109,7 +113,7 @@ h6, .d-xs-6, .d-xs-6 p {
 }
 
 .text-xl p, .text-xl {
-  font-family: $inter;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -121,6 +125,7 @@ h6, .d-xs-6, .d-xs-6 p {
 }
 
 .text-md p, .text-md {
+  font-family: inherit;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -128,6 +133,7 @@ h6, .d-xs-6, .d-xs-6 p {
 }
 
 .text-sm p, .text-sm {
+  font-family: inherit;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -135,6 +141,7 @@ h6, .d-xs-6, .d-xs-6 p {
 }
 
 .text-xs p, .text-xs {
+  font-family: inherit;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -146,27 +153,6 @@ h6, .d-xs-6, .d-xs-6 p {
 
 .theme-cta-button {
   @include theme-cta-style;
-}
-
-.label {
-  @include micro-text;
-  display: block;
-  width: fit-content;
-  text-transform: uppercase;
-  @include flex(center, center);
-  transition: background-color $duration, color $duration;
-  background-color: transparent;
-  border-radius: 50px;
-  color: $threeSixty_theme_warm_red;
-  border: 1px solid currentColor;
-  padding: 7.2px 11.7px;
-  @include x-large-screen {
-    padding: 7.5px 12px;
-  }
-
-  &.light-label {
-    color: $threeSixty_theme_white;
-  }
 }
 
 .btn-white {
@@ -188,7 +174,7 @@ h6, .d-xs-6, .d-xs-6 p {
 
 // region cta link
 .theme-cta-link {
-  @include font(18px, 700, 24px, $threeSixty_theme_black, $montserrat);
+  @include font(18px, 700, 24px, $threeSixty_theme_black, inherit);
   transition: color $duration;
 
   &:hover {
