@@ -181,19 +181,24 @@ function threeSixty_theme_breadcrumbs()
   // Start the breadcrumb with a link to the home page
   echo '<nav class="site-breadcrumb">';
 
-  // 🏠 الكلمة "Home" أو "الرئيسية"
   $home_label = apply_filters('wpml_translate_single_string', 'Home', 'theme-breadcrumbs', 'Home Label');
   echo '<a href="' . esc_url(home_url('/')) . '">' . esc_html($home_label) . '</a>';
 
-  // Add the separator
   echo ' / ';
 
   if (is_singular('post')) {
-    // 📄 الكلمة "Blog"
     $blog_label = apply_filters('wpml_translate_single_string', 'Blog', 'theme-breadcrumbs', 'Blog Label');
-    echo '<a href="' . site_url('blog') . '">' . esc_html($blog_label) . '</a>';
+
+    if (ICL_LANGUAGE_CODE === 'ar') {
+      $blog_url = site_url('/ar/blog/');
+    } else {
+      $blog_url = site_url('/blog/');
+    }
+
+    echo '<a href="' . esc_url($blog_url) . '">' . esc_html($blog_label) . '</a>';
     echo ' / ';
   }
+
 
   if (is_singular()) {
     echo '<span>' . esc_html(get_the_title()) . '</span>';
@@ -256,5 +261,6 @@ function register_breadcrumb_strings_for_wpml() {
   do_action('wpml_register_single_string', 'text', 'Copy link Label', 'Copy link');
   do_action('wpml_register_single_string', 'text', 'Previous Label', 'Previous');
   do_action('wpml_register_single_string', 'text', 'Next Label', 'Next');
+  do_action('wpml_register_single_string', 'text', 'Related Posts Label', 'Related Posts');
 }
 add_action('init', 'register_breadcrumb_strings_for_wpml');

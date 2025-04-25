@@ -151,7 +151,9 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
     <!--     region recent posts -->
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts">
       <div class="container">
-        <h5 class="semi-bold recent-content-title">Related Posts</h5>
+        <h5 class="semi-bold recent-content-title">
+          <?= $text_label = t('Related Posts', 'text', ' Related Posts Label'); ?>
+         </h5>
         <?php
         $current_post_id = get_the_ID();
         $args = [
