@@ -23,6 +23,8 @@ $cta_icon = get_field('cta_icon', $post_id);
         <?= $service_excerpt ?>
       </div>
     <?php } ?>
+  </div>
+  <div class="theme-cta-button-wrapper">
     <a class="theme-cta-button offering-btn btn-white" href="<?= $post_permalink ?>" target="_self">
       <?= $text_label = t('Explore More', 'text', 'Explore More Label'); ?>
       <?php if (!empty($cta_icon) && is_array($cta_icon)) { ?>
