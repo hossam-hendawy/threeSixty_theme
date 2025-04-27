@@ -49,14 +49,12 @@ h3, .d-lg-h3, .d-lg-h3 p {
   font-weight: 400;
   line-height: 110%;
   font-style: normal;
-  letter-spacing: -0.96px;
   @include media-screen-992 {
     font-size: 32px;
   }
   @include large-screen {
     line-height: 125%;
     font-size: 48px;
-    letter-spacing: -0.96px;
   }
 }
 
