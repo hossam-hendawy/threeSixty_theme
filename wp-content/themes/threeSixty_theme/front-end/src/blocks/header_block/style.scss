@@ -99,6 +99,11 @@ header {
     @include media-screen-768 {
       display: flex;
     }
+
+    body.rtl & {
+      flex-direction: row-reverse;
+    }
+
   }
 
   // burger menu
