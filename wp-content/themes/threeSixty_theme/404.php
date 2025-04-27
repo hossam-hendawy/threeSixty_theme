@@ -7,9 +7,7 @@
  * @package threeSixty_theme
  */
 get_header();
-$page_title = get_field('page_title', 'options');
-$sub_title = get_field('sub_title', 'options');
-$description = get_field('description', 'options');
+$current_lang = apply_filters('wpml_current_language', NULL);
 ?>
   <section id="page_not_found" class="page_not_found" data-section-class="page_not_found" aria-labelledby="page-not-found-heading"  >
     <div class="site-logo not-found-logo" role="img" aria-labelledby="not-found-logo-description">
@@ -21,11 +19,44 @@ $description = get_field('description', 'options');
       </svg>
     </div>
     <div class="container">
-      <div class="content-wrapper flex-col gab-20">
-        <h1 class="center-text">Page Not Found</h1>
-        <p class="center-text">Oops! The page you were looking for doesn’t exit.</p>
-        <a class="theme-cta-button" href="<?= site_url() ?>">home</a>
-      </div>
+      <?php if ($current_lang === 'ar') { ?>
+        <div class="content-wrapper flex-col gab-20">
+          <h1 class="center-text">لم يتم العثور على الصفحة</h1>
+          <p class="center-text">عفواً! الصفحة التي تبحث عنها غير موجودة.</p>
+          <a class="theme-cta-button btn-white left-content-btn" href="<?= site_url() ?>">الرئيسية
+            <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none">
+              <g clip-path="url(#clip0_1377_4705)">
+                <path d="M16.6718 29L1.08116e-05 28.9549L8.37476 14.4851L16.6718 29Z" fill="#CA8504"/>
+                <path d="M25 14.5012L16.6774 -3.63794e-07L1.90735e-06 -1.09278e-06L8.37476 14.4851L16.6717 29L25 14.5012Z" fill="#EAAA08"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_1377_4705">
+                  <rect width="29" height="25" fill="white" transform="translate(25) rotate(90)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      <?php } elseif ($current_lang === 'en') {
+        ?>
+        <div class="content-wrapper flex-col gab-20">
+          <h1 class="center-text">Page Not Found</h1>
+          <p class="center-text">Oops! The page you were looking for doesn’t exit.</p>
+          <a class="theme-cta-button btn-white left-content-btn" href="<?= site_url() ?>">HOME
+            <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1377_4705)">
+                <path d="M16.6718 29L1.08116e-05 28.9549L8.37476 14.4851L16.6718 29Z" fill="#CA8504"/>
+                <path d="M25 14.5012L16.6774 -3.63794e-07L1.90735e-06 -1.09278e-06L8.37476 14.4851L16.6717 29L25 14.5012Z" fill="#EAAA08"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_1377_4705">
+                  <rect width="29" height="25" fill="white" transform="translate(25) rotate(90)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      <?php } ?>
     </div>
   </section>
 <?php

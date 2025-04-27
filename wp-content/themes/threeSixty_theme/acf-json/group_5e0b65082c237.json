@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63da2914fbf9f",
@@ -208,7 +209,8 @@
                     "min": "",
                     "max": "",
                     "elements": "",
-                    "parent_repeater": "field_63da2815fbf9a"
+                    "parent_repeater": "field_63da2815fbf9a",
+                    "bidirectional_target": []
                 },
                 {
                     "key": "field_67cf70dbe25db",
@@ -268,7 +270,8 @@
                     "min": "",
                     "max": "",
                     "elements": "",
-                    "parent_repeater": "field_63da2815fbf9a"
+                    "parent_repeater": "field_63da2815fbf9a",
+                    "bidirectional_target": []
                 },
                 {
                     "key": "field_67cf70f4e25dc",
@@ -1029,7 +1032,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6794c4b28011d",
@@ -1129,7 +1133,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_679a45d457833",
@@ -1202,7 +1207,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_61e3fb70d7e97",
@@ -1285,83 +1291,6 @@
             "new_lines": ""
         },
         {
-            "key": "field_6721213963607",
-            "label": "404",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6721214363608",
-            "label": "Page Title",
-            "name": "page_title",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "small-field",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_6721215f63609",
-            "label": "Sub Title",
-            "name": "sub_title",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "small-field",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 1
-        },
-        {
-            "key": "field_6721217a6360a",
-            "label": "Description",
-            "name": "description",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "medium-field",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 1
-        },
-        {
             "key": "field_6797b73a00dab",
             "label": "Get In Touch",
             "name": "",
@@ -1376,7 +1305,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_67b213d482b02",
@@ -1498,5 +1428,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741650852
+    "acfml_field_group_mode": "translation",
+    "modified": 1745774969
 }
