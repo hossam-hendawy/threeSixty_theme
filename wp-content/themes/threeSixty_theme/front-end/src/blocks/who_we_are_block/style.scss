@@ -4,11 +4,7 @@
 // @author DELL
 .who_we_are_block {
   position: relative;
-  padding-block: 65px;
   overflow: hidden;
-  @include min-medium-screen {
-    padding-block: 127px 124px;
-  }
 
   .logo {
     display: none;
@@ -16,23 +12,16 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 0;
-      width: 548px;
-      height: 241%;
+      inset-inline-end: 0;
+      width: auto;
+      height: 100%;
       display: block;
-    }
-    @include min-medium-screen {
-      display: block;
-      width: 664px;
-      height: 200%;
-    }
-    @include large-screen {
-      width: 736px;
-      height: 300%;
+      pointer-events: none;
     }
   }
 
   .cards-wrapper {
+    padding-block: 65px;
     position: relative;
     display: flex;
     align-items: center;
@@ -40,6 +29,8 @@
     flex-direction: column;
     gap: 50px;
     @include min-medium-screen {
+      padding-block: 127px 124px;
+
       flex-direction: row;
       gap: 0;
     }
@@ -50,8 +41,8 @@
       align-items: center;
       max-width: 620px;
       @include media-screen-992 {
-        margin-right: auto;
-        margin-left: 0;
+        margin-inline-end: auto;
+        margin-inline-start: 0;
         max-width: 100%;
         width: 46.99%;
         align-items: flex-start;
@@ -115,7 +106,6 @@
       }
     }
   }
-
 
   body.rtl & {
     .left-content {
