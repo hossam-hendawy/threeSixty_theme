@@ -37,6 +37,9 @@ $description = get_field('description');
     <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
   </picture>
 <?php } ?>
+
+
+
 <div class="container">
   <div class="content-wrapper flex-col">
     <?php if (function_exists('threeSixty_theme_breadcrumbs')) {
