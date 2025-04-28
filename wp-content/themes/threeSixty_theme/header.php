@@ -50,7 +50,9 @@
     /* region EN fonts */
     @font-face {
       font-family: 'Inter';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Regular.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Regular.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Regular.woff) format('woff');
+
       font-weight: 400;
       font-style: normal;
       font-display: swap;
@@ -58,7 +60,9 @@
 
     @font-face {
       font-family: 'Inter';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Medium.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Medium.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Medium.woff) format('woff');
+
       font-weight: 500;
       font-style: normal;
       font-display: swap;
@@ -67,7 +71,8 @@
 
     @font-face {
       font-family: 'Inter';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-SemiBold.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?> /theme-fonts/Inter/Inter_24pt-SemiBold.woff2) format('woff2') . url(<?= get_template_directory_uri() ?> /theme-fonts/Inter/Inter_24pt-SemiBold.woff) format('woff');
+
       font-weight: 600;
       font-style: normal;
       font-display: swap;
@@ -75,7 +80,8 @@
 
     @font-face {
       font-family: 'Inter';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Bold.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Bold.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Inter/Inter_24pt-Bold.woff2) format('woff');
       font-weight: 700;
       font-style: normal;
       font-display: swap;
@@ -87,7 +93,8 @@
 
     @font-face {
       font-family: 'Tajawal';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Light.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Light.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Light.woff) format('woff');
       font-weight: 300;
       font-style: normal;
       font-display: swap;
@@ -95,7 +102,8 @@
 
     @font-face {
       font-family: 'Tajawal';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Regular.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Regular.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Regular.woff) format('woff');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
@@ -103,7 +111,8 @@
 
     @font-face {
       font-family: 'Tajawal';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Medium.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Medium.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Medium.woff) format('woff');
       font-weight: 500;
       font-style: normal;
       font-display: swap;
@@ -111,7 +120,8 @@
 
     @font-face {
       font-family: 'Tajawal';
-      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Bold.woff2) format('woff2');
+      src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Bold.woff2) format('woff2'),
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Bold.woff) format('woff');
       font-weight: 700;
       font-style: normal;
       font-display: swap;
@@ -120,6 +130,7 @@
     @font-face {
       font-family: 'Tajawal';
       src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-ExtraBold.woff2) format('woff2');
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-ExtraBold.woff) format('woff');
       font-weight: 800;
       font-style: normal;
       font-display: swap;
@@ -128,6 +139,7 @@
     @font-face {
       font-family: 'Tajawal';
       src: url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Black.woff2) format('woff2');
+      url(<?= get_template_directory_uri() ?>/theme-fonts/Tajawal/Tajawal-Black.woff) format('woff');
       font-weight: 900;
       font-style: normal;
       font-display: swap;
