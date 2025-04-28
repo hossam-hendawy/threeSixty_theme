@@ -40,6 +40,7 @@ $has_border = $has_border ? ' block-has-border' : ' ';
 <?php } ?>
 <!--Footer ACF-->
 <?php
+$newsletter_subscription = get_field('newsletter_subscription', 'options');
 $footer_logo = get_field('footer_logo', 'options');
 $icon = get_field('icon', 'options');
 $main_title = get_field('main_title', 'options');
@@ -81,10 +82,11 @@ $current_lang = apply_filters('wpml_current_language', NULL);
           <?php } ?>
         </div>
       </div>
-      <div class="form-btn">
-        <?php echo do_shortcode('[gravityform id="' . $form . '" ajax="true" title="false" description="false"]'); ?>
-        <a class="theme-cta-button btn" href="">SUBSCRIBE</a>
-      </div>
+      <?php if ($newsletter_subscription): ?>
+        <div class="form-btn">
+          <?=  $newsletter_subscription ?>
+        </div>
+      <?php endif; ?>
     </div>
     <div class="content-wrapper">
       <div class="left-content">

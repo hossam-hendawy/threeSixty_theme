@@ -64,7 +64,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
         </a>
       <?php } ?>
     </div>
-    <div class="right-image">
+    <div class="right-image iv-st-from-bottom">
       <?php if (!empty($image) && is_array($image)) { ?>
         <picture class="image image-wrapper cover-image">
           <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
