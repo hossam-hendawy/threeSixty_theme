@@ -54,7 +54,7 @@ $cta_button = get_field('cta_button');
         $title = get_sub_field('title');
         $description = get_sub_field('description');
         ?>
-        <div class="services-card iv-st-from-bottom">
+        <div class="services-card">
           <?php if (!empty($icon) && is_array($icon)) { ?>
             <picture class="icon-wrapper">
               <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">

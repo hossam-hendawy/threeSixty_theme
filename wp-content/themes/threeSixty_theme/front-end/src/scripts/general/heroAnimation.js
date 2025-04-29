@@ -15,9 +15,9 @@ export  function heroAnimation(container = document) {
       {opacity: 0},
       {
         opacity: 1,
-        duration: 1.5,
+        duration: 2,
         ease: "power2.out",
-        delay: 0.5
+        delay: 1
       }
     );
   }
@@ -27,7 +27,7 @@ export  function heroAnimation(container = document) {
       {opacity: 0},
       {
         opacity: 1,
-        duration: 1.5,
+        duration: 2.5,
         ease: "power2.out",
       }
     );
