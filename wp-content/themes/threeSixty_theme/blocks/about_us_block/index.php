@@ -3,6 +3,7 @@
 // Create id attribute allowing for custom "anchor" value.
 $id = '';
 $className = $dataClass = 'about_us_block';
+$className .= ' ' . 'hero-block';
 if (isset($block)) {
   $id = 'block_' . uniqid();
   if (!empty($block['anchor'])) {
@@ -23,6 +24,7 @@ if (isset($block)) {
     return;
   endif;
 }
+
 /****************************
  *     Custom ACF Meta      *
  ****************************/
@@ -37,7 +39,6 @@ $description = get_field('description');
     <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
   </picture>
 <?php } ?>
-
 
 
 <div class="container">

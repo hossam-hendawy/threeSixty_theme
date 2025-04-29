@@ -3,6 +3,7 @@
 // Create id attribute allowing for custom "anchor" value.
 $id = '';
 $className = $dataClass = 'packages_hero';
+$className .= ' ' . 'hero-block';
 if (isset($block)) {
   $id = 'block_' . uniqid();
   if (!empty($block['anchor'])) {
