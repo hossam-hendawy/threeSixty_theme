@@ -8,7 +8,6 @@ import {getHeightOfViewPort} from './scripts/functions/getHeightOfViewPort';
 import {generateDataHover} from './scripts/functions/generateDataHover';
 import {copyToClipboard} from "./scripts/general/CopyToClipboard";
 import {initModal} from "./scripts/general/custom-modal";
-import {heroAnimation} from "./scripts/general/heroAnimation";
 import {openPopup} from "./scripts/general/open-popup";
 import {scrollToHash} from './scripts/general/scroll-to-hash';
 import {activePage} from "./scripts/general/active-page";
@@ -26,9 +25,7 @@ const reInvokableFunction = async (container = document) => {
   openPopup(container);
   copyToClipboard(container);
   updateSVGInPictures();
-  heroAnimation();
   ScrollTrigger.refresh(false);
-
 };
 let loaded = false;
 

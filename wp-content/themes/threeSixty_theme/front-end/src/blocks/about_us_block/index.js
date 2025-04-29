@@ -1,6 +1,7 @@
 import './style.scss';
 import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
+import {heroAnimation} from "../../scripts/general/heroAnimation";
 
 
 /**
@@ -9,6 +10,8 @@ import {animations} from "../../scripts/general/animations";
  * @returns {Promise<void>}
  */
 const aboutUsBlock = async (block) => {
+
+  heroAnimation(block, ".about_us_block:after");
 
   animations(block);
   imageLazyLoading(block);

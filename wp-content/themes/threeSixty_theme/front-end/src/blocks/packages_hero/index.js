@@ -1,18 +1,18 @@
 import './style.scss';
 import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
+import {heroAnimation} from "../../scripts/general/heroAnimation";
+
 /**
  * @author DELL
  * @param block {HTMLElement}
  * @returns {Promise<void>}
  */
 const packagesHero = async (block) => {
+  heroAnimation(block, ".about_us_block:after");
 
-  // add block code here
-// testing the new hidden value 
-
-    animations(block);
-    imageLazyLoading(block);
+  animations(block);
+  imageLazyLoading(block);
 };
 
 export default packagesHero;
