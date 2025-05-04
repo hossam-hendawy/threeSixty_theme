@@ -102,8 +102,11 @@ header {
 
     body.rtl & {
       flex-direction: row-reverse;
-    }
 
+      svg {
+        transform: scaleX(1);
+      }
+    }
   }
 
   // burger menu
@@ -330,10 +333,6 @@ header {
         }
       }
     }
-
-    body.rtl & {
-      flex-direction: row-reverse;
-    }
   }
 
   .arrow-icon {
@@ -452,6 +451,10 @@ header {
             height: 37px;
             flex-shrink: 0;
             margin-top: 8px;
+
+            body.rtl & {
+              transform: scaleX(-1);
+            }
           }
 
           .title-and-excerpt {
@@ -526,6 +529,10 @@ header {
         body.rtl & {
           flex-direction: row-reverse;
           justify-content: flex-end;
+
+          .arrow-icon {
+            transform: rotate(90deg);
+          }
         }
       }
     }

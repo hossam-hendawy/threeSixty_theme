@@ -358,6 +358,10 @@ footer {
             height: 12px;
             flex-shrink: 0;
             margin-top: 5.5px;
+
+            body.rtl & {
+              transform: scaleX(-1);
+            }
           }
 
           &:hover {
@@ -441,20 +445,20 @@ footer {
   }
 
   .mailster-block-form-type-content {
-    @include small-screen{
+    @include small-screen {
       width: 100% !important;
     }
   }
 
   div.wp-block-mailster-form-outside-wrapper.wp-block-mailster-form-outside-wrapper-7f41eef1.wp-block-mailster-form-outside-wrapper-10795 .mailster-wrapper {
-    @include small-screen{
+    @include small-screen {
       width: 100% !important;
     }
   }
 
   div.wp-block-mailster-form-outside-wrapper {
     margin-bottom: 0 !important;
-    @include media-screen-600{
+    @include media-screen-600 {
       height: 45px !important;
 
     }
@@ -464,7 +468,7 @@ footer {
     display: flex;
     gap: 12px;
 
-    @include media-screen-600{
+    @include media-screen-600 {
       flex-wrap: nowrap;
     }
 
@@ -482,7 +486,7 @@ footer {
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
-      @include media-screen-600{
+      @include media-screen-600 {
         width: 287px !important;
       }
     }
@@ -519,11 +523,11 @@ footer {
       line-height: 20px;
       transition: background-color $duration;
 
-      &:hover{
+      &:hover {
         background-color: #CA8504;
       }
 
-      @include media-screen-600{
+      @include media-screen-600 {
         width: 172px !important;
 
       }
@@ -548,7 +552,7 @@ footer {
       pointer-events: none !important;
       transition: transform $duration !important;
 
-      @include small-screen{
+      @include small-screen {
         top: 80% !important;
         transform: translateY(-50%);
         inset-inline-end: 96px;
