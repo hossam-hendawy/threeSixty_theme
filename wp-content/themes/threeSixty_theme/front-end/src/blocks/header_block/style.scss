@@ -527,9 +527,6 @@ header {
         }
 
         body.rtl & {
-          flex-direction: row-reverse;
-          justify-content: flex-end;
-
           .arrow-icon {
             transform: rotate(90deg);
           }

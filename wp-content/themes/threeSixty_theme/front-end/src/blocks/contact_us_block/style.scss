@@ -205,6 +205,11 @@
             .icon {
               @include square(20px);
             }
+
+            body.rtl & {
+             flex-direction: row-reverse;
+              justify-content: flex-end;
+            }
           }
         }
       }
@@ -283,6 +288,7 @@
     textarea {
       height: 85px;
       padding: 10px 14px !important;
+      resize: none;
     }
 
     .quform-label > label > .quform-required {
@@ -347,13 +353,18 @@
         background-size: contain;
         position: absolute !important;
         width: 18.56px !important;
-        height: 16px !important;
+        height: 20px !important;
         top: 50% !important;
         transform: translateY(-50%);
-        left: calc(100% + 15px);
+        inset-inline-start: calc(100% + 15px);
         cursor: pointer !important;
         pointer-events: none !important;
         transition: transform $duration !important;
+
+        body.rtl & {
+          transform: scaleX(-1)  translateY(-38%);
+        }
+
       }
     }
 
@@ -372,8 +383,9 @@
 
     .quform-option {
       margin-top: 32px;
-      .quform-option-label{
-        padding-left: 12px;
+
+      .quform-option-label {
+        padding-inline-start: 12px;
       }
 
 
@@ -400,6 +412,7 @@
   .quform-edit-form {
     display: none;
   }
+
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,

@@ -92,6 +92,10 @@
         top: 50%;
         transform: translateY(-50%);
         inset-inline-end: 0;
+
+        body.rtl & {
+          transform: translateY(-50%) scaleX(-1);
+        }
       }
     }
   }

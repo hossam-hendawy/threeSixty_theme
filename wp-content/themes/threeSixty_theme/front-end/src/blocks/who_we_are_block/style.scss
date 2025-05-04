@@ -116,5 +116,19 @@
         }
       }
     }
+
+
+    .logo {
+      @include media-screen-992 {
+        inset-inline-end: -11%;
+      }
+
+      @include min-medium-screen {
+        inset-inline-end: -12.5%;
+      }
+      @include large-screen {
+        inset-inline-end: -10.5%;
+      }
+    }
   }
 }
