@@ -26,6 +26,11 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
             $categories = get_the_category();
             if ($categories) {
               foreach ($categories as $category) {
+                // تخطي التصنيف غير المصنف
+                if ($category->slug === 'uncategorized' || $category->name === 'غير مصنف') {
+                  continue;
+                }
+
                 $text_color = get_field('text_color', 'category_' . $category->term_id);
                 $background_color = get_field('background_color', 'category_' . $category->term_id);
                 $border_color = get_field('border_color', 'category_' . $category->term_id);
@@ -36,11 +41,11 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
                 $border_color = $border_color ? esc_attr($border_color) : '#FDE172';
 
                 echo '<div class="cat-name text-sm medium"
-                    style="color: ' . $text_color . ';
-                           background-color: ' . $background_color . ';
-                           border-color: ' . $border_color . ';">
-                    ' . esc_html($category->name) . '
-                  </div>';
+                style="color: ' . $text_color . ';
+                       background-color: ' . $background_color . ';
+                       border-color: ' . $border_color . ';">
+              ' . esc_html($category->name) . '
+            </div>';
               }
             }
             ?>
@@ -148,7 +153,7 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
       </div>
     </div>
 
-    <!--     region recent posts -->
+    <!--     region related posts -->
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts">
       <div class="container">
         <h5 class="semi-bold recent-content-title">

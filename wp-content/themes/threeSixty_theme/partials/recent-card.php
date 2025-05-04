@@ -57,24 +57,27 @@ $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_titl
     $categories = get_the_category();
     if ($categories) {
       foreach ($categories as $category) {
-        if ($category->slug === 'uncategorized') {
+        if ($category->slug === 'uncategorized' || $category->name === 'غير مصنف') {
           continue;
         }
         $text_color = get_field('text_color', 'category_' . $category->term_id);
         $background_color = get_field('background_color', 'category_' . $category->term_id);
         $border_color = get_field('border_color', 'category_' . $category->term_id);
 
-        // Set default colors if ACF fields are empty
         $text_color = $text_color ? esc_attr($text_color) : '#A15C07';
         $background_color = $background_color ? esc_attr($background_color) : '#FEFBE8';
         $border_color = $border_color ? esc_attr($border_color) : '#FDE172';
 
-        echo '<div class="cat-name text-sm medium"
-                    style="color: ' . $text_color . ';
-                           background-color: ' . $background_color . ';
-                           border-color: ' . $border_color . ';">
-                    ' . esc_html($category->name) . '
-                  </div>';
+        echo '<div class="cat-name text-sm medium" style="
+              color: ' . $text_color . ';
+              background-color: ' . $background_color . ';
+              border: 1px solid ' . $border_color . ';
+              padding: 4px 10px;
+              border-radius: 6px;
+              display: inline-block;
+              margin-right: 6px;
+              margin-bottom: 4px;
+            ">' . esc_html($category->name) . '</div>';
       }
     }
     ?>
