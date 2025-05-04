@@ -93,6 +93,9 @@ details > div {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+#subscriber-table table td:has(select) {
+	text-overflow: unset;
+}
 .table-wrap {
 	max-height: 500px;
 	border: 1px solid #c3c4c7;

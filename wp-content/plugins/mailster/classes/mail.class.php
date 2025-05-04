@@ -84,15 +84,15 @@ class MailsterMail {
 			$this->mailer->IsSMTP();
 
 			$this->mailer->Host     = mailster_option( 'smtp_host' );
-			$this->mailer->Port     = mailster_option( 'smtp_port', 25 );
-			$this->mailer->Timeout  = mailster_option( 'smtp_timeout', 10 );
-			$this->mailer->SMTPAuth = ! ! mailster_option( 'smtp_auth', false );
+			$this->mailer->Port     = (int) mailster_option( 'smtp_port', 25 );
+			$this->mailer->Timeout  = (int) mailster_option( 'smtp_timeout', 10 );
+			$this->mailer->SMTPAuth = (bool) mailster_option( 'smtp_auth', false );
 			if ( $this->mailer->SMTPAuth ) {
 				$this->mailer->AuthType = mailster_option( 'smtp_auth', '' );
 				$this->mailer->Username = mailster_option( 'smtp_user' );
 				$this->mailer->Password = mailster_option( 'smtp_pwd' );
 			}
-			$this->mailer->SMTPSecure    = mailster_option( 'smtp_secure', '' );
+			$this->mailer->SMTPSecure    = (bool) mailster_option( 'smtp_secure', '' );
 			$this->mailer->SMTPKeepAlive = true;
 
 			add_action( 'mailster_presend', array( &$this, 'pre_send' ), 1, 10 );

@@ -222,7 +222,14 @@ class MailsterNotification {
 
 					// legacy
 					$form = $this->get_form_options( $options['form'], $subscriber );
-					return $form->subject;
+					if ( ! empty( $form->subject ) ) {
+
+						return $form->subject;
+					}
+
+					// fallback if no form is defined
+					return sprintf( esc_html__( 'Welcome to %s! Please Confirm Your Email', 'mailster' ), '{company}' );
+
 				}
 
 				return get_post_meta( $form_id, 'subject', true );
@@ -235,7 +242,12 @@ class MailsterNotification {
 
 					// legacy
 					$form = $this->get_form_options( $options['form'], $subscriber );
-					return $form->template;
+					if ( ! empty( $form->template ) ) {
+						return $form->template;
+					}
+
+					// fallback if no form is defined
+					return null;
 				}
 				return false;
 
@@ -247,7 +259,12 @@ class MailsterNotification {
 
 					// legacy
 					$form = $this->get_form_options( $options['form'], $subscriber );
-					return $form->headline;
+					if ( ! empty( $form->headline ) ) {
+						return $form->headline;
+					}
+
+					// fallback if no form is defined
+					return esc_html__( 'Please confirm your Email', 'mailster' );
 				}
 
 				return get_post_meta( $form_id, 'headline', true );
@@ -256,17 +273,18 @@ class MailsterNotification {
 				$form_id = mailster( 'subscribers' )->meta( $subscriber->ID, 'form' );
 				$form    = get_post( $form_id );
 
+				$link_text = esc_html__( 'Confirm your email address', 'mailster' );
+
 				if ( ! $form || $form->post_type != 'mailster-form' ) {
 
 					// legacy
 					if ( isset( $options['form'] ) ) {
-						$form    = $this->get_form_options( $options['form'], $subscriber, false, true );
-						$form_id = $form->ID;
+						$form      = $this->get_form_options( $options['form'], $subscriber, false, true );
+						$form_id   = $form->ID;
+						$link_text = $form->link;
 					} else {
 						$form_id = null;
 					}
-				} else {
-
 				}
 
 				$subscriber_lists = mailster( 'subscribers' )->get_lists( $subscriber->ID );
@@ -279,7 +297,7 @@ class MailsterNotification {
 
 				return wp_parse_args(
 					array(
-						'link'         => '<a href="' . htmlentities( $link ) . '">' . $form->link . '</a>',
+						'link'         => '<a href="' . htmlentities( $link ) . '">' . esc_html( $link_text ) . '</a>',
 						'linkaddress'  => $link,
 						'lists'        => implode( ', ', $list_names ),
 						'notification' => $message,
@@ -296,7 +314,7 @@ class MailsterNotification {
 
 					// legacy
 					$form = $this->get_form_options( $options['form'], $subscriber );
-					if ( $form->vcard ) {
+					if ( ! empty( $form->vcard ) ) {
 
 						$wp_filesystem = mailster_require_filesystem();
 
@@ -674,11 +692,15 @@ class MailsterNotification {
 
 			// legacy
 			$form = $this->get_form_options( $options['form'], $subscriber );
-			if ( false === strpos( $form->content, '{link}' ) ) {
-				$form->content .= "\n{link}";
+			if ( ! empty( $form->content ) ) {
+				$content = $form->content;
+				if ( false === strpos( $content, '{link}' ) ) {
+					$content .= "\n{link}";
+				}
+				// fallback if no form is defined
+			} else {
+				$content = sprintf( esc_html__( 'By clicking on the following link, you are confirming your email address. %s', 'mailster' ), "\n\n{link}" );
 			}
-			$content = $form->content;
-
 		} else {
 			$content = get_post_meta( $form_id, 'content', true );
 		}

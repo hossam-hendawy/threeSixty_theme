@@ -1,3 +1,16 @@
+### Version 4.1.11 (2025-05-01)
+
+- added: implement installation checks and enhance default settings handling
+- added: link to documentation for capabilities settings page
+- added: new capability to delete campaigns with appropriate roles and help text
+- added: new helpdesk links to the settings page
+- refactored: improve notification template fallback and error handling
+- refactored: improve SMTP configuration type casting
+- refactored: improve wp_mail filter argument handling
+- fixed: correct parent block references for condition blocks
+- updated: enhance import functionality and UI interactions
+- packages updates
+
 ### Version 4.1.10 (2025-03-10)
 
 - fixed: improve capabilities and permissions system

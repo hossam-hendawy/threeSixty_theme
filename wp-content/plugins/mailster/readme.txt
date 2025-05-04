@@ -3,8 +3,8 @@
 Contributors: everpress  
 Tags: email newsletter, newsletter, newsletter signup, email signup, email marketing  
 Requires at least: 6.2  
-Tested up to: 6.7  
-Stable tag: 4.1.9  
+Tested up to: 6.8  
+Stable tag: 4.1.11  
 License: GPLv2 or later  
 Requires PHP: 7.4
 
@@ -186,6 +186,19 @@ Get professional development help from our expert support partner _Codeable_ for
 == Changelog ==
 
 = Changelog =
+
+= 4.1.11 =
+
+- added: implement installation checks and enhance default settings handling
+- added: link to documentation for capabilities settings page
+- added: new capability to delete campaigns with appropriate roles and help text
+- added: new helpdesk links to the settings page
+- refactored: improve notification template fallback and error handling
+- refactored: improve SMTP configuration type casting
+- refactored: improve wp_mail filter argument handling
+- fixed: correct parent block references for condition blocks
+- updated: enhance import functionality and UI interactions
+- packages updates
 
 = 4.1.10 =
 

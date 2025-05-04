@@ -47,7 +47,7 @@
 		</td>
 	</tr>
 	<tr valign="top" class="settings-row settings-row-do-not-track">
-		<th scope="row">Do Not Track</th>
+		<th scope="row">Do Not Track <?php echo mailster()->beacon( '67e1218d3fb0ea7a22c0ef47' ); ?></th>
 		<td><label><input type="hidden" name="mailster_options[do_not_track]" value=""><input type="checkbox" name="mailster_options[do_not_track]" value="1" <?php checked( mailster_option( 'do_not_track' ) ); ?>> <?php esc_html_e( 'Respect users "Do Not Track" option', 'mailster' ); ?></label>
 		<p class="description"><?php printf( esc_html__( 'If enabled Mailster will respect users option for not getting tracked. Read more on the %s', 'mailster' ), '<a href="http://donottrack.us/" class="external">' . esc_html__( 'official website', 'mailster' ) . '</a>' ); ?></p>
 		</td>

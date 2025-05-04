@@ -437,7 +437,7 @@ class MailsterManage {
 
 	public function ajax_do_import() {
 
-			define( 'MAILSTER_DO_BULKIMPORT', true );
+		define( 'MAILSTER_DO_BULKIMPORT', true );
 
 		$this->ajax_nonce();
 
@@ -458,7 +458,7 @@ class MailsterManage {
 				'lists'       => isset( $import_options['_lists'] ) ? (array) $import_options['_lists'] : array(),
 				'tags'        => isset( $import_options['_tags'] ) ? (array) $import_options['_tags'] : array(),
 				'order'       => isset( $import_options['_order'] ) ? (array) $import_options['_order'] : array(),
-				'signupdate'  => $import_options['signupdate'],
+				'signupdate'  => isset( $import_options['signupdate'] ) ? $import_options['signupdate'] : null,
 				'existing'    => $import_options['existing'],
 				'status'      => $import_options['status'],
 				'page'        => 1,
@@ -702,7 +702,7 @@ class MailsterManage {
 					unset( $insert['signup'] );
 				}
 
-				if ( ! isset( $insert['confirm'] ) ) {
+				if ( ! isset( $insert['confirm'] ) && ! empty( $insert['signup'] ) ) {
 					$insert['confirm'] = 0;
 				}
 
@@ -716,6 +716,7 @@ class MailsterManage {
 							if ( ! isset( $insert['status'] ) ) {
 								$insert['status'] = $exists->status;
 							}
+
 							$subscriber_id = mailster( 'subscribers' )->update( $insert, true );
 
 						} else {

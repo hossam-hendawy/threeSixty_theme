@@ -5,7 +5,7 @@
   "title": "Condition fulfilled",
   "category": "mailster-workflow-steps",
   "parent": [
-    "mailster-workflow/condition-yes"
+    "mailster-workflow/conditions"
   ],
   "example": {},
   "supports": {

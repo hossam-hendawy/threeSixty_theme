@@ -1,9 +1,10 @@
 <?php
 /*
-Plugin Name: Mailster - Email Newsletter Plugin for WordPress
+Plugin Name: Mailster - Email Newsletter Plugin for WordPress (Premium)
 Plugin URI: https://mailster.co
 Description: Send Beautiful Email Newsletters in WordPress.
-Version: 4.1.10
+Version: 4.1.11
+Update URI: https://api.freemius.com
 Author: EverPress
 Author URI: https://everpress.co
 Text Domain: mailster
@@ -14,9 +15,9 @@ if ( defined( 'MAILSTER_VERSION' ) || ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-define( 'MAILSTER_VERSION', '4.1.10' );
-define( 'MAILSTER_BUILT', 1741598425 );
-define( 'MAILSTER_ENVATO', true );
+define( 'MAILSTER_VERSION', '4.1.11' );
+define( 'MAILSTER_BUILT', 1746089212 );
+define( 'MAILSTER_ENVATO', false );
 define( 'MAILSTER_DBVERSION', 20230517 );
 define( 'MAILSTER_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MAILSTER_URI', plugin_dir_url( __FILE__ ) );

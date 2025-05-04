@@ -104,6 +104,12 @@ mailster = (function (mailster, $, window, document) {
 		.on('change', 'ul.roles input', function () {
 			$('.no-role-cb').prop('checked', false);
 		})
+		.on('change', 'input[name="existing"]', function () {
+			if ($(this).val() == 'merge') {
+				$('#signup').prop('checked', false);
+				$('#signupdate').prop('disabled', true);
+			}
+		})
 		.on('change', '.no-role-cb', function () {
 			$(this)
 				.parent()

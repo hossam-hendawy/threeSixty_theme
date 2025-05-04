@@ -2637,26 +2637,26 @@ class Mailster {
 
 		$current_filter = current_filter();
 
-		$this->atts = apply_filters( 'wp_mail', compact( 'to', 'subject', 'message', 'headers', 'attachments' ) );
+		$wp_mail_args = apply_filters( 'wp_mail', compact( 'to', 'subject', 'message', 'headers', 'attachments' ) );
 
-		if ( isset( $this->atts['to'] ) ) {
-			$to = $this->atts['to'];
+		if ( isset( $wp_mail_args['to'] ) ) {
+			$to = $wp_mail_args['to'];
 		}
 
-		if ( isset( $this->atts['subject'] ) ) {
-			$subject = $this->atts['subject'];
+		if ( isset( $wp_mail_args['subject'] ) ) {
+			$subject = $wp_mail_args['subject'];
 		}
 
-		if ( isset( $this->atts['message'] ) ) {
-			$message = $this->atts['message'];
+		if ( isset( $wp_mail_args['message'] ) ) {
+			$message = $wp_mail_args['message'];
 		}
 
-		if ( isset( $this->atts['headers'] ) ) {
-			$headers = $this->atts['headers'];
+		if ( isset( $wp_mail_args['headers'] ) ) {
+			$headers = $wp_mail_args['headers'];
 		}
 
-		if ( isset( $this->atts['attachments'] ) ) {
-			$attachments = $this->atts['attachments'];
+		if ( isset( $wp_mail_args['attachments'] ) ) {
+			$attachments = $wp_mail_args['attachments'];
 		}
 		if ( is_array( $headers ) ) {
 			$headers = implode( "\r\n", $headers ) . "\r\n";

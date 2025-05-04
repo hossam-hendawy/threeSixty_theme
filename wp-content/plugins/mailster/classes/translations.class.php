@@ -279,11 +279,25 @@ class MailsterTranslations {
 		try {
 			$this->re_check();
 			$this->download_language();
+
+		} catch ( Exception $e ) {
+		}
+	}
+
+	public function on_install( $new ) {
+
+		if ( ! $new ) {
+			return;
+		}
+
+		try {
+			// $this->re_check();
+			// $this->download_language();
 			mailster( 'settings' )->define_texts( true );
 
 			// convert some settings with text
 			$default_settings = mailster( 'settings' )->get_defaults();
-			foreach ( array( 'slugs', 'tags' ) as $key ) {
+			foreach ( array( 'slugs', 'tags', 'from_name' ) as $key ) {
 				if ( isset( $default_settings[ $key ] ) ) {
 					mailster_update_option( $key, $default_settings[ $key ] );
 				}

@@ -50,6 +50,12 @@ $mailster_capabilities = array(
 		'help'  => esc_html__( 'Allows viewing of private/draft campaigns', 'mailster' ),
 	),
 
+	'delete_newsletter'                   => array(
+		'title' => esc_html__( 'Delete Campaign', 'mailster' ),
+		'roles' => array( 'contributor', 'author', 'editor' ),
+		'help'  => esc_html__( 'Allows deletion of a campaign', 'mailster' ),
+	),
+
 	'delete_newsletters'                  => array(
 		'title' => esc_html__( 'Delete Campaigns', 'mailster' ),
 		'roles' => array( 'contributor', 'author', 'editor' ),
