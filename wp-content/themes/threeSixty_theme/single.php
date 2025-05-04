@@ -6,6 +6,8 @@ $current_user_id = get_current_user_id();
 $author_name = get_the_author_meta('display_name', $current_user_id);
 $user_image = get_field('user_image', 'user_' . $current_user_id);
 $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
+$languages = apply_filters('wpml_active_languages', NULL, array('skip_missing' => 0));
+$current_lang = apply_filters('wpml_current_language', NULL);
 ?>
 <?php if (have_posts()): the_post(); ?>
   <div class="single-post-wrapper">
@@ -157,8 +159,13 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts">
       <div class="container">
         <h5 class="semi-bold recent-content-title">
-          <?= $text_label = t('Related Posts', 'text', ' Related Posts Label'); ?>
-         </h5>
+          <?php if ($current_lang === 'ar' && isset($languages['en'])) { ?>
+            مقالات ذات صلة
+          <?php } elseif ($current_lang === 'en' && isset($languages['ar'])) {
+            ?>
+            Related Posts
+          <?php } ?>
+        </h5>
         <?php
         $current_post_id = get_the_ID();
         $args = [

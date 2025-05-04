@@ -12,8 +12,6 @@ $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_titl
 ?>
 <div class="swiper-slide recent-card">
   <a href="<?= $post_permalink ?>" target="_self">
-
-
     <?php if ($thumbnail_id) { ?>
       <?php
       $picture_class = 'aspect-ratio image-wrapper image-hover-effect featured-image';
@@ -40,8 +38,6 @@ $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_titl
         <img src="<?= get_template_directory_uri() . '/images/image-not-found.jpg' ?>" alt="image-not-found">
       </picture>
     <?php } ?>
-
-
   </a>
   <a href="<?= $post_permalink ?>" target="_self" class="post-title d-xs-6 semi-bold">
     <span><?= $post_title ?></span>
