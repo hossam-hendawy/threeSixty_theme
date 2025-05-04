@@ -35,6 +35,8 @@ $current_lang = apply_filters('wpml_current_language', NULL);
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container">
+  <div class="hero-gradient-overlay"></div>
+
   <picture class="shape">
     <?php if ($current_lang === 'ar') { ?>
       <img src="<?= get_template_directory_uri() . '/images/backgrounds/ThreeSixty-Hero-header-ar.webp' ?>" alt="cover image">

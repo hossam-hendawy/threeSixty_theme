@@ -153,6 +153,9 @@ body.home {
     }
   }
 
+  .title, .title p {
+    font-weight: 300;
+  }
 }
 
 .about_us_block, .blog_hero_block,
@@ -742,10 +745,13 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
   background: $threeSixty_theme_white;
   border: 1px solid #E4E7EC;
   border-radius: 8px;
-  box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.14);
   display: flex;
   flex-direction: column;
+  transition: box-shadow $duration;
 
+  &:hover{
+    box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.14);
+  }
 
   .package-title-and-price {
     padding: 38px;
@@ -848,6 +854,7 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
     padding: 38px;
     border-top: 1px solid #E4E7EC;
     margin-top: auto;
+
     .theme-cta-button {
       width: 100%;
       font-size: 20px;
@@ -930,7 +937,7 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
       }
     }
 
-    .theme-cta-button-wrapper{
+    .theme-cta-button-wrapper {
       margin-top: auto;
       @include paddingX(25px);
       @include min-medium-screen {

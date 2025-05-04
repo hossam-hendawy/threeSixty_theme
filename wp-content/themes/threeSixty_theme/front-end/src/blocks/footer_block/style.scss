@@ -424,7 +424,6 @@ footer {
 
   .info-wrapper {
     display: flex;
-    align-items: center;
     gap: 16px;
     color: $threeSixty_theme_gray-300;
     font-size: 14px;
@@ -434,8 +433,10 @@ footer {
     transition: color $duration;
 
     svg {
+      flex-shrink: 0;
       width: 16px;
       height: 16px;
+      margin-top: 4px;
     }
 
     &:hover {

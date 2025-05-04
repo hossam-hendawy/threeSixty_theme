@@ -3,6 +3,10 @@ import {imageLazyLoading} from "../../scripts/functions/imageLazyLoading";
 import {animations} from "../../scripts/general/animations";
 import {Swiper} from "swiper";
 import {Navigation} from 'swiper/modules';
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 /**
  * @author DELL
  * @param block {HTMLElement}
@@ -38,6 +42,25 @@ const testimonialsBlock = async (block) => {
       prevEl: [...block.querySelectorAll(".swiper-button-prev")],
     },
   });
+
+
+  const logo = block.querySelector('svg.logo');
+
+  if (logo) {
+    gsap.fromTo(logo,
+      {opacity: 0},
+      {
+        opacity: 1,
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: block,
+          start: "top top",
+          toggleActions: "play none none none"
+        }
+      }
+    );
+  }
 
 
 // testing the new hidden value

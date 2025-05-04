@@ -48,17 +48,17 @@ if ($programmatic_or_manual === 'programmatic') {
 <!-- region threeSixty_theme's Block -->
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="container recent_posts_block">
-  <div class="cards-wrapper">
+  <div class="cards-wrapper iv-st-from-bottom">
     <div class="recent-content flex-col">
       <?php if ($title) { ?>
-        <h3 class="d-lg-h3 bold recent-content-title iv-st-from-bottom"><?= $title ?></h3>
+        <h3 class="d-lg-h3 bold recent-content-title "><?= $title ?></h3>
       <?php } ?>
       <?php if ($description) { ?>
-        <div class="text-xl gray-500 iv-st-from-bottom"><?= $description ?></div>
+        <div class="text-xl gray-500"><?= $description ?></div>
       <?php } ?>
     </div>
     <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
-      <a class="theme-cta-button btn-white left-content-btn iv-st-from-bottom" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
+      <a class="theme-cta-button btn-white left-content-btn" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>">
         <?= $cta_button['title'] ?>
         <svg width="25" height="29" viewBox="0 0 25 29" aria-hidden="true" fill="none">
           <g clip-path="url(#clip0_1377_4705)">

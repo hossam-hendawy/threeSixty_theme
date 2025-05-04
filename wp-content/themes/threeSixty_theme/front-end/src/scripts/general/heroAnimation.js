@@ -13,9 +13,9 @@ export function heroAnimation(block, selector = ".hero-block:after") {
       { opacity: 0 },
       {
         opacity: 1,
-        duration: 1.5,
+        duration: 1.2,
         ease: "power2.out",
-        delay: 0.5
+        delay: 0.2
       }
     );
   }

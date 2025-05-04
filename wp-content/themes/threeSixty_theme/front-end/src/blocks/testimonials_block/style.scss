@@ -21,6 +21,7 @@
     top: 42px;
     inset-inline-end: 12%;
     display: none;
+    z-index: -2;
     @include large-screen {
       display: block;
     }
@@ -123,6 +124,10 @@
           width: 64px;
           height: 42px;
           margin-bottom: 24px;
+
+          body.rtl & {
+            transform: scaleX(-1);
+          }
         }
 
         .comment {

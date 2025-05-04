@@ -51,12 +51,9 @@ $marketing_icon = get_field('marketing_icon');
         ?>
         <div class="marketing-services-card">
           <?php if (!empty($marketing_icon) && is_array($marketing_icon)) { ?>
-            <div class="icon-wrapper">
-              <picture class="icon-wrapper-svg cover-image">
-                <img src="<?= $marketing_icon['url'] ?>"
-                     alt="<?= $marketing_icon['alt'] ?>">
+              <picture class="icon-wrapper">
+                <img src="<?= $marketing_icon['url'] ?>" alt="<?= $marketing_icon['alt'] ?>">
               </picture>
-            </div>
           <?php } ?>
           <div class="service-benefit-wrapper">
             <?php if ($marketing_title) { ?>

@@ -45,9 +45,9 @@ $cta_button = get_field('cta_button');
       <div class="text-xl gray-500 center-text overview-description"><?= $description ?></div>
     <?php endif; ?>
   </div>
-  <div class="cards-wrapper">
+  <div class="cards-wrapper iv-st-from-bottom">
   <?php if (have_rows('service_benefits')) { ?>
-    <div class="services-cards iv-st-from-bottom">
+    <div class="services-cards">
       <?php while (have_rows('service_benefits')) {
         the_row();
         $icon = get_sub_field('icon');
