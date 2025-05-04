@@ -8,12 +8,10 @@ $post_permalink = get_permalink($post_id);
 $thumbnail_id = get_post_thumbnail_id($post_id);
 $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 $thumbnail_alt = $thumbnail_alt ? esc_attr($thumbnail_alt) : esc_attr($post_title);
-
-$current_user_id = get_current_user_id();
-$author_name = get_the_author_meta('display_name', $current_user_id);
-$user_image = get_field('user_image', 'user_' . $current_user_id);
-$user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
-
+$post_author_id = get_post_field('post_author', $post_id);
+$author_name = get_the_author_meta('display_name', $post_author_id);
+$user_image = get_field('user_image', 'user_' . $post_author_id);
+$user_jop_title = get_field('user_jop_title', 'user_' . $post_author_id);
 ?>
 <div class="post-card horizontal-card">
   <a href="<?= $post_permalink ?>" class="post-image-card" target="_self">

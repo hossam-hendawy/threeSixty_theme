@@ -2,10 +2,10 @@
 get_header();
 global $post;
 $post_id = get_the_ID();
-$current_user_id = get_current_user_id();
-$author_name = get_the_author_meta('display_name', $current_user_id);
-$user_image = get_field('user_image', 'user_' . $current_user_id);
-$user_jop_title = get_field('user_jop_title', 'user_' . $current_user_id);
+$post_author_id = get_post_field('post_author', $post_id);
+$author_name = get_the_author_meta('display_name', $post_author_id);
+$user_image = get_field('user_image', 'user_' . $post_author_id);
+$user_jop_title = get_field('user_jop_title', 'user_' . $post_author_id);
 $languages = apply_filters('wpml_active_languages', NULL, array('skip_missing' => 0));
 $current_lang = apply_filters('wpml_current_language', NULL);
 ?>
