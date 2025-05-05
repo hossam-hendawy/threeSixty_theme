@@ -306,6 +306,10 @@ body.home {
       inset-inline-end: 160px;
       top: 10px;
     }
+
+    img {
+      object-fit: contain;
+    }
   }
 }
 
@@ -749,7 +753,7 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
   flex-direction: column;
   transition: box-shadow $duration;
 
-  &:hover{
+  &:hover {
     box-shadow: 0 32px 64px -12px rgba(16, 24, 40, 0.14);
   }
 
