@@ -82,7 +82,7 @@ header {
       }
 
       body.rtl & {
-        margin-right: auto;
+        margin-left: auto;
       }
     }
 
@@ -346,7 +346,12 @@ header {
 
     @include max-medium-screen {
       transform: rotate(-90deg);
+      body.rtl & {
+        transform: rotate(90deg);
+      }
     }
+
+
   }
 
 
@@ -630,6 +635,14 @@ header {
       }
       @include min-medium-screen {
         display: none;
+      }
+
+      body.rtl & {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        svg {
+          transform: scaleX(1);
+        }
       }
 
     }
