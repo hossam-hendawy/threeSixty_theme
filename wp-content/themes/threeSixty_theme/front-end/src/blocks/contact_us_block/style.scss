@@ -196,7 +196,7 @@
             p, a {
               color: $threeSixty_theme_brand-700;
               transition: color $duration;
-
+              font-weight: 600;
               &:hover {
                 color: $threeSixty_theme_gold;
               }

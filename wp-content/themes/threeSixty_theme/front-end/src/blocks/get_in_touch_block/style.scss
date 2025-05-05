@@ -16,6 +16,10 @@
     width: 285.685px;
     height: 220px;
     margin-bottom: 32px;
+    @include small-screen{
+      width: 245.685px;
+      height: 190px;
+    }
     @include media-screen-768 {
       width: 454.685px;
       height: 350px;
@@ -52,6 +56,12 @@
     .membership-info {
       margin-bottom: 32px;
       color: $threeSixty_theme_tertiary-600;
+    }
+
+    .theme-cta-button {
+      @include small-screen{
+        font-size: 18px;
+      }
     }
   }
 }

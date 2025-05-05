@@ -445,29 +445,25 @@ footer {
 
   }
 
-  .mailster-block-form-type-content {
-    @include small-screen {
-      width: 100% !important;
-    }
-  }
 
-  div.wp-block-mailster-form-outside-wrapper.wp-block-mailster-form-outside-wrapper-7f41eef1.wp-block-mailster-form-outside-wrapper-10795 .mailster-wrapper {
-    @include small-screen {
-      width: 100% !important;
-    }
+  .mailster-block-form.wp-block-mailster-form-wrapper .mailster-block-form-inner .mailster-wrapper {
+    width: 100% !important;
   }
 
   div.wp-block-mailster-form-outside-wrapper {
     margin-bottom: 0 !important;
     @include media-screen-600 {
       height: 45px !important;
-
     }
   }
 
   .mailster-block-form.wp-block-mailster-form-wrapper .mailster-block-form-inner, {
     display: flex;
     gap: 12px;
+    @include small-screen {
+      width: 287px;
+
+    }
 
     @include media-screen-600 {
       flex-wrap: nowrap;
@@ -479,7 +475,6 @@ footer {
       background: var(--Colors-Background-bg-primary, #FFF);
       box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
       display: flex;
-      width: 100% !important;
       height: 45px !important;
       padding: 10px 14px 10px 20px;
       color: $threeSixty_theme_quinary-400;
@@ -487,9 +482,7 @@ footer {
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
-      @include media-screen-600 {
-        width: 287px !important;
-      }
+      width: 270px !important;
     }
 
     .mailster-label {
@@ -510,7 +503,7 @@ footer {
     input[type="submit"] {
       position: relative;
       height: 45px !important;
-      width: 100% !important;
+      width: 270px !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -530,7 +523,6 @@ footer {
 
       @include media-screen-600 {
         width: 172px !important;
-
       }
     }
   }
@@ -539,13 +531,12 @@ footer {
     position: relative !important;
 
     &:after {
-      display: none;
       content: "";
       background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2219%22%20height%3D%2222%22%20viewBox%3D%220%200%2019%2022%22%20fill%3D%22none%22%3E%3Cg%20clip-path%3D%22url(%23clip0_1377_5312)%22%3E%3Cpath%20d%3D%22M12.6648%2022.0001L0.0172629%2021.9659L6.37053%2010.9888L12.6648%2022.0001Z%22%20fill%3D%22%2398A2B3%22/%3E%3Cpath%20d%3D%22M18.9828%2011.0009L12.6691%200L0.0172672%200L6.37053%2010.9887L12.6648%2022L18.9828%2011.0009Z%22%20fill%3D%22%23D0D5DD%22/%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_1377_5312%22%3E%3Crect%20width%3D%2222%22%20height%3D%2218.9655%22%20fill%3D%22white%22%20transform%3D%22translate(18.9828)%20rotate(90)%22/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E') no-repeat center;
       background-size: contain;
       position: absolute !important;
       width: 18.56px !important;
-      height: 16px !important;
+      height: 18px !important;
       top: 50% !important;
       transform: translateY(-50%);
       inset-inline-end: 22px;
@@ -556,7 +547,16 @@ footer {
       @include small-screen {
         top: 80% !important;
         transform: translateY(-50%);
-        inset-inline-end: 96px;
+        inset-inline-end: 72px;
+      }
+
+
+      body.rtl & {
+        @include small-screen {
+          inset-inline-end: 107px;
+        }
+        inset-inline-end: 42px;
+        transform: scaleX(-1) translateY(-50%);
       }
     }
   }
