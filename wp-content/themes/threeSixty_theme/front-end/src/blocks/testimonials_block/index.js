@@ -51,7 +51,7 @@ const testimonialsBlock = async (block) => {
       {opacity: 0},
       {
         opacity: 1,
-        duration: 3,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: block,

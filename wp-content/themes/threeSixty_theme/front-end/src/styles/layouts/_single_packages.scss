@@ -1,7 +1,7 @@
 @use "../common/variables" as *;
 @use "../mixins/mixins" as *;
 
-body.single-packages , body.single-services {
+body.single-packages, body.single-services {
 
 
   .faq_block {
@@ -16,4 +16,14 @@ body.single-packages , body.single-services {
     }
   }
 
+}
+
+
+body.single-services.rtl {
+
+  .strategy_marketing_block {
+    .icon-wrapper {
+      transform: scaleX(-1);
+    }
+  }
 }

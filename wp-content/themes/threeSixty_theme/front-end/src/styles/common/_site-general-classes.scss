@@ -825,7 +825,6 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
 
     .text {
       display: flex;
-      align-items: center;
       gap: 12px;
       width: 45%;
       @include small-screen {
@@ -836,6 +835,7 @@ blockquote.theme-blockquote, .wysiwyg-block blockquote {
         flex-shrink: 0;
         width: 24px;
         height: 24px;
+        margin-top: 5px;
 
         img, svg {
           width: 100%;
