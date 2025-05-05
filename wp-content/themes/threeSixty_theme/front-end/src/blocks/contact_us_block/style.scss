@@ -57,11 +57,11 @@
             font-size: 23px;
             font-style: normal;
             font-weight: 600;
-            line-height: 44px; /* 191.304% */
+            line-height: 44px;
             letter-spacing: -0.46px;
             @include square(46px);
             border-radius: 50%;
-            border: 2px solid $threeSixty_theme_gold;
+            border: 2.5px solid $threeSixty_theme_gold;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -231,7 +231,7 @@
         position: absolute;
         top: 0;
         inset-inline-start: 23px;
-        width: 1px;
+        width: 2.5px;
         height: 100%;
         background: $threeSixty_theme_gold;
       }

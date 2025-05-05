@@ -4,7 +4,7 @@
 // @author HOSSAM
 .package_block {
   padding-block: 40px 65px;
-  @include min-medium-screen{
+  @include min-medium-screen {
     padding-bottom: 80px;
   }
   @include large-screen {
@@ -43,7 +43,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        @include media-screen-992{
+        @include media-screen-992 {
           width: 47%;
         }
         @include min-medium-screen {
@@ -57,6 +57,9 @@
           width: 64px;
           height: 64px;
           flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           svg, img {
             width: auto;
