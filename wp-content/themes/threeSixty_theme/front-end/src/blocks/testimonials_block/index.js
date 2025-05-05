@@ -55,7 +55,7 @@ const testimonialsBlock = async (block) => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: block,
-          start: "top top",
+          start: "top 80%",
           toggleActions: "play none none none"
         }
       }
