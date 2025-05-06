@@ -21,10 +21,6 @@ body.single-packages, body.single-services {
 body.single-packages {
 
   .strategy_marketing_block .marketing-services-cards .marketing-services-card {
-    @include min-medium-screen {
-      align-items: flex-start;
-    }
-
     .icon-wrapper {
       width: 34px;
       height: 34px;

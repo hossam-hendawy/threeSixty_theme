@@ -43,6 +43,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
+
         @include media-screen-992 {
           width: 47%;
         }
@@ -79,6 +80,19 @@
 
           .description {
             max-width: 411px;
+          }
+        }
+
+        @include small-screen {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          .title {
+            text-align: center;
+          }
+
+          .description p {
+            text-align: center !important;
           }
         }
       }
