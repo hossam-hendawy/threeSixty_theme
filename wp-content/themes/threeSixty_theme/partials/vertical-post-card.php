@@ -43,7 +43,22 @@ $user_jop_title = get_field('user_jop_title', 'user_' . $post_author_id);
     <?php } ?>
   </a>
   <div class="post-content flex-col">
-    <div class="text-sm semi-bold category"><?php the_category(', '); ?></div>
+    <div class="text-sm semi-bold category">
+      <?php
+      $categories = get_the_category($post_id);
+      $category_output = [];
+
+      if ($categories) {
+        foreach ($categories as $category) {
+          if ($category->slug === 'uncategorized' || $category->name === 'غير مصنف') {
+            continue;
+          }
+          $category_output[] = '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+        }
+      }
+      echo implode(' , ', $category_output);
+      ?>
+    </div>
     <a href="<?= $post_permalink ?>" class="d-sm-h5 semi-bold post-title"><?= $post_title ?></a>
     <div class="text-md regular gray-600 post-excerpt">
       <?php echo has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 20, '...'); ?>

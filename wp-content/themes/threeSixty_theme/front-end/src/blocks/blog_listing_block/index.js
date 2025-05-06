@@ -38,7 +38,7 @@ const blogListingBlock = async (block) => {
 
   const currentLangAttr = document.documentElement.lang || 'en';
   const currentLang = currentLangAttr === 'en-US' ? 'en' : currentLangAttr;
-  let local = false
+  let local = true
   let url;
 
   function loadPosts(page) {

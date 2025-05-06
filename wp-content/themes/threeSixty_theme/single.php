@@ -28,7 +28,6 @@ $current_lang = apply_filters('wpml_current_language', NULL);
             $categories = get_the_category();
             if ($categories) {
               foreach ($categories as $category) {
-                // تخطي التصنيف غير المصنف
                 if ($category->slug === 'uncategorized' || $category->name === 'غير مصنف') {
                   continue;
                 }
