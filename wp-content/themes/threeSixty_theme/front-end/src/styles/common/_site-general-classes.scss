@@ -219,6 +219,20 @@ body.home {
 
 .hero_package, .packages_hero {
 
+  @include small-screen {
+    .content-wrapper {
+      align-items: center;
+    }
+
+    .sub-title p {
+      text-align: center !important;
+    }
+    .description p {
+      text-align: center !important;
+    }
+  }
+
+
   &:after {
     background-image: url(../../../../images/backgrounds/BG8box.svg);
   }
