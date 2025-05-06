@@ -17,7 +17,9 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a82f9035476",
@@ -37,7 +39,8 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 1
+            "delay": 1,
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67a82fdd35477",
@@ -57,7 +60,8 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 1
+            "delay": 1,
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67c8c332d10e8",
@@ -82,7 +86,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a8304cf4928",
@@ -99,7 +104,9 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a2d1c1f4895",
@@ -122,6 +129,7 @@
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_67a2d1d3f4896",
@@ -147,7 +155,8 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_67a2d1c1f4895"
+                    "parent_repeater": "field_67a2d1c1f4895",
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_67a2d1e0f4897",
@@ -168,7 +177,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67a2d1c1f4895"
+                    "parent_repeater": "field_67a2d1c1f4895",
+                    "wpml_cf_preferences": 2
                 },
                 {
                     "key": "field_67a2d1e6f4898",
@@ -189,7 +199,8 @@
                     "toolbar": "full",
                     "media_upload": 0,
                     "delay": 1,
-                    "parent_repeater": "field_67a2d1c1f4895"
+                    "parent_repeater": "field_67a2d1c1f4895",
+                    "wpml_cf_preferences": 2
                 }
             ]
         },
@@ -216,7 +227,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a2e445d361f",
@@ -236,7 +248,8 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 1
+            "delay": 1,
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67a2e48ad3620",
@@ -256,7 +269,8 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67a2e7d6f86a9",
@@ -276,7 +290,8 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67a2e4c3d3622",
@@ -296,7 +311,8 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67a2f0aec85df",
@@ -321,7 +337,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a2f088c85dd",
@@ -344,6 +361,7 @@
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_67a2f095c85de",
@@ -364,7 +382,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67a2f088c85dd"
+                    "parent_repeater": "field_67a2f088c85dd",
+                    "wpml_cf_preferences": 2
                 }
             ]
         },
@@ -382,7 +401,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a2f57322bad",
@@ -407,7 +427,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67a2f43814d03",
@@ -427,7 +448,8 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 1
+            "delay": 1,
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_67d227d3e00a4",
@@ -444,7 +466,9 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67d227e0e00a5",
@@ -464,7 +488,8 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "wpml_cf_preferences": 2
         }
     ],
     "location": [
@@ -485,5 +510,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741826124
+    "acfml_field_group_mode": "localization",
+    "modified": 1746529489
 }

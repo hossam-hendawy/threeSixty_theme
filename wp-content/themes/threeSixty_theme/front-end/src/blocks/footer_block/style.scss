@@ -560,4 +560,11 @@ footer {
       }
     }
   }
+
+  .contact-number span {
+
+    body.rtl & {
+      direction: ltr;
+    }
+  }
 }
