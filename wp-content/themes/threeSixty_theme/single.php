@@ -157,14 +157,6 @@ $current_lang = apply_filters('wpml_current_language', NULL);
     <!--     region related posts -->
     <section id="recent_posts" data-section-class="recent_posts" class="threeSixty_theme-block recent_posts">
       <div class="container">
-        <h5 class="semi-bold recent-content-title">
-          <?php if ($current_lang === 'ar' && isset($languages['en'])) { ?>
-            مقالات ذات صلة
-          <?php } elseif ($current_lang === 'en' && isset($languages['ar'])) {
-            ?>
-            Related Posts
-          <?php } ?>
-        </h5>
         <?php
         $current_post_id = get_the_ID();
         $args = [
@@ -177,6 +169,15 @@ $current_lang = apply_filters('wpml_current_language', NULL);
         $query = new WP_Query($args);
         ?>
         <?php if ($query->have_posts()): ?>
+          <h5 class="semi-bold recent-content-title">
+            <?php if ($current_lang === 'ar' && isset($languages['en'])) { ?>
+              مقالات ذات صلة
+            <?php } elseif ($current_lang === 'en' && isset($languages['ar'])) {
+              ?>
+              Related Posts
+            <?php } ?>
+          </h5>
+
           <div class="swiper recent-posts-swiper">
             <div class="swiper-wrapper">
               <?php while ($query->have_posts()): $query->the_post(); ?>
@@ -187,21 +188,24 @@ $current_lang = apply_filters('wpml_current_language', NULL);
             </div>
           </div>
           <?php wp_reset_postdata(); ?>
+          <div class="swiper-navigations">
+            <div class="swiper-button-prev swiper-navigation arrow" role="button" tabindex="0" aria-label="Previous Slide">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                <path class="border" d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="Red"/>
+                <path class="arrow" d="M35 28H21M21 28L28 35M21 28L28 21" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next swiper-navigation arrow" role="button" tabindex="0" aria-label="Next Slide">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                <path class="border" d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="#98A2B3"/>
+                <path class="arrow" d="M21 28H35M35 28L28 21M35 28L28 35" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
         <?php endif; ?>
-        <div class="swiper-navigations">
-          <div class="swiper-button-prev swiper-navigation arrow" role="button" tabindex="0" aria-label="Previous Slide">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
-              <path class="border" d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="Red"/>
-              <path class="arrow" d="M35 28H21M21 28L28 35M21 28L28 21" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="swiper-button-next swiper-navigation arrow" role="button" tabindex="0" aria-label="Next Slide">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
-              <path class="border" d="M0.5 0.5H55.5V55.5H0.5V0.5Z" stroke="#98A2B3"/>
-              <path class="arrow" d="M21 28H35M35 28L28 21M35 28L28 35" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
+
+
       </div>
     </section>
     <!--  endregion-->
