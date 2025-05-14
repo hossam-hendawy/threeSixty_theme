@@ -215,41 +215,11 @@ body.home {
       //}
     }
 
-
-  }
-}
-
-.about_us_block, .blog_hero_block,
-.service_hero, .contact_us_hero {
-
-  .isolation-mode {
-
     body.rtl & {
-      inset-inline-end: 27px;
-      @include media-screen-600 {
-        inset-inline-end: 0;
-      }
-      @include media-screen-768 {
-        inset-inline-end: 24px;
-      }
-      @include media-screen-992 {
-        inset-inline-end: 54px;
-      }
-      @include min-medium-screen {
-        inset-inline-end: 29px;
-      }
-      @include large-screen {
-        inset-inline-end: 98px;
-      }
-      @include x-large-screen {
-        inset-inline-end: 12.4%;
-      }
+      transform: scaleX(-1);
     }
-
-
   }
 }
-
 
 .hero_package, .packages_hero {
 
