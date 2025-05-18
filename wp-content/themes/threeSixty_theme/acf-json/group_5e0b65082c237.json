@@ -19,7 +19,7 @@
             "placement": "top",
             "endpoint": 0,
             "selected": 0,
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_63da2914fbf9f",
@@ -45,7 +45,7 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_63da2815fbf9a",
@@ -68,7 +68,7 @@
             "collapsed": "",
             "button_label": "Add Menu Links",
             "rows_per_page": 20,
-            "wpml_cf_preferences": 1,
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_67ce33e2684fc",
@@ -90,7 +90,7 @@
                     "ui_off_text": "",
                     "ui": 1,
                     "parent_repeater": "field_63da2815fbf9a",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_63da286cfbf9b",
@@ -116,7 +116,7 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_63da2815fbf9a",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_67ce37a742e69",
@@ -181,7 +181,7 @@
                     "layout": "horizontal",
                     "save_other_choice": 0,
                     "parent_repeater": "field_63da2815fbf9a",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_67ce3b53e033b",
@@ -218,7 +218,7 @@
                     "elements": "",
                     "parent_repeater": "field_63da2815fbf9a",
                     "bidirectional_target": [],
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_67cf70dbe25db",
@@ -244,7 +244,7 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_63da2815fbf9a",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_67ce3b6be033c",
@@ -281,7 +281,7 @@
                     "elements": "",
                     "parent_repeater": "field_63da2815fbf9a",
                     "bidirectional_target": [],
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_67cf70f4e25dc",
@@ -307,7 +307,7 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_63da2815fbf9a",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 }
             ]
         },
@@ -326,6 +326,7 @@
                 "id": ""
             },
             "layout": "block",
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_67cf7ae25f6c6",
@@ -348,7 +349,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "sub_fields": [
                         {
                             "key": "field_67cf7b115f6c7",
@@ -375,7 +376,7 @@
                             "mime_types": "",
                             "preview_size": "medium",
                             "parent_repeater": "field_67cf7ae25f6c6",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         },
                         {
                             "key": "field_67cf7b1a5f6c8",
@@ -393,12 +394,11 @@
                             },
                             "return_format": "array",
                             "parent_repeater": "field_67cf7ae25f6c6",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         }
                     ]
                 }
-            ],
-            "wpml_cf_preferences": 1
+            ]
         },
         {
             "key": "field_67cf7b9989695",
@@ -415,6 +415,7 @@
                 "id": ""
             },
             "layout": "block",
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_67cf7b9989696",
@@ -437,7 +438,7 @@
                     "max": 0,
                     "collapsed": "",
                     "button_label": "Add Row",
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "sub_fields": [
                         {
                             "key": "field_67cf7b9989697",
@@ -464,7 +465,7 @@
                             "mime_types": "",
                             "preview_size": "medium",
                             "parent_repeater": "field_67cf7b9989696",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         },
                         {
                             "key": "field_67cf7b9989698",
@@ -482,12 +483,11 @@
                             },
                             "return_format": "array",
                             "parent_repeater": "field_67cf7b9989696",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         }
                     ]
                 }
-            ],
-            "wpml_cf_preferences": 1
+            ]
         },
         {
             "key": "field_669f976afeca4",
@@ -504,7 +504,7 @@
                 "id": ""
             },
             "return_format": "array",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_609bc694d0b79",
@@ -523,7 +523,7 @@
             "placement": "top",
             "endpoint": 0,
             "selected": 0,
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_63d670951bf67",
@@ -549,7 +549,7 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_679301f993f8d",
@@ -566,6 +566,7 @@
                 "id": ""
             },
             "layout": "block",
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_6793020c93f8e",
@@ -609,7 +610,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "sub_fields": [
                         {
                             "key": "field_6793026693f90",
@@ -627,7 +628,7 @@
                             },
                             "return_format": "array",
                             "parent_repeater": "field_6793025993f8f",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         },
                         {
                             "key": "field_679b91cbe4fef",
@@ -649,12 +650,11 @@
                             "ui_off_text": "",
                             "ui": 1,
                             "parent_repeater": "field_6793025993f8f",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         }
                     ]
                 }
-            ],
-            "wpml_cf_preferences": 1
+            ]
         },
         {
             "key": "field_679302a42d3fe",
@@ -671,6 +671,7 @@
                 "id": ""
             },
             "layout": "block",
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_679302a42d3ff",
@@ -714,7 +715,7 @@
                     "max": 0,
                     "collapsed": "",
                     "button_label": "Add Row",
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "sub_fields": [
                         {
                             "key": "field_679302a42d401",
@@ -732,7 +733,7 @@
                             },
                             "return_format": "",
                             "parent_repeater": "field_679302a42d400",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         },
                         {
                             "key": "field_679b93f2ce19e",
@@ -754,12 +755,11 @@
                             "ui_off_text": "",
                             "ui": 1,
                             "parent_repeater": "field_679302a42d400",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         }
                     ]
                 }
-            ],
-            "wpml_cf_preferences": 1
+            ]
         },
         {
             "key": "field_679302b52d402",
@@ -776,6 +776,7 @@
                 "id": ""
             },
             "layout": "block",
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_679302b52d403",
@@ -819,7 +820,7 @@
                     "max": 0,
                     "collapsed": "",
                     "button_label": "Add Row",
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "sub_fields": [
                         {
                             "key": "field_679302b52d405",
@@ -837,7 +838,7 @@
                             },
                             "return_format": "",
                             "parent_repeater": "field_679302b52d404",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         },
                         {
                             "key": "field_679b9434a1b52",
@@ -859,12 +860,11 @@
                             "ui_off_text": "",
                             "ui": 1,
                             "parent_repeater": "field_679302b52d404",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         }
                     ]
                 }
-            ],
-            "wpml_cf_preferences": 1
+            ]
         },
         {
             "key": "field_679302c82d407",
@@ -881,6 +881,7 @@
                 "id": ""
             },
             "layout": "block",
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_679302c82d408",
@@ -924,7 +925,7 @@
                     "max": 0,
                     "collapsed": "",
                     "button_label": "Add Row",
-                    "wpml_cf_preferences": 1,
+                    "wpml_cf_preferences": 3,
                     "sub_fields": [
                         {
                             "key": "field_679302c82d40a",
@@ -942,7 +943,7 @@
                             },
                             "return_format": "array",
                             "parent_repeater": "field_679302c82d409",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         },
                         {
                             "key": "field_679b94b52e603",
@@ -964,12 +965,11 @@
                             "ui_off_text": "",
                             "ui": 1,
                             "parent_repeater": "field_679302c82d409",
-                            "wpml_cf_preferences": 1
+                            "wpml_cf_preferences": 3
                         }
                     ]
                 }
-            ],
-            "wpml_cf_preferences": 1
+            ]
         },
         {
             "key": "field_679346cafc51a",
@@ -1013,7 +1013,7 @@
             "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
-            "wpml_cf_preferences": 1,
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_679346f5fc51c",
@@ -1040,7 +1040,7 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "parent_repeater": "field_679345c1f6d98",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_679346ecfc51b",
@@ -1059,7 +1059,7 @@
                     "default_value": "",
                     "placeholder": "",
                     "parent_repeater": "field_679345c1f6d98",
-                    "wpml_cf_preferences": 1
+                    "wpml_cf_preferences": 3
                 }
             ]
         },
@@ -1077,7 +1077,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
+            "wpml_cf_preferences": 3,
             "placement": "top",
             "endpoint": 0,
             "selected": 0
@@ -1106,7 +1106,7 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_6794bdf22e846",
@@ -1155,9 +1155,9 @@
             "label": "Newsletter Subscription",
             "name": "newsletter_subscription",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
-            "required": 0,
+            "required": false,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -1166,11 +1166,10 @@
             },
             "wpml_cf_preferences": 2,
             "default_value": "",
-            "allow_in_bindings": 1,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 1
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": ""
         },
         {
             "key": "field_679a455257831",
@@ -1189,7 +1188,7 @@
             "placement": "top",
             "endpoint": 0,
             "selected": 0,
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_679a45d457833",
@@ -1248,7 +1247,7 @@
                 "id": ""
             },
             "return_format": "array",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_61e3fb60d7e96",
@@ -1267,7 +1266,7 @@
             "placement": "top",
             "endpoint": 0,
             "selected": 0,
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_61e3fb70d7e97",
@@ -1370,7 +1369,7 @@
             "placement": "top",
             "endpoint": 0,
             "selected": 0,
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_67b213d482b02",
@@ -1391,7 +1390,7 @@
             "ui_on_text": "Yes",
             "ui_off_text": "No",
             "ui": 1,
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_679a3aedab48d",
@@ -1417,7 +1416,7 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_6797b74a00dac",
@@ -1476,7 +1475,29 @@
                 "id": ""
             },
             "return_format": "array",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 3
+        },
+        {
+            "key": "field_681296f9775de",
+            "label": "test",
+            "name": "test",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -1497,6 +1518,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfml_field_group_mode": "translation",
-    "modified": 1745847195
+    "acfml_field_group_mode": "localization",
+    "modified": 1747584238
 }

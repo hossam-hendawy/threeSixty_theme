@@ -1,5 +1,4 @@
-<?php wp_footer(); ?>
-
+<!-- region get in touch block-->
 <?php
 $hide_get_in_touch = get_field('hide_get_in_touch', get_the_ID());
 $get_in_touch_title = get_field('get_in_touch_title', 'options');
@@ -38,6 +37,12 @@ $has_border = $has_border ? ' block-has-border' : ' ';
     </div>
   </section>
 <?php } ?>
+<!-- endregion-->
+
+<!-- region newsletter-form-->
+<?php get_template_part("partials/newsletter-form"); ?>
+<!-- endregion-->
+<?php wp_footer(); ?>
 <!--Footer ACF-->
 <?php
 $newsletter_subscription = get_field('newsletter_subscription', 'options');
@@ -66,28 +71,6 @@ $current_lang = apply_filters('wpml_current_language', NULL);
 <!--region footer-->
 <footer>
   <div class="container">
-    <div class="contact-us-wrapper">
-      <div class="content-icon">
-        <?php if (!empty($icon) && is_array($icon)) { ?>
-          <picture class="image-wrapper icon cover-image ">
-            <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
-          </picture>
-        <?php } ?>
-        <div class="content">
-          <?php if ($main_title) { ?>
-            <h3 class="text-lg semi-bold footer-title white-color"> <?= $main_title ?> </h3>
-          <?php } ?>
-          <?php if ($title) { ?>
-            <h5 class="text-md regular footer-description"><?= $title ?></h5>
-          <?php } ?>
-        </div>
-      </div>
-      <?php if ($newsletter_subscription): ?>
-        <div class="form-btn">
-          <?=  $newsletter_subscription ?>
-        </div>
-      <?php endif; ?>
-    </div>
     <div class="content-wrapper">
       <div class="left-content">
         <?php if ($footer_logo) : ?>
