@@ -500,7 +500,7 @@ footer {
       font-size: 14px;
       font-weight: 500;
       line-height: 20px;
-      width: 270px !important;
+      width: 287px !important;
     }
 
     .mailster-label {
@@ -521,7 +521,7 @@ footer {
     input[type="submit"] {
       position: relative;
       height: 45px !important;
-      width: 270px !important;
+      width: 287px !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -563,7 +563,7 @@ footer {
       transition: transform $duration !important;
 
       @include small-screen {
-        top: 80% !important;
+        top: 78% !important;
         transform: translateY(-50%);
         inset-inline-end: 72px;
       }
@@ -571,7 +571,7 @@ footer {
 
       body.rtl & {
         @include small-screen {
-          inset-inline-end: 107px;
+          inset-inline-end: 102px;
         }
         inset-inline-end: 42px;
         transform: scaleX(-1) translateY(-50%);
@@ -586,15 +586,7 @@ footer {
     }
   }
 
-
-
-
-
 }
-
-
-//   error massage
-
 
 .wp-block-mailster-messages {
   position: absolute !important;
@@ -612,7 +604,3 @@ footer {
     text-align: start !important;
   }
 }
-
-
-
-
