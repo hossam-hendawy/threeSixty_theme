@@ -230,7 +230,7 @@ footer {
       align-items: center;
       //flex-wrap: wrap;
       gap: 11px;
-      margin-top: 30px;
+      margin-top: 48px;
       @include min-medium-screen {
         margin-top: 0;
       }
@@ -273,6 +273,24 @@ footer {
           min-width: 172px;
         }
       }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus,
+      select:-webkit-autofill,
+      select:-webkit-autofill:hover,
+      select:-webkit-autofill:focus {
+        @include input-style;
+        outline: none;
+        color: white !important;
+        caret-color: #98A2B3;
+        -webkit-text-fill-color: #98A2B3;
+        -webkit-box-shadow: 0 0 0 1000px white inset;
+      }
+
     }
   }
 
@@ -568,4 +586,33 @@ footer {
     }
   }
 
+
+
+
+
 }
+
+
+//   error massage
+
+
+.wp-block-mailster-messages {
+  position: absolute !important;
+  width: 100% !important;
+  inset-inline-end: 0 !important;
+  bottom: calc(100% + 10px);
+
+  .mailster-block-form-info-succes, .mailster-block-form-info-error {
+    text-align: start !important;
+    background-color: #F04438 !important;
+    font-size: 14px !important;
+  }
+
+  .mailster-block-form.wp-block-mailster-form-wrapper .mailster-block-form-inner .mailster-block-form-info > div {
+    text-align: start !important;
+  }
+}
+
+
+
+
