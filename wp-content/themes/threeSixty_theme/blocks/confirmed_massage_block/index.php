@@ -56,10 +56,7 @@ $cta_button = get_field('cta_button');
         </svg>
       </a>
     <?php } ?>
-
   </div>
 </div>
 </section>
-
-
 <!-- endregion threeSixty_theme's Block -->
