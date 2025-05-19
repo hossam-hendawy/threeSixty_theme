@@ -1,0 +1,44 @@
+@use "../../styles/common/variables" as *;
+@use "../../styles/mixins/mixins" as *;
+
+// @author HOSSAM
+.confirmed_massage_block {
+  padding-block: 115px 65px;
+  @include min-medium-screen {
+    padding-block: 250px 128px;
+  }
+
+  .top-content {
+    gap: 15px;
+    @include marginX(auto);
+    @include media-screen-600 {
+      max-width: 630px;
+    }
+    @include min-medium-screen {
+      max-width: 800px;
+    }
+    @include large-screen {
+      max-width: 768px;
+    }
+
+    .title {
+      color: $threeSixty_theme_gray-950;
+    }
+
+    .description {
+      p {
+        line-height: 150%;
+        color: $threeSixty_theme_gray-500;
+        @include min-medium-screen {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .theme-cta-button {
+      margin-inline: auto;
+      margin-top: 35px;
+    }
+  }
+
+}
