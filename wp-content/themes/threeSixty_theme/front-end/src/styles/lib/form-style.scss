@@ -42,8 +42,6 @@
 }
 
 .form-wrapper {
-  margin-top: 48px;
-
   .quform-element-row, .quform-options-columns {
     margin: 0 -16px !important;
     width: auto;
@@ -93,7 +91,7 @@
     border: 1px solid #D2D6DB;
     background: #FFF;
     padding: 10px 14px;
-    height: 44px;
+    height: 44px !important;
     @include input-style;
 
     &::placeholder {
@@ -102,7 +100,7 @@
   }
 
   textarea {
-    height: 85px;
+    height: 85px !important;
     padding: 10px 14px !important;
     resize: none;
   }
@@ -117,72 +115,9 @@
   }
 
   .quform-element-submit {
-    border-radius: 4px;
-    background: #344054;
-    height: 48px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 11px;
-    margin-bottom: 0;
-    transition: background-color $duration;
-
-    &:hover {
-      background-color: $threeSixty_theme_brand-600;
-    }
-  }
-
-  .quform-element-submit > div {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    max-width: unset;
-    margin: 0;
-    padding: 0;
-  }
-
-  .quform-element-submit button {
-    width: 100%;
-    height: 100%;
-    color: $threeSixty_theme_white;
-    font-family: inherit;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-    padding: 0;
-    flex-shrink: 0;
-    @include media-screen-768 {
-      font-size: 20px;
-    }
 
   }
 
-  span.quform-button-submit-text {
-    position: relative;
-    flex-shrink: 0;
-
-    &:after {
-      content: "";
-      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2220%22%20viewBox%3D%220%200%2016%2020%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M10.67%2019.28H0L5.36%209.99L10.67%2019.28Z%22%20fill%3D%22%23D0D5DD%22/%3E%3Cpath%20d%3D%22M16%2010L10.67%200.72H0L5.36%209.99L10.67%2019.28L16%2010Z%22%20fill%3D%22%23F2F4F7%22/%3E%3C/svg%3E') no-repeat center;
-      background-size: contain;
-      position: absolute !important;
-      width: 18.56px !important;
-      height: 20px !important;
-      top: 50% !important;
-      transform: translateY(-50%);
-      inset-inline-start: calc(100% + 15px);
-      cursor: pointer !important;
-      pointer-events: none !important;
-      transition: transform $duration !important;
-
-      body.rtl & {
-        transform: scaleX(-1) translateY(-38%);
-      }
-
-    }
-  }
 
   .quform-loading {
     display: none !important;

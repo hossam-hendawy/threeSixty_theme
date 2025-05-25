@@ -4,4 +4,44 @@
 // @author HOSSAM
 .client_brief_form_block {
 
+  padding-block: 115px 65px;
+  @include min-medium-screen {
+    padding-block: 128px 128px;
+  }
+
+
+  .quform-page-progress-bar {
+    background-color: $threeSixty_theme_black;
+    color: $threeSixty_theme_white;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .get-in-touch {
+    max-width: 100%;
+    margin-inline: auto;
+    @include media-screen-768{
+      max-width: 607px;
+    }
+  }
+
+
+  .quform-spacer {
+    margin-bottom: 16px !important;
+  }
+
+
+  .quform-element-textarea {
+    margin-bottom: 0 !important;
+  }
+
+  .form-wrapper textarea {
+    height: 85px;
+    padding: 10px 14px !important;
+    resize: none;
+  }
+
 }
