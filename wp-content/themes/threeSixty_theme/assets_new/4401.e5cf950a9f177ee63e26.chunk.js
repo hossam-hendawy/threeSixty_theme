@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkthreeSixty_theme=self.webpackChunkthreeSixty_theme||[]).push([[2189,4401],{2189:function(){},4401:function(e,t,h){h(2189);var n=h(6241),u=h(570);t.default=async e=>{(0,u.W)(e),(0,n.q)(e)}}}]);
-//# sourceMappingURL=4401.e5cf950a9f177ee63e26.chunk.js.map

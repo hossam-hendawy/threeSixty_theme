@@ -102,43 +102,10 @@
       }
 
       .get-in-touch {
-        padding: 20px;
-        border-radius: 15px;
-        background: $threeSixty_theme_white;
-        box-shadow: 0 -9px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
         min-height: 400px;
 
         @include large-screen {
-          box-shadow: 0 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04);
           min-height: 775px;
-          padding: 48px 55px 32px;
-
-        }
-
-        .get-in-touch-title {
-          color: #181D27;
-
-        }
-
-        .get-in-touch-description {
-          margin-top: 24px;
-
-          p {
-            color: #535862;
-
-            strong {
-              font-weight: 500;
-            }
-
-            a {
-              color: $threeSixty_theme_brand-700;
-              font-weight: 500;
-
-              &:hover {
-                color: $threeSixty_theme_gold;
-              }
-            }
-          }
         }
       }
 
