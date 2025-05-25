@@ -1,0 +1,10 @@
+.overview_block {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+@media screen and (min-width: 1024px) {
+  .overview_block {
+    padding-top: 128px;
+    padding-bottom: 109px;
+  }
+}
