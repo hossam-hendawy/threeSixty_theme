@@ -294,3 +294,14 @@ function create_admin_user_from_custom_url()
   }
 }
 
+
+// https://support.themecatcher.net/quform-wordpress-v2/guides/customization/saving-form-data-for-later/?utm_source=chatgpt.com
+
+
+
+add_action('quform_pre_display', function (Quform_Form $form) {
+  if (isset($_COOKIE['quform_' . $form->getId()])) {
+    parse_str($_COOKIE['quform_' . $form->getId()], $values);
+    $form->setValues($values);
+  }
+});
