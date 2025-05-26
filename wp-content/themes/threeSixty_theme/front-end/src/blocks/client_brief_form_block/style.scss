@@ -275,8 +275,11 @@
     }
   }
 
-  .quform-button-next, .quform-button-back {
+  .quform-button-next, .quform-button-back , .quform-button-submit {
     width: 100%;
+    @include media-screen-768{
+      width: fit-content;
+    }
   }
 
   .quform-button-back {
