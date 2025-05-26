@@ -2,11 +2,237 @@
 @use "../../styles/mixins/mixins" as *;
 
 // @author HOSSAM
-.client_brief_form_block {
 
-  padding-block: 115px 65px;
+.client_brief_form_block {
+  padding-block: 44px 65px;
   @include min-medium-screen {
-    padding-block: 128px 128px;
+    padding-block: 87px 80px;
+  }
+  @include large-screen {
+    padding-block: 87px 128px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    @include min-medium-screen {
+      gap: 0;
+      flex-direction: row;
+    }
+
+    .left-content {
+      max-width: 520px;
+      @include min-medium-screen {
+        width: 42.83%;
+      }
+
+      .content {
+        p {
+          color: #535862;
+        }
+      }
+
+      .title {
+        color: #181D27;
+      }
+
+
+      .steps-cards {
+        margin-top: 24px;
+        @include min-medium-screen {
+          margin-top: 48px;
+        }
+
+        .step-card {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          position: relative;
+
+          .left-step {
+            background: $threeSixty_theme_white;
+            color: $threeSixty_theme_gold;
+            font-family: inherit;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 44px;
+            letter-spacing: -0.46px;
+            @include square(46px);
+            border-radius: 50%;
+            border: 2.5px solid $threeSixty_theme_gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+
+          }
+
+          .right-step {
+            width: 85%;
+            gap: 8px;
+            @include small-screen {
+              width: 80%;
+            }
+
+            .info-title {
+              color: $threeSixty_theme_gray-950;
+            }
+
+            .info-description {
+              max-width: 420px;
+
+              p {
+                font-weight: 400;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .right-content {
+      width: 100%;
+      @include min-medium-screen {
+        width: 50%;
+        margin-top: -409px;
+      }
+
+      .bottom-content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        @include small-screen {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include min-medium-screen {
+          margin-top: 50px;
+        }
+        @include large-screen {
+          margin-top: 92px;
+        }
+
+        .information-support {
+          padding: 24px;
+          border-radius: 10px;
+          border: 1px solid #CDD5DF;
+          gap: 8px;
+          width: 48.02%;
+          @include small-screen {
+            width: 100%;
+          }
+          @include min-medium-screen {
+            padding-inline: 18px;
+          }
+          @include large-screen {
+            padding: 24px;
+          }
+
+          .information-title {
+            color: #1F2A37;
+          }
+
+          .information-description {
+            color: $threeSixty_theme_gray-600;
+
+            p {
+              font-weight: 400;
+            }
+          }
+
+          .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $threeSixty_theme_brand-700;
+
+            p, a {
+              color: $threeSixty_theme_brand-700;
+              transition: color $duration;
+              font-weight: 600;
+
+              &:hover {
+                color: $threeSixty_theme_gold;
+              }
+            }
+
+            .icon {
+              @include square(20px);
+            }
+
+            body.rtl & {
+              flex-direction: row-reverse;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .step-card {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+
+      @include min-medium-screen {
+        padding-bottom: 48px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        inset-inline-start: 23px;
+        width: 2.5px;
+        height: 100%;
+        background: $threeSixty_theme_gold;
+      }
+    }
+  }
+
+  .form-wrapper {
+
+    .quform-sub-label, .quform-label > label {
+      color: #1F2A37;
+      font-family: inherit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+    }
+
+
+    input, textarea {
+      border-radius: 8px;
+      border: 1px solid #D2D6DB;
+      background: #FFF;
+      padding: 10px 14px;
+      height: 44px;
+      @include input-style;
+
+      &::placeholder {
+        @include input-style;
+      }
+    }
+
+
+    .quform-loading {
+      display: none !important;
+    }
+
+  }
+
+  .quform-edit-form {
+    display: none;
   }
 
 
@@ -18,12 +244,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    display: none;
   }
 
   .get-in-touch {
     max-width: 100%;
     margin-inline: auto;
-    @include media-screen-768{
+    @include media-screen-768 {
       max-width: 607px;
     }
   }
@@ -44,4 +271,68 @@
     resize: none;
   }
 
+
+  .quform-element-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .quform-button-next, .quform-button-back {
+    padding: 0;
+  }
+
+  .quform-button-back {
+    margin-inline: 0 auto !important;
+  }
+
+  .quform-button-next ,.quform-button-submit {
+    margin-inline: auto 0 !important;
+  }
+
+
+  .quform-next, .quform-back, .quform-submit {
+    @include theme-cta-style;
+    padding: 0;
+
+    span {
+      position: relative;
+      flex-shrink: 0;
+
+      &:after {
+        content: "";
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2220%22%20viewBox%3D%220%200%2016%2020%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M10.67%2019.28H0L5.36%209.99L10.67%2019.28Z%22%20fill%3D%22%23D0D5DD%22/%3E%3Cpath%20d%3D%22M16%2010L10.67%200.72H0L5.36%209.99L10.67%2019.28L16%2010Z%22%20fill%3D%22%23F2F4F7%22/%3E%3C/svg%3E') no-repeat center;
+        background-size: contain;
+        position: absolute !important;
+        width: 18.56px !important;
+        height: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+        inset-inline-start: calc(100% + 15px);
+        cursor: pointer !important;
+        pointer-events: none !important;
+        transition: transform $duration !important;
+
+        body.rtl & {
+          transform: scaleX(-1) translateY(-46%);
+        }
+
+      }
+    }
+  }
+
+  .quform-back {
+    span {
+
+      &:after {
+        body.rtl & {
+          transform: scaleX(1) translateY(-46%);
+        }
+      }
+    }
+  }
+
+
 }
+
+
