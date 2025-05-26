@@ -247,14 +247,6 @@
     display: none;
   }
 
-  .get-in-touch {
-    max-width: 100%;
-    margin-inline: auto;
-    @include media-screen-768 {
-      max-width: 607px;
-    }
-  }
-
 
   .quform-spacer {
     margin-bottom: 16px !important;
@@ -275,25 +267,33 @@
   .quform-element-submit {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    @include media-screen-768 {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   .quform-button-next, .quform-button-back {
-    padding: 0;
+    width: 100%;
   }
 
   .quform-button-back {
-    margin-inline: 0 auto !important;
+    @include media-screen-768 {
+      margin-inline: 0 auto !important;
+    }
   }
 
-  .quform-button-next ,.quform-button-submit {
-    margin-inline: auto 0 !important;
+  .quform-button-next, .quform-button-submit {
+    @include media-screen-768 {
+      margin-inline: auto 0 !important;
+    }
   }
 
 
   .quform-next, .quform-back, .quform-submit {
     @include theme-cta-style;
-    padding: 0;
 
     span {
       position: relative;
