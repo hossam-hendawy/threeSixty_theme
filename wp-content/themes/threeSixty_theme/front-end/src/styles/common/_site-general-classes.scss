@@ -349,6 +349,204 @@ body.home {
 
 // endregion
 
+.client_brief_form_block, .contact_us_block {
+  padding-block: 44px 65px;
+  @include min-medium-screen {
+    padding-block: 87px 80px;
+  }
+  @include large-screen {
+    padding-block: 87px 128px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    @include min-medium-screen {
+      gap: 0;
+      flex-direction: row;
+    }
+
+    .left-content {
+      max-width: 520px;
+      @include min-medium-screen {
+        width: 42.83%;
+      }
+
+      .content {
+        p {
+          color: #535862;
+        }
+      }
+
+      .title {
+        color: #181D27;
+      }
+
+
+      .steps-cards {
+        margin-top: 24px;
+        @include min-medium-screen {
+          margin-top: 48px;
+        }
+
+        .step-card {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          position: relative;
+
+          .left-step {
+            background: $threeSixty_theme_white;
+            color: $threeSixty_theme_gold;
+            font-family: inherit;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 44px;
+            letter-spacing: -0.46px;
+            @include square(46px);
+            border-radius: 50%;
+            border: 2.5px solid $threeSixty_theme_gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+
+          }
+
+          .right-step {
+            width: 85%;
+            gap: 8px;
+            @include small-screen {
+              width: 80%;
+            }
+
+            .info-title {
+              color: $threeSixty_theme_gray-950;
+            }
+
+            .info-description {
+              max-width: 420px;
+
+              p {
+                font-weight: 400;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .right-content {
+      width: 100%;
+      @include min-medium-screen {
+        width: 50%;
+        margin-top: -409px;
+      }
+
+      .bottom-content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        @include small-screen {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include min-medium-screen {
+          margin-top: 50px;
+        }
+        @include large-screen {
+          margin-top: 92px;
+        }
+
+        .information-support {
+          padding: 24px;
+          border-radius: 10px;
+          border: 1px solid #CDD5DF;
+          gap: 8px;
+          width: 48.02%;
+          @include small-screen {
+            width: 100%;
+          }
+          @include min-medium-screen {
+            padding-inline: 18px;
+          }
+          @include large-screen {
+            padding: 24px;
+          }
+
+          .information-title {
+            color: #1F2A37;
+          }
+
+          .information-description {
+            color: $threeSixty_theme_gray-600;
+
+            p {
+              font-weight: 400;
+            }
+          }
+
+          .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $threeSixty_theme_brand-700;
+
+            p, a {
+              color: $threeSixty_theme_brand-700;
+              transition: color $duration;
+              font-weight: 600;
+
+              &:hover {
+                color: $threeSixty_theme_gold;
+              }
+            }
+
+            .icon {
+              @include square(20px);
+            }
+
+            body.rtl & {
+              flex-direction: row-reverse;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .step-card {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+
+      @include min-medium-screen {
+        padding-bottom: 48px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        inset-inline-start: 23px;
+        width: 2.5px;
+        height: 100%;
+        background: $threeSixty_theme_gold;
+      }
+    }
+  }
+}
+
+
 .overview-content {
   .sub-title {
     letter-spacing: normal;

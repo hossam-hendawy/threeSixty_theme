@@ -92,6 +92,7 @@
     background: #FFF;
     padding: 10px 14px;
     height: 44px !important;
+    color: $threeSixty_theme_black !important;
     @include input-style;
 
     &::placeholder {

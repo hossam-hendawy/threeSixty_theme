@@ -37,6 +37,8 @@ async function onLoad() {
     loaded = true;
     gsap.registerPlugin(ScrollTrigger);
     await reInvokableFunction();
+
+
     document.body.classList.add('loaded');
     //region force page to scroll to element if url has hash
     let currentURL = window.location.href;
