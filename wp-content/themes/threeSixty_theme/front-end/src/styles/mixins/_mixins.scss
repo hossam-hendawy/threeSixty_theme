@@ -425,12 +425,12 @@ $base-size: 10;
 @mixin input-style {
   color: #9DA4AE;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 14px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   @include media-screen-768 {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 

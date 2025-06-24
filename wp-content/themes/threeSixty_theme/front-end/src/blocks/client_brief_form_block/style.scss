@@ -2,7 +2,6 @@
 @use "../../styles/mixins/mixins" as *;
 
 // @author HOSSAM
-
 .client_brief_form_block {
 
   .form-wrapper {
@@ -58,9 +57,9 @@
     }
   }
 
-  .quform-button-next, .quform-button-back , .quform-button-submit {
+  .quform-button-next, .quform-button-back, .quform-button-submit {
     width: 100%;
-    @include media-screen-768{
+    @include media-screen-768 {
       width: fit-content;
     }
   }
@@ -117,6 +116,59 @@
         }
       }
     }
+  }
+
+  .quform-element-textarea {
+    margin-bottom: 0 !important;
+  }
+
+
+  .quform-element-optional {
+    .quform-option {
+      margin-top: 8px !important;
+    }
+  }
+
+  .quform .quform-input-multiselect .select2-container--quform .select2-selection {
+    border-radius: 8px;
+    border: 1px solid var(--Gray-neutral-300, #D2D6DB);
+    background: #FFF;
+    padding-inline: 14px;
+    height: 44px;
+  }
+
+  .select2-container--quform .select2-search--inline:first-child .select2-search__field {
+    margin: 0;
+  }
+
+  .select2-container--quform .select2-results__option {
+    background-color: transparent !important;
+    color: #9DA4AE !important;
+    font-family: inherit !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    background-image: unset !important;
+    background-color: transparent;
+    background-image: none !important;
+
+  }
+
+  .select2-results__option.select2-results__option--highlighted {
+    background-color: transparent;
+    background-image: none;
+  }
+  .select2-container--quform .select2-selection--multiple .select2-selection__choice {
+    color: $threeSixty_theme_black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    background-image: unset;
+    margin-inline-start: 7px;
+    background: transparent !important;
+    border: none !important;
   }
 }
 
