@@ -37,11 +37,9 @@
     display: none;
   }
 
-
   .quform-spacer {
     margin-bottom: 16px !important;
   }
-
 
   .form-wrapper textarea {
     height: 85px;
@@ -111,16 +109,15 @@
 
   .quform-back {
     span {
-
       &:after {
         body.rtl & {
           transform: scaleX(1) translateY(-46%);
+          inset-inline-start: unset;
+          inset-inline-end: calc(100% + 15px);
         }
       }
     }
   }
-
-
 }
 
 
