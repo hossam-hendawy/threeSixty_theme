@@ -21,6 +21,13 @@
     }
   }
 
+  .get-in-touch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
   .quform-edit-form {
     display: none;
   }
@@ -40,6 +47,9 @@
     margin-bottom: 16px !important;
   }
 
+  .form-wrapper {
+    width: 100%;
+  }
   .form-wrapper textarea {
     height: 85px;
     padding: 10px 14px !important;
@@ -142,36 +152,74 @@
     margin: 0;
   }
 
-  .select2-container--quform .select2-results__option {
-    background-color: transparent !important;
-    color: #9DA4AE !important;
-    font-family: inherit !important;
-    font-size: 16px !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: 24px !important;
-    background-image: unset !important;
-    background-color: transparent;
-    background-image: none !important;
 
-  }
-
-  .select2-results__option.select2-results__option--highlighted {
-    background-color: transparent;
-    background-image: none;
-  }
-
-  .select2-container--quform .select2-selection--multiple .select2-selection__choice {
-    color: $threeSixty_theme_black;
+  .quform-success-message {
+    margin: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    background-image: unset;
-    margin-inline-start: 7px;
-    background: transparent !important;
-    border: none !important;
+    font-family: inherit;
+    @include min-medium-screen{
+      font-size: 24px;
+    }
+  }
+
+}
+
+.select2-results__option.select2-results__option--highlighted {
+  background-color: transparent;
+  background-image: none;
+  transition: background-color $duration !important;
+}
+
+.select2-container--quform .select2-selection--multiple .select2-selection__rendered {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.select2-container--quform .select2-selection--multiple .select2-selection__choice {
+  color: $threeSixty_theme_black;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  background-image: unset;
+  margin-inline-start: 7px;
+  background: transparent !important;
+  border: none !important;
+  width: fit-content;
+
+  @include media-screen-768{
+    font-size: 16px;
   }
 }
 
 
+.select2-container--quform .select2-results__option {
+  background-color: transparent !important;
+  color: #9DA4AE !important;
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  background-image: unset !important;
+  background-color: transparent;
+  background-image: none !important;
+  transition: color $duration;
+}
+
+
+.select2-container--quform .select2-results__option--highlighted[aria-selected] {
+  background-color: #404968 !important;
+  color: white !important;
+}
+
+.select2-container--quform .select2-selection--multiple .select2-selection__choice__remove{
+  top: 50%;
+
+  @include media-screen-768{
+    top: 54%;
+  }
+}
