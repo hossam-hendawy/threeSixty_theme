@@ -33,7 +33,7 @@ $description = get_field('description');
 <?php general_settings_for_blocks($id, $className, $dataClass); ?>
 <div class="content-wrapper">
   <?php if ($title): ?>
-    <h6 class="d-sm-h5 gray-900 bold title"><?= $title ?></h6>
+    <h2 class=" gray-900 bold title"><?= $title ?></h2>
   <?php endif; ?>
   <?php if ($description): ?>
     <div class="text-lg gray-600 description"><?= $description ?></div>

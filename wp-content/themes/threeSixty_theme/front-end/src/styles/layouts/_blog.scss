@@ -72,7 +72,83 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 16px;
+    margin-block-end: 16px;
+    background-color: red;
+  }
+
+  h1 {
+    font-family: inherit;
+    color: $threeSixty_theme_gray-900;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    @include media-screen-992 {
+      font-size: 32px;
+    }
+    @include large-screen {
+      line-height: 125%;
+      font-size: 48px;
+    }
+  }
+
+  h2 {
+    font-family: inherit;
+    color: $threeSixty_theme_gray-900;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    @include large-screen {
+      font-size: 30px;
+      line-height: 126.667%;
+    }
+  }
+
+  h3 {
+    font-family: inherit;
+    color: $threeSixty_theme_gray-900;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 133.333%;
+    font-style: normal;
+    @include min-medium-screen {
+      font-size: 24px;
+    }
+  }
+
+  h4 {
+    color: $threeSixty_theme_gray-900;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    @include large-screen {
+      font-size: 20px;
+      line-height: 30px; /* 150% */
+    }
+  }
+
+  h5 {
+    color: $threeSixty_theme_gray-900;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 155%;
+    font-style: normal;
+    @include large-screen {
+      font-size: 18px;
+    }
+  }
+
+  h6 {
+    color: $threeSixty_theme_gray-900;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
   }
 
   p {
@@ -80,8 +156,17 @@
     max-width: 100%;
   }
 
+
   strong {
     font-weight: 600;
+  }
+
+  .semi-bold {
+    font-weight: 600;
+  }
+
+  .bold {
+    font-weight: 700;
   }
 
   blockquote {
@@ -162,7 +247,7 @@
 
     a {
       display: inline-block;
-      color: $threeSixty_theme_gray-600;
+      color: $threeSixty_theme_gold;
       transition: color $duration;
       text-decoration-line: underline !important;
       text-decoration-style: solid;
@@ -177,15 +262,29 @@
     }
   }
 
+  .wp-block-list {
+    margin-block-start: 10px;
+    padding-inline-start: 20px;
+
+    li {
+      color: $threeSixty_theme_gray-600;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 155%;
+      font-style: normal;
+      margin-bottom: 8px;
+    }
+  }
 
   // table content
   .simpletoc-title {
-    color: $threeSixty_theme_gray-900;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 133.333%;
-    margin-bottom: 18px;
+    //color: $threeSixty_theme_gray-900;
+    //font-size: 24px;
+    //font-style: normal;
+    //font-weight: 600;
+    //line-height: 133.333%;
+    //margin-bottom: 18px;
 
   }
 
@@ -199,17 +298,13 @@
     border: 1px solid $threeSixty_theme_gray-300;
     border-radius: 8px;
 
-    ul {
-      list-style: none;
-    }
-
     li {
       min-height: 55px;
       padding-block: 10px;
       padding: 12px;
 
       &:not(:last-child) {
-        border: 1px solid $threeSixty_theme_gray-300;
+        border-bottom: 1px solid $threeSixty_theme_gray-300;
       }
 
       a {

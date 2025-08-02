@@ -89,7 +89,8 @@ footer {
   }
 
   .footer-logo {
-    width: 320px;
+    width: fit-content;
+    max-width: 320px;
     height: 47px;
     max-height: 47px;
     display: block;

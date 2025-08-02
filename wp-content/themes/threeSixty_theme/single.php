@@ -51,7 +51,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
             }
             ?>
           </div>
-          <h1 class="post-title d-lg-h3 bold"><?php the_title(); ?></h1>
+          <h1 class="post-title  bold"><?php the_title(); ?></h1>
           <div class="excerpt text-xl gray-500">
             <?php echo get_the_excerpt(); ?>
           </div>
@@ -88,8 +88,8 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                 </picture>
               <?php } ?>
               <div class="author-info">
-                <h5 class="text-lg capital-text semi-bold gray-900 author-name"><?= $author_name ?></h5>
-                <h6 class="text-md capital-text regular gray-600 author-jop"> <?= $user_jop_title ?></h6>
+                <div class="text-lg capital-text semi-bold gray-900 author-name"><?= $author_name ?></div>
+                <div class="text-md capital-text regular gray-600 author-jop"> <?= $user_jop_title ?></div>
               </div>
             </div>
             <div class="social-links">
@@ -169,14 +169,14 @@ $current_lang = apply_filters('wpml_current_language', NULL);
         $query = new WP_Query($args);
         ?>
         <?php if ($query->have_posts()): ?>
-          <h5 class="semi-bold recent-content-title">
+          <h2 class="semi-bold recent-content-title">
             <?php if ($current_lang === 'ar' && isset($languages['en'])) { ?>
               مقالات ذات صلة
             <?php } elseif ($current_lang === 'en' && isset($languages['ar'])) {
               ?>
               Related Posts
             <?php } ?>
-          </h5>
+          </h2>
 
           <div class="swiper recent-posts-swiper">
             <div class="swiper-wrapper">
