@@ -37,7 +37,6 @@ if (isset($block)) {
         the_row();
         $title = get_sub_field('title');
         $description = get_sub_field('description');
-        $description = bdw_protect_facebook_links($description);
 
         ?>
         <div class="content iv-st-from-bottom">

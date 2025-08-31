@@ -9,7 +9,7 @@ import {animations} from "../../scripts/general/animations";
 const textBlock = async (block) => {
 
   // add block code here
-// testing the new hidden value 
+// testing the new hidden value
 
     animations(block);
     imageLazyLoading(block);
