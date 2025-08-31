@@ -8,19 +8,23 @@
       max-width: 1000px;
       @include marginX(auto);
     }
+
     .content {
       border-top: 1px solid $threeSixty_theme_gray-300;
       @include paddingY(30px, 50px);
       @include min-medium-screen {
         @include paddingY(50px);
       }
+
       .title {
         margin-bottom: 20px;
       }
+
       .description {
         p {
           margin-bottom: 14px;
         }
+
         ol {
           margin-left: 18px;
           @include min-medium-screen {
@@ -30,6 +34,7 @@
             margin-left: 20px;
           }
         }
+
         ul {
           margin-left: 15px;
           padding-left: 12px;
@@ -38,10 +43,12 @@
             margin-left: 17.9px;
           }
         }
+
         a {
           color: $threeSixty_theme_brand-600;
+          cursor: pointer;
 
-          &:hover{
+          &:hover {
             color: $threeSixty_theme_gray-500;
           }
         }

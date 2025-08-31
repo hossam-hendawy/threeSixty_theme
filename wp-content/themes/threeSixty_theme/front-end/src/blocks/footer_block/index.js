@@ -11,6 +11,22 @@ export default async (footer = document) => {
     accordion(footer.querySelectorAll(".accordion"))
   }
 
+  //Handeling Facebook Links Clicking
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest('a.external-link-protected[data-href]');
+    if (!a) return;
+    e.preventDefault();
+    window.open(a.getAttribute('data-href'), '_blank', 'noopener,noreferrer');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    const a = e.target.closest('a.external-link-protected[data-href]');
+    if (!a) return;
+    e.preventDefault();
+    window.open(a.getAttribute('data-href'), '_blank', 'noopener,noreferrer');
+  });
+
   animations(footer);
   imageLazyLoading(footer);
 };

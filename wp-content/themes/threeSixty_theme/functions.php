@@ -273,3 +273,50 @@ add_action('quform_pre_display', function (Quform_Form $form) {
     $form->setValues($values);
   }
 });
+
+
+// make facebook links not crawlable
+function bdw_protect_facebook_links($html)
+{
+  if (empty($html) || strip_tags($html) === '') return $html;
+
+  libxml_use_internal_errors(true);
+  $dom = new DOMDocument('1.0', 'UTF-8');
+
+  $dom->loadHTML('<?xml encoding="utf-8" ?>' . $html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+  $xpath = new DOMXPath($dom);
+  $links = $xpath->query('//a[@href]');
+
+  foreach ($links as $a) {
+    $href = $a->getAttribute('href');
+
+    if (preg_match('#^https?://((www|m|l)\.)?(facebook\.com|fb\.com|fb\.me)/#i', $href)) {
+      $a->setAttribute('data-href', $href);
+      $a->removeAttribute('href');
+      $a->setAttribute('role', 'link');
+      $a->setAttribute('tabindex', '0');
+
+      $a->setAttribute(
+        'class',
+        trim(($a->getAttribute('class') ?: '') . ' external-link-protected')
+      );
+      $rel = trim(($a->getAttribute('rel') ?: '') . ' nofollow noopener noreferrer');
+      $a->setAttribute('rel', preg_replace('/\s+/', ' ', $rel));
+      $a->setAttribute('target', '_blank');
+    }
+  }
+
+  $out = $dom->saveHTML();
+  libxml_clear_errors();
+  return $out;
+}
+
+add_filter('acf/format_value/type=wysiwyg', function ($value) {
+  return bdw_protect_facebook_links($value);
+}, 10, 1);
+
+add_filter('the_content', function ($content) {
+  return bdw_protect_facebook_links($content);
+}, 20);
+

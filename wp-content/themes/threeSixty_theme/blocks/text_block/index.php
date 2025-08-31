@@ -37,13 +37,8 @@ if (isset($block)) {
         the_row();
         $title = get_sub_field('title');
         $description = get_sub_field('description');
-        if ($description) {
-          $description = preg_replace(
-            '/<a(.*?)href="https?:\/\/(www\.)?facebook\.com(.*?)"(.*?)>/i',
-            '<a$1href="https://facebook.com$3"$4 rel="nofollow noopener noreferrer" target="_blank">',
-            $description
-          );
-        }
+        $description = bdw_protect_facebook_links($description);
+
         ?>
         <div class="content iv-st-from-bottom">
           <?php if ($title) { ?>
