@@ -339,7 +339,9 @@ $current_lang = apply_filters('wpml_current_language', NULL);
             $url = get_sub_field('url');
             $icon = get_sub_field('icon');
             ?>
-            <a href="<?= $url ?>" target="_blank" class="social-link" aria-label=" (opens in a new tab)">
+            <a href="javascript:void(0);"
+               onclick="window.open('<?= esc_url($url) ?>','_blank');"
+               class="social-link" aria-label=" (opens in a new tab)">
               <?php if (!empty($icon) && is_array($icon)) { ?>
                 <picture class="icon-wrapper cover-image">
                   <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
