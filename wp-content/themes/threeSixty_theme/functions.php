@@ -190,7 +190,7 @@ function threeSixty_theme_breadcrumbs()
     $blog_label = apply_filters('wpml_translate_single_string', 'Blog', 'theme-breadcrumbs', 'Blog Label');
 
     if (ICL_LANGUAGE_CODE === 'ar') {
-      $blog_url = site_url('/ar/blog/');
+      $blog_url = site_url('المدونة');
     } else {
       $blog_url = site_url('/blog/');
     }
