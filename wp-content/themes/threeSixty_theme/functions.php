@@ -192,7 +192,7 @@ function threeSixty_theme_breadcrumbs()
     if (ICL_LANGUAGE_CODE === 'ar') {
       $blog_url = site_url('المدونة');
     } else {
-      $blog_url = site_url('/blog/');
+      $blog_url = site_url('en/blog/');
     }
 
     echo '<a href="' . esc_url($blog_url) . '">' . esc_html($blog_label) . '</a>';
