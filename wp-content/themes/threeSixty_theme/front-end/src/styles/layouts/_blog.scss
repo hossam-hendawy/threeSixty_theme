@@ -214,6 +214,44 @@
     max-width: 720px;
     margin-inline: auto;
 
+    .wp-block-image,.wp-block-table {
+      max-width: 100% !important;
+    }
+
+    .wp-block-table{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+      }
+      table{
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid $threeSixty_theme_gray-500;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+        background: #fff;
+        min-width: 500px; /* ✅ يخلي الجدول يقدر يسبب سكرول لو الشاشة ضيقة */
+
+        th,td{
+          padding: 8px;
+          color: $threeSixty_theme_gray-900;
+          border: 0;
+          border-inline-end: 1px solid $threeSixty_theme_gray-500;
+          border-bottom: 1px solid $threeSixty_theme_gray-500;
+        }
+
+        tr:last-child td {
+          border-bottom: none;
+        }
+
+        tr td:last-child, tr th:last-child {
+          border-inline-end: none;
+        }
+      }
+    }
     img {
       max-width: 100% !important;
       border-radius: 12px;
@@ -277,15 +315,6 @@
   }
 
   // table content
-  .simpletoc-title {
-    //color: $threeSixty_theme_gray-900;
-    //font-size: 24px;
-    //font-style: normal;
-    //font-weight: 600;
-    //line-height: 133.333%;
-    //margin-bottom: 18px;
-
-  }
 
   .simpletoc-list {
     color: $threeSixty_theme_gray-900;

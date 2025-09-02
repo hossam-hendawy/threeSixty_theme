@@ -37,6 +37,7 @@ if (isset($block)) {
         the_row();
         $title = get_sub_field('title');
         $description = get_sub_field('description');
+
         ?>
         <div class="content iv-st-from-bottom">
           <?php if ($title) { ?>
