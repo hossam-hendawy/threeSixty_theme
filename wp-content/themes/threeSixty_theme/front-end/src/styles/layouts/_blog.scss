@@ -214,18 +214,20 @@
     max-width: 720px;
     margin-inline: auto;
 
-    .wp-block-image,.wp-block-table {
+    .wp-block-image, .wp-block-table {
       max-width: 100% !important;
     }
 
-    .wp-block-table{
+    .wp-block-table {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+
       &::-webkit-scrollbar {
         display: none; /* Chrome, Safari */
       }
-      table{
+
+      table {
         border-collapse: separate;
         border-spacing: 0;
         border-radius: 8px;
@@ -233,14 +235,23 @@
         border: 1px solid $threeSixty_theme_gray-500;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
         background: #fff;
-        min-width: 500px; /* ✅ يخلي الجدول يقدر يسبب سكرول لو الشاشة ضيقة */
+        min-width: 600px;
 
-        th,td{
-          padding: 8px;
-          color: $threeSixty_theme_gray-900;
+
+        th, td {
+          font-size: 18px;
+          font-style: normal;
+          line-height: 100%;
+          padding: 10px 8px;
+          color: $threeSixty_theme_gray-600;
           border: 0;
           border-inline-end: 1px solid $threeSixty_theme_gray-500;
           border-bottom: 1px solid $threeSixty_theme_gray-500;
+          @include media-screen-768 {
+            font-size: 18px;
+            padding:15px 8px;
+
+          }
         }
 
         tr:last-child td {
@@ -252,6 +263,7 @@
         }
       }
     }
+
     img {
       max-width: 100% !important;
       border-radius: 12px;
