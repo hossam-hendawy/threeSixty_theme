@@ -415,7 +415,7 @@ footer {
     }
 
     .social-links-wrapper {
-      display: flex;
+      display: flex !important;
       align-items: center;
       gap: 2px;
       flex-wrap: wrap;

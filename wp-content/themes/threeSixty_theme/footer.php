@@ -333,7 +333,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
         <div class="captions text-md regular white-color"><?= $footer_text ?></div>
       <?php endif; ?>
       <?php if (have_rows('social_links', 'options')) { ?>
-        <div class="social-links-wrapper">
+        <div class="social-links-wrapper" style="display: flex !important;">
           <?php while (have_rows('social_links', 'options')) {
             the_row();
             $url = get_sub_field('url');
