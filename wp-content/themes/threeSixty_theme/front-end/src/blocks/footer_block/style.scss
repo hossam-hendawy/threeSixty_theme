@@ -457,6 +457,9 @@ footer {
       width: 16px;
       height: 16px;
       margin-top: 4px;
+      body.rtl &{
+        margin-top: 0;
+      }
     }
 
     &:hover {
