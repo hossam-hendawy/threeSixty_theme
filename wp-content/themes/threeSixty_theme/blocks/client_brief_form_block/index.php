@@ -96,16 +96,28 @@ $form = get_field('form_short_code');
               <?php if ($information_description) { ?>
                 <div class="text-md information-description"><?= $information_description ?></div>
               <?php } ?>
-              <?php if ($text) { ?>
-                <div class="phone-number text-md medium">
-                  <?php if ($icon) { ?>
-                    <picture class="icon cover-image">
-                      <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
-                    </picture>
-                  <?php } ?>
-                  <?= $text ?>
-                </div>
-              <?php } ?>
+              <?php if (have_rows('contact_info')) { ?>
+                <?php while (have_rows('contact_info')) {
+                  the_row();
+                  $icon = get_sub_field('icon');
+                  $text = get_sub_field('info_text');
+                  ?>
+                  <div class="info-detail text-md medium">
+                    <?php if ($icon) { ?>
+                      <picture class="icon cover-image">
+                        <img src="<?= $icon['url'] ?>"
+                             alt="<?= $icon['alt'] ?>">
+                      </picture>
+                    <?php } ?>
+                    <?php if ($text) { ?>
+                      <div class="info-text">
+                        <?= $text ?>
+                      </div>
+                    <?php } ?>
+                  </div>
+                <?php }
+              } ?>
+
             </div>
           <?php } ?>
         </div>

@@ -39,76 +39,91 @@ $form = get_field('form');
     <div class="left-content">
       <div class="flex-col gab-20 content">
         <?php if ($title) { ?>
-        <h5 class="bold title iv-st-from-bottom"><?= $title ?></h5>
+          <h5 class="bold title iv-st-from-bottom"><?= $title ?></h5>
         <?php } ?>
         <?php if ($description) { ?>
-        <div class="text-xl iv-st-from-bottom"><?= $description ?></div>
+          <div class="text-xl iv-st-from-bottom"><?= $description ?></div>
         <?php } ?>
       </div>
       <?php if (have_rows('step')) { ?>
-      <div class="steps-cards iv-st-from-bottom  flex-col">
-        <?php while (have_rows('step')) {
-          the_row();
-          $info_title = get_sub_field('info_title');
-          $info_description = get_sub_field('info_description');
-          $index = get_row_index();
-          ?>
-        <div class="step-card ">
-          <div class="left-step"><?= $index ?></div>
-          <div class="right-step flex-col">
-            <?php if ($info_title) { ?>
-            <h4 class="text-xl bold info-title"><?= $info_title ?></h4>
-            <?php } ?>
-            <?php if ($info_description) { ?>
-            <div class="info-description gray-500 text-md"><?= $info_description ?></div>
-            <?php } ?>
-          </div>
+        <div class="steps-cards iv-st-from-bottom  flex-col">
+          <?php while (have_rows('step')) {
+            the_row();
+            $info_title = get_sub_field('info_title');
+            $info_description = get_sub_field('info_description');
+            $index = get_row_index();
+            ?>
+            <div class="step-card ">
+              <div class="left-step"><?= $index ?></div>
+              <div class="right-step flex-col">
+                <?php if ($info_title) { ?>
+                  <h4 class="text-xl bold info-title"><?= $info_title ?></h4>
+                <?php } ?>
+                <?php if ($info_description) { ?>
+                  <div
+                    class="info-description gray-500 text-md"><?= $info_description ?></div>
+                <?php } ?>
+              </div>
+            </div>
+          <?php } ?>
         </div>
-        <?php } ?>
-      </div>
       <?php } ?>
     </div>
     <div class="right-content iv-st-from-bottom">
       <div class="get-in-touch">
         <?php if ($get_in_touch_title) { ?>
-        <h3 class="get-in-touch-title bold"><?= $get_in_touch_title ?></h3>
+          <h3 class="get-in-touch-title bold"><?= $get_in_touch_title ?></h3>
         <?php } ?>
         <?php if ($get_in_touch_description) { ?>
-        <div class="get-in-touch-description text-xl"><?= $get_in_touch_description ?></div>
+          <div
+            class="get-in-touch-description text-xl"><?= $get_in_touch_description ?></div>
         <?php } ?>
         <div class="form-wrapper">
-          <?= $form?>
+          <?= $form ?>
         </div>
       </div>
       <?php if (have_rows('information_card')) { ?>
-      <div class="bottom-content">
-        <?php while (have_rows('information_card')) {
-          the_row();
-          $information_title = get_sub_field('information_title');
-          $information_description = get_sub_field('information_description');
-          $icon = get_sub_field('icon');
-          $text = get_sub_field('text');
-          ?>
-        <div class="information-support flex-col iv-st-from-bottom">
-          <?php if ($information_title) { ?>
-          <h3 class="text-xl bold information-title"><?= $information_title ?></h3>
-          <?php } ?>
-          <?php if ($information_description) { ?>
-          <div class="text-md information-description"><?= $information_description ?></div>
-          <?php } ?>
-          <?php if ($text) { ?>
-          <div class="phone-number text-md medium">
-            <?php if ($icon) { ?>
-            <picture class="icon cover-image">
-              <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
-            </picture>
-            <?php } ?>
-            <?= $text ?>
-          </div>
+        <div class="bottom-content">
+          <?php while (have_rows('information_card')) {
+            the_row();
+            $information_title = get_sub_field('information_title');
+            $information_description = get_sub_field('information_description');
+            $icon = get_sub_field('icon');
+            $text = get_sub_field('text');
+            ?>
+            <div class="information-support flex-col iv-st-from-bottom">
+              <?php if ($information_title) { ?>
+                <h3
+                  class="text-xl bold information-title"><?= $information_title ?></h3>
+              <?php } ?>
+              <?php if ($information_description) { ?>
+                <div
+                  class="text-md information-description"><?= $information_description ?></div>
+              <?php } ?>
+              <?php if (have_rows('contact_info')) { ?>
+                <?php while (have_rows('contact_info')) {
+                  the_row();
+                  $icon = get_sub_field('icon');
+                  $text = get_sub_field('info_text');
+                  ?>
+                  <div class="info-detail text-md medium">
+                    <?php if ($icon) { ?>
+                      <picture class="icon cover-image">
+                        <img src="<?= $icon['url'] ?>"
+                             alt="<?= $icon['alt'] ?>">
+                      </picture>
+                    <?php } ?>
+                    <?php if ($text) { ?>
+                      <div class="info-text">
+                        <?= $text ?>
+                      </div>
+                    <?php } ?>
+                  </div>
+                <?php }
+              } ?>
+            </div>
           <?php } ?>
         </div>
-        <?php } ?>
-      </div>
       <?php } ?>
     </div>
   </div>

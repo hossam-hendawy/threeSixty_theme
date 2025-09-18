@@ -493,7 +493,7 @@ body.home {
             }
           }
 
-          .phone-number {
+          .info-detail {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -512,6 +512,7 @@ body.home {
             .icon {
               @include square(20px);
             }
+
 
             body.rtl & {
               flex-direction: row-reverse;

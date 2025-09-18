@@ -465,6 +465,13 @@ footer {
 
   }
 
+  .contact-number span {
+
+    body.rtl & {
+      direction: ltr;
+    }
+  }
+
   .mailster-block-form.wp-block-mailster-form-wrapper .mailster-block-form-inner .mailster-wrapper {
     width: 100% !important;
   }
@@ -579,14 +586,6 @@ footer {
       }
     }
   }
-
-  .contact-number span {
-
-    body.rtl & {
-      direction: ltr;
-    }
-  }
-
 }
 
 .wp-block-mailster-messages {
