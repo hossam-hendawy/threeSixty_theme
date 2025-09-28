@@ -110,7 +110,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
         <?php endif; ?>
         <div class="company-info flex-col">
           <?php if ($first_number) : ?>
-            <div class="en-h6 white-color contact-number info-wrapper">
+            <a href="tel:<?= $first_number ?>" class="en-h6 white-color contact-number info-wrapper">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                    aria-hidden="true">
                 <path
@@ -119,10 +119,10 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                   stroke-linejoin="round"/>
               </svg>
                 <span><?= $first_number ?></span>
-            </div>
+            </a>
           <?php endif; ?>
           <?php if ($second_number) : ?>
-            <div class="en-h6 white-color contact-number info-wrapper">
+            <a href="tel:<?= $second_number ?>" class="en-h6 white-color contact-number info-wrapper">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                    aria-hidden="true">
                 <path
@@ -131,7 +131,7 @@ $current_lang = apply_filters('wpml_current_language', NULL);
                   stroke-linejoin="round"/>
               </svg>
                 <span><?= $second_number ?></span>
-            </div>
+            </a>
           <?php endif; ?>
           <?php if ($contact_email) : ?>
             <a href="mailto:<?= $contact_email ?>"
