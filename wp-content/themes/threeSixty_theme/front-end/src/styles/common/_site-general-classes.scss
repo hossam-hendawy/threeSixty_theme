@@ -204,7 +204,9 @@ body.home {
     @include x-large-screen {
       inset-inline-end: 12.4%;
     }
-
+    @include xx-large-screen {
+      inset-inline-end: 7%;
+    }
 
     svg, img {
       width: 100%;
@@ -330,6 +332,9 @@ body.home {
     }
     @include x-large-screen {
       inset-inline-end: 114px;
+    }
+    @include xx-large-screen {
+      inset-inline-end: 2%;
     }
   }
 }
