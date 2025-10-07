@@ -283,9 +283,7 @@ body.home {
       inset-inline-end: 126px;
       top: -10px;
     }
-    @include xx-large-screen {
-      inset-inline-end: 60px;
-    }
+
 
 
   }
@@ -335,6 +333,9 @@ body.home {
 .blog_hero_block {
   .isolation-mode {
     width: auto;
+    @include xx-large-screen {
+      inset-inline-end: 21%;
+    }
   }
 }
 
