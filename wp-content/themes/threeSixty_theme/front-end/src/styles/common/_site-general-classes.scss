@@ -283,7 +283,9 @@ body.home {
       inset-inline-end: 126px;
       top: -10px;
     }
-
+    @include xx-large-screen {
+      inset-inline-end: 50px;
+    }
 
 
   }
