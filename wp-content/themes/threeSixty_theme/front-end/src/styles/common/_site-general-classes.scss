@@ -329,12 +329,19 @@ body.home {
     }
   }
 }
-
+//////
 .blog_hero_block {
   .isolation-mode {
     width: auto;
     @include xx-large-screen {
       inset-inline-end: 21%;
+    }
+  }
+}
+.about_us_block{
+  .isolation-mode {
+    @include xx-large-screen {
+      inset-inline-end: 7%;
     }
   }
 }
