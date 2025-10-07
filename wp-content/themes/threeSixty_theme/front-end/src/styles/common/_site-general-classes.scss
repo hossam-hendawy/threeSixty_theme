@@ -309,7 +309,9 @@ body.home {
       inset-inline-end: 160px;
       top: 10px;
     }
-
+    @include xx-large-screen {
+      inset-inline-end: 60px;
+    }
     img {
       object-fit: contain;
     }
