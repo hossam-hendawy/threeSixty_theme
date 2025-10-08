@@ -105,6 +105,8 @@ body.home {
   background-color: $threeSixty_theme_black;
   z-index: 2;
   min-height: 450px;
+  margin-inline: auto;
+  max-width: 1263px;
 
   &:before {
     content: "";
@@ -117,10 +119,10 @@ body.home {
     z-index: -1;
   }
 
-  @include xx-large-screen {
-    max-width: 1263px;
-    margin-inline: auto;
-  }
+  //@include xx-large-screen {
+  //  max-width: 1263px;
+  //  margin-inline: auto;
+  //}
 
   .container {
     width: 100%;
@@ -202,11 +204,9 @@ body.home {
       inset-inline-end: 98px;
     }
     @include x-large-screen {
-      inset-inline-end: 12.4%;
+      inset-inline-end: 85px;
     }
-    @include xx-large-screen {
-      inset-inline-end: 7%;
-    }
+
 
     svg, img {
       width: 100%;
@@ -282,13 +282,9 @@ body.home {
       height: 100%;
     }
     @include x-large-screen {
-      inset-inline-end: 126px;
+      inset-inline-end: 50px;
       top: -10px;
     }
-    @include xx-large-screen {
-      inset-inline-end: 50px;
-    }
-
 
   }
 }
@@ -308,12 +304,10 @@ body.home {
       height: 502px;
     }
     @include x-large-screen {
-      inset-inline-end: 160px;
+      inset-inline-end: 65px;
       top: 10px;
     }
-    @include xx-large-screen {
-      inset-inline-end: 60px;
-    }
+
     img {
       object-fit: contain;
     }
@@ -331,18 +325,18 @@ body.home {
       width: 549px;
     }
     @include x-large-screen {
-      inset-inline-end: 114px;
-    }
-    @include xx-large-screen {
-      inset-inline-end: 2%;
+      inset-inline-end: 0;
     }
   }
 }
-//////
+
 .blog_hero_block {
   .isolation-mode {
     width: auto;
-    @include xx-large-screen {
+    @include x-large-screen {
+      inset-inline-end: 12.5%;
+    }
+      @include xx-large-screen {
       inset-inline-end: 21%;
     }
   }
